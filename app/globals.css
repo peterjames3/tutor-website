@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f8f9fa;
-}
 
 @theme inline {
   --color-background: var(--background);
@@ -14,10 +11,14 @@
   --color-background: #f8f9fa;
   --color-banner: #506d37;
   --color-primary: #041107;
-  --color-secondary: #2b9e3b;
+  --color-secondary: #e2ebf3;
   --color-accent: #e8f9f1;
   --color-accent2: #d9f3d8;
   --color-cardBg: #e5e5e5;
+  --color-cardBg-support1: #FFEEEB;
+  --color-cardBg-support2: #B2D7FF;
+  --color-cardBg-support3: #E8F9F1;
+
   --color-tertiary: #e5e5e5;
   --color-tertiary-30: rgba(229, 229, 229, 0.3);
   --color-tertiary-white: #1e2915;
@@ -69,12 +70,7 @@
   --text-label-lg: 0.875rem;
   --text-label-md: 0.75rem;
   --text-label-sm: 0.6875rem;
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn {
@@ -181,4 +177,23 @@ body {
       font-size: var(--text-label-lg);
     }
   }
+}
+
+.dropdown-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #4ade80 #f0fdf4;
+}
+
+.dropdown-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-track {
+  background: #f0fdf4;
+  border-radius: 3px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb {
+  background-color: #4ade80;
+  border-radius: 3px;
 }

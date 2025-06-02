@@ -100,15 +100,15 @@ const LeftHero = () => {
       title: " Certiticates Exams",
       exams: [
         {
-          name: "Cisco Certifications (CCNA, CCNP)",
+          name: "CCNA",
           path: "/services/cisco-exams",
         },
         {
-          name: "CompTIA (A+, Network+, Security+)",
+          name: "CompTIA",
           path: "/services/comptia-exams",
         },
         {
-          name: "AWS/Azure Cloud Certifications",
+          name: "AWS",
           path: "/services/cloud-exams",
         },
         { name: "CEH", path: "/services/ceh-exam" },
@@ -130,7 +130,7 @@ const LeftHero = () => {
             Left Side: Title + Description + Category Tabs
         ───────────────────────────────────────────────────────────────── */}
         <div>
-          <h1 className="text-3xl md:text-4xl lg:text-[4.1rem] font-bold mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-[2.5rem] md:text-[3rem] lg:text-[4.1rem] font-bold mb-4 leading-tight">
             <span className="text-primary">Ace Your </span>
             <span className="text-secondary">Exams </span>
             <br />
@@ -139,7 +139,7 @@ const LeftHero = () => {
             <span className="text-primary"> Assistance</span>
           </h1>
 
-          <p className="text-primary mb-6 text-lg leading-relaxed">
+          <p className="text-primary mb-4 text-lg leading-relaxed">
             Struggling with exams? Let our experts handle it for you!
             <br />
             We ensure top-quality results while you focus on what matters most.
@@ -151,7 +151,7 @@ const LeftHero = () => {
           </h2>
 
           {/* ───── Category Tabs ───── */}
-          <div className="flex justify-between mb-4  rounded-md bg-accent overflow-hidden border border-active-link">
+          <div className="flex justify-between mb-3  rounded-md  overflow-hidden border border-active-link">
             {Object.entries(examData).map(([key, category]) => {
               const isActive = activeCategory === key;
               return (
@@ -159,11 +159,11 @@ const LeftHero = () => {
                   key={key}
                   onClick={() => setActiveCategory(key as ExamCategory)}
                   className={`
-                    px-6  py-2 text-[]1.2rem] font-semibold  transition-all
+                    px-6  py-3 text-[]1.2rem] font-semibold  transition-all
                     ${
                       isActive
                         ? "bg-secondary text-background hover:cursor-pointer"
-                        : " text-primary hover:bg-green-50 hover:cursor-pointer"
+                        : " text-primary hover:bg-accent hover:cursor-pointer"
                     }
                   `}
                 >
@@ -177,8 +177,8 @@ const LeftHero = () => {
         {/* ───────────────────────────────────────────────────────────────
             Right Side: Exam “Pills” Grid
         ───────────────────────────────────────────────────────────────── */}
-        <div className=" py-5 px-2 ">
-          <h3 className="flex items-center text-xl font-bold mb-6 text-green-700">
+        <div className=" py-2 px-2 ">
+          <h3 className="flex items-center text-xl font-bold mb-3 text-green-700">
             <span className="mr-3">
               <Logo />
             </span>

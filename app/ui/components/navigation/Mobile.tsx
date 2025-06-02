@@ -119,7 +119,7 @@ export default function Mobile() {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed top-0 right-0 bottom-0 w-3/4 bg-gradient-to-b from-[#CEF3D6] to-[#FFEEEB] z-50 overflow-y-auto shadow-xl"
+            className="fixed top-0 right-0 bottom-0 w-3/4 bg-gradient-to-b from-[#CEF3D6] to-[#FFEEEB] z-100 overflow-y-auto shadow-xl"
           >
             <div className="flex flex-col py-6">
               {MenuItems.map((item, index) => (

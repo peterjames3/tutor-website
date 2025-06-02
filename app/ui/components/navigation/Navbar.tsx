@@ -13,7 +13,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -29,10 +28,10 @@ export default function Navbar() {
           : "bg-gradient-to-r from-green-50 to-green-100"
       }`}
     >
-      <section className="w-full mx-auto max-w-full md:max-w-[840px] xl:max-w-[1440px]">
+      <section className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]">
         <ContactBar isScrolled={false} />
       </section>
-      <div className="w-full mx-auto max-w-full md:max-w-[840px] xl:max-w-[1440px] flex items-center justify-between gap-6 px-4 md:px-0">
+      <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] flex items-center justify-between gap-6 px-4 md:px-2 lg:px-3">
         {/* Logo */}
         <nav className="font-bold text-[1.2rem] lg:text-[1.5rem]">
           <Link href="/" className="flex items-center gap-1 lg:gap-2">
@@ -52,7 +51,7 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <nav className="flex gap-6">
             {MenuItems.map((item) => (
               <div
@@ -81,7 +80,7 @@ export default function Navbar() {
           </nav>
         </div>
         {/*  Buttons */}
-        <div className="md:flex  hidden gap-5">
+        <div className="lg:flex  hidden gap-5">
           <button type="button" className="btn">
             Login
           </button>
@@ -91,7 +90,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
           <Mobile />
         </div>
       </div>

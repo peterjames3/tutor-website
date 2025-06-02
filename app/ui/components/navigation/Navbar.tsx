@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { MenuItems } from "@/lib/menuitem";
 import DropdownMenu from "./DropdownMenu";
 import ContactBar from "@/app/ui/ContactBar";
-import MobileMenu from "./MobileMenu";
+import Mobile from "@/app/ui/components/navigation/Mobile";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -80,36 +80,21 @@ export default function Navbar() {
             ))}
           </nav>
         </div>
+        {/*  Buttons */}
+        <div className="md:flex  hidden gap-5">
+          <button type="button" className="btn">
+            Login
+          </button>
+          <button type="button" className="btn">
+            Sign Up
+          </button>
+        </div>
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(true)}
-            className="p-2 text-gray-800"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+          <Mobile />
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <MobileMenu
-        isOpen={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
-      />
     </header>
   );
 }

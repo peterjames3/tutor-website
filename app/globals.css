@@ -75,7 +75,25 @@
   --text-label-md: 0.75rem;
   --text-label-sm: 0.6875rem;
 }
+.card-btn {
+  @apply px-6 py-3 rounded-lg font-medium text-sm transition-colors;
+  background-color: var(--color-button-login-default);
+  color: var(--color-button-textColor);
+}
+.card-btn:hover {
+  background-color: var(--color-button-login-hover);
+  color: var(--color-button-textColor-hover);
+}
+.card-btn:active {
+  background-color: var(--color-button-login-active);
+}
 
+.card-btn:disabled {
+  background-color: var(--color-button-login-disabled);
+  color: var(--color-button-textColor-disabled);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
 .btn {
   @apply px-6 py-4 rounded-lg font-medium text-sm transition-colors;
   background-color: var(--color-button-login-default);

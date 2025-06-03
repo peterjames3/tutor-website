@@ -1,27 +1,34 @@
 // components/ExamServices/Tabs.tsx
-"use client";
-import { useState } from "react";
+interface TabsProps {
+  activeTab: number;
+  setActiveTab: (tab: number) => void;
+}
 
-const tabList = ["Grades K-12", "Graduate & beyond", "Academics"];
+const tabList = [
+  "Grades K-12",
+  "Graduate & beyond",
+  "Professional Certification Exams",
+];
 
-export default function Tabs() {
-  const [active, setActive] = useState(1);
-
+export default function Tabs({ activeTab, setActiveTab }: TabsProps) {
   return (
-    <div className="flex justify-center gap-1 mb-8">
-      {tabList.map((tab, idx) => (
-        <button
-          key={tab}
-          onClick={() => setActive(idx)}
-          className={`px-4 py-2 text-sm border rounded-full transition-colors ${
-            active === idx
-              ? "bg-green-500 text-white border-green-500"
-              : "text-gray-700 border-gray-300 hover:bg-gray-100"
-          }`}
-        >
-          {tab}
-        </button>
-      ))}
+    <div className="w-full flex justify-center items-center mb-8">
+      <div className="border border-secondary rounded-md inline-flex justify-center">
+        {tabList.map((tab, idx) => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(idx)}
+            className={`px-12 cursor-pointer py-2 p-text font-medium transition-all duration-200
+              ${
+                activeTab === idx
+                  ? "bg-secondary text-primary"
+                  : "text-primary font-medium"
+              }`}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

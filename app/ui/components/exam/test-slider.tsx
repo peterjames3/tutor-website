@@ -1,41 +1,29 @@
 // components/ExamServices/ServicesCarousel.tsx
+"use client";
 import ServiceCard from "./exam-service-card";
+import servicesByTab from "@/lib/services";
 
-const services = [
-  {
-    title: "MCAT 515+ Exams and classes",
-    description: "We take exams and do classes tailored to you.",
-    labels: ["Live Online", "In-Person"],
-    highlight: "Most popular",
-  },
-  {
-    title: "LSAT 165+ Exams and Classes",
-    description: "Everything you need for LSAT success.",
-    labels: ["Live Online", "In-Person"],
-  },
-  {
-    title: "GMAT 645+ Exams and Classes",
-    description: "Get a GMAT focus score that top business schools want.",
-    labels: ["Live Online"],
-  },
-  {
-    title: "GRE+ Exams and Classes",
-    description: "Achieve your best GRE score",
-    labels: ["Live Online"],
-  },
-  {
-    title: "GRE+ Exams and Classes",
-    description: "Achieve your best GRE score",
-    labels: ["Live Online"],
-  },
-];
+interface TestCarouselProps {
+  activeTab: number;
+}
 
-export default function TestCarousel() {
+export default function TestCarousel({ activeTab }: TestCarouselProps) {
+  const services = servicesByTab[activeTab] || [];
+
   return (
-    <div className="flex overflow-x-auto gap-6 px-1 scrollbar-hide">
-      {services.map((item, index) => (
-        <ServiceCard key={index} {...item} />
-      ))}
+    <div className="flex overflow-x-auto gap-6 px-2 scrollbar-hide snap-x snap-mandatory scroll-smooth">
+      {services.length > 0 ? (
+        services.map((item, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-[280px] md:w-[340px] snap-start"
+          >
+            <ServiceCard {...item} />
+          </div>
+        ))
+      ) : (
+        <p className="text-gray-500">No services available for this tab.</p>
+      )}
     </div>
   );
 }

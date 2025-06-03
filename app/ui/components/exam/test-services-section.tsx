@@ -17,7 +17,7 @@ export default function ExamServicesSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="w-full max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto"
+        className="w-full max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto py-20"
       >
         <ServicesHeader />
         <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />

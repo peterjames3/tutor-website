@@ -26,7 +26,7 @@ export default function TestCard({
         {labels.map((label, idx) => (
           <span
             key={idx}
-            className={`label-text font-medium px-2 py-1 rounded-full ${
+            className={`label-text font-medium px-2 py-1 rounded-sm ${
               label === "Live Online"
                 ? "bg-gray-100 text-green-600"
                 : "bg-green-100 text-green-700"

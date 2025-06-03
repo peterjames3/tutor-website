@@ -25,7 +25,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 ${
         isScrolled
           ? "bg-gradient-to-r from-white/90 via-green-50/80 to-white/90 backdrop-blur-lg shadow-xl border-b border-white/20"
-          : "bg-gradient-to-r from-green-50 to-green-100"
+          : "bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB]"
       }`}
     >
       <section className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]">

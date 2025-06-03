@@ -130,7 +130,7 @@ const LeftHero = () => {
             Left Side: Title + Description + Category Tabs
         ───────────────────────────────────────────────────────────────── */}
         <div>
-          <h1 className="text-3xl sm:text-[2.5rem] md:text-[3rem] lg:text-[4.1rem] font-bold mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[4.1rem] font-bold mb-4 leading-tight">
             <span className="text-primary">Ace Your </span>
             <span className="text-secondary">Exams </span>
             <br />

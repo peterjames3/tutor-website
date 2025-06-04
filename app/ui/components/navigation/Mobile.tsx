@@ -104,7 +104,7 @@ export default function Mobile() {
             animate="open"
             exit="closed"
             variants={overlayVariants}
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/50 z-40 h-full"
             onClick={() => setIsOpen(false)}
             aria-hidden="true"
           />

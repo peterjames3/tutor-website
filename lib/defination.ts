@@ -45,3 +45,9 @@ export type SubMenuItem = {
   href: string;
   group?: string; // For grouping exam categories
 };
+//other links
+export interface LinkItem {
+  name: string;
+  slug?: string;
+  isLink?: boolean;
+}

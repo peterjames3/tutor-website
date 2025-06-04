@@ -7,6 +7,9 @@ import SubService from "./ui/components/heroservice/subservices-section";
 import TestServices from "./ui/components/exam/test-services-section";
 import SubTestimonialCard from "./ui/components/Testimonial/sub-testimonial";
 import SuccessPath from "./ui/components/path/success-path";
+import TestimonialsSection from "./ui/components/Testimonial/testimonials-section";
+import { AnimatedBanner } from "./ui/animated-banner";
+import { OtherLinksSection } from "./ui/components/otherlinks/other-links-section";
 
 export default function Page() {
   return (
@@ -17,6 +20,9 @@ export default function Page() {
       <TestServices />
       <SubTestimonialCard />
       <SuccessPath />
+      <TestimonialsSection />
+      <AnimatedBanner />
+      <OtherLinksSection />
     </main>
   );
 }

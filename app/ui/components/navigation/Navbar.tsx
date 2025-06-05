@@ -63,7 +63,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   className={`hover:text-primary transition-colors ${
-                    pathname === item.href ? "text-primary" : "text-foreground"
+                    pathname === item.href ? "text-secondary" : "text-primary"
                   }`}
                 >
                   {item.name}

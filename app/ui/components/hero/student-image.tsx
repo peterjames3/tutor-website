@@ -1,5 +1,4 @@
-// components/StudentImage.tsx
-//import { motion } from "framer-motion";
+
 import Image from "next/image";
 import type { FC } from "react";
 

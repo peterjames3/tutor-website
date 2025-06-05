@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button";
+//import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { memo } from "react";
 
 const AuthButtons = memo(() => {
-  console.log("🔐 Rendering AuthButtons component");
-
   return (
     <div className="hidden items-center gap-4 md:flex">
       <Link
@@ -13,9 +11,9 @@ const AuthButtons = memo(() => {
       >
         LOG IN
       </Link>
-      <Button className="bg-green-500 hover:bg-green-600 text-white px-6 transition-all duration-200 hover:scale-105 hover:shadow-lg">
+      <button className="bg-green-500 hover:bg-green-600 text-white px-6 transition-all duration-200 hover:scale-105 hover:shadow-lg">
         SIGN UP
-      </Button>
+      </button>
     </div>
   );
 });

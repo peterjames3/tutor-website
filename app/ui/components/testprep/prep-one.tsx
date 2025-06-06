@@ -14,27 +14,30 @@ export default function PrepOne() {
         <nav className=" mb-4 headline flex items-center justify-center font-semibold size-16 rounded-full p-6 text-primary border-2 border-accent2">
           1
         </nav>
-        <h2 className="headline font-semibold mb-2">
-          1-one-1 preping
-        </h2>
+        <h2 className="headline font-semibold mb-2">1-one-1 prepping</h2>
         <p className="text-[1rem] lg:text-[1.3rem] text-primary mb-4">
-          Browse the type of support you need: Online Tutoring, Exam Preparation
-          or Full Online Exam Handling.
+          Discover the ultimate test prep solution, customized to meet your
+          individual needs. Our comprehensive platform offers targeted support
+          across a wide array tests, icluding high school and college entrance
+          exams, graduate school test prep, and professional certifications. No
+          matter which exam you&apos;re preparing for, we provide the resources
+          and expertise to help you excel in your academic journey, ensuring a
+          personalized and effective test preparation experience.
         </p>
         <article className="flex gap-4 text-start">
           <article className="bg-accent2 p-4 rounded w-1/2">
             <h3 className="text-secondary font-bold text-2xl">94%</h3>
             <p className="p-text text-primary">
-              of students feel more confident when they get customized support
-              instaed of trying of trying to prepare alone.
+              of students reported increased confidence when receiving
+              personalized exam prep guidance, rather than studying alone.
             </p>
           </article>
           <div className="bg-accent2 p-4 rounded w-1/2">
             <h3 className="text-secondary font-bold text-2xl">85%</h3>
             <p className="p-text text-primary">
-              of our students select serices/es that are customized to theri
-              exact needs-whether it&apos;s tutoring, Exam support, or exam
-              prep.
+              of learners choose services that are tailored to their exact exam
+              goals—whether it&apos;s one-on-one tutoring, test strategy
+              sessions, or full prep programs.
             </p>
           </div>
         </article>

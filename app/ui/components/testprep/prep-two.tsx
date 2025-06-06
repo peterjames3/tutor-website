@@ -23,35 +23,16 @@ export default function PrepTwo() {
         <nav className=" mb-4 headline flex items-center justify-center font-semibold size-16 rounded-full p-6 text-primary border-2 border-accent2">
           2
         </nav>
-        <h2 className="headline font-semibold mb-2"> Fill a Quick Form</h2>
+        <h2 className="headline font-semibold mb-2"> Test Prep Classes</h2>
         <div className="text-[1rem] lg:text-[1.3rem] text-primary mb-4">
-          Provide detailed information about your academic needs, including:
-          <ul className="list-disc pl-6 mt-2 space-y-2">
-            <li>
-              <strong>Subject name</strong> (e.g., Mathematics, Biology,
-              History)
-            </li>
-            <li>
-              <strong>Course name or level</strong> (e.g., AP Calculus, GCSE
-              Physics, University-Level Statistics)
-            </li>
-            <li>
-              <strong>Exam details</strong> (if applicable), such as:
-              <ul className="list-[circle] pl-6 mt-1 space-y-1">
-                <li>Exam date & format</li>
-                <li>Specific areas where you need assistance</li>
-              </ul>
-            </li>
-            {/* <li>
-              <strong>Specific challenges or goals</strong> (e.g., improving
-              essay writing, mastering problem-solving techniques, understanding
-              key concepts)
-            </li> */}
-          </ul>
-          <p className="mt-3 italic">
-            The more details you provide, the better we can tailor support to
-            your needs!
-          </p>
+          Experience unparalleled test prep support with our live classes,
+          designed to help you build or reinforce fundamentals and basic
+          test-taking strategies. These classes, which include overview sessions
+          as well as section-specific lessons for dozens of exams, supplement
+          1-on-1 tutoring for a comprehensive preparation experience. Taught by
+          highly vetted instructors and tailored to students of various ages,
+          these live classes provide an engaging and collaborative learning
+          environment to further boost your test-taking skills and success.
         </div>
         <div className="bg-gradient-to-r  from-[#CEF3D6] to-[#FFEEEB] p-4 rounded-md">
           <h4 className="title font-bold text-primary">Emily Thompson</h4>

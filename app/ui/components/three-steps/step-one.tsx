@@ -25,16 +25,16 @@ export default function StepOne() {
           <article className="bg-accent2 p-4 rounded w-1/2">
             <h3 className="text-secondary font-bold text-2xl">94%</h3>
             <p className="p-text text-primary">
-              of students feel more confident when they get customized support
-              instaed of trying of trying to prepare alone.
+              of students reported increased confidence when receiving
+              personalized exam prep guidance, rather than studying alone.
             </p>
           </article>
           <div className="bg-accent2 p-4 rounded w-1/2">
             <h3 className="text-secondary font-bold text-2xl">85%</h3>
             <p className="p-text text-primary">
-              of our students select serices/es that are customized to theri
-              exact needs-whether it&apos;s tutoring, Exam support, or exam
-              prep.
+              of learners choose services that are tailored to their exact exam
+              goals—whether it&apos;s one-on-one tutoring, test strategy
+              sessions, or full prep programs.
             </p>
           </div>
         </article>

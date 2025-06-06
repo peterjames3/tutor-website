@@ -9,7 +9,10 @@ export default function Hero() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="w-full bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] min-h-[30rem] z-10 relative">
+    <div
+      id="Hero"
+      className="w-full bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] min-h-[30rem] z-10 relative"
+    >
       <AnimatePresence mode="wait">
         {showForm ? (
           <motion.div

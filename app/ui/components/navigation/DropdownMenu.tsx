@@ -2,8 +2,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SubMenuItem } from "@/lib/defination";
+import { usePathname } from "next/navigation";
 
 const DropdownMenu = ({ submenu }: { submenu: SubMenuItem[] }) => {
+  const pathname = usePathname();
   const groupedItems = submenu.reduce((acc, item) => {
     const group = item.group || "Other";
     if (!acc[group]) acc[group] = [];
@@ -34,7 +36,11 @@ const DropdownMenu = ({ submenu }: { submenu: SubMenuItem[] }) => {
                   <li key={idx}>
                     <Link
                       href={item.href}
-                      className="block px-2 py-1 text-gray-700 hover:bg-gray-50 rounded transition"
+                      className={`block px-2 py-1 rounded transition ${
+                        pathname === item.href
+                          ? "text-secondary"
+                          : "text-primary"
+                      } `}
                     >
                       {item.name}
                     </Link>

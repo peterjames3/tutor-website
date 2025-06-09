@@ -33,25 +33,27 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
     >
       <div>
         <motion.h2 className="p-text text-primary" variants={itemVariants}>
-          Test Prep
+          Your Exam, Our Expertise – Everything Else is Covered
         </motion.h2>
 
         <motion.h3
           className="text-[2.5rem] lg:text-[3.1rem] font-bold text-primary leading-tight"
           variants={itemVariants}
         >
-          <span className="text-primary">Unlocking</span>
-          <span className="text-secondary"> Top </span>
-          <span className="text-primary"> Test </span>
+          <span className="text-primary">Book</span>
+          <span className="text-secondary"> Your Exam </span>
+          <span className="text-primary"> and Let </span>
           <br />
-          <span className="text-secondary">Scores </span>
-          <span className="text-primary"> and Beyond</span>
+          <span className="text-secondary">Our Experts </span>
+          <span className="text-primary"> Take Care of Rest.</span>
         </motion.h3>
 
         <p className="p-text text-primary mb-4">
-          Achieve your highest potential with our proven strategies and expert{" "}
-          <br />
-          support for test preparation success.
+          Preparing for exams can be overwhelming — but you don’t have to do it
+          alone. With our <br /> proven expertise, personalized support, and
+          end-to-end exam handling, we ensure you stay confident, organized, and
+          fully prepared. From registration to results, we&apos;ve got you
+          covered.
         </p>
 
         <motion.button

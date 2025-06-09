@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calculator, Lightbulb, BookOpen } from "lucide-react";
+import { Calculator, BookOpen, BrainCircuit } from "lucide-react";
 
 export default function HeroRightContent() {
   const containerVariants = {
@@ -21,81 +21,84 @@ export default function HeroRightContent() {
 
   return (
     <motion.div
-      className="w-full  flex items-center  gap-2"
+      className="w-full flex items-center gap-2"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      {/* Math Section */}
+      {/* Quantitative Reasoning */}
       <motion.div
-        className=" bg-accent2 rounded-md flex items-center justify-between h-full w-full px-3  py-[12rem]"
+        className="relative bg-accent2 rounded-md flex items-center justify-between h-full w-full px-3 py-[10rem] overflow-hidden"
         variants={itemVariants}
       >
-        <section>
+        <section className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
             <div className="rounded-full p-3 bg-accent">
               <Calculator />
             </div>
-            <h3 className="text-2xl font-bold text-primary">Math</h3>
+            <h3 className="text-2xl font-bold text-primary">
+              Quantitative Reasoning
+            </h3>
           </div>
-
           <p className="text-gray-600">
-            Sample: If <span className="font-math">x² + 3x = 10</span>....
-          </p>
-          <div className="flex items-start gap-2 mt-4 px-3 rounded-sm py-5 bg-accent">
-            <Lightbulb />
-            <span className="text-primary">
-              Tip: Remember to check all answer choices
+            Core formulas like percentages, ratios, averages, algebraic
+            expressions, and data interpretation appear across many exams.
+            <br />
+            <span className="text-sm italic text-gray-500">
+              e.g., Understand how to compare growth rates using percent change.
             </span>
-          </div>
+          </p>
         </section>
       </motion.div>
 
-      <div className="flex flex-col gap-5 py-2 ">
-        {/* Writing Test Section */}
+      {/* Communication & Writing */}
+      <div className="flex flex-col gap-5 py-2">
+        {/* Verbal Communication */}
         <motion.div
-          className="space-y-3 rounded-md bg-cardBg-support2  h-full w-full px-3  py-[2rem] "
+          className="space-y-3 rounded-md bg-cardBg-support2 h-full w-full px-3 py-[2rem]"
           variants={itemVariants}
         >
           <div className="flex items-center gap-2">
             <div className="rounded-full p-3 bg-accent">
               <BookOpen />
             </div>
-            <h3 className="text-xl font-semibold text-primary">Writing Test</h3>
+            <h3 className="text-xl font-semibold text-primary">
+              Written Communication
+            </h3>
           </div>
           <p className="text-gray-600 ml-7">
-            Sample: The writer wants to emphasize...
-          </p>
-          <div className="flex items-start gap-2 mt-4 px-3 rounded-sm py-5 bg-accent">
-            <div className="">
-              <Lightbulb />
-            </div>
-            <span className="text-gray-600">
-              Tip: Look for the most concise answer
+            Grammar, clarity, sentence structure, and logical flow are critical
+            for written responses or essays.
+            <br />
+            <span className="text-sm italic text-gray-500">
+              e.g., Knowing when to use active vs passive voice improves writing
+              quality.
             </span>
-          </div>
+          </p>
         </motion.div>
 
-        {/* Reading Section */}
+        {/* Critical Thinking */}
         <motion.div
-          className="space-y-3 rounded-md bg-cardBg-support3  h-full w-full px-3  py-[2rem]"
+          className="space-y-3 rounded-md bg-cardBg-support3 h-full w-full px-3 py-[2rem]"
           variants={itemVariants}
         >
           <div className="flex items-center gap-2">
             <div className="rounded-full p-3 bg-accent">
-              <BookOpen />
+              <BrainCircuit />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">Reading</h3>
+            <h3 className="text-xl font-semibold text-gray-800">
+              Critical Thinking
+            </h3>
           </div>
-          <p className="text-gray-600 ml-7">The author wants to emphasize...</p>
-          <div className="flex items-start gap-2 ml-7">
-            <div>
-              <Lightbulb />
-            </div>
-            <span className="text-gray-600">
-              Tip: Choose the most concise and directly supported answer.
+          <p className="text-gray-600 ml-7">
+            Evaluate arguments, identify assumptions, and draw conclusions —
+            core skills for both verbal and analytical exams.
+            <br />
+            <span className="text-sm italic text-gray-500">
+              e.g., Spotting flawed logic helps in both reading passages and
+              data interpretation.
             </span>
-          </div>
+          </p>
         </motion.div>
       </div>
     </motion.div>

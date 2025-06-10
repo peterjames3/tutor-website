@@ -8,6 +8,7 @@ import WhyChooseUs from "@/app/ui/components/exam-aid/why-choose-us";
 import FAQSection from "@/app/ui/components/exam-aid/faq";
 //import PrepSection from "@/app/ui/components/testprep/prep-section";
 import ProctoredProcess from "../ui/components/exam-aid/proctored-process";
+import SupportedExams from "@/app/ui/components/exam-aid/supported-exams";
 //import { TEST_PREP_PROGRAMS } from "@/lib/constants/test-prep-data";
 import { Services } from "@/app/ui/components/exam-aid/services";
 
@@ -58,6 +59,7 @@ export default function TestPrepHome() {
       <ProctoredProcess />
       <Services />
       <WhyChooseUs />
+      <SupportedExams />
       {/* Uncomment the following section if you want to include the PrepSection */}
       {/* <PrepSection /> */}
       {/* <section className="bg-[#e2ebf3]/30 py-16 px-4 sm:px-6 lg:px-10">

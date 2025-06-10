@@ -4,11 +4,13 @@
 //import { motion, AnimatePresence } from "framer-motion";
 //import { ChevronLeft, ChevronRight } from "lucide-react";
 import Hero from "@/app/ui/components/exam-aid/main-hero-section";
+import WhyChooseUs from "@/app/ui/components/exam-aid/why-choose-us";
+import FAQSection from "@/app/ui/components/exam-aid/faq";
 //import PrepSection from "@/app/ui/components/testprep/prep-section";
 import ProctoredProcess from "../ui/components/exam-aid/proctored-process";
 //import { TEST_PREP_PROGRAMS } from "@/lib/constants/test-prep-data";
 import { Services } from "@/app/ui/components/exam-aid/services";
-import { WhyChooseUs } from "@/app/ui/components/testprep/why-choose-us";
+
 import TestimonialsSection from "@/app/ui/components/Testimonial/testimonials-section";
 //import Link from "next/link";
 
@@ -55,6 +57,18 @@ export default function TestPrepHome() {
       <Hero />
       <ProctoredProcess />
       <Services />
+      <WhyChooseUs />
+      {/* Uncomment the following section if you want to include the PrepSection */}
+      {/* <PrepSection /> */}
+      {/* <section className="bg-[#e2ebf3]/30 py-16 px-4 sm:px-6 lg:px-10">
+        <div className="w-full max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Test Preparation Programs
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12 text-center">
+            Comprehensive prep courses for all major standardized tests
+          </p>
+        </div>
       {/* Uncomment the following section if you want to include the PrepSection */}
       {/* <section className="bg-[#e2ebf3]/30 py-16 px-4 sm:px-6 lg:px-10">
         <div className="w-full max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto">
@@ -179,8 +193,9 @@ export default function TestPrepHome() {
           ))}
         </div> */}
       {/* </section> */}
-      <WhyChooseUs />
+
       <TestimonialsSection />
+      <FAQSection />
     </>
   );
 }

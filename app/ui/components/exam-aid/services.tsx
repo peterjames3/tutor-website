@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import SlideInContainer from "@/app/ui/components/animation/SlideInContainer";
-import { MessageSquare, Calendar, ClipboardPen, Target } from "lucide-react";
+import { MessageSquare, Calendar, ClipboardPen } from "lucide-react";
 
 export function Services() {
   const scrollToTop = () => {

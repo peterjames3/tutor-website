@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { TEST_PREP_PROGRAMS } from "@/lib/constants/test-prep-data";
+import { EXAM_AID_PROGRAMS } from "@/lib/constants/exam-aid-data";
 
 import ExamAidSlider from "@/app/ui/components/exam-aid/exam-aid-slider";
 
@@ -16,14 +16,15 @@ export default function SupportedExams() {
         className="text-center mb-12"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Test Preparation Programs
+          We Support a variety of Exams
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Comprehensive prep courses for all major standardized tests
+          We specialize in end-to-end technical support for all proctored
+          testing platforms
         </p>
       </motion.div>
 
-      <ExamAidSlider programs={TEST_PREP_PROGRAMS} />
+      <ExamAidSlider programs={EXAM_AID_PROGRAMS} />
     </section>
   );
 }

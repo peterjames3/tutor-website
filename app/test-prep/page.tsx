@@ -96,7 +96,7 @@ export default function TestPrepHome() {
                 {currentItems.map((test) => (
                   <motion.div key={test.slug} className="h-full py-2">
                     <Link
-                      href={`/test-prep/${test.slug}`}
+                      href={`/exam-prep/${test.slug}`}
                       className="block h-full"
                     >
                       <div className="bg-background  p-6 rounded-2xl shadow-md hover:shadow-md transition-shadow h-full flex flex-col">

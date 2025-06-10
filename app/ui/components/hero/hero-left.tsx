@@ -25,33 +25,33 @@ const LeftHero = () => {
       exams: [
         {
           name: "SAT",
-          path: "/exams/sat",
+          path: "/exam-aid/sat",
           description: "College admission test",
         },
         {
           name: "ACT",
-          path: "/exams/act",
+          path: "/exam-aid/act",
           description: "Alternative college admission test",
         },
         {
           name: "AP",
-          path: "/exams/ap",
+          path: "/exam-aid/ap",
           description: "Advanced Placement exams",
         },
         { name: "PSAT", path: "/exams/psat", description: "Preliminary SAT" },
         {
           name: "SHSAT",
-          path: "/exams/shsat",
+          path: "/exam-aid/shsat",
           description: "Specialized High Schools Admissions Test",
         },
         {
           name: "SSAT",
-          path: "/exams/ssat",
+          path: "/exam-aid/ssat",
           description: "Secondary School Admission Test",
         },
         {
           name: "ISEE",
-          path: "/exams/isee",
+          path: "/exam-aid/isee",
           description: "Independent School Entrance Exam",
         },
       ],
@@ -61,37 +61,37 @@ const LeftHero = () => {
       exams: [
         {
           name: "GRE",
-          path: "/exams/gre",
+          path: "/exam-aid/gre",
           description: "Graduate Record Examination",
         },
         {
           name: "GMAT",
-          path: "/exams/gmat",
+          path: "/exam-aid/gmat",
           description: "Graduate Management Admission Test",
         },
         {
           name: "LSAT",
-          path: "/exams/lsat",
+          path: "/exam-aid/lsat",
           description: "Law School Admission Test",
         },
         {
           name: "MCAT",
-          path: "/exams/mcat",
+          path: "/exam-aid/mcat",
           description: "Medical College Admission Test",
         },
         {
           name: "DAT",
-          path: "/exams/dat",
+          path: "/exam-aid/dat",
           description: "Dental Admission Test",
         },
         {
           name: "PCAT",
-          path: "/exams/pcat",
+          path: "/exam-aid/pcat",
           description: "Pharmacy College Admission Test",
         },
         {
           name: "BAR Exam",
-          path: "/exams/bar",
+          path: "/exam-aid/bar",
           description: "State Bar Examination",
         },
       ],
@@ -101,21 +101,21 @@ const LeftHero = () => {
       exams: [
         {
           name: "CCNA",
-          path: "/services/cisco-exams",
+          path: "/exam-aid/cisco-exams",
         },
         {
           name: "CompTIA",
-          path: "/services/comptia-exams",
+          path: "/exam-aid/comptia-exams",
         },
         {
           name: "AWS",
-          path: "/services/cloud-exams",
+          path: "/exam-aid/cloud-exams",
         },
         { name: "CEH", path: "/services/ceh-exam" },
-        { name: "PMI (PMP, CAPM)", path: "/services/pmi-exams" },
+        { name: "PMI (PMP, CAPM)", path: "/exam-aid/pmi-exams" },
         {
           name: "MCSA",
-          path: "/services/microsoft-exams",
+          path: "/exam-aid/microsoft-exams",
         },
       ],
     },

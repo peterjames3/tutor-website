@@ -1,6 +1,5 @@
 import { ExamCategory, AcademicService, MenuItem } from "./defination";
 
-
 export const examAidCategories: ExamCategory = {
   "Certification Exams": [
     "Microsoft Azure",
@@ -10,7 +9,7 @@ export const examAidCategories: ExamCategory = {
     "Prince2 (Foundation & Practitioner)",
     "PMI-PMP",
     "PMI-ACP",
-    "PMI-RMP",
+    "PMP",
     "CAPM",
     "CISA",
     "CISM",

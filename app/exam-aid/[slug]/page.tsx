@@ -3,7 +3,7 @@ import { notFound as nextNotFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { Calculator, Lightbulb, BookOpen, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { examContent } from "@/lib/constants/test-prep-dynamic-route-data";
+import { examContent } from "@/lib/constants/exam-aid-dynamic-data";
 
 export default function ExamPage({ params }: { params: { slug: string } }) {
   // Icon mapping based on section title

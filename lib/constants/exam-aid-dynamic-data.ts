@@ -170,6 +170,188 @@ export const examContent: { [key: string]: Exam } = {
       },
     ],
   },
+  microsoftAzure: {
+    title: "Microsoft Azure Certification",
+    description:
+      "Comprehensive preparation for Microsoft Azure cloud certification exams.",
+    structure: [
+      "Cloud Concepts: Core Azure services, security, privacy, compliance, and trust",
+      "Azure Architecture: Compute, network, storage, and governance solutions",
+      "Azure Management: Monitoring, backup, and migration tools",
+    ],
+    sections: [
+      {
+        title: "Azure Fundamentals",
+        content:
+          "Which Azure service provides serverless computing capabilities?",
+        tips: [
+          "Understand core Azure services and their use cases",
+          "Practice with Azure portal navigation",
+          "Review pricing models and SLAs",
+        ],
+      },
+      {
+        title: "Security and Compliance",
+        content:
+          "What Azure service provides centralized security policy management?",
+        tips: [
+          "Study Azure security best practices",
+          "Understand identity and access management",
+          "Review compliance certifications",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Devon M.",
+        quote:
+          "The Azure prep materials were spot-on for the certification exam. I passed on my first attempt!",
+      },
+    ],
+  },
+
+  googleCloud: {
+    title: "Google Cloud Certification",
+    description:
+      "Preparation for Google Cloud Platform (GCP) certification exams.",
+    structure: [
+      "GCP Fundamentals: Core infrastructure services and pricing",
+      "Data Engineering: Big data and machine learning services",
+      "Security: Identity and access management best practices",
+    ],
+    sections: [
+      {
+        title: "Compute Services",
+        content: "When would you choose Cloud Run over Compute Engine?",
+        tips: [
+          "Compare GCP compute options",
+          "Understand serverless vs. VM-based solutions",
+          "Review auto-scaling capabilities",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Sarah L.",
+        quote:
+          "The GCP prep helped me understand the key differences between services that were tested heavily.",
+      },
+    ],
+  },
+
+  cisco: {
+    title: "Cisco Certification (CCNA/CCNP/CCIE)",
+    description:
+      "Comprehensive networking certification preparation for Cisco exams.",
+    structure: [
+      "Network Fundamentals: OSI model, IP addressing, and subnetting",
+      "Infrastructure: Switching, routing, and wireless technologies",
+      "Security: Network security concepts and Cisco security solutions",
+    ],
+    sections: [
+      {
+        title: "Network Fundamentals",
+        content: "What is the purpose of the ARP protocol?",
+        tips: [
+          "Master subnetting calculations",
+          "Understand network protocols and their functions",
+          "Practice Cisco IOS commands",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Raj P.",
+        quote:
+          "The Cisco prep labs were invaluable for understanding practical networking scenarios.",
+      },
+    ],
+  },
+
+  itil: {
+    title: "ITIL Certification",
+    description: "Preparation for ITIL 4 Foundation and Practitioner exams.",
+    structure: [
+      "Service Management: Key concepts and principles",
+      "ITIL Practices: 34 management practices",
+      "Service Value System: Components and interactions",
+    ],
+    sections: [
+      {
+        title: "Service Value Chain",
+        content:
+          "Which activity in the service value chain focuses on ensuring services meet expectations?",
+        tips: [
+          "Understand the service value chain activities",
+          "Study the ITIL guiding principles",
+          "Practice scenario-based questions",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Emma T.",
+        quote:
+          "The ITIL prep made the framework concepts clear and practical for real-world application.",
+      },
+    ],
+  },
+
+  prince2: {
+    title: "PRINCE2 Certification",
+    description: "Preparation for PRINCE2 Foundation and Practitioner exams.",
+    structure: [
+      "Principles: 7 PRINCE2 principles",
+      "Themes: Business case, organization, quality, etc.",
+      "Processes: Starting up, initiating, managing project delivery",
+    ],
+    sections: [
+      {
+        title: "PRINCE2 Principles",
+        content: "Which principle ensures the project remains viable?",
+        tips: [
+          "Memorize the 7 principles",
+          "Understand how themes support principles",
+          "Practice tailoring scenarios",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Michael B.",
+        quote:
+          "The PRINCE2 prep materials were perfectly aligned with the exam requirements.",
+      },
+    ],
+  },
+
+  pmiPmp: {
+    title: "PMI PMP Certification",
+    description: "Preparation for Project Management Professional (PMP) exam.",
+    structure: [
+      "People: Leading and managing project teams",
+      "Process: Technical project management aspects",
+      "Business Environment: Aligning projects with strategy",
+    ],
+    sections: [
+      {
+        title: "Project Processes",
+        content: "Which process group includes developing the project charter?",
+        tips: [
+          "Understand the 49 processes and 5 process groups",
+          "Study input-output-tools techniques",
+          "Practice situational questions",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Lisa K.",
+        quote:
+          "The PMP prep was comprehensive and helped me pass on my first try.",
+      },
+    ],
+  },
   sat: {
     title: "Scholastic Assessment Test (SAT)",
     description:
@@ -1621,6 +1803,525 @@ export const examContent: { [key: string]: Exam } = {
         author: "James L",
         quote:
           "SSAT prep helped me improve my verbal and math skills, boosting my confidence.",
+      },
+    ],
+  },
+  terraform: {
+    title: "Terraform Certification",
+    description:
+      "Preparation for HashiCorp Certified: Terraform Associate exam.",
+    structure: [
+      "Terraform Basics",
+      "Terraform Workflow",
+      "State Management",
+      "Modules",
+      "Collaboration",
+    ],
+    sections: [
+      {
+        title: "Infrastructure as Code",
+        content: "What command would you use to preview Terraform changes?",
+        tips: [
+          "Practice core Terraform commands",
+          "Understand state file management",
+          "Study module composition",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "David W.",
+        quote:
+          "The Terraform prep labs were excellent for hands-on practice with real-world scenarios.",
+      },
+    ],
+  },
+
+  oracle: {
+    title: "Oracle Certification",
+    description:
+      "Preparation for Oracle Database and Cloud certification exams.",
+    structure: [
+      "Database Architecture",
+      "SQL and PL/SQL",
+      "Backup and Recovery",
+      "Performance Tuning",
+    ],
+    sections: [
+      {
+        title: "SQL Fundamentals",
+        content: "Which SQL statement would you use to modify existing data?",
+        tips: [
+          "Master SQL syntax and functions",
+          "Understand Oracle database architecture",
+          "Practice performance tuning techniques",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Sophia C.",
+        quote:
+          "The Oracle prep covered all the advanced database concepts tested on the exam.",
+      },
+    ],
+  },
+  pmiAcp: {
+    title: "PMI Agile Certified Practitioner (PMI-ACP)",
+    description: "Preparation for PMI Agile Certified Practitioner exam.",
+    structure: [
+      "Agile Principles and Mindset",
+      "Value-Driven Delivery",
+      "Stakeholder Engagement",
+      "Team Performance",
+      "Adaptive Planning",
+      "Problem Detection and Resolution",
+      "Continuous Improvement",
+    ],
+    sections: [
+      {
+        title: "Agile Methodologies",
+        content:
+          "Which of the following is NOT a principle in the Agile Manifesto?",
+        tips: [
+          "Understand all Agile methodologies (Scrum, Kanban, XP, etc.)",
+          "Know the Agile Manifesto principles by heart",
+          "Practice estimating techniques like planning poker",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Mark T.",
+        quote:
+          "The PMI-ACP prep helped me connect Agile theory to practical application scenarios.",
+      },
+    ],
+  },
+
+  pmiRmp: {
+    title: "PMI Risk Management Professional (PMI-RMP)",
+    description: "Preparation for PMI Risk Management Professional exam.",
+    structure: [
+      "Risk Strategy and Planning",
+      "Risk Identification",
+      "Risk Analysis",
+      "Risk Response",
+      "Monitor and Close Risks",
+    ],
+    sections: [
+      {
+        title: "Risk Analysis",
+        content:
+          "What is the difference between qualitative and quantitative risk analysis?",
+        tips: [
+          "Understand risk breakdown structures",
+          "Practice risk probability and impact calculations",
+          "Know risk response strategies",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Lisa H.",
+        quote:
+          "The risk management frameworks and templates were invaluable for the exam.",
+      },
+    ],
+  },
+
+  capm: {
+    title: "Certified Associate in Project Management (CAPM)",
+    description:
+      "Preparation for Certified Associate in Project Management exam.",
+    structure: [
+      "Project Management Fundamentals",
+      "Project Environment",
+      "Role of the Project Manager",
+      "Project Integration Management",
+      "Project Scope Management",
+      "Project Schedule Management",
+      "Project Cost Management",
+      "Project Quality Management",
+      "Project Resource Management",
+      "Project Communications Management",
+      "Project Risk Management",
+      "Project Procurement Management",
+      "Project Stakeholder Management",
+    ],
+    sections: [
+      {
+        title: "Project Processes",
+        content: "Which process group includes developing the project charter?",
+        tips: [
+          "Memorize the 49 processes and 5 process groups",
+          "Understand input-output-tools techniques",
+          "Know the differences between predictive and adaptive approaches",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Jason B.",
+        quote:
+          "The CAPM prep made the PMBOK guide much more approachable and understandable.",
+      },
+    ],
+  },
+
+  cisa: {
+    title: "Certified Information Systems Auditor (CISA)",
+    description: "Preparation for Certified Information Systems Auditor exam.",
+    structure: [
+      "Information System Auditing Process",
+      "Governance and Management of IT",
+      "Information Systems Acquisition, Development and Implementation",
+      "Information Systems Operations and Business Resilience",
+      "Protection of Information Assets",
+    ],
+    sections: [
+      {
+        title: "IT Governance",
+        content: "What are the three lines of defense model in IT governance?",
+        tips: [
+          "Understand COBIT framework thoroughly",
+          "Study IT control types and testing approaches",
+          "Know risk assessment methodologies",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Sarah K.",
+        quote:
+          "The CISA prep aligned perfectly with the job practice domains and exam content.",
+      },
+    ],
+  },
+
+  cism: {
+    title: "Certified Information Security Manager (CISM)",
+    description: "Preparation for Certified Information Security Manager exam.",
+    structure: [
+      "Information Security Governance",
+      "Information Risk Management",
+      "Information Security Program",
+      "Incident Management",
+    ],
+    sections: [
+      {
+        title: "Security Governance",
+        content:
+          "What are the key components of an information security strategy?",
+        tips: [
+          "Understand how security aligns with business objectives",
+          "Study security metrics and reporting",
+          "Know regulatory requirements and standards",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "David L.",
+        quote:
+          "The CISM prep helped me think like a security manager, not just a technician.",
+      },
+    ],
+  },
+
+  ceh: {
+    title: "Certified Ethical Hacker (CEH)",
+    description: "Preparation for Certified Ethical Hacker exam.",
+    structure: [
+      "Footprinting and Reconnaissance",
+      "Scanning Networks",
+      "Enumeration",
+      "Vulnerability Analysis",
+      "System Hacking",
+      "Malware Threats",
+      "Sniffing",
+      "Social Engineering",
+      "Denial-of-Service",
+      "Session Hijacking",
+      "Evading IDS, Firewalls and Honeypots",
+      "Hacking Web Servers",
+      "Hacking Web Applications",
+      "SQL Injection",
+      "Hacking Wireless Networks",
+      "Hacking Mobile Platforms",
+      "IoT Hacking",
+      "Cloud Computing",
+      "Cryptography",
+    ],
+    sections: [
+      {
+        title: "Penetration Testing",
+        content:
+          "What is the first phase of a penetration test according to EC-Council?",
+        tips: [
+          "Know the tools in Kali Linux",
+          "Understand different attack vectors",
+          "Study the methodology thoroughly",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Alex R.",
+        quote:
+          "The CEH labs were amazing for hands-on practice with real hacking tools.",
+      },
+    ],
+  },
+
+  crisc: {
+    title: "Certified in Risk and Information Systems Control (CRISC)",
+    description:
+      "Preparation for Certified in Risk and Information Systems Control exam.",
+    structure: [
+      "Governance",
+      "IT Risk Assessment",
+      "Risk Response and Reporting",
+      "Information Technology and Security",
+    ],
+    sections: [
+      {
+        title: "Risk Identification",
+        content: "What is the difference between inherent and residual risk?",
+        tips: [
+          "Understand risk appetite vs risk tolerance",
+          "Study risk assessment methodologies",
+          "Know control types and their effectiveness",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Michelle W.",
+        quote:
+          "The CRISC prep made complex risk concepts clear and applicable.",
+      },
+    ],
+  },
+
+  awsSolutionArchitectProfessional: {
+    title: "AWS Certified Solutions Architect - Professional",
+    description:
+      "Preparation for AWS Certified Solutions Architect - Professional exam.",
+    structure: [
+      "Design for Organizational Complexity",
+      "Design for New Solutions",
+      "Migration Planning",
+      "Cost Control",
+      "Continuous Improvement for Existing Solutions",
+    ],
+    sections: [
+      {
+        title: "AWS Architecture",
+        content:
+          "What factors would you consider when designing a multi-region active-active architecture?",
+        tips: [
+          "Know all AWS services deeply",
+          "Understand advanced networking concepts",
+          "Practice with AWS Well-Architected Framework",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Raj N.",
+        quote:
+          "The AWS professional prep covered all the advanced scenarios I saw on the exam.",
+      },
+    ],
+  },
+
+  comptiaSecurityPlus: {
+    title: "CompTIA Security+",
+    description: "Preparation for CompTIA Security+ certification exam.",
+    structure: [
+      "Attacks, Threats and Vulnerabilities",
+      "Architecture and Design",
+      "Implementation",
+      "Operations and Incident Response",
+      "Governance, Risk and Compliance",
+    ],
+    sections: [
+      {
+        title: "Security Concepts",
+        content:
+          "What is the difference between symmetric and asymmetric encryption?",
+        tips: [
+          "Know all acronyms",
+          "Understand security controls and frameworks",
+          "Study attack types and mitigation techniques",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Tom B.",
+        quote:
+          "The Security+ prep was comprehensive and helped me pass on my first attempt.",
+      },
+    ],
+  },
+
+  comptiaNetworkPlus: {
+    title: "CompTIA Network+",
+    description: "Preparation for CompTIA Network+ certification exam.",
+    structure: [
+      "Networking Fundamentals",
+      "Network Implementations",
+      "Network Operations",
+      "Network Security",
+      "Network Troubleshooting",
+    ],
+    sections: [
+      {
+        title: "Network Protocols",
+        content:
+          "What port numbers are associated with HTTP, HTTPS, FTP, and SSH?",
+        tips: [
+          "Memorize OSI model layers",
+          "Know common port numbers",
+          "Understand subnetting",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Jessica M.",
+        quote:
+          "The Network+ prep made complex networking concepts easy to understand.",
+      },
+    ],
+  },
+
+  comptiaAPlus: {
+    title: "CompTIA A+",
+    description: "Preparation for CompTIA A+ certification exam.",
+    structure: [
+      "Hardware",
+      "Operating Systems",
+      "Software Troubleshooting",
+      "Networking",
+      "Hardware and Network Troubleshooting",
+      "Security",
+      "Mobile Devices",
+      "Virtualization and Cloud Computing",
+      "Operational Procedures",
+    ],
+    sections: [
+      {
+        title: "Hardware Components",
+        content: "What are the differences between DDR3 and DDR4 RAM?",
+        tips: [
+          "Know hardware components and specifications",
+          "Understand troubleshooting methodology",
+          "Study operating system features",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Chris D.",
+        quote:
+          "The A+ prep covered all the hardware and software knowledge I needed.",
+      },
+    ],
+  },
+
+  cybersecurityAnalyst: {
+    title: "Cybersecurity Analyst (CySA+)",
+    description:
+      "Preparation for CompTIA Cybersecurity Analyst (CySA+) certification exam.",
+    structure: [
+      "Threat and Vulnerability Management",
+      "Software and Systems Security",
+      "Security Operations and Monitoring",
+      "Incident Response",
+      "Compliance and Assessment",
+    ],
+    sections: [
+      {
+        title: "Threat Detection",
+        content:
+          "What tools would you use to analyze network traffic for anomalies?",
+        tips: [
+          "Know security tools and their outputs",
+          "Understand log analysis",
+          "Study incident response procedures",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Sam R.",
+        quote:
+          "The CySA+ prep was perfect for learning real-world security analysis skills.",
+      },
+    ],
+  },
+  pmp: {
+    title: "Cybersecurity Analyst (CySA+)",
+    description:
+      "Preparation for CompTIA Cybersecurity Analyst (CySA+) certification exam.",
+    structure: [
+      "Threat and Vulnerability Management",
+      "Software and Systems Security",
+      "Security Operations and Monitoring",
+      "Incident Response",
+      "Compliance and Assessment",
+    ],
+    sections: [
+      {
+        title: "Threat Detection",
+        content:
+          "What tools would you use to analyze network traffic for anomalies?",
+        tips: [
+          "Know security tools and their outputs",
+          "Understand log analysis",
+          "Study incident response procedures",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Sam R.",
+        quote:
+          "The CySA+ prep was perfect for learning real-world security analysis skills.",
+      },
+    ],
+  },
+
+  pentestPlus: {
+    title: "PenTest+",
+    description: "Preparation for CompTIA PenTest+ certification exam.",
+    structure: [
+      "Planning and Scoping",
+      "Information Gathering and Vulnerability Identification",
+      "Attacks and Exploits",
+      "Penetration Testing Tools",
+      "Reporting and Communication",
+    ],
+    sections: [
+      {
+        title: "Penetration Testing Methodology",
+        content:
+          "What is the difference between a vulnerability scan and a penetration test?",
+        tips: [
+          "Know the penetration testing process",
+          "Understand common vulnerabilities",
+          "Practice with testing tools",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Kevin L.",
+        quote:
+          "The PenTest+ prep gave me hands-on experience with real penetration testing scenarios.",
       },
     ],
   },

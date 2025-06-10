@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-interface TestPrepProgram {
+interface ExamAidProgram {
   slug: string;
   name: string;
   description: string;
@@ -15,11 +15,11 @@ interface TestPrepProgram {
   benefit?: string;
 }
 
-interface TestPrepSliderProps {
-  programs: TestPrepProgram[];
+interface ExamAidSliderProps {
+  programs: ExamAidProgram[];
 }
 
-export default function ExamAidSlider({ programs }: TestPrepSliderProps) {
+export default function ExamAidSlider({ programs }: ExamAidSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
   const [itemsPerPage, setItemsPerPage] = useState(1);
@@ -123,7 +123,7 @@ export default function ExamAidSlider({ programs }: TestPrepSliderProps) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <Link href={`/test-prep/${test.slug}`} className="block h-full">
+                <Link href={`/exam-aid/${test.slug}`} className="block h-full">
                   <div className="bg-background p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow h-full flex flex-col">
                     <div className="flex flex-wrap gap-6 mb-5">
                       <span className="bg-accent2 text-secondary px-2 py-1 rounded-md label-text">

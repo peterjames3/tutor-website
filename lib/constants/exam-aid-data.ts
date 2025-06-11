@@ -270,7 +270,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "AWS Certified Cloud Practitioner",
-    slug: "aws-cloud-practitioner",
+    slug: "awscloudpractitioner",
     banner: "LiveOnline",
     category: "Cloud Certification",
     duration: "90 minutes",
@@ -278,19 +278,10 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
       "Entry-level AWS certification – foundational cloud knowledge and services overview.",
     benefit: "Kickstart your cloud career with AWS fundamentals.",
   },
-  {
-    name: "CompTIA A+",
-    slug: "comptia-a-plus",
-    banner: "LiveOnline",
-    category: "IT Certification",
-    duration: "90 minutes per core exam (2 exams)",
-    description:
-      "Core IT certification – covers hardware, networking, security, and troubleshooting.",
-    benefit: "Begin a career in IT support and technical roles.",
-  },
+
   {
     name: "Google Associate Cloud Engineer",
-    slug: "google-ace",
+    slug: "googlecloud",
     banner: "LiveOnline",
     category: "Cloud Certification",
     duration: "120 minutes",
@@ -300,7 +291,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "(AZ-900)",
-    slug: "azure-fundamentals",
+    slug: "azurefundamentals",
     banner: "LiveOnline",
     category: "Cloud Certification",
     duration: "60 minutes",
@@ -310,7 +301,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "Cisco (CCNA/CCNP/CCIE)",
-    slug: "ccna",
+    slug: "cisco",
     banner: "LiveOnline",
     category: "Networking",
     duration: "120 minutes and 8 hours(Lab Exam)",

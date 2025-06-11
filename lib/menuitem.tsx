@@ -2,9 +2,9 @@ import { ExamCategory, AcademicService, MenuItem } from "./defination";
 
 export const examAidCategories: ExamCategory = {
   "Certification Exams": [
-    "Microsoft Azure",
+    "Azure Fundamentals",
     "Google Cloud",
-    "Cisco - CCNA/CCNP/CCIE",
+    "Cisco",
     "ITIL",
     "Prince2  Practitioner",
 

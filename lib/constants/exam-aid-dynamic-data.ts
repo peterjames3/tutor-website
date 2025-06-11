@@ -170,7 +170,58 @@ export const examContent: { [key: string]: Exam } = {
       },
     ],
   },
-  microsoftAzure: {
+  awscloudpractitioner: {
+    title: "AWS Certified Cloud Practitioner",
+    description:
+      "Preparation for the AWS Certified Cloud Practitioner exam, covering foundational AWS services and cloud concepts.",
+    structure: [
+      "Cloud Concepts: Benefits, deployment models, and economic aspects",
+      "AWS Core Services: Compute, storage, networking, and databases",
+      "Security and Compliance: Shared responsibility model, IAM, and compliance programs",
+      "Cloud Pricing and Billing: Cost optimization and billing tools",
+      "Support Plans and Documentation: AWS support tiers and trusted advisor",
+    ],
+    sections: [
+      {
+        title: "Cloud Concepts",
+        content:
+          "What are the advantages of cloud computing over traditional on-premises infrastructure?",
+        tips: [
+          "Understand scalability, elasticity, and agility",
+          "Know different deployment models: public, private, hybrid",
+          "Familiarize yourself with AWS global infrastructure",
+        ],
+      },
+      {
+        title: "Security and Compliance",
+        content: "What is the AWS Shared Responsibility Model?",
+        tips: [
+          "Learn which security tasks are AWS's responsibility vs. the customer's",
+          "Understand IAM, encryption, and compliance frameworks",
+          "Review AWS security services like AWS Shield and CloudTrail",
+        ],
+      },
+      {
+        title: "Pricing and Billing",
+        content:
+          "Which AWS pricing model is most cost-effective for unpredictable workloads?",
+        tips: [
+          "Compare On-Demand, Reserved, and Spot Instances",
+          "Use the AWS Pricing Calculator for estimates",
+          "Understand the Free Tier and billing alerts",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Nina K.",
+        quote:
+          "The AWS Cloud Practitioner prep gave me a strong cloud foundation and boosted my confidence to explore further certifications.",
+      },
+    ],
+  },
+
+  azurefundamentals: {
     title: "Microsoft Azure Certification",
     description:
       "Comprehensive preparation for Microsoft Azure cloud certification exams.",
@@ -200,6 +251,16 @@ export const examContent: { [key: string]: Exam } = {
           "Review compliance certifications",
         ],
       },
+      {
+        title: "Azure Storage Solutions",
+        content:
+          "Which Azure storage option is best for storing unstructured data such as images and videos?",
+        tips: [
+          "Differentiate between Blob, File, Queue, and Table storage",
+          "Understand redundancy options like LRS, GRS, and ZRS",
+          "Practice setting up storage accounts and containers in the Azure portal",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -210,7 +271,7 @@ export const examContent: { [key: string]: Exam } = {
     ],
   },
 
-  googleCloud: {
+  googlecloud: {
     title: "Google Cloud Certification",
     description:
       "Preparation for Google Cloud Platform (GCP) certification exams.",
@@ -227,6 +288,26 @@ export const examContent: { [key: string]: Exam } = {
           "Compare GCP compute options",
           "Understand serverless vs. VM-based solutions",
           "Review auto-scaling capabilities",
+        ],
+      },
+      {
+        title: "Identity and Access Management (IAM)",
+        content:
+          "How does Google Cloud's IAM ensure secure access to resources?",
+        tips: [
+          "Understand roles: basic, predefined, and custom",
+          "Know the principle of least privilege",
+          "Review how IAM policies are inherited across projects and resources",
+        ],
+      },
+      {
+        title: "BigQuery and Data Warehousing",
+        content:
+          "What are the advantages of using BigQuery for large-scale data analysis?",
+        tips: [
+          "Understand BigQuery architecture and use cases",
+          "Learn how to optimize queries and use partitioning",
+          "Familiarize yourself with pricing and storage models in BigQuery",
         ],
       },
     ],
@@ -1530,9 +1611,9 @@ export const examContent: { [key: string]: Exam } = {
     ],
     testimonials: [
       {
-        author: "Anthony S.",
+        author: "Nina K.",
         quote:
-          "The GED prep course helped me pass on my first try. The math practice and essay tips were especially useful!",
+          "I couldn’t have done it without the full support I received. From structured lessons to real-time proctored exam simulations, the AWS Cloud Practitioner prep was truly end-to-end. It felt like I had a personal guide through the entire process.",
       },
     ],
   },

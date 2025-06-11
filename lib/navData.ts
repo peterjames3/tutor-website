@@ -89,7 +89,7 @@ export const gradeLevels = [
 ];
 
 export const certifications = [
-  { name: "Microsoft Azure", slug: "exam-aid/microsoft-azure" },
+  { name: "Microsoft Azure", slug: "exam-aid/azurefundamentals" },
   {
     name: "AWS Solution Architect Professional",
     slug: "exam-aid/aws-solution-architect",
@@ -101,7 +101,7 @@ export const certifications = [
   { name: "PMI-PMP", slug: "exam-aid/pmipmp" },
   { name: "Google Cloud", slug: "exam-aid/google-cloud" },
   // { name: "CompTIA Security+", slug: "exam-aid/comptiasecurityplus" },
-  { name: "Cisco-CCNA/CCNP", slug: "exam-aid/cisco-ccna-ccnp" },
+  { name: "Cisco-CCNA/CCNP", slug: "exam-aid/cisco" },
   { name: "CompTIA A+ ", slug: "exam-aid/comptiaa" },
   { name: "CompTIA Network+ ", slug: "exam-aid/comptianetworkplus" },
   { name: "CompTIA Pentest+", slug: "exam-aid/comptia-pentest-plus" },

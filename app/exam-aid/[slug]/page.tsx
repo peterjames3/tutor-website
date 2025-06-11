@@ -34,7 +34,7 @@ export default function ExamPage({ params }: { params: { slug: string } }) {
           <section className=" h-full flex flex-col justify-center w-full lg:w-1/2 py-3 sm:py-18 lg:py-24">
             <ul className="flex items-center gap-1.5 text-sm mb-2">
               <li>
-                <Link href="/test-prep">Test Prep</Link>
+                <Link href="/exam-aid">Exam Aid</Link>
               </li>
               <ChevronRight className="text-gray-500" />
               <li className="font-medium">{exam.title}</li>

@@ -83,7 +83,7 @@ const categoryToSubmenu = (categories: ExamCategory, basePath: string) => {
       name: item,
       href: `${basePath}/${item
         .toLowerCase()
-        .replace(/\s+/g, "-")
+        // .replace(/\s+/g, "-")
         .replace(/[^a-z0-9-]/g, "")}`,
       group,
     })),

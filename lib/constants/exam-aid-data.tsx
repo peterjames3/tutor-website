@@ -467,7 +467,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "CompTIA Security+",
-    slug: "comptia-security-plus",
+    slug: "comptiasecurityplus",
     banner: "LiveOnline",
     category: "Cybersecurity",
     duration: "90 minutes",
@@ -498,7 +498,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "CompTIA PenTest+",
-    slug: "comptia-pentest-plus",
+    slug: "pentest",
     banner: "LiveOnline",
     category: "Cybersecurity",
     duration: "165 minutes",

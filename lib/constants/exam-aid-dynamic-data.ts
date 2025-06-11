@@ -2136,7 +2136,7 @@ export const examContent: { [key: string]: Exam } = {
     ],
   },
 
-  comptiaSecurityPlus: {
+  comptiasecurityplus: {
     title: "CompTIA Security+",
     description: "Preparation for CompTIA Security+ certification exam.",
     structure: [
@@ -2156,6 +2156,18 @@ export const examContent: { [key: string]: Exam } = {
           "Understand security controls and frameworks",
           "Study attack types and mitigation techniques",
         ],
+      },
+      {
+        title: "Security Concepts",
+        content:
+          "What is the difference between confidentiality, integrity, and availability (CIA Triad)?",
+        tips: ["Understand how each principle applies in real-world security"],
+      },
+      {
+        title: "Security Concepts",
+        content:
+          "What are the differences between technical, administrative, and physical security controls?",
+        tips: ["Memorize examples of each type of control"],
       },
     ],
     testimonials: [
@@ -2295,7 +2307,7 @@ export const examContent: { [key: string]: Exam } = {
     ],
   },
 
-  pentestPlus: {
+  pentest: {
     title: "PenTest+",
     description: "Preparation for CompTIA PenTest+ certification exam.",
     structure: [
@@ -2314,6 +2326,20 @@ export const examContent: { [key: string]: Exam } = {
           "Know the penetration testing process",
           "Understand common vulnerabilities",
           "Practice with testing tools",
+        ],
+      },
+      {
+        title: "Types of Penetration Tests",
+        content:
+          "What are the differences between black-box, white-box, and gray-box penetration testing?",
+        tips: ["Study the levels of access in each testing type"],
+      },
+      {
+        title: "Penetration Testing Tools",
+        content:
+          "Which tools are commonly used in penetration testing and what are their functions?",
+        tips: [
+          "Familiarize yourself with tools like Metasploit, Nmap, and Burp Suite",
         ],
       },
     ],

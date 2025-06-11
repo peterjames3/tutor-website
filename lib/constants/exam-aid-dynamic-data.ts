@@ -258,6 +258,25 @@ export const examContent: { [key: string]: Exam } = {
           "Practice Cisco IOS commands",
         ],
       },
+      {
+        title: "Routing Protocols",
+        content: "What is the main difference between OSPF and EIGRP?",
+        tips: [
+          "Understand how link-state and distance-vector protocols work",
+          "Know administrative distances and metrics",
+          "Practice configuring OSPF and EIGRP on Cisco devices",
+        ],
+      },
+      {
+        title: "Switching Technologies",
+        content:
+          "What is the purpose of VLANs and how do they improve network efficiency?",
+        tips: [
+          "Understand VLAN segmentation and trunking",
+          "Practice configuring VLANs using Cisco IOS commands",
+          "Know how VLANs relate to broadcast domains and security",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -287,6 +306,26 @@ export const examContent: { [key: string]: Exam } = {
           "Practice scenario-based questions",
         ],
       },
+      {
+        title: "ITIL Practices",
+        content:
+          "What is the primary goal of the Continual Improvement practice?",
+        tips: [
+          "Review the 34 ITIL management practices and their purposes",
+          "Understand how continual improvement underpins every value chain activity",
+          "Use the Continual Improvement Register (CIR) to track opportunities",
+        ],
+      },
+      {
+        title: "ITIL Guiding Principles",
+        content:
+          "How does the 'Start where you are' principle influence service improvement initiatives?",
+        tips: [
+          "Study all 7 ITIL guiding principles in depth",
+          "Understand how principles apply across the service value system",
+          "Use examples to see how 'Start where you are' avoids unnecessary change",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -297,7 +336,7 @@ export const examContent: { [key: string]: Exam } = {
     ],
   },
 
-  prince2: {
+  prince2practitioner: {
     title: "PRINCE2 Certification",
     description: "Preparation for PRINCE2 Foundation and Practitioner exams.",
     structure: [
@@ -313,6 +352,26 @@ export const examContent: { [key: string]: Exam } = {
           "Memorize the 7 principles",
           "Understand how themes support principles",
           "Practice tailoring scenarios",
+        ],
+      },
+      {
+        title: "PRINCE2 Themes",
+        content:
+          "How does the quality theme ensure deliverables meet project expectations?",
+        tips: [
+          "Understand how each theme integrates with project stages",
+          "Know roles and responsibilities related to quality assurance",
+          "Study how quality registers and product descriptions are used",
+        ],
+      },
+      {
+        title: "PRINCE2 Processes",
+        content:
+          "What are the key activities in the 'Managing a Stage Boundary' process?",
+        tips: [
+          "Understand the purpose of each process and when it's triggered",
+          "Know inputs and outputs for stage boundaries",
+          "Practice sequencing the seven PRINCE2 processes correctly",
         ],
       },
     ],
@@ -1827,6 +1886,24 @@ export const examContent: { [key: string]: Exam } = {
           "Study module composition",
         ],
       },
+      {
+        title: "Terraform Planning",
+        content: "What command would you use to preview Terraform changes?",
+        tips: [
+          "Use `terraform plan` to see what will change before applying",
+          "Understand the importance of planning in CI/CD pipelines",
+          "Run in a test environment first to avoid breaking infrastructure",
+        ],
+      },
+      {
+        title: "Terraform Initialization and Setup",
+        content: "What does the `terraform init` command do?",
+        tips: [
+          "Initializes a working directory with required providers",
+          "Download and install modules and plugins",
+          "Ensure proper backend configuration before initializing",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -1857,6 +1934,22 @@ export const examContent: { [key: string]: Exam } = {
           "Practice performance tuning techniques",
         ],
       },
+      {
+        title: "Filtering and Aggregating Data",
+        content: "How do you retrieve unique values from a column in SQL?",
+        tips: [
+          "Use the DISTINCT keyword to filter duplicate values",
+          "Understand limitations of DISTINCT across multiple columns",
+        ],
+      },
+      {
+        title: "Understanding SQL Joins",
+        content: "What is the difference between INNER JOIN and LEFT JOIN?",
+        tips: [
+          "Understand how different joins affect result sets",
+          "Visualize table relationships using diagrams",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -1866,7 +1959,7 @@ export const examContent: { [key: string]: Exam } = {
       },
     ],
   },
-  pmiAcp: {
+  pmiacp: {
     title: "PMI Agile Certified Practitioner (PMI-ACP)",
     description: "Preparation for PMI Agile Certified Practitioner exam.",
     structure: [
@@ -1889,6 +1982,25 @@ export const examContent: { [key: string]: Exam } = {
           "Practice estimating techniques like planning poker",
         ],
       },
+      {
+        title: "Value-Driven Delivery",
+        content:
+          "How does Agile ensure that the highest value features are delivered first?",
+        tips: [
+          "Use techniques like MoSCoW and WSJF for prioritization",
+          "Engage stakeholders continuously to reassess priorities",
+          "Focus on delivering MVPs and gathering early feedback",
+        ],
+      },
+      {
+        title: "Adaptive Planning",
+        content: "What is the role of rolling wave planning in Agile projects?",
+        tips: [
+          "Understand the difference between predictive and adaptive planning",
+          "Study how backlog refinement supports just-in-time planning",
+          "Know how to use velocity for forecasting future sprints",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -1899,7 +2011,7 @@ export const examContent: { [key: string]: Exam } = {
     ],
   },
 
-  pmiRmp: {
+  pmirmp: {
     title: "PMI Risk Management Professional (PMI-RMP)",
     description: "Preparation for PMI Risk Management Professional exam.",
     structure: [
@@ -1918,6 +2030,24 @@ export const examContent: { [key: string]: Exam } = {
           "Understand risk breakdown structures",
           "Practice risk probability and impact calculations",
           "Know risk response strategies",
+        ],
+      },
+      {
+        title: "Risk Response Planning",
+        content:
+          "What are the different types of risk response strategies for threats and opportunities?",
+        tips: [
+          "Differentiate between avoid, transfer, mitigate, and accept strategies",
+          "Understand exploit, enhance, share, and accept for opportunities",
+        ],
+      },
+      {
+        title: "Risk Monitoring and Control",
+        content:
+          "How do you ensure risks are tracked and responses remain effective throughout a project?",
+        tips: [
+          "Use risk audits and status meetings regularly",
+          "Update the risk register with new or evolving risks",
         ],
       },
     ],
@@ -1944,10 +2074,6 @@ export const examContent: { [key: string]: Exam } = {
       "Project Cost Management",
       "Project Quality Management",
       "Project Resource Management",
-      "Project Communications Management",
-      "Project Risk Management",
-      "Project Procurement Management",
-      "Project Stakeholder Management",
     ],
     sections: [
       {
@@ -1957,6 +2083,26 @@ export const examContent: { [key: string]: Exam } = {
           "Memorize the 49 processes and 5 process groups",
           "Understand input-output-tools techniques",
           "Know the differences between predictive and adaptive approaches",
+        ],
+      },
+      {
+        title: "Project Stakeholder Management",
+        content:
+          "How do you identify and engage stakeholders throughout the project?",
+        tips: [
+          "Know the tools for stakeholder analysis",
+          "Understand stakeholder influence and engagement levels",
+          "Use communication plans to manage expectations effectively",
+        ],
+      },
+      {
+        title: "Project Schedule Management",
+        content:
+          "What are the key techniques for estimating activity durations?",
+        tips: [
+          "Understand analogous, parametric, and three-point estimating methods",
+          "Know how to apply critical path method (CPM)",
+          "Use schedule compression techniques like crashing and fast tracking",
         ],
       },
     ],
@@ -1989,6 +2135,26 @@ export const examContent: { [key: string]: Exam } = {
           "Know risk assessment methodologies",
         ],
       },
+      {
+        title: "IT Compliance Management",
+        content:
+          "How do organizations ensure compliance with IT regulatory requirements?",
+        tips: [
+          "Familiarize yourself with standards like ISO 27001 and NIST",
+          "Map controls to regulatory frameworks (e.g., GDPR, HIPAA)",
+          "Conduct regular audits and maintain documentation",
+        ],
+      },
+      {
+        title: "Strategic Alignment in IT",
+        content:
+          "How does IT align with overall business objectives and goals?",
+        tips: [
+          "Understand how IT supports core business functions",
+          "Use frameworks like COBIT and ITIL for alignment",
+          "Establish clear communication between IT and business units",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -2017,6 +2183,24 @@ export const examContent: { [key: string]: Exam } = {
           "Understand how security aligns with business objectives",
           "Study security metrics and reporting",
           "Know regulatory requirements and standards",
+        ],
+      },
+      {
+        title: "Security Compliance",
+        content:
+          "How do frameworks like ISO 27001 and NIST help in achieving compliance?",
+        tips: [
+          "Compare major compliance frameworks",
+          "Understand the audit and certification process",
+        ],
+      },
+      {
+        title: "Security Policy Management",
+        content:
+          "What elements should be included in an effective security policy?",
+        tips: [
+          "Differentiate between policies, standards, and procedures",
+          "Ensure policies are clear, enforceable, and regularly reviewed",
         ],
       },
     ],
@@ -2064,7 +2248,28 @@ export const examContent: { [key: string]: Exam } = {
           "Study the methodology thoroughly",
         ],
       },
+      {
+        title: "Post-Exploitation Techniques",
+        content:
+          "After gaining access during a pen test, what's the next step?",
+        tips: [
+          "Learn privilege escalation methods",
+          "Understand data exfiltration techniques",
+          "Know how to maintain access and cover tracks",
+        ],
+      },
+      {
+        title: "Vulnerability Scanning",
+        content:
+          "How do vulnerability scans differ from manual exploitation methods?",
+        tips: [
+          "Understand automated vs manual testing approaches",
+          "Familiarize with common vulnerability scanners (e.g., Nessus, OpenVAS)",
+          "Know how to interpret scan reports effectively",
+        ],
+      },
     ],
+
     testimonials: [
       {
         author: "Alex R.",
@@ -2094,6 +2299,24 @@ export const examContent: { [key: string]: Exam } = {
           "Know control types and their effectiveness",
         ],
       },
+      {
+        title: "Risk Response Strategies",
+        content: "What are the four main strategies for responding to risk?",
+        tips: [
+          "Learn the difference between avoidance, mitigation, transfer, and acceptance",
+          "Use real-world scenarios to identify the best response",
+          "Understand how cost-benefit analysis influences decisions",
+        ],
+      },
+      {
+        title: "Risk Management Frameworks",
+        content: "How does NIST RMF guide the risk assessment process?",
+        tips: [
+          "Familiarize yourself with the NIST RMF steps",
+          "Align controls to organizational goals",
+          "Map risks to applicable compliance requirements",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -2104,7 +2327,7 @@ export const examContent: { [key: string]: Exam } = {
     ],
   },
 
-  awsSolutionArchitectProfessional: {
+  awssolutionarchitectprofessional: {
     title: "AWS Certified Solutions Architect - Professional",
     description:
       "Preparation for AWS Certified Solutions Architect - Professional exam.",
@@ -2126,6 +2349,27 @@ export const examContent: { [key: string]: Exam } = {
           "Practice with AWS Well-Architected Framework",
         ],
       },
+
+      {
+        title: "AWS Cost Optimization",
+        content:
+          "How can you reduce AWS costs without sacrificing performance or reliability?",
+        tips: [
+          "Leverage pricing models like Reserved and Spot Instances",
+          "Implement cost monitoring using AWS Cost Explorer",
+          "Use Auto Scaling and rightsizing tools effectively",
+        ],
+      },
+      {
+        title: "AWS Serverless Design",
+        content:
+          "When building a serverless application, what are key considerations for scaling and monitoring?",
+        tips: [
+          "Understand Lambda concurrency limits",
+          "Use CloudWatch for logs and metrics",
+          "Design with event-driven architecture in mind",
+        ],
+      },
     ],
     testimonials: [
       {
@@ -2135,8 +2379,112 @@ export const examContent: { [key: string]: Exam } = {
       },
     ],
   },
+  comptiaa: {
+    title: "CompTIA A+",
+    description:
+      "Preparation for the CompTIA A+ certification – foundational IT skills for support roles.",
+    structure: [
+      "Hardware",
+      "Operating Systems",
+      "Networking",
+      "Security",
+      "Troubleshooting",
+      "Mobile Devices",
+      "Virtualization and Cloud Computing",
+      "Operational Procedures",
+    ],
+    sections: [
+      {
+        title: "Hardware Troubleshooting",
+        content: "How would you diagnose and fix a PC that doesn’t power on?",
+        tips: [
+          "Check power source and connections first",
+          "Listen for POST beeps or LED indicators",
+          "Replace faulty components like PSU or motherboard",
+        ],
+      },
+      {
+        title: "Operating Systems",
+        content:
+          "What steps would you take to resolve a slow Windows boot process?",
+        tips: [
+          "Disable unnecessary startup programs",
+          "Check for malware and disk errors",
+          "Update drivers and OS patches",
+        ],
+      },
+      {
+        title: "Mobile Devices",
+        content:
+          "How do you troubleshoot a mobile device with no Wi-Fi connectivity?",
+        tips: [
+          "Toggle airplane mode and Wi-Fi settings",
+          "Forget and reconnect to the network",
+          "Check router settings and firmware",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Jamie L.",
+        quote: "The A+ training helped me land my first IT support job!",
+      },
+    ],
+  },
 
-  comptiasecurityplus: {
+  comptiacysaplus: {
+    title: "CompTIA CySA+ (Cybersecurity Analyst+)",
+    description:
+      "Build practical threat detection, analysis, and response skills for CySA+.",
+    structure: [
+      "Leverage threat intelligence to analyze and interpret data from multiple sources",
+      "Apply vulnerability management strategies and prioritize remediation efforts",
+      "Utilize security tools to monitor networks and investigate suspicious activity",
+      "Implement incident response procedures and support forensic analysis",
+      "Ensure compliance with security policies and assess organizational risk posture",
+    ],
+    sections: [
+      {
+        title: "Security Monitoring and Analysis",
+        content:
+          "What indicators would help you detect lateral movement within a network?",
+        tips: [
+          "Understand the MITRE ATT&CK framework",
+          "Analyze user and system behavior anomalies",
+          "Use tools like SIEM, EDR, and flow logs for detection",
+        ],
+      },
+      {
+        title: "Vulnerability Management Process",
+        content:
+          "How would you prioritize remediation after a vulnerability scan?",
+        tips: [
+          "Know the difference between CVE, CVSS, and exploitability",
+          "Consider asset criticality and business impact",
+          "Use patch management and compensating controls effectively",
+        ],
+      },
+      {
+        title: "Incident Detection and Response",
+        content:
+          "How should an analyst respond to a detected phishing attempt?",
+        tips: [
+          "Isolate the affected system immediately",
+          "Collect email headers and artifacts for analysis",
+          "Educate users to prevent future social engineering attacks",
+        ],
+      },
+    ],
+    testimonials: [
+      {
+        author: "Tom B.",
+        quote:
+          "The Security+ prep was comprehensive and helped me pass on my first attempt.",
+      },
+    ],
+  },
+
+  comptiasecurity: {
     title: "CompTIA Security+",
     description: "Preparation for CompTIA Security+ certification exam.",
     structure: [
@@ -2179,7 +2527,7 @@ export const examContent: { [key: string]: Exam } = {
     ],
   },
 
-  comptiaNetworkPlus: {
+  comptianetwork: {
     title: "CompTIA Network+",
     description: "Preparation for CompTIA Network+ certification exam.",
     structure: [
@@ -2198,6 +2546,25 @@ export const examContent: { [key: string]: Exam } = {
           "Memorize OSI model layers",
           "Know common port numbers",
           "Understand subnetting",
+        ],
+      },
+      {
+        title: "Subnetting and IP Addressing",
+        content: "How do you calculate the number of hosts in a subnet?",
+        tips: [
+          "Practice subnet mask conversions",
+          "Understand CIDR notation",
+          "Use subnet calculators for accuracy",
+        ],
+      },
+      {
+        title: "Network Troubleshooting Tools",
+        content:
+          "What is the purpose of tools like ping, traceroute, and nslookup?",
+        tips: [
+          "Learn how each tool diagnoses network issues",
+          "Understand DNS resolution and routing paths",
+          "Practice troubleshooting real-world connectivity problems",
         ],
       },
     ],

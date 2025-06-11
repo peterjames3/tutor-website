@@ -19,13 +19,13 @@ const servicesByTab = [
       title: "ACT Prep",
       description: "Achieve college readiness with comprehensive ACT training.",
       labels: ["Live Online"],
-      slug: "test-prep/act-prep",
+      slug: "test-prep/act",
     },
     {
       title: "AP Subject Tutoring",
       description: "Excel in AP courses with targeted support from experts.",
       labels: ["Live Online"],
-      slug: "test-prep/ap-tutoring",
+      slug: "test-prep/ap",
     },
   ],
 
@@ -41,19 +41,19 @@ const servicesByTab = [
       title: "MCAT 515+ Program",
       description: "In-depth science and reasoning prep for medical school.",
       labels: ["Live Online"],
-      slug: "test-prep/mcat-515",
+      slug: "test-prep/mcat",
     },
     {
       title: "LSAT 165+ Coaching",
       description: "Master logic games and reading comprehension.",
       labels: ["Live Online"],
-      slug: "test-prep/lsat-165",
+      slug: "test-prep/lsat",
     },
     {
       title: "GMAT Prep",
       description: "Target your GMAT score for top MBA programs.",
       labels: ["Live Online"],
-      slug: "test-prep/gmat-prep",
+      slug: "test-prep/gmat",
     },
   ],
 

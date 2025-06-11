@@ -6,9 +6,8 @@ export const examAidCategories: ExamCategory = {
     "Google Cloud",
     "Cisco - CCNA/CCNP/CCIE",
     "ITIL",
-    "Prince2 (Foundation & Practitioner)",
-    "PMI-PMP",
-    "PMI-ACP",
+    "Prince2  Practitioner",
+
     "PMP",
     "CAPM",
     "CISA",

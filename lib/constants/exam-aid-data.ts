@@ -309,40 +309,19 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
     benefit: "Validate foundational cloud skills with Microsoft.",
   },
   {
-    name: "(CCNA)",
+    name: "Cisco (CCNA/CCNP/CCIE)",
     slug: "ccna",
     banner: "LiveOnline",
     category: "Networking",
-    duration: "120 minutes",
+    duration: "120 minutes and 8 hours(Lab Exam)",
     description:
       "Core networking certification – IP services, network fundamentals, and automation.",
     benefit: "Launch your networking career with CCNA certification.",
   },
-  {
-    name: " (CCNP)",
-    slug: "ccnp",
-    banner: "LiveOnline",
-    category: "Networking",
-    duration: "120 minutes per exam (2–3 exams)",
-    description:
-      "Advanced networking certification – enterprise infrastructure, routing, switching, and troubleshooting.",
-    benefit:
-      "Advance your networking career and validate enterprise-level skills.",
-  },
-  {
-    name: " (CCIE)",
-    slug: "ccie",
-    banner: "LiveOnline",
-    category: "Networking",
-    duration: "8 hours (Lab Exam) + 120-minute written exam",
-    description:
-      "Expert-level Cisco certification – complex network infrastructure, design, and troubleshooting.",
-    benefit:
-      "Establish expert status in networking with Cisco's most prestigious certification.",
-  },
+
   {
     name: "ITIL 4 Foundation",
-    slug: "itil-foundation",
+    slug: "itil",
     banner: "LiveOnline",
     category: "IT Certification",
     duration: "60 minutes",
@@ -351,20 +330,10 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
     benefit:
       "Enhance service management skills and efficiency in IT operations.",
   },
-  {
-    name: "PRINCE2 Foundation",
-    slug: "prince2-foundation",
-    banner: "LiveOnline",
-    category: "Project Management",
-    duration: "60 minutes",
-    description:
-      "Project management methodology – structured approach for managing projects effectively.",
-    benefit:
-      "Gain foundational knowledge of PRINCE2 project management methodology.",
-  },
+
   {
     name: "PRINCE2 Practitioner",
-    slug: "prince2-practitioner",
+    slug: "prince2practitioner",
     banner: "LiveOnline",
     category: "Project Management",
     duration: "150 minutes",
@@ -386,7 +355,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "(PMI-ACP)",
-    slug: "pmi-acp",
+    slug: "pmiacp",
     banner: "LiveOnline",
     category: "Project Management",
     duration: "180 minutes",
@@ -457,7 +426,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "AWS Certified Solutions Architect – Professional",
-    slug: "aws-solution-architect-professional",
+    slug: "awssolutionarchitectprofessional",
     banner: "LiveOnline",
     category: "Cloud Certification",
     duration: "180 minutes",
@@ -466,8 +435,19 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
     benefit: "Design and manage complex AWS solutions at scale.",
   },
   {
+    name: "CompTIA A+",
+    slug: "comptiaa",
+    banner: "LiveOnline",
+    category: "IT Certification",
+    duration: "90 minutes per exam (Core 1 & Core 2)",
+    description:
+      "Foundational IT certification – covers hardware, software, networking, and troubleshooting.",
+    benefit:
+      "Launch your IT career with skills in device setup, support, and maintenance.",
+  },
+  {
     name: "CompTIA Security+",
-    slug: "comptiasecurityplus",
+    slug: "comptiasecurity",
     banner: "LiveOnline",
     category: "Cybersecurity",
     duration: "90 minutes",
@@ -478,7 +458,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "CompTIA Network+",
-    slug: "comptia-network-plus",
+    slug: "comptianetwork",
     banner: "LiveOnline",
     category: "Networking",
     duration: "90 minutes",
@@ -488,7 +468,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "CompTIA Cybersecurity Analyst (CySA+)",
-    slug: "comptia-cysa-plus",
+    slug: "comptiacysaplus",
     banner: "LiveOnline",
     category: "Cybersecurity",
     duration: "165 minutes",

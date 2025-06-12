@@ -178,7 +178,7 @@ export const EXAM_AID_PROGRAMS: ExamAidProgram[] = [
   },
   {
     name: "Series 7, 3, 6, 63, 65, 66",
-    slug: "series-exams",
+    slug: "seriesexams",
     banner: "LiveOnline",
     category: "Financial Licensing",
     duration: "Varies by exam",

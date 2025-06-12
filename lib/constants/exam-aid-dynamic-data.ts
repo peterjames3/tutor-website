@@ -173,7 +173,7 @@ export const examContent: { [key: string]: Exam } = {
   awscloudpractitioner: {
     title: "AWS Certified Cloud Practitioner",
     description:
-      "Preparation for the AWS Certified Cloud Practitioner exam, covering foundational AWS services and cloud concepts.",
+      "Preparation for the AWS Cloud Practitioner exam: foundational services and cloud concepts.",
     structure: [
       "Cloud Concepts: Benefits, deployment models, and economic aspects",
       "AWS Core Services: Compute, storage, networking, and databases",
@@ -1124,7 +1124,7 @@ export const examContent: { [key: string]: Exam } = {
       },
     ],
   },
-  seriesExams: {
+  seriesexams: {
     title: "Series Exams (Number and Pattern Recognition)",
     description:
       "Prepare for series exams by mastering pattern recognition and logical reasoning skills.",

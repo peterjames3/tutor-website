@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProctoredProcess() {
   return (
@@ -81,10 +82,13 @@ export default function ProctoredProcess() {
               <p className="text-gray-500 mb-4">
                 Securely join your exam session and we&apos;ll handle the rest
               </p>
-              <button className="flex items-center text-primary font-semibold group">
+              <Link
+                href="#supported-exams"
+                className="flex items-center text-primary font-semibold group"
+              >
                 Explore various exams we provide support{" "}
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </section>
             <figcaption className="h-[55%]  w-full">
               <Image

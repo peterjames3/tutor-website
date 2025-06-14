@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import FloatingElements from "../animation/FloatingElements";
 
 export default function SubTestimonialCard() {
@@ -13,7 +13,7 @@ export default function SubTestimonialCard() {
         className="max-w-[840px] mx-auto p-6 rounded-2xl shadow-md bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] border border-gray-200 relative"
       >
         <h3 className="text-xl font-semibold text-gray-800 text-center">
-          Alice K
+          Jamie L.
         </h3>
 
         <div className="flex items-center justify-center mt-2 space-x-2">
@@ -30,15 +30,16 @@ export default function SubTestimonialCard() {
               </svg>
             ))}
           </div>
-          <span className="text-sm text-blue-600">2 month ago</span>
+          <span className="text-sm text-blue-600">2 months ago</span>
         </div>
 
         <p className="mt-4 text-gray-700 text-sm text-center leading-relaxed">
-          &apos;I like the clarity and meticulous nature of the course
-          presentation. I like the fact that the course content and presentation
-          was made using the content of the certification requirements. Great
-          help, reasonably priced compared to the others which I see as rip off.
-          Thanks. I passed my exam today!&apos;
+          &apos;The tutoring sessions were incredibly helpful — they made
+          complex topics easy to understand. I felt supported every step of the
+          way, and my tutor adjusted the pace just for me. The service is
+          professional, affordable, and far better than anything I&apos;ve tried
+          before. Whether you&apos;re in grade school or prepping for your
+          doctorate, I highly recommend this team!&apos;
         </p>
         <FloatingElements />
       </motion.div>

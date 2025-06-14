@@ -70,7 +70,7 @@ export const testPrepCategories: ExamCategory = {
 
 export const academicServices: AcademicService[] = [
   { name: "Assignment Help", href: "/academic/assignment-help" },
-  { name: "Online Tutoring Services", href: "/academic/online-tutoring" },
+  { name: "Online Tutoring Services", href: "/academic/tutoring" },
   { name: "Class Assistant", href: "/academic/class-assistant" },
 ];
 
@@ -93,7 +93,7 @@ export const MenuItems: MenuItem[] = [
   { name: "Home", href: "/" },
   {
     name: "Academic",
-    href: "/academic",
+    href: "#",
     submenu: academicServices,
   },
   {

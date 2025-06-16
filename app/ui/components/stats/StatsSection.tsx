@@ -1,11 +1,9 @@
 import { memo } from "react";
-import { useIntersectionObserver } from "@/app/hooks/useIntersectionObserver";
+import { useIntersectionObserver } from "@/app/(site)/hooks/useIntersectionObserver";
 import StatCard from "./StatCard";
 import { statsData } from "@/lib/statsData";
 
 const StatsSection = memo(() => {
-  
-
   const { isVisible, elementRef } = useIntersectionObserver({
     threshold: 0.3,
     rootMargin: "0px 0px -50px 0px",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, memo } from "react";
-import { useCountUp } from "@/app/hooks/useCountUp";
+import { useCountUp } from "@/app/(site)/hooks/useCountUp";
 import type { StatCard as StatCardType } from "@/lib/defination";
 
 interface StatCardProps {

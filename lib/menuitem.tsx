@@ -69,9 +69,9 @@ export const testPrepCategories: ExamCategory = {
 };
 
 export const academicServices: AcademicService[] = [
-  { name: "Assignment Help", href: "/academic/assignment-help" },
+  // { name: "Assignment Help", href: "/academic/assignment-help" },
   { name: "Online Tutoring Services", href: "/academic/tutoring" },
-  { name: "Class Assistant", href: "/academic/class-assistant" },
+  // { name: "Class Assistant", href: "/academic/class-assistant" },
 ];
 
 // Helper function to convert ExamCategory to SubMenuItem[]

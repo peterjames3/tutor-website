@@ -2,6 +2,7 @@ import Hero from "@/app/ui/components/tutoring/hero-main-section";
 import WhyChooseUs from "@/app/ui/components/tutoring/why-choose-us";
 import SubTestimonialCard from "@/app/ui/components/tutoring/sub-testimonial";
 import TutoringFeatures from "@/app/ui/components/tutoring/tutoring-component";
+import SubjectsSection from "@/app/ui/components/tutoring/some-subject-covered";
 export default function TutoringPage() {
   return (
     <>
@@ -9,6 +10,7 @@ export default function TutoringPage() {
       <WhyChooseUs />
       <SubTestimonialCard />
       <TutoringFeatures />
+      <SubjectsSection />
     </>
   );
 }

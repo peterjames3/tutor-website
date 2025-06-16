@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight, BookOpen, BarChart2, Clock, Award } from "lucide-react";
 
 export default function TutoringFeatures() {
@@ -121,15 +122,17 @@ export default function TutoringFeatures() {
             </motion.div>
 
             {/* CTA Button */}
-            <motion.button
-              variants={item}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold rounded-lg flex items-center justify-center gap-2 shadow-lg"
-            >
-              Begin Your Journey
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
+            <Link href="#hero">
+              <motion.button
+                variants={item}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full cursor-pointer py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold rounded-lg flex items-center justify-center gap-2 shadow-lg"
+              >
+                Begin Your Journey
+                <ArrowRight className="w-5 h-5" />
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* Right Column */}

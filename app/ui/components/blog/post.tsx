@@ -1,6 +1,7 @@
 import { SanityDocument } from "@sanity/client";
 //import { client } from "@/sanity/lib/client";
 import Image from "next/image";
+import { PortableTextBlock } from "@portabletext/types";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 import SocialShare from "./social-share";
@@ -17,13 +18,52 @@ type Category = {
   title: string;
   description: string;
 };
+// Define types for table structure
+interface TableCell extends PortableTextBlock {
+  _type: "tableCell";
+}
+
+interface TableRow {
+  _type: "tableRow";
+  cells: TableCell[];
+}
+
+interface TableValue {
+  _type: "table";
+  rows: TableRow[];
+}
+
+// Define props for table component
+interface TableComponentProps {
+  value: TableValue;
+}
+
+const TableComponent = ({ value }: TableComponentProps) => {
+  return (
+    <div className="overflow-x-auto mb-6">
+      <table className="min-w-full border-collapse">
+        <tbody>
+          {value.rows.map((row: TableRow, i: number) => (
+            <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : ""}>
+              {row.cells.map((cell: TableCell, j: number) => (
+                <td key={j} className="border p-3">
+                  <PortableText value={cell} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default function Post({ post }: { post: SanityDocument }) {
   if (!post) return <p>Loading ...</p>;
 
   return (
     <div className="w-full mx-auto max-w-full md:max-w-[840px] xl:max-w-[1440px] px-4 md:px-0 mt-[10rem]">
-      <ul className="flex gap-[0.2rem] p-text mb-3 sm:ml-[13px] ">
+      <ul className="flex gap-[0.5rem] p-text mb-3 sm:ml-[13px] ">
         <li className="hover:text-primary font-semibold transition-color delay-300">
           <Link href="/">Home</Link>
         </li>
@@ -49,8 +89,7 @@ export default function Post({ post }: { post: SanityDocument }) {
             <nav className=" ">
               <Link
                 href="/blog"
-                className=" no-underline font-semibold w-1/3 text-[0.79] sm:text-[0.9rem] text-center text-textColor bg-primary  px-6 py-3  transition-all delay-300 hover:bg-foreground hover:text-background"
-              >
+                className=" btn ">
                 <span className="mr-[0.2rem]"> &larr;</span>
                 Go Back
               </Link>
@@ -100,11 +139,62 @@ export default function Post({ post }: { post: SanityDocument }) {
                 components={{
                   block: {
                     normal: ({ children }) => (
-                      <p className="p- space-y-2">{children}</p>
+                      <p className="text-[1.1rem] leading-7 mb-4">{children}</p>
                     ),
                     h2: ({ children }) => (
-                      <h2 className="text-xl font-bold">{children}</h2>
+                      <h2 className="text-2xl font-bold mb-6 mt-8">
+                        {children}
+                      </h2>
                     ),
+                    h3: ({ children }) => (
+                      <h3 className="text-xl font-semibold mb-4 mt-6">
+                        {children}
+                      </h3>
+                    ),
+                  },
+                  list: {
+                    bullet: ({ children }) => (
+                      <ul className="list-disc pl-6 space-y-2 mb-4">
+                        {children}
+                      </ul>
+                    ),
+                    number: ({ children }) => (
+                      <ol className="list-decimal pl-6 space-y-2 mb-4">
+                        {children}
+                      </ol>
+                    ),
+                  },
+                  listItem: {
+                    bullet: ({ children }) => (
+                      <li className="text-[1.1rem] leading-7">{children}</li>
+                    ),
+                    number: ({ children }) => (
+                      <li className="text-[1.1rem] leading-7">{children}</li>
+                    ),
+                  },
+                  marks: {
+                    link: ({ value, children }) => {
+                      const url = (value as { href?: string })?.href || "";
+                      return (
+                        <a
+                          href={url}
+                          className="text-blue-600 hover:underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {children}
+                        </a>
+                      );
+                    },
+                    strong: ({ children }) => (
+                      <strong className="font-semibold">{children}</strong>
+                    ),
+                    em: ({ children }) => (
+                      <em className="italic">{children}</em>
+                    ),
+                  },
+                  types: {
+                    table: TableComponent,
                   },
                 }}
               />

@@ -17,19 +17,29 @@ export const postsQuery = groq`
  `;
 
 // Get a single post by its slug
-export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{ 
+export const postQuery = groq`
+  *[_type == "post" && slug.current == $slug][0] {
     _id,
-    _createdAt, 
+    _createdAt,
     title,
-   
-    mainImage, 
+    mainImage,
     "imageURL": mainImage.asset->url,
-   "authorName": author->name,
-   "categories": categories[]->{title, description},
-  
-    body
-  }`;
-
+    "authorName": author->name,
+    "categories": categories[]->{title, description},
+    body, // Full body content for PortableText rendering
+    // Extract headings for table of contents
+    "headings": body[][
+      _type == "block" &&
+      (style == "h2" || style == "h3") // Querying for h2 and h3
+    ] {
+      _key,
+      style,
+      children[] {
+        text
+      }
+    }
+  }
+`;
 // Get all post slugs
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)]{
   "slug": slug.current

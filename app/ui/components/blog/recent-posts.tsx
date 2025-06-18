@@ -15,7 +15,7 @@ export default async function RecentPosts() {
   }
   return (
     <section className=" mt-2 space-y-8">
-      {latestPosts.map((latestPost) => (
+      {latestPosts.slice(5).map((latestPost) => (
         <Link
           href={latestPost.slug.current || "#"}
           key={latestPost._id}

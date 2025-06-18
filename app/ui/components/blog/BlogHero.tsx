@@ -18,8 +18,8 @@ export default function BlogHero() {
           Section
         </h2>
         <p className="text-white font-semibold">
-          Get latest news, trend and technological insights about solar and
-          security{" "}
+          Get the latest tips, study strategies, and expert insights on test
+          prep, tutoring, and exam success.
         </p>
         <ul className="flex gap-[0.2rem] p-text">
           <li className="text-primary">

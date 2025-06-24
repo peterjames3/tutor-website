@@ -1,14 +1,15 @@
-'use client';
-import React from "react";
-import { icon } from "lucide-react";
+"use client";
 
 interface CardProps {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode; // was `string`, changed to `React.ReactNode` for JSX icon support
   selected: boolean;
   onClick: () => void;
   tags?: string[];
+  variant?: string; // main color (icon)
+  variantBg?: string; // light background color
+  variantText?: string; // tag text color
 }
 
 const Card: React.FC<CardProps> = ({
@@ -18,36 +19,51 @@ const Card: React.FC<CardProps> = ({
   selected,
   onClick,
   tags = [],
+  variant = "#ccc",
+  variantBg = "#f0f0f0",
+  variantText = "#000",
 }) => {
   return (
     <div
       className={`border rounded-xl p-6 cursor-pointer transition-all ${
         selected
-          ? "border-blue-600 bg-blue-50 shadow-md ring-2 ring-blue-200"
-          : "border-gray-200 hover:border-gray-300"
+          ? "border-accent2 bg-accent shadow-md ring-2 ring-accent2"
+          : "border-gray-200 hover:border-gray-300 bg-background"
       }`}
       onClick={onClick}
     >
-      <div className="flex items-start mb-4">
-        <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
-        <div className="ml-4">
-          <h3 className="font-bold text-lg text-gray-800">{title}</h3>
-          <p className="text-gray-600 mt-1">{description}</p>
+      <section className="flex items-start mb-4">
+        {/* Icon Wrapper with dynamic colors */}
+        <div
+          className=" rounded-sm w-16 h-16 flex items-center justify-center"
+          style={{ backgroundColor: variantBg, color: variant }}
+        >
+          <nav className="text-3xl">{icon}</nav>
         </div>
-      </div>
 
-      {tags.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      )}
+        {/* Text Content */}
+        <article className="ml-4">
+          <h3 className="title font-semibold text-primary">{title}</h3>
+          <p className="p-text mt-1">{description}</p>
+
+          {tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-5 font-medium">
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 rounded-full label-text font-medium"
+                  style={{
+                    backgroundColor: variantBg,
+                    color: variantText,
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </article>
+      </section>
     </div>
   );
 };

@@ -7,7 +7,7 @@ export type BaseStudentFormData = {
   name: string;
   email: string;
   phone_number: string;
-  level: "High School" | "Undergraduate" | "Postgraduate";
+  level: "High School" | "Undergraduate" | "Graduate" | "Professional";
   assistant?: string;
   status?: "Pending" | "In Progress" | "Completed";
 };
@@ -30,7 +30,12 @@ export type EndToEndSupportFormData = BaseStudentFormData & {
   support_type: "End-to-End Exam Support";
 };
 
-export const studentLevelEnum = z.enum(["High School", "A-Level", "College"]);
+export const studentLevelEnum = z.enum([
+  "High School",
+  "Undergraduate",
+  "Graduate",
+  "Professional",
+]);
 export const studentStatusEnum = z.enum([
   "Pending",
   "In Progress",

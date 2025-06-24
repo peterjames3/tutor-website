@@ -6,9 +6,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-blue-600 text-white hover:bg-blue-700",
-        outline: "border border-blue-600 text-blue-600 hover:bg-blue-50",
-        ghost: "hover:bg-gray-100",
+        default:
+          "bg-button-login-default text-white hover:bg-button-login-hover hover:cursor-pointer transition-all delay-300",
+        outline:
+          "border  border-button-login-default text-primary hover:cursor-pointer hover:text-background hover:bg-button-login-hover transition-all delay-300",
+        ghost: "hover:bg-button-login-disabled",
       },
       size: {
         default: "h-11 px-6 py-2",

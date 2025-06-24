@@ -1,14 +1,14 @@
 "use client";
-// import { useForm } from "react-hook-form";
-// import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { BaseFormSchema } from "@/lib/zod-schema";
 import { useFormContext } from "@/context/FormContext";
 import Button from "./button";
 import { useForm as useReactHookForm } from "react-hook-form";
-//import { zodResolver } from "@hookform/resolvers/zod";
+
 import { zodResolver } from "@hookform/resolvers/zod";
+import { MessageSquare, MoveLeft, MoveRight } from "lucide-react";
 import Input from "./input";
-import { Label } from "./label";
+
 import Select from "./select";
 
 export default function PersonalInfoStep() {
@@ -24,7 +24,7 @@ export default function PersonalInfoStep() {
     defaultValues: state.data,
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: z.infer<typeof BaseFormSchema>) => {
     dispatch({ type: "NEXT_STEP", payload: data });
   };
 
@@ -50,7 +50,11 @@ export default function PersonalInfoStep() {
               {...register("name")}
               label="Full Name"
               placeholder="John Doe"
-              error={errors.name?.message}
+              error={
+                typeof errors.name?.message === "string"
+                  ? errors.name.message
+                  : undefined
+              }
             />
           </div>
 
@@ -61,7 +65,11 @@ export default function PersonalInfoStep() {
               type="email"
               label="Email"
               placeholder="john@example.com"
-              error={errors.email?.message}
+              error={
+                typeof errors.name?.message === "string"
+                  ? errors.name.message
+                  : undefined
+              }
             />
           </div>
 
@@ -71,7 +79,11 @@ export default function PersonalInfoStep() {
               {...register("phone_number")}
               label="Phone Number"
               placeholder="+1 (555) 123-4567"
-              error={errors.phone_number?.message}
+              error={
+                typeof errors.name?.message === "string"
+                  ? errors.name.message
+                  : undefined
+              }
             />
           </div>
 
@@ -80,39 +92,59 @@ export default function PersonalInfoStep() {
             <Select
               {...register("level")}
               label="Education Level"
-              error={errors.level?.message}
+              error={
+                typeof errors.level?.message === "string"
+                  ? errors.level.message
+                  : undefined
+              }
               options={[
                 { value: "", label: "Select your education level" },
-                { value: "high-school", label: "High School" },
-                { value: "undergraduate", label: "Undergraduate" },
-                { value: "graduate", label: "Graduate" },
-                { value: "professional", label: "Professional" },
+                { value: "High School", label: "High School" },
+                { value: "Undergraduate", label: "Undergraduate" },
+                { value: "Graduate", label: "Graduate" },
+                { value: "Professional", label: "Professional" },
               ]}
             />
           </div>
         </div>
       </div>
-      
+      <article className="max-w-[540px] my-8 p-8 rounded-md shadow-md shadow-tertiary flex items-center gap-10 bg-tertiary-30">
+        <div>
+          <MessageSquare size={50} className="text-2xl text-active-link" />
+        </div>
+        <div className="text-primary p-text">
+          <p>
+            We like to start with a conversation about your goals and needs. The
+            more we know about you, the more we can help.
+          </p>
+        </div>
+      </article>
 
       <div className="flex justify-between">
         <Button
           type="button"
+          className="border border-active-link text primary"
           variant="outline"
           onClick={() => dispatch({ type: "PREV_STEP" })}
         >
+          <MoveLeft className="mr-2" />
           Back
         </Button>
-        <Button type="submit">Continue →</Button>
+        <Button variant="default" type="submit">
+          Continue <MoveRight className="ml-2" />
+        </Button>
       </div>
     </form>
   );
 }
+import type { Resolver } from "react-hook-form";
+
 function useForm({
   resolver,
   defaultValues,
 }: {
-  resolver: any;
-  defaultValues: any;
+  resolver: Resolver<z.infer<typeof BaseFormSchema>>;
+  defaultValues: z.infer<typeof BaseFormSchema>;
 }) {
   return useReactHookForm({
     resolver,

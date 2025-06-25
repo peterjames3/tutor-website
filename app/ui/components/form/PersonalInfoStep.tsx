@@ -66,8 +66,8 @@ export default function PersonalInfoStep() {
               label="Email"
               placeholder="john@example.com"
               error={
-                typeof errors.name?.message === "string"
-                  ? errors.name.message
+                typeof errors.email?.message === "string"
+                  ? errors.email.message
                   : undefined
               }
             />
@@ -80,8 +80,8 @@ export default function PersonalInfoStep() {
               label="Phone Number"
               placeholder="+1 (555) 123-4567"
               error={
-                typeof errors.name?.message === "string"
-                  ? errors.name.message
+                typeof errors.phone_number?.message === "string"
+                  ? errors.phone_number.message
                   : undefined
               }
             />

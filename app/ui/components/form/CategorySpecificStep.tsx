@@ -1,15 +1,16 @@
 "use client";
-// import { useForm } from "react-hook-form";
-// import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { useFormContext } from "@/context/FormContext";
+import { MessageSquare, MoveLeft, MoveRight } from "lucide-react";
 import {
   examPrep,
   tutoringStudents,
   endToEndSupportStudents,
 } from "@/src/db/schema";
-import  Button  from "./button";
-// import { Input } from "./input";
-// import { Label } from "./label";
+import Button from "./button";
+import Input from "./input";
 
 export default function CategorySpecificStep() {
   const { state, dispatch } = useFormContext();

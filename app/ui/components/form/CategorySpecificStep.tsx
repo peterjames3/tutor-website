@@ -3,6 +3,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useFormContext } from "@/context/FormContext";
+import { useEffect } from "react";
 import Input from "./input";
 import {
   MessageSquare,
@@ -11,9 +12,9 @@ import {
   BookOpenCheck,
 } from "lucide-react";
 import {
-  ExamPrepFormSchema,
+  // ExamPrepFormSchema,
   TutoringFormSchema,
-  EndToEndSupportFormSchema,
+  // EndToEndSupportFormSchema,
 } from "@/lib/zod-schema";
 import Button from "./button";
 
@@ -21,20 +22,20 @@ export default function CategorySpecificStep() {
   const { state, dispatch } = useFormContext();
   const supportType = state.data.supportType;
 
-  let schema: z.ZodTypeAny;
-  switch (supportType) {
-    case "Exam Prep":
-      schema = ExamPrepFormSchema;
-      break;
-    case "Tutoring":
-      schema = TutoringFormSchema;
-      break;
-    case "Exam Aid":
-      schema = EndToEndSupportFormSchema;
-      break;
-    default:
-      schema = ExamPrepFormSchema;
-  }
+  // let schema: z.ZodTypeAny = TutoringFormSchema
+  // switch (supportType) {
+  //   case "Exam Prep":
+  //     schema = ExamPrepFormSchema;
+  //     break;
+  //   case "Tutoring":
+  //     schema = TutoringFormSchema;
+  //     break;
+  //   case "Exam Aid":
+  //     schema = EndToEndSupportFormSchema;
+  //     break;
+  //   default:
+  //     schema = ExamPrepFormSchema;
+  // }
 
   const message =
     supportType === "Exam Prep"
@@ -50,16 +51,22 @@ export default function CategorySpecificStep() {
     register,
     handleSubmit,
     formState: { errors },
+    setError,
   } = useForm({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(TutoringFormSchema),
     defaultValues: state.data,
+    mode: "onChange",
   });
+  // Debug: Log current step and errors
+  useEffect(() => {
+    console.log("Current step:", state.step);
+    console.log("Form errors:", errors);
+  }, [state.step, errors]);
 
   const onSubmit = (
-    data:
-      | z.infer<typeof ExamPrepFormSchema>
-      | z.infer<typeof TutoringFormSchema>
-      | z.infer<typeof EndToEndSupportFormSchema>
+    data: // | z.infer<typeof ExamPrepFormSchema>
+    z.infer<typeof TutoringFormSchema>
+    // | z.infer<typeof EndToEndSupportFormSchema>
   ) => {
     dispatch({ type: "NEXT_STEP", payload: data });
   };

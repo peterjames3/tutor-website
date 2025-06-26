@@ -57,7 +57,15 @@ export const BaseFormSchema = z.object({
 export const ExamPrepFormSchema = BaseFormSchema.extend({
   exam: z.string().min(1, "Exam is required"),
   subject: z.string().min(1, "Subject is required"),
-  exam_date: z.string().min(1, "Exam date is required"),
+  exam_date: z.string().refine(
+    (value) => {
+      const date = new Date(value);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return date >= today;
+    },
+    { message: "Date must be in the future" }
+  ),
   assistant: z.string(),
   status: studentStatusEnum,
 });
@@ -65,7 +73,15 @@ export const ExamPrepFormSchema = BaseFormSchema.extend({
 export const TutoringFormSchema = BaseFormSchema.extend({
   subject_help: z.string().min(1, "Subject help is required"),
   subject: z.string().min(1, "Subject is required"),
-  exam_date: z.string().min(1, "Exam date is required"),
+  exam_date: z.string().refine(
+    (value) => {
+      const date = new Date(value);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return date >= today;
+    },
+    { message: "Date must be in the future" }
+  ),
   support_type: supportTypeEnum,
   assistant: z.string(),
   status: studentStatusEnum,
@@ -74,7 +90,15 @@ export const TutoringFormSchema = BaseFormSchema.extend({
 export const EndToEndSupportFormSchema = BaseFormSchema.extend({
   subject: z.string().min(1, "Subject is required"),
   exam: z.string().min(1, "Exam is required"),
-  exam_date: z.string().min(1, "Exam date is required"),
+  exam_date: z.string().refine(
+    (value) => {
+      const date = new Date(value);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return date >= today;
+    },
+    { message: "Date must be in the future" }
+  ),
   support_type: supportTypeEnum,
   assistant: z.string(),
   status: studentStatusEnum,

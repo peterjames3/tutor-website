@@ -1,7 +1,7 @@
 "use client";
 import { useFormContext } from "@/context/FormContext";
 import { submitFormData } from "@/lib/action";
-import  Button  from "./button";
+import Button from "./button";
 
 export default function ConfirmationStep() {
   const { state, dispatch } = useFormContext();

@@ -31,12 +31,12 @@ export default function PersonalInfoStep() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-8 bg-background py-4 px-6"
+      className="space-y-8 bg-background py-4 px-6 rounded-sm"
     >
       <div>
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">
+        <h2 className="text-3xl font-bold text-gray-800 mb-2">
           Personal Information
-        </h1>
+        </h2>
         <p className="text-gray-600">
           Please provide your basic contact information
         </p>

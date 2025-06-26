@@ -31,6 +31,7 @@ const FormContent = () => {
       {state.step === 0 && <SupportTypeStep />}
       {state.step === 1 && <PersonalInfoStep />}
       {state.step === 2 && <CategorySpecificStep />}
+     
       {state.step === 3 && <ConfirmationStep />}
     </>
   );

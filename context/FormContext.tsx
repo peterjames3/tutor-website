@@ -1,6 +1,6 @@
 "use client";
 import { createContext, useContext, useReducer, useEffect } from "react";
-import { FormData } from "@/lib/schemas";
+import { FormData } from "@/lib/zod-schema";
 
 // Define state structure
 type FormState = {

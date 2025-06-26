@@ -12,30 +12,30 @@ import {
   BookOpenCheck,
 } from "lucide-react";
 import {
-  // ExamPrepFormSchema,
+  ExamPrepFormSchema,
   TutoringFormSchema,
-  // EndToEndSupportFormSchema,
+  EndToEndSupportFormSchema,
 } from "@/lib/zod-schema";
 import Button from "./button";
 
 export default function CategorySpecificStep() {
   const { state, dispatch } = useFormContext();
-  const supportType = state.data.supportType;
+  const supportType = state.data.support_type;
 
-  // let schema: z.ZodTypeAny = TutoringFormSchema
-  // switch (supportType) {
-  //   case "Exam Prep":
-  //     schema = ExamPrepFormSchema;
-  //     break;
-  //   case "Tutoring":
-  //     schema = TutoringFormSchema;
-  //     break;
-  //   case "Exam Aid":
-  //     schema = EndToEndSupportFormSchema;
-  //     break;
-  //   default:
-  //     schema = ExamPrepFormSchema;
-  // }
+  let schema: z.ZodTypeAny;
+  switch (supportType) {
+    case "Exam Prep":
+      schema = ExamPrepFormSchema;
+      break;
+    case "Tutoring":
+      schema = TutoringFormSchema;
+      break;
+    case "End to End ":
+      schema = EndToEndSupportFormSchema;
+      break;
+    default:
+      schema = ExamPrepFormSchema;
+  }
 
   const message =
     supportType === "Exam Prep"
@@ -51,24 +51,32 @@ export default function CategorySpecificStep() {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
   } = useForm({
-    resolver: zodResolver(TutoringFormSchema),
+    resolver: zodResolver(schema),
     defaultValues: state.data,
     mode: "onChange",
   });
-  // Debug: Log current step and errors
+
   useEffect(() => {
     console.log("Current step:", state.step);
     console.log("Form errors:", errors);
   }, [state.step, errors]);
 
   const onSubmit = (
-    data: // | z.infer<typeof ExamPrepFormSchema>
-    z.infer<typeof TutoringFormSchema>
-    // | z.infer<typeof EndToEndSupportFormSchema>
+    data:
+      | z.infer<typeof ExamPrepFormSchema>
+      | z.infer<typeof TutoringFormSchema>
+      | z.infer<typeof EndToEndSupportFormSchema>
   ) => {
-    dispatch({ type: "NEXT_STEP", payload: data });
+    dispatch({
+      type: "NEXT_STEP",
+      payload: {
+        ...data,
+        assistant: "Liam Martin",
+        status: "Pending",
+        support_type: supportType,
+      },
+    });
   };
 
   return (
@@ -82,69 +90,85 @@ export default function CategorySpecificStep() {
           Category-Specific Details
         </h2>
         <p className="text-gray-600">
-          Please provide thes specific details for your selected support type
+          Please provide the specific details for your selected support type
         </p>
       </div>
-      <div className=" font-medium  text-primary flex items-center  gap-4 px-4 py-3 rounded-sm bg-accent2">
+
+      <div className="font-medium text-primary flex items-center gap-4 px-4 py-3 rounded-sm bg-accent2">
         <BookOpenCheck size={32} />
-        <p> {supportType} Service</p>
+        <p>{supportType} Service</p>
       </div>
 
       <div className="bg-gray-50 rounded-xl p-6">
-        {/* Dynamic form fields based on support type */}
         <div className="grid grid-cols-1 gap-6">
-          {/* Exam Field */}
           {(supportType === "Exam Prep" || supportType === "Exam Aid") && (
-            <div>
-              <Input
-                {...register("exam")}
-                label="Exam Name"
-                placeholder="e.g., SAT, GRE, MCAT"
-                error={
-                  typeof errors.exam?.message === "string"
-                    ? errors.exam.message
-                    : undefined
-                }
-              />
-            </div>
-          )}
-
-          {/* Subject Field */}
-          <div>
             <Input
-              {...register("subject")}
-              type="subject"
-              label="Subject"
-              placeholder="e.g., AP Math, SAT Science..."
+              {...register("exam")}
+              label="Exam Name"
+              placeholder="e.g., SAT, GRE, MCAT"
               error={
-                typeof errors.subject?.message === "string"
-                  ? errors.subject.message
+                typeof errors.exam?.message === "string"
+                  ? errors.exam.message
                   : undefined
               }
             />
-          </div>
-          {/* Exam Date Field */}
-          <div>
-            <div>
+          )}
+
+          <Input
+            {...register("subject")}
+            type="text"
+            label="Subject"
+            placeholder="e.g., AP Math, SAT Science..."
+            error={
+              typeof errors.subject?.message === "string"
+                ? errors.subject.message
+                : undefined
+            }
+          />
+
+          {(supportType === "Exam Prep" || supportType === "Exam Aid") && (
+            <Input
+              {...register("exam_date")}
+              label={label}
+              type="date"
+              error={
+                typeof errors.exam_date?.message === "string"
+                  ? errors.exam_date.message
+                  : undefined
+              }
+            />
+          )}
+
+          {supportType === "Tutoring" && (
+            <>
               <Input
-                {...register("exam_date")}
-                label={label}
-                type="date"
+                {...register("subject_help")}
+                label="Topic or Focus Area"
+                placeholder="e.g., Algebra, Essay Writing..."
                 error={
-                  typeof errors.exam_date?.message === "string"
-                    ? errors.exam_date.message
+                  typeof errors.subject_help?.message === "string"
+                    ? errors.subject_help.message
                     : undefined
                 }
               />
-            </div>
-            <div className="label-text mt-1">{message}</div>
-          </div>
+              <Input
+                {...register("start_date")}
+                label={label}
+                type="date"
+                error={
+                  typeof errors.start_date?.message === "string"
+                    ? errors.start_date.message
+                    : undefined
+                }
+              />
+            </>
+          )}
         </div>
+        <div className="label-text mt-4">{message}</div>
       </div>
+
       <article className="max-w-[540px] my-8 p-8 rounded-md shadow-md shadow-tertiary flex items-center gap-10 bg-tertiary-30">
-        <div>
-          <MessageSquare size={50} className="text-2xl text-active-link" />
-        </div>
+        <MessageSquare size={50} className="text-2xl text-active-link" />
         <div className="text-primary p-text">
           <p>
             We look at 100+ variables to create a personalized learning plan

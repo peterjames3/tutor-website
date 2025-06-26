@@ -8,7 +8,7 @@ const phone = varchar("phone", { length: 50 }).notNull();
 const level = varchar("level", { length: 50 }).notNull();
 const assistant = varchar("assistant", { length: 255 }).default("Liam James");
 const status = text("status").default("Pending");
-const supportType = text("support_type").notNull();
+const support_type = text("support_type").notNull();
 
 export const baseSchema = {
   name,
@@ -38,7 +38,7 @@ export const tutoringStudents = pgTable("tutoring_students", {
   exam_date: text("exam_date").notNull(),
   assistant,
   status,
-  support_type: supportType,
+  support_type: support_type,
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true })
     .notNull()
@@ -53,10 +53,9 @@ export const endToEndSupportStudents = pgTable("end_to_end_support_students", {
   exam_date: text("start_date").notNull(),
   assistant,
   status,
-  support_type: supportType,
+  support_type: support_type,
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true })
     .notNull()
     .$onUpdate(() => new Date()),
 });
-

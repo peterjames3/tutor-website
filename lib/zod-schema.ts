@@ -10,6 +10,7 @@ export type BaseStudentFormData = {
   level: "High School" | "Undergraduate" | "Graduate" | "Professional";
   assistant?: string;
   status?: "Pending" | "In Progress" | "Completed";
+  support_type: "Exam Prep" | "Tutoring" | "End to End Exam Support";
 };
 
 export type ExamPrepFormData = BaseStudentFormData & {
@@ -21,13 +22,11 @@ export type TutoringFormData = BaseStudentFormData & {
   subject_help: string;
   subject: string;
   exam_date: string;
-  support_type: "Tutoring";
 };
 export type EndToEndSupportFormData = BaseStudentFormData & {
   subject: string;
   exam: string;
   exam_date: string;
-  support_type: "End-to-End Exam Support";
 };
 
 export const studentLevelEnum = z.enum([
@@ -43,17 +42,20 @@ export const studentStatusEnum = z.enum([
 ]);
 export const supportTypeEnum = z.enum([
   "Tutoring",
-  "exam-prep",
-  "End-to-End Exam Support",
+  "Exam Prep",
+  "End to End Exam Support",
 ]);
 
+export type FormData =
+  | ExamPrepFormData
+  | TutoringFormData
+  | EndToEndSupportFormData;
 export const BaseFormSchema = z.object({
   name: z.string().min(3, "Name is required"),
   email: z.string().email({ message: "Invalid email address format" }),
   phone_number: z.string().min(1, "Phone number is required"),
   level: studentLevelEnum,
 });
-
 export const ExamPrepFormSchema = BaseFormSchema.extend({
   exam: z.string().min(1, "Exam is required"),
   subject: z.string().min(1, "Subject is required"),
@@ -66,8 +68,9 @@ export const ExamPrepFormSchema = BaseFormSchema.extend({
     },
     { message: "Date must be in the future" }
   ),
-  assistant: z.string(),
-  status: studentStatusEnum,
+  assistant: z.string().default("Liam Martin"),
+  status: studentStatusEnum.default("Pending"),
+  support_type: supportTypeEnum.default("Exam Prep"),
 });
 
 export const TutoringFormSchema = BaseFormSchema.extend({
@@ -82,9 +85,9 @@ export const TutoringFormSchema = BaseFormSchema.extend({
     },
     { message: "Date must be in the future" }
   ),
-  support_type: supportTypeEnum,
-  assistant: z.string(),
-  status: studentStatusEnum,
+  support_type: supportTypeEnum.default("Tutoring"),
+  assistant: z.string().default("Liam Martin"),
+  status: studentStatusEnum.default("Pending"),
 });
 
 export const EndToEndSupportFormSchema = BaseFormSchema.extend({
@@ -99,7 +102,7 @@ export const EndToEndSupportFormSchema = BaseFormSchema.extend({
     },
     { message: "Date must be in the future" }
   ),
-  support_type: supportTypeEnum,
-  assistant: z.string(),
-  status: studentStatusEnum,
+  support_type: supportTypeEnum.default("End to End Exam Support"),
+  assistant: z.string().default("Liam Martin"),
+  status: studentStatusEnum.default("Pending"),
 });

@@ -1,27 +1,31 @@
 "use client";
 import { useFormContext } from "@/context/FormContext";
-// import Link from 'next/link';
 import Card from "./card";
 import Button from "./button";
 import { GraduationCap, PencilRuler, Headset } from "lucide-react";
 
+// Define the correct support types that match your Zod enum
+type SupportType = "Tutoring" | "Exam Prep" | "End to End Exam Support";
+
 export default function SupportTypeStep() {
   const { state, dispatch } = useFormContext();
+
+  // Updated support types to match Zod enum values
   const supportTypes = [
     {
       id: "exam-prep",
-      title: "Exam Prep",
+      title: "Exam Prep" as SupportType,
       description:
         "Comprehensive preparation for standardized tests like SAT, ACT, GRE, and more",
       icon: <GraduationCap />,
       tags: ["MAP", "ACT", "AP Exams", "DAT", "CISM"],
       variantBg: "#A9D2F9",
-      variant: "#OC61E9",
-      variantText: "#OC61E9",
+      variant: "#0C61E9", // Fixed typo: #OC61E9 → #0C61E9
+      variantText: "#0C61E9",
     },
     {
       id: "tutoring",
-      title: "Tutoring",
+      title: "Tutoring" as SupportType,
       description:
         "One-on-one tutoring for specific subjects and academic support",
       icon: <PencilRuler />,
@@ -31,8 +35,8 @@ export default function SupportTypeStep() {
       variantText: "#176526",
     },
     {
-      id: "exam-aid",
-      title: "Exam Aid",
+      id: "end-to-end-exam-support",
+      title: "End to End Exam Support" as SupportType, // Matches Zod enum
       description:
         "Your One-Stop Solution for Online Proctored Exam Assistance",
       icon: <Headset />,
@@ -43,23 +47,23 @@ export default function SupportTypeStep() {
     },
   ];
 
-  const handleSelect = (type: string) => {
+  const handleSelect = (type: SupportType) => {
     dispatch({
       type: "SET_DATA",
-      payload: { supportType: type },
+      payload: { support_type: type },
     });
   };
 
   const handleNext = () => {
-    if (state.data.supportType) {
+    if (state.data.support_type) {
       dispatch({ type: "NEXT_STEP", payload: {} });
+      console.log(state.data.support_type);
     }
   };
 
   return (
     <div className="space-y-8">
-      <div className=" mb-10">
-        
+      <div className="mb-10">
         <h2 className="headline font-bold text-primary mb-3">
           Choose Your Support Type
         </h2>
@@ -79,7 +83,7 @@ export default function SupportTypeStep() {
             variantBg={type.variantBg}
             variantText={type.variantText}
             tags={type.tags}
-            selected={state.data.supportType === type.title}
+            selected={state.data.support_type === type.title}
             onClick={() => handleSelect(type.title)}
           />
         ))}
@@ -90,7 +94,7 @@ export default function SupportTypeStep() {
           type="button"
           className="btn"
           onClick={handleNext}
-          disabled={!state.data.supportType}
+          disabled={!state.data.support_type}
         >
           Continue →
         </Button>

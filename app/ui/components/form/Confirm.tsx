@@ -1,13 +1,14 @@
 "use client";
+
 import { useFormContext } from "@/context/FormContext";
-import { submitFormData } from "@/lib/action";
+import { submitForm } from "@/lib/action";
 import Button from "./button";
-import { useEffect } from "react";
 import {
   ExamPrepFormData,
   TutoringFormData,
   EndToEndSupportFormData,
 } from "@/lib/zod-schema";
+import { useEffect } from "react";
 
 export default function ConfirmationStep() {
   const { state, dispatch } = useFormContext();
@@ -25,18 +26,23 @@ export default function ConfirmationStep() {
         status: "Pending",
       };
 
-      await submitFormData(formData);
-      dispatch({ type: "RESET" });
-      localStorage.removeItem("studentFormData");
-      window.location.href = "/success";
+      const res = await submitForm(formData);
+
+      if (res?.success) {
+        dispatch({ type: "SUBMIT" }); // trigger redirect to success page
+        localStorage.removeItem("studentFormData");
+      } else {
+        alert("Submission failed: " + res?.error || "Please try again.");
+      }
     } catch (error) {
       console.error("Submission error:", error);
+      alert("Something went wrong. Please try again.");
     }
   };
 
-  // Type-safe data access functions
-  const getTutoringData = () => state.data as TutoringFormData;
+  // Narrowed data helpers
   const getExamPrepData = () => state.data as ExamPrepFormData;
+  const getTutoringData = () => state.data as TutoringFormData;
   const getEndToEndData = () => state.data as EndToEndSupportFormData;
 
   return (
@@ -50,16 +56,18 @@ export default function ConfirmationStep() {
         </p>
       </div>
 
+      {/* Support Type */}
       <div className="p-6 rounded-sm bg-cardBg space-y-2">
         <h3 className="title">Support Type</h3>
         <p className="label-text">Your selected support category</p>
         <p className="font-semibold">{supportType}</p>
       </div>
 
+      {/* Personal Info */}
       <div className="p-6 rounded-sm bg-cardBg space-y-2">
         <h3 className="title">Personal Information</h3>
         <p className="label-text">Your contact details</p>
-        <div className="grid grid-cols-2 grid-rows-2 gap-5">
+        <div className="grid grid-cols-2 gap-5">
           <div>
             <h4 className="p-text">Full Name</h4>
             <p className="label-text">{state.data.name}</p>
@@ -79,6 +87,7 @@ export default function ConfirmationStep() {
         </div>
       </div>
 
+      {/* Service Details */}
       <div className="p-6 rounded-sm bg-cardBg space-y-2">
         <h3 className="title">Service Details</h3>
         <p className="label-text">Your specific requirements</p>
@@ -96,8 +105,7 @@ export default function ConfirmationStep() {
               <div>
                 <h4 className="p-text">Exam Date</h4>
                 <p className="label-text">
-                  {getExamPrepData().exam_date &&
-                    new Date(getExamPrepData().exam_date).toLocaleDateString()}
+                  {new Date(getExamPrepData().exam_date).toLocaleDateString()}
                 </p>
               </div>
             </>
@@ -116,8 +124,7 @@ export default function ConfirmationStep() {
               <div>
                 <h4 className="p-text">Start Date</h4>
                 <p className="label-text">
-                  {getTutoringData().exam_date &&
-                    new Date(getTutoringData().exam_date).toLocaleDateString()}
+                  {new Date(getTutoringData().exam_date).toLocaleDateString()}
                 </p>
               </div>
             </>
@@ -136,8 +143,7 @@ export default function ConfirmationStep() {
               <div>
                 <h4 className="p-text">Exam Date</h4>
                 <p className="label-text">
-                  {getEndToEndData().exam_date &&
-                    new Date(getEndToEndData().exam_date).toLocaleDateString()}
+                  {new Date(getEndToEndData().exam_date).toLocaleDateString()}
                 </p>
               </div>
             </>
@@ -145,6 +151,7 @@ export default function ConfirmationStep() {
         </div>
       </div>
 
+      {/* Actions */}
       <div className="flex justify-between">
         <Button
           variant="outline"

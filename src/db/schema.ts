@@ -1,4 +1,4 @@
-import { pgTable, varchar, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, varchar, serial, text } from "drizzle-orm/pg-core";
 
 // Common fields
 
@@ -24,10 +24,10 @@ export const examPrep = pgTable("exam_prep_students", {
   exam_date: text("exam_date").notNull(),
   assistant,
   status,
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
-  updatedAt: timestamp("updated_at", { withTimezone: true })
-    .notNull()
-    .$onUpdate(() => new Date()),
+  // createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  // updatedAt: timestamp("updated_at", { withTimezone: true })
+  //   .notNull()
+  //   .$onUpdate(() => new Date()),
 });
 
 export const tutoringStudents = pgTable("tutoring_students", {
@@ -39,10 +39,10 @@ export const tutoringStudents = pgTable("tutoring_students", {
   assistant,
   status,
   support_type: support_type,
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
-  updatedAt: timestamp("updated_at", { withTimezone: true })
-    .notNull()
-    .$onUpdate(() => new Date()),
+  // createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  // updatedAt: timestamp("updated_at", { withTimezone: true })
+  //   .notNull()
+  //   .$onUpdate(() => new Date()),
 });
 
 export const endToEndSupportStudents = pgTable("end_to_end_support_students", {
@@ -54,8 +54,8 @@ export const endToEndSupportStudents = pgTable("end_to_end_support_students", {
   assistant,
   status,
   support_type: support_type,
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
-  updatedAt: timestamp("updated_at", { withTimezone: true })
-    .notNull()
-    .$onUpdate(() => new Date()),
+  // createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  // updatedAt: timestamp("updated_at", { withTimezone: true })
+  //   .notNull()
+  //   .$onUpdate(() => new Date()),
 });

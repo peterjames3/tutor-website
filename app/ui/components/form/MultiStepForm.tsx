@@ -5,6 +5,7 @@ import PersonalInfoStep from "./PersonalInfoStep";
 import CategorySpecificStep from "./CategorySpecificStep";
 import ConfirmationStep from "./Confirm";
 import Stepper from "./StepIndicators";
+import Success from "./Success";
 
 export default function StudentForm() {
   return (
@@ -25,13 +26,16 @@ export default function StudentForm() {
 
 const FormContent = () => {
   const { state } = useFormContext();
+  if (state.submitted) {
+    return <Success />;
+  }
 
   return (
     <>
       {state.step === 0 && <SupportTypeStep />}
       {state.step === 1 && <PersonalInfoStep />}
       {state.step === 2 && <CategorySpecificStep />}
-     
+
       {state.step === 3 && <ConfirmationStep />}
     </>
   );

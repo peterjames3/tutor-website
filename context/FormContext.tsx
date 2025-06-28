@@ -5,6 +5,7 @@ import { FormData } from "@/lib/zod-schema";
 // Define state structure
 type FormState = {
   step: number;
+  submitted: boolean;
   data: Partial<FormData>;
 };
 
@@ -13,16 +14,23 @@ type FormAction =
   | { type: "NEXT_STEP"; payload: Partial<FormData> }
   | { type: "PREV_STEP" }
   | { type: "SET_DATA"; payload: Partial<FormData> }
+  | { type: "SUBMIT" } // New action type
   | { type: "RESET" };
 
 const initialState: FormState = {
   step: 0,
+  submitted: false,
   data: {},
 };
 
 // Reducer function
 const formReducer = (state: FormState, action: FormAction): FormState => {
   switch (action.type) {
+    case "SUBMIT":
+      return {
+        ...initialState,
+        submitted: true, // Set submitted to true
+      };
     case "NEXT_STEP":
       return {
         ...state,
@@ -50,25 +58,40 @@ const FormContext = createContext<{
 });
 
 // Context provider component
+// Update FormProvider
 export function FormProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(formReducer, initialState);
 
-  // Persist form state to localStorage
+  // Update localStorage persistence
   useEffect(() => {
     const savedData = localStorage.getItem("studentFormData");
     if (savedData) {
+      const parsedData = JSON.parse(savedData);
       dispatch({
         type: "SET_DATA",
-        payload: JSON.parse(savedData),
+        payload: {
+          ...parsedData,
+          step: parsedData.step || 0,
+        },
       });
     }
   }, []);
 
   useEffect(() => {
-    if (Object.keys(state.data).length > 0) {
-      localStorage.setItem("studentFormData", JSON.stringify(state.data));
+    // Don't persist when submitted
+    if (
+      !state.submitted &&
+      (Object.keys(state.data).length > 0 || state.step > 0)
+    ) {
+      localStorage.setItem(
+        "studentFormData",
+        JSON.stringify({
+          ...state.data,
+          step: state.step,
+        })
+      );
     }
-  }, [state.data]);
+  }, [state.data, state.step, state.submitted]);
 
   return (
     <FormContext.Provider value={{ state, dispatch }}>

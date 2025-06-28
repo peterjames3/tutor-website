@@ -3,9 +3,15 @@ import { useFormContext } from "@/context/FormContext";
 import { submitFormData } from "@/lib/action";
 import Button from "./button";
 import { useEffect } from "react";
+import {
+  ExamPrepFormData,
+  TutoringFormData,
+  EndToEndSupportFormData,
+} from "@/lib/zod-schema";
 
 export default function ConfirmationStep() {
   const { state, dispatch } = useFormContext();
+  const supportType = state.data.support_type;
 
   useEffect(() => {
     console.log("Form data to submit:", state.data);
@@ -13,7 +19,6 @@ export default function ConfirmationStep() {
 
   const handleSubmit = async () => {
     try {
-      // Add default values before submission
       const formData = {
         ...state.data,
         assistant: "Liam Martin",
@@ -29,41 +34,114 @@ export default function ConfirmationStep() {
     }
   };
 
+  // Type-safe data access functions
+  const getTutoringData = () => state.data as TutoringFormData;
+  const getExamPrepData = () => state.data as ExamPrepFormData;
+  const getEndToEndData = () => state.data as EndToEndSupportFormData;
+
   return (
-    <div className="space-y-8">
-      <div className="bg-white p-6 rounded-lg shadow">
-        <h2 className="text-2xl font-bold mb-4">Confirmation</h2>
+    <div className="space-y-6 bg-background py-4 px-6 rounded-sm">
+      <div>
+        <h2 className="text-3xl font-bold text-gray-800 mb-2">
+          Review Your Information
+        </h2>
+        <p className="text-gray-600">
+          Please confirm that everything is correct
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div className="p-6 rounded-sm bg-cardBg space-y-2">
+        <h3 className="title">Support Type</h3>
+        <p className="label-text">Your selected support category</p>
+        <p className="font-semibold">{supportType}</p>
+      </div>
+
+      <div className="p-6 rounded-sm bg-cardBg space-y-2">
+        <h3 className="title">Personal Information</h3>
+        <p className="label-text">Your contact details</p>
+        <div className="grid grid-cols-2 grid-rows-2 gap-5">
           <div>
-            <h3 className="font-semibold text-gray-700">
-              Personal Information
-            </h3>
-            <p className="text-gray-600">{state.data.name}</p>
-            <p className="text-gray-600">{state.data.email}</p>
-            <p className="text-gray-600">{state.data.phone_number}</p>
-            <p className="text-gray-600">{state.data.level}</p>
+            <h4 className="p-text">Full Name</h4>
+            <p className="label-text">{state.data.name}</p>
           </div>
-
           <div>
-            <h3 className="font-semibold text-gray-700">Service Details</h3>
-            <p className="text-gray-600">{state.data.support_type}</p>
-            <p className="text-gray-600">
-              {state.data.exam || state.data.subject}
-            </p>
-            <p className="text-gray-600">
-              {state.data.exam_date
-                ? new Date(state.data.exam_date).toLocaleDateString()
-                : ""}
-            </p>
+            <h4 className="p-text">Email</h4>
+            <p className="label-text">{state.data.email}</p>
+          </div>
+          <div>
+            <h4 className="p-text">Phone Number</h4>
+            <p className="label-text">{state.data.phone_number}</p>
+          </div>
+          <div>
+            <h4 className="p-text">Education Level</h4>
+            <p className="label-text">{state.data.level}</p>
           </div>
         </div>
+      </div>
 
-        <div className="mt-6">
-          <h3 className="font-semibold text-gray-700">
-            Additional Information
-          </h3>
-          <p className="text-gray-600">{state.data.subject_help}</p>
+      <div className="p-6 rounded-sm bg-cardBg space-y-2">
+        <h3 className="title">Service Details</h3>
+        <p className="label-text">Your specific requirements</p>
+        <div className="grid grid-cols-2 gap-5">
+          {supportType === "Exam Prep" && (
+            <>
+              <div>
+                <h4 className="p-text">Exam Name</h4>
+                <p className="label-text">{getExamPrepData().exam}</p>
+              </div>
+              <div>
+                <h4 className="p-text">Subject</h4>
+                <p className="label-text">{getExamPrepData().subject}</p>
+              </div>
+              <div>
+                <h4 className="p-text">Exam Date</h4>
+                <p className="label-text">
+                  {getExamPrepData().exam_date &&
+                    new Date(getExamPrepData().exam_date).toLocaleDateString()}
+                </p>
+              </div>
+            </>
+          )}
+
+          {supportType === "Tutoring" && (
+            <>
+              <div>
+                <h4 className="p-text">Subject</h4>
+                <p className="label-text">{getTutoringData().subject}</p>
+              </div>
+              <div>
+                <h4 className="p-text">Focus Area</h4>
+                <p className="label-text">{getTutoringData().subject_help}</p>
+              </div>
+              <div>
+                <h4 className="p-text">Start Date</h4>
+                <p className="label-text">
+                  {getTutoringData().exam_date &&
+                    new Date(getTutoringData().exam_date).toLocaleDateString()}
+                </p>
+              </div>
+            </>
+          )}
+
+          {supportType === "End to End Exam Support" && (
+            <>
+              <div>
+                <h4 className="p-text">Exam Name</h4>
+                <p className="label-text">{getEndToEndData().exam}</p>
+              </div>
+              <div>
+                <h4 className="p-text">Subject</h4>
+                <p className="label-text">{getEndToEndData().subject}</p>
+              </div>
+              <div>
+                <h4 className="p-text">Exam Date</h4>
+                <p className="label-text">
+                  {getEndToEndData().exam_date &&
+                    new Date(getEndToEndData().exam_date).toLocaleDateString()}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </div>
 

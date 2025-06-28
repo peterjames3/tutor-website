@@ -30,7 +30,7 @@ export default function CategorySpecificStep() {
     case "Tutoring":
       schema = TutoringFormSchema;
       break;
-    case "End to End ":
+    case "End to End Exam Support":
       schema = EndToEndSupportFormSchema;
       break;
     default:
@@ -101,7 +101,8 @@ export default function CategorySpecificStep() {
 
       <div className="bg-gray-50 rounded-xl p-6">
         <div className="grid grid-cols-1 gap-6">
-          {(supportType === "Exam Prep" || supportType === "Exam Aid") && (
+          {(supportType === "Exam Prep" ||
+            supportType === "End to End Exam Support") && (
             <Input
               {...register("exam")}
               label="Exam Name"
@@ -126,7 +127,8 @@ export default function CategorySpecificStep() {
             }
           />
 
-          {(supportType === "Exam Prep" || supportType === "Exam Aid") && (
+          {(supportType === "Exam Prep" ||
+            supportType === "End to End Exam Support") && (
             <Input
               {...register("exam_date")}
               label={label}

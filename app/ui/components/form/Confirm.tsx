@@ -1,46 +1,74 @@
 "use client";
 
 import { useFormContext } from "@/context/FormContext";
-import { submitForm } from "@/lib/action";
 import Button from "./button";
 import {
   ExamPrepFormData,
   TutoringFormData,
   EndToEndSupportFormData,
 } from "@/lib/zod-schema";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function ConfirmationStep() {
   const { state, dispatch } = useFormContext();
   const supportType = state.data.support_type;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   useEffect(() => {
     console.log("Form data to submit:", state.data);
   }, [state.data]);
 
   const handleSubmit = async () => {
+    setIsSubmitting(true);
+    setSubmitError(null);
+
     try {
+      // Prepare form data with defaults
       const formData = {
         ...state.data,
         assistant: "Liam Martin",
         status: "Pending",
       };
 
-      const res = await submitForm(formData);
+      // Submit to API endpoint
+      const response = await fetch(
+        "https://tutor-dashboard-self.vercel.app/api/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-      if (res?.success) {
-        dispatch({ type: "SUBMIT" }); // trigger redirect to success page
-        localStorage.removeItem("studentFormData");
-      } else {
-        alert("Submission failed: " + res?.error || "Please try again.");
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(
+          errorData.error || `HTTP error! status: ${response.status}`
+        );
       }
+
+      const result = await response.json();
+      console.log("Submission successful:", result);
+
+      // Clear form state on success
+      dispatch({ type: "SUBMIT" });
+      localStorage.removeItem("studentFormData");
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Something went wrong. Please try again.");
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  // Narrowed data helpers
+  // Helper functions for type-safe data access
   const getExamPrepData = () => state.data as ExamPrepFormData;
   const getTutoringData = () => state.data as TutoringFormData;
   const getEndToEndData = () => state.data as EndToEndSupportFormData;
@@ -118,10 +146,6 @@ export default function ConfirmationStep() {
                 <p className="label-text">{getTutoringData().subject}</p>
               </div>
               <div>
-                <h4 className="p-text">Focus Area</h4>
-                <p className="label-text">{getTutoringData().subject_help}</p>
-              </div>
-              <div>
                 <h4 className="p-text">Start Date</h4>
                 <p className="label-text">
                   {new Date(getTutoringData().exam_date).toLocaleDateString()}
@@ -151,15 +175,26 @@ export default function ConfirmationStep() {
         </div>
       </div>
 
+      {/* Error Message */}
+      {submitError && (
+        <div className="p-4 rounded-md bg-red-50 text-red-700">
+          <p className="font-medium">Submission Error:</p>
+          <p>{submitError}</p>
+        </div>
+      )}
+
       {/* Actions */}
       <div className="flex justify-between">
         <Button
           variant="outline"
           onClick={() => dispatch({ type: "PREV_STEP" })}
+          disabled={isSubmitting}
         >
           Back
         </Button>
-        <Button onClick={handleSubmit}>Submit Application</Button>
+        <Button onClick={handleSubmit} disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit Application"}
+        </Button>
       </div>
     </div>
   );

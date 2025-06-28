@@ -17,11 +17,20 @@ export default function PersonalInfoStep() {
     register,
     handleSubmit,
     formState: { errors },
-    // setValue,
-    // watch,
   } = useForm({
     resolver: zodResolver(BaseFormSchema),
-    defaultValues: state.data,
+    defaultValues: {
+      name: state.data.name ?? "",
+      email: state.data.email ?? "",
+      phone_number: state.data.phone_number ?? "",
+      level:
+        state.data.level &&
+        ["High School", "Undergraduate", "Graduate", "Professional"].includes(
+          state.data.level
+        )
+          ? state.data.level
+          : "High School",
+    },
   });
 
   const onSubmit = (data: z.infer<typeof BaseFormSchema>) => {

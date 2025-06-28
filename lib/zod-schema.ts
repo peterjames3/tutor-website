@@ -19,7 +19,6 @@ export type ExamPrepFormData = BaseStudentFormData & {
   exam_date: string;
 };
 export type TutoringFormData = BaseStudentFormData & {
-  
   subject: string;
   exam_date: string;
 };

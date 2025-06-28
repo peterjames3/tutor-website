@@ -144,12 +144,12 @@ export default function CategorySpecificStep() {
           {supportType === "Tutoring" && (
             <>
               <Input
-                {...register("subject_help")}
+                {...register("subject")}
                 label="Topic or Focus Area"
                 placeholder="e.g., Algebra, Essay Writing..."
                 error={
-                  typeof errors.subject_help?.message === "string"
-                    ? errors.subject_help.message
+                  typeof errors.subject?.message === "string"
+                    ? errors.subject.message
                     : undefined
                 }
               />

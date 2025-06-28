@@ -3,7 +3,7 @@ import { pgTable, varchar, serial, text } from "drizzle-orm/pg-core";
 // Common fields
 
 const name = varchar("name", { length: 255 }).notNull();
-const email = varchar("email", { length: 255 }).notNull().unique();
+const email = varchar("email", { length: 255 }).notNull();
 const phone = varchar("phone", { length: 50 }).notNull();
 const level = varchar("level", { length: 50 }).notNull();
 const assistant = varchar("assistant", { length: 255 }).default("Liam James");
@@ -33,7 +33,7 @@ export const examPrep = pgTable("exam_prep_students", {
 export const tutoringStudents = pgTable("tutoring_students", {
   id: serial("id").primaryKey(),
   ...baseSchema,
-  subject_help: text("subject_help").notNull(),
+
   subject: text("subject").notNull(),
   exam_date: text("exam_date").notNull(),
   assistant,

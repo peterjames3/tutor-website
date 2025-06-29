@@ -6,10 +6,6 @@ import HeroRight from "./hero-right-content";
 import FloatingElements from "../animation/FloatingElements";
 import MultiStepForm from "@/app/ui/components/form/MultiStepForm";
 
-type MultiStepFormProps = {
-  onBack: () => void;
-};
-
 export default function HeroMainSection() {
   const [showForm, setShowForm] = useState(false);
 
@@ -28,7 +24,7 @@ export default function HeroMainSection() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
           >
-            <MultiStepForm onBack={() => setShowForm(false)} />
+            <MultiStepForm />
           </motion.div>
         ) : (
           <motion.div

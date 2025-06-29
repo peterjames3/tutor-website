@@ -26,23 +26,25 @@ export const useIntersectionObserver = (
         setIsVisible(newIsVisible);
       },
       {
-        threshold: options.threshold || 0.3,
-        rootMargin: options.rootMargin || "0px 0px -50px 0px",
+        threshold: options.threshold ?? 0.3,
+        rootMargin: options.rootMargin ?? "0px 0px -50px 0px",
       }
     );
 
-    if (elementRef.current) {
-      console.log("🎯 Observing element:", elementRef.current);
-      observer.observe(elementRef.current);
+    const currentElement = elementRef.current;
+
+    if (currentElement) {
+      console.log("🎯 Observing element:", currentElement);
+      observer.observe(currentElement);
     }
 
     return () => {
       console.log("🧹 Cleaning up intersection observer");
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
-  }, [options.threshold, options]);
+  }, [options]);
 
   return { isVisible, elementRef };
 };

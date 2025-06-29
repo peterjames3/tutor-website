@@ -9,7 +9,7 @@ import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 
 const builder = imageUrlBuilder(client);
-const urlFor = (source: any) => {
+const urlFor = (source: string) => {
   return builder.image(source);
 };
 

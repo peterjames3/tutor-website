@@ -15,7 +15,7 @@ export default function StudentForm() {
           <div className="w-full md:w-[30%] px-8 py-14 h-auto bg-[#042207]">
             <Stepper />
           </div>
-          <div className=" w-full md:w-[70%] px-3 py-5 h-auto rounded-2xl">
+          <div className=" w-full md:w-[70%] px-3 pt-20 h-auto rounded-2xl">
             <FormContent />
           </div>
         </div>

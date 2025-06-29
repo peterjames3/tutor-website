@@ -1,18 +1,27 @@
 import { notFound } from "next/navigation";
 import ExamPageClient from "@/app/ui/components/exam-aid/exam-page-client";
 import { examContent } from "@/lib/constants/exam-aid-dynamic-data";
-//import type { Metadata } from "next";
+import type { Metadata } from "next";
 
-// Correct typing for App Router pages with Promise
+// Correct typing for App Router pages
 type PageProps = {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 };
 
-export default async function ExamAidPage({ params }: PageProps) {
-  // Await the params promise
-  const { slug } = await params;
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  return {
+    title: `${params.slug.replace(/-/g, " ")} Exam Aid`,
+    description: `Study guide for ${params.slug} exam`,
+  };
+}
 
-  // Access your data (no need for Promise.resolve since examContent is sync)
+export default function ExamAidPage({ params }: PageProps) {
+  const { slug } = params;
   const exam = examContent[slug as keyof typeof examContent];
 
   if (!exam) {

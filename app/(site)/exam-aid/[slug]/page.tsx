@@ -1,28 +1,34 @@
 import { notFound } from "next/navigation";
 import ExamPageClient from "@/app/ui/components/exam-aid/exam-page-client";
-import { examContent } from "@/lib/constants/exam-aid-dynamic-data";
+import { getExamData, getAllExamSlugs } from "@/lib/datafetching/exam-service";
 import type { Metadata } from "next";
 
-// Correct typing for App Router pages
 type PageProps = {
   params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
 };
 
 export async function generateMetadata({
   params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+}: PageProps): Promise<Metadata> {
+  const exam = await getExamData(params.slug);
+
   return {
-    title: `${params.slug.replace(/-/g, " ")} Exam Aid`,
-    description: `Study guide for ${params.slug} exam`,
+    title: exam?.title || `${params.slug} Exam Aid`,
+    description: exam?.description || `Study guide for ${params.slug}`,
+    openGraph: {
+      images: [
+        {
+          url: `/api/og?title=${encodeURIComponent(exam?.title || params.slug)}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
   };
 }
 
-export default function ExamAidPage({ params }: PageProps) {
-  const { slug } = params;
-  const exam = examContent[slug as keyof typeof examContent];
+export default async function ExamAidPage({ params }: PageProps) {
+  const exam = await getExamData(params.slug);
 
   if (!exam) {
     notFound();
@@ -32,7 +38,8 @@ export default function ExamAidPage({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  return Object.keys(examContent).map((slug) => ({ slug }));
+  const slugs = await getAllExamSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export const dynamicParams = false;

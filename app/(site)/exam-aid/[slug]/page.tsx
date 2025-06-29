@@ -7,10 +7,9 @@ interface PageProps {
     slug: string;
   };
 }
-export async function generateStaticParams() {
-  return Object.keys(examContent).map((slug) => ({ slug }));
-}
-export default function ExamAidPage({ params }: PageProps) {
+
+// Must be async to safely access dynamic route params
+export default async function ExamAidPage({ params }: PageProps) {
   const exam = examContent[params.slug as keyof typeof examContent];
 
   if (!exam) {
@@ -18,4 +17,8 @@ export default function ExamAidPage({ params }: PageProps) {
   }
 
   return <ExamPageClient exam={exam} />;
+}
+
+export async function generateStaticParams() {
+  return Object.keys(examContent).map((slug) => ({ slug }));
 }

@@ -1,6 +1,6 @@
+import { notFound } from "next/navigation";
 import ExamPageClient from "@/app/ui/components/exam-aid/exam-page-client";
 import { examContent } from "@/lib/constants/exam-aid-dynamic-data";
-import { notFound } from "next/navigation";
 
 interface PageProps {
   params: {
@@ -8,8 +8,7 @@ interface PageProps {
   };
 }
 
-// Must be async to safely access dynamic route params
-export default async function ExamAidPage({ params }: PageProps) {
+export default function ExamAidPage({ params }: PageProps) {
   const exam = examContent[params.slug as keyof typeof examContent];
 
   if (!exam) {

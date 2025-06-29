@@ -1,28 +1,19 @@
 import { notFound } from "next/navigation";
 import ExamPageClient from "@/app/ui/components/exam-aid/exam-page-client";
 import { examContent } from "@/lib/constants/exam-aid-dynamic-data";
-import type { Metadata } from "next";
+//import type { Metadata } from "next";
 
-// Correct typing for App Router pages
+// Correct typing for App Router pages with Promise
 type PageProps = {
-  params: { slug: string };
-  searchParams?: Record<string, string | string[] | undefined>;
+  params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  return {
-    title: `${params.slug.replace(/-/g, " ")} Exam Aid | YourSite`,
-    description: `Study guide for ${params.slug} exam`,
-  };
-}
-
 export default async function ExamAidPage({ params }: PageProps) {
-  // Make data fetching explicit
-  const exam = await Promise.resolve(
-    examContent[params.slug as keyof typeof examContent]
-  );
+  // Await the params promise
+  const { slug } = await params;
+
+  // Access your data (no need for Promise.resolve since examContent is sync)
+  const exam = examContent[slug as keyof typeof examContent];
 
   if (!exam) {
     notFound();

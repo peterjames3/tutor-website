@@ -5,29 +5,10 @@ import { getExamData, getAllExamSlugs } from "@/lib/datafetching/exam-service";
 
 type Params = Promise<{ slug: string }>;
 
-// export async function generateMetadata({
-//   params,
-// }: {params: Params}): Promise<Metadata> {
-//   const exam = await getExamData(params.slug);
-
-//   return {
-//     title: exam?.title || `${params.slug} Exam Aid`,
-//     description: exam?.description || `Study guide for ${params.slug}`,
-//     openGraph: {
-//       images: [
-//         {
-//           url: `/api/og?title=${encodeURIComponent(exam?.title || params.slug)}`,
-//           width: 1200,
-//           height: 630,
-//         },
-//       ],
-//     },
-//   };
-// }
-
 export default async function ExamAidPage({ params }: { params: Params }) {
   const { slug } = await params;
   const exam = await getExamData(slug);
+  console.log(exam);
 
   if (!exam) {
     notFound();

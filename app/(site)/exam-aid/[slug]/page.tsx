@@ -3,9 +3,12 @@ import ExamPageClient from "@/app/ui/components/exam-aid/exam-page-client";
 import { getExamData, getAllExamSlugs } from "@/lib/datafetching/exam-service";
 //import type { Metadata } from "next";
 
-type Params = Promise<{ slug: string }>;
+export type paramsType = Promise<{ slug: string }>;
+type Props = {
+  params: paramsType;
+};
 
-export default async function ExamAidPage({ params }: { params: Params }) {
+export default async function ExamAidPage({ params }: Props) {
   const { slug } = await params;
   const exam = await getExamData(slug);
   console.log(exam);

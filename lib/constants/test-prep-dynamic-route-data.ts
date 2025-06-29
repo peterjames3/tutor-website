@@ -12,7 +12,7 @@ export type Exam = {
   testimonials: { author: string; quote: string }[];
 };
 
-export const examContent: { [key: string]: Exam } = {
+export const testprepContent: { [key: string]: Exam } = {
   psat: {
     title: "Digital PSAT® Preparation",
     description:

@@ -5,7 +5,16 @@ import { Calculator, Lightbulb, BookOpen, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { examContent } from "@/lib/constants/exam-aid-dynamic-data";
 
-export default function ExamPage({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+  searchParams?: {
+    [key: string]: string | string[] | undefined;
+  };
+}
+
+export default function ExamPage({ params }: PageProps) {
   // Icon mapping based on section title
   const getSectionIcon = (title: string) => {
     switch (title.toLowerCase()) {

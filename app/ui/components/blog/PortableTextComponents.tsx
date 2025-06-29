@@ -92,7 +92,7 @@ const SanityImage = ({ value }: SanityImageProps) => {
     return null;
   }
 
-  const imageUrl = urlFor(value).width(1200).height(800).quality(80).url();
+  const imageUrl = urlFor(value.asset._ref).width(1200).height(800).quality(80).url();
 
   return (
     <figure className="relative w-full h-64 my-8">

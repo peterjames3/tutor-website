@@ -20,9 +20,9 @@ export default async function ExamAidPage({ params }: Props) {
   return <ExamPageClient exam={exam} />;
 }
 
-// export async function generateStaticParams() {
-//   const slugs = await getAllExamSlugs();
-//   return slugs.map((slug) => ({ slug }));
-// }
+ export async function generateStaticParams() {
+   const slugs = await getAllExamSlugs();
+   return slugs.map((slug) => ({ slug }));
+ }
 
 export const dynamicParams = false;

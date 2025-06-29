@@ -10,9 +10,9 @@ type ExamPageProps = {
     slug: string;
   };
 };
-export async function generateStaticParams() {
-  return Object.keys(examContent).map((slug) => ({ slug }));
-}
+// export async function generateStaticParams() {
+//   return Object.keys(examContent).map((slug) => ({ slug }));
+// }
 
 export default function ExamPage({ params }: ExamPageProps) {
   // Icon mapping based on section title

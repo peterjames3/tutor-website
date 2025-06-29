@@ -5,16 +5,16 @@ import { Calculator, Lightbulb, BookOpen, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { examContent } from "@/lib/constants/exam-aid-dynamic-data";
 
-// interface PageProps {
-//   params: {
-//     slug: string;
-//   };
-//   searchParams?: {
-//     [key: string]: string | string[] | undefined;
-//   };
-// }
+type ExamPageProps = {
+  params: {
+    slug: string;
+  };
+};
+export async function generateStaticParams() {
+  return Object.keys(examContent).map((slug) => ({ slug }));
+}
 
-export default function ExamPage({ params }: { params: { slug: string } }) {
+export default function ExamPage({ params }: ExamPageProps) {
   // Icon mapping based on section title
   const getSectionIcon = (title: string) => {
     switch (title.toLowerCase()) {
@@ -29,7 +29,7 @@ export default function ExamPage({ params }: { params: { slug: string } }) {
     }
   };
 
-  const exam = examContent[params.slug as keyof typeof examContent];
+  const exam = examContent[params.slug];
 
   if (!exam) {
     notFound();

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import HeroLeft from "./hero-left";
 import HeroRight from "./hero-right";
 import FloatingElements from "../animation/FloatingElements";
-import MultiStepForm from "./multi-step-form";
+import MultiStepForm from "@/app/ui/components/form/MultiStepForm";
 export default function Hero() {
   const [showForm, setShowForm] = useState(false);
 

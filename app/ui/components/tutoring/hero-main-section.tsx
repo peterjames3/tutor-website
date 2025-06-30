@@ -24,7 +24,7 @@ export default function HeroMainSection() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
           >
-            <MultiStepForm />
+            <MultiStepForm onBack={() => setShowForm(false)} />
           </motion.div>
         ) : (
           <motion.div

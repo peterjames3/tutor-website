@@ -6,8 +6,12 @@ import CategorySpecificStep from "./CategorySpecificStep";
 import ConfirmationStep from "./Confirm";
 import Stepper from "./StepIndicators";
 import Success from "./Success";
+import { ArrowLeft } from "lucide-react";
+type MultiStepFormProps = {
+  onBack: () => void;
+};
 
-export default function StudentForm() {
+export default function StudentForm({ onBack }: MultiStepFormProps) {
   return (
     <FormProvider>
       <div className="min-h-screen  py-6 px-4 ">
@@ -16,6 +20,12 @@ export default function StudentForm() {
             <Stepper />
           </div>
           <div className=" w-full md:w-[70%] px-3 pt-20 h-auto rounded-2xl">
+            <button
+              onClick={onBack}
+              className="flex items-center gap-2 text-primary mb-6 hover:text-secondary transition-colors hover:cursor-pointer"
+            >
+              <ArrowLeft size={18} /> Back to main
+            </button>
             <FormContent />
           </div>
         </div>

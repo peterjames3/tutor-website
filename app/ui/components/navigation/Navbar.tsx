@@ -8,11 +8,14 @@ import { MenuItems } from "@/lib/menuitem";
 import DropdownMenu from "./DropdownMenu";
 import ContactBar from "@/app/ui/ContactBar";
 import Mobile from "@/app/ui/components/navigation/Mobile";
+import { useUIDispatch } from "@/context/UIContext";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+
+  const dispatch = useUIDispatch();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -81,11 +84,8 @@ export default function Navbar() {
         </div>
         {/*  Buttons */}
         <div className="lg:flex  hidden gap-5">
-          <button type="button" className="btn">
-            Login
-          </button>
-          <button type="button" className="btn">
-            Sign Up
+          <button  onClick={()=> dispatch({ type: 'SHOW_HELP'})} type="button" className="btn hover:cursor-pointer">
+            Get Help Now
           </button>
         </div>
 

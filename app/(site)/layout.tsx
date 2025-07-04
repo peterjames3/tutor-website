@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/app/ui/components/navigation/Navbar";
 import Footer from "../ui/components/footer/Footer";
 import ScrollToTopBtn from "../ui/scroll-to-top-btn";
+import { UIProvider } from "@/context/UIContext";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -59,14 +60,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
-      >
-        <Navbar />
-        {children}
-        <ScrollToTopBtn />
-        <Footer />
-      </body>
+      <UIProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
+        >
+          <Navbar />
+          {children}
+          <ScrollToTopBtn />
+          <Footer />
+        </body>
+      </UIProvider>
     </html>
   );
 }

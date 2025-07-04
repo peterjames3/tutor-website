@@ -5,6 +5,12 @@ export const examaidType = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "title",
+      title: "Exam Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -13,12 +19,7 @@ export const examaidType = defineType({
         maxLength: 96,
       },
     }),
-    defineField({
-      name: "title",
-      title: "Exam Title",
-      type: "string",
-      validation: (Rule) => Rule.required(),
-    }),
+
     defineField({
       name: "description",
       title: "Description",

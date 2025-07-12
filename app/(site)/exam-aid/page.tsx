@@ -1,5 +1,6 @@
-"use client";
-
+import { SanityDocument } from "@sanity/client";
+import { examAidProgramsQuery } from "@/sanity/lib/queries";
+import { sanityFetch } from "@/sanity/lib/server-fetch";
 
 import Hero from "@/app/ui/components/exam-aid/main-hero-section";
 import WhyChooseUs from "@/app/ui/components/exam-aid/why-choose-us";
@@ -12,9 +13,13 @@ import { Services } from "@/app/ui/components/exam-aid/services";
 
 import TestimonialsSection from "@/app/ui/components/Testimonial/testimonials-section";
 
+export default async function TestAidHome() {
+  const programs = await sanityFetch<SanityDocument[]>({
+    query: examAidProgramsQuery,
+    // tags: ["exams"],
+  });
+  console.log(programs.length);
 
-export default function TestPrepHome() {
- 
 
   return (
     <>
@@ -22,7 +27,7 @@ export default function TestPrepHome() {
       <ProctoredProcess />
       <Services />
       <WhyChooseUs />
-      <SupportedExams />
+      <SupportedExams programs={programs} />
       <TestimonialsSection />
       <FAQSection />
     </>

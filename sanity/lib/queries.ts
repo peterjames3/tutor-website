@@ -61,3 +61,61 @@ export const latestPostsQuery = groq`
     
   }
 `;
+
+// Fetch Slugs and Exam Data
+export const examPathsQuery = `
+  *[_type == "exam_aid"] {
+    "slug": slug.current
+  }
+`;
+
+export const examQuery = `
+  *[_type == "exam_aid" && slug.current == $slug] {
+    _id,
+    _createdAt,
+    title,
+    "slug": slug.current,
+    description,
+    deliveryMethod,
+    educationLevel,
+    benefits,
+    structure,
+    "sections": sections[]->{
+      _id,
+      title,
+      content,
+      tips,
+      icon
+    },
+    "testimonials": testimonials[]->{
+      _id,
+      author,
+      quote
+    }
+  }
+`;
+export const examAidProgramsQuery = `
+  *[_type == "exam_aid"] | order(title asc) {
+    _id,
+    _createdAt,
+    title,
+    "slug": slug.current,
+    description,
+    deliveryMethod,
+    educationLevel,
+    benefits,
+    structure,
+    "sections": sections[]->{
+      _id,
+      title,
+      content,
+      tips,
+      icon
+    },
+    "testimonials": testimonials[]->{
+      _id,
+      author,
+      quote
+    }
+  }
+`;

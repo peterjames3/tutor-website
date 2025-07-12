@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 export const examaidType = defineType({
-  name: "exam",
+  name: "exam_aid",
   title: "Exam Aid",
   type: "document",
   fields: [
@@ -23,7 +23,49 @@ export const examaidType = defineType({
     defineField({
       name: "description",
       title: "Description",
-      type: "text",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
+      name: "deliveryMethod",
+      title: "Delivery Method",
+      type: "string",
+      options: {
+        list: [
+          { title: "Online", value: "online" },
+          { title: "In-Person", value: "in_person" },
+          { title: "Both", value: "both" },
+        ],
+        layout: "radio",
+      },
+      initialValue: "online",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "educationLevel",
+      title: "Education Level",
+      type: "string",
+      options: {
+        list: [
+          { title: "High School", value: "high_school" },
+          { title: "College Entrance", value: " college_entrance" },
+          { title: "Nursing Entry program", value: "nursing_entry_program" },
+          { title: "Pre-Dental School", value: "pre-dental students" },
+          { title: "Undergraduate", value: "undergraduate" },
+          { title: "Graduate", value: "graduate" },
+          { title: "Professional", value: "professional" },
+        ],
+        layout: "dropdown",
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "benefits",
+      title: "Exam Benefits",
+      type: "array",
+      of: [{ type: "string" }],
+      description: "List how passing this exam unlocks opportunities",
       validation: (Rule) => Rule.required(),
     }),
     defineField({

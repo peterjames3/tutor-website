@@ -34,6 +34,7 @@ export const sectionType = defineType({
           { title: "Writing", value: "writing" },
           { title: "Science", value: "science" },
           { title: "Verbal", value: "verbal" },
+          { title: "Nursing", value: "nursing" },
           { title: "Quantitative", value: "quantitative" },
         ],
       },

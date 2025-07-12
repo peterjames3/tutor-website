@@ -18,10 +18,10 @@ export const TestimonialsType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "exam",
+      name: "exam_aid",
       title: "Author",
       type: "reference",
-      to: [{ type: "exam" }],
+      to: [{ type: "exam_aid" }],
     }),
   ],
   preview: {

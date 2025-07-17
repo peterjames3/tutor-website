@@ -2,7 +2,7 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function ExamServices() {
   return (
     <section className="bg-[#e2ebf3]/30 py-16 px-4 sm:px-6 lg:px-10 ">
@@ -56,17 +56,21 @@ export default function ExamServices() {
                 Personalized support to ensure your success with ease and
                 confidence.
               </p>
-              <button className="flex items-center text-primary font-semibold group">
+
+              <Link
+                href="/exam-aid"
+                className="flex items-center text-primary font-semibold group"
+              >
                 Learn More{" "}
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </section>
             <figcaption className="h-full  w-1/2">
               <Image
                 src="/service 1.png"
                 alt="expert exam assistance"
                 width={300}
-                height={800}
+                height={400}
                 className="object-fill h-full w-full"
               />
             </figcaption>
@@ -80,29 +84,36 @@ export default function ExamServices() {
             transition={{ duration: 0.5, delay: 0.4 }}
             whileHover={{ y: -5 }}
           >
-            <section className=" h-3/5 p-2 ">
+            <section className=" h-[45%] p-3 mb-2 ">
               <h3 className="text-lg font-normal text-gray-600 mb-4">Expert</h3>
               <p className="text-2xl text-primary font-semibold mb-6">
-                Homework help
+                Tutoring
               </p>
-              <p className="text-gray-500 mb-4">24/7 instant homework help.</p>
-              <button className="flex items-center text-primary font-semibold group">
-                Explore{" "}
+              <p className="text-gray-500 mb-4">
+                Get personalized tutoring from certified instructors to boost
+                your confidence and performance.
+              </p>
+              <Link
+                href="/academic/tutoring"
+                className="flex items-center text-primary font-semibold group"
+              >
+                Explore About Tutoring{" "}
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </section>
-            <figcaption className="h-2/5  w-full">
+            <figcaption className="h-[55%]  w-full">
               <Image
                 src="/service 2.png"
                 alt="expert exam assistance"
                 width={800}
-                height={200}
+                height={400}
                 className="object-fill h-full w-full"
               />
             </figcaption>
           </motion.div>
 
           {/* Service Card 3 */}
+
           <motion.div
             className="shadow-sm hover:shadow-md transition-shadow"
             initial={{ opacity: 0, y: 30 }}
@@ -110,27 +121,31 @@ export default function ExamServices() {
             transition={{ duration: 0.5, delay: 0.4 }}
             whileHover={{ y: -5 }}
           >
-            <section className=" h-3/5 p-2 ">
+            <section className=" h-[45%] p-3 mb-2 ">
               <h3 className="text-lg font-normal text-gray-600 mb-4">
-                Effortless Learning
+                Test Prep
               </h3>
               <p className="text-2xl text-primary font-semibold mb-6">
-                Stress-free Class Assistance
+                Ace Your Exam
               </p>
               <p className="text-gray-500 mb-4">
-                Let our experts take your online classes
+                Get ready with targeted practice, expert guidance, and full
+                support.
               </p>
-              <button className="flex items-center text-primary font-semibold group">
-                Start{" "}
+              <Link
+                href="/test-prep"
+                className="flex items-center text-primary font-semibold group"
+              >
+                Explore More On Exam Prep{" "}
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </section>
-            <figcaption className="h-2/5  w-full">
+            <figcaption className="h-[55%]  w-full">
               <Image
                 src="/services 3.png"
                 alt="expert exam assistance"
                 width={800}
-                height={200}
+                height={400}
                 className="object-fill h-full w-full"
               />
             </figcaption>

@@ -62,7 +62,7 @@ export const latestPostsQuery = groq`
   }
 `;
 
-// Fetch Slugs and Exam Data
+// Fetch Slugs and Exam aid programs
 export const examPathsQuery = `
   *[_type == "exam_aid"] {
     "slug": slug.current
@@ -118,4 +118,63 @@ export const examAidProgramsQuery = `
       quote
     }
   }
+`;
+
+//fetch slugs  for exam prep programs
+
+export const examPrepPathsQuery = `
+*[_type == "exam_prep"] {
+  "slug": slug.current
+}
+`;
+
+export const examPrepQuery = `
+*[_type == "exam_prep" && slug.current == $slug] {
+  _id,
+  _createdAt,
+  title,
+  "slug": slug.current,
+  description,
+  deliveryMethod,
+  educationLevel,
+  benefits,
+  structure,
+  "sections": sections[]->{
+    _id,
+    title, 
+    content,
+    tips,
+    icon
+  },
+  "testimonials": testimonials[]->{
+    _id,
+    author,
+    quote
+  }
+}
+`;
+export const examPrepProgramsQuery = `
+*[_type == "exam_prep"]  {
+  _id,
+  _createdAt,
+  title,
+  "slug": slug.current,
+  description,
+  deliveryMethod,
+  educationLevel,   
+  benefits,
+  structure,
+  "sections": sections[]->{
+    _id,
+    title,
+    content,
+    tips,
+    icon
+  },
+  "testimonials": testimonials[]->{
+    _id,
+    author,
+    quote
+  }
+}
 `;

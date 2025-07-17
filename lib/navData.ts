@@ -89,41 +89,41 @@ export const gradeLevels = [
 ];
 
 export const certifications = [
-  { name: "Microsoft Azure", slug: "exam-aid/azurefundamentals" },
+  { name: "Microsoft Azure", slug: "azurefundamentals" },
   {
     name: "AWS Solution Architect Professional",
-    slug: "exam-aid/aws-solution-architect",
+    slug: "awssolutionarchitectprofessional",
   },
-  {
-    name: "CompTIA Advanced Security Practitioner",
-    slug: "exam-aid/comptia-asp",
-  },
-  { name: "PMI-PMP", slug: "exam-aid/pmipmp" },
-  { name: "Google Cloud", slug: "exam-aid/google-cloud" },
+ 
+  { name: "PMI-PMP", slug: "pmp" },
+  { name: "Google Cloud", slug: "googlecloud" },
   // { name: "CompTIA Security+", slug: "exam-aid/comptiasecurityplus" },
-  { name: "Cisco-CCNA/CCNP", slug: "exam-aid/cisco" },
-  { name: "CompTIA A+ ", slug: "exam-aid/comptiaa" },
-  { name: "CompTIA Network+ ", slug: "exam-aid/comptianetworkplus" },
-  { name: "CompTIA Pentest+", slug: "exam-aid/comptia-pentest-plus" },
+  { name: "Cisco-CCNA/CCNP", slug: "cisco" },
+
+  { name: "CompTIA Network+ ", slug: "comptianetwork" },
+  { name: "CompTIA Pentest+", slug: "exam-aid/comptiasecurity" },
   {
     name: "ITIL, Prince2(Foundation & practitioner)",
-    slug: "exam-aid/itil-prince2",
+    slug: "itil",
   },
-  { name: "CompTIA A+", slug: "exam-aid/comptia-a-plus" },
+  { name: "CompTIA A+", slug: "exam-aid/comptiaa" },
   { name: "ISTOB", slug: "exam-aid/istob" },
   {
-    name: "PMI-PMP, PMI-ACP, PMI-RMP, CAPM",
-    slug: "exam-aid/pmi-certifications",
+    name: "CAPM",
+    slug: "capm",
   },
   {
-    name: "CompTIA Cybersecurity Analyst",
-    slug: "exam-aid/comptia-cybersecurity-analyst",
+    name: "Maryland Real Estate License Exam",
+    slug: "marylandrealestatelicenseexam",
   },
-  { name: "Oracle", slug: "exam-aid/oracle" },
-  { name: "CISA, CISM, CEH, CRISC", slug: "exam-aid/security-certifications" },
+  { name: "Oracle", slug: "oracle" },
+  { name: "CISA", slug: "cisa" },
+  { name: "CEH", slug: "ceh" },
+  { name: "CRISC", slug: "crisc" },
+  { name: "CISM", slug: "cism" },
   { name: "Snowflake", slug: "exam-aid/snowflake" },
-  { name: "Power BI", slug: "exam-aid/power-bi" },
-  { name: "Terraform", slug: "exam-aid/terraform" },
+  { name: "Power BI", slug: "power-bi" },
+  { name: "Terraform", slug: "terraform" },
 ];
 
 export const tutorSubjects = [
@@ -176,15 +176,13 @@ export const testPrepSubjects = [
   { name: "BTECs", slug: "test-prep/btecs" },
   { name: "Series", slug: "test-prep/series" },
   { name: "SAT", slug: "test-prep/sat" },
-  { name: "UKCAT", slug: "test-prep/ukcat" },
-  { name: "7,3,6,63,65,66", slug: "test-prep/7-3-6-63-65-66" },
+  { name: "UCAT", slug: "test-prep/ucat" },
+
   { name: "IB", slug: "test-prep/ib" },
   { name: "BMAT", slug: "test-prep/bmat" },
-  { name: "CCNA", slug: "test-prep/ccna" },
-  { name: "ComTIA", slug: "test-prep/comtia" },
+
   { name: "TEAS", slug: "test-prep/teas" },
   { name: "HesiPN", slug: "test-prep/hesipn" },
   { name: "AttTeas", slug: "test-prep/attteas" },
   { name: "GED", slug: "test-prep/ged" },
-  { name: "SIE", slug: "test-prep/sie" },
 ];

@@ -15,11 +15,7 @@ export default function Error({
       <h3 className="text-center font-medium">
         {error.name}: {error.message}!
       </h3>
-      <button
-        type="button"
-        className="mt-4 font-semibold rounded-md bg-primary px-4 py-2 text-sm hover:cursor-pointer text-background transition-colors hover:bg-foreground hover:text-background"
-        onClick={() => reset()}
-      >
+      <button type="button" className="btn" onClick={() => reset()}>
         Try again
       </button>
     </div>

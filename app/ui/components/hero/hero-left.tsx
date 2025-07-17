@@ -40,8 +40,8 @@ const LeftHero = () => {
         },
         { name: "PSAT", path: "/exams/psat", description: "Preliminary SAT" },
         {
-          name: "SHSAT",
-          path: "/exam-aid/shsat",
+          name: "PSAT",
+          path: "/exam-aid/psat",
           description: "Specialized High Schools Admissions Test",
         },
         {
@@ -50,9 +50,9 @@ const LeftHero = () => {
           description: "Secondary School Admission Test",
         },
         {
-          name: "ISEE",
-          path: "/exam-aid/isee",
-          description: "Independent School Entrance Exam",
+          name: "and More",
+          path: "/exam-aid",
+          description: "Exam aid page",
         },
       ],
     },
@@ -90,8 +90,8 @@ const LeftHero = () => {
           description: "Pharmacy College Admission Test",
         },
         {
-          name: "BAR Exam",
-          path: "/exam-aid/bar",
+          name: "NCLEX",
+          path: "/exam-aid/nclex",
           description: "State Bar Examination",
         },
       ],
@@ -101,21 +101,25 @@ const LeftHero = () => {
       exams: [
         {
           name: "CCNA",
-          path: "/exam-aid/cisco-exams",
+          path: "/exam-aid/cisco",
         },
         {
-          name: "CompTIA",
-          path: "/exam-aid/comptia-exams",
+          name: "CompTIA A+",
+          path: "/exam-aid/comptiaa",
         },
         {
           name: "AWS",
-          path: "/exam-aid/cloud-exams",
+          path: "/exam-aid/awssolutionarchitectprofessional",
         },
-        { name: "CEH", path: "/services/ceh-exam" },
-        { name: "PMI (PMP, CAPM)", path: "/exam-aid/pmi-exams" },
+        { name: "CEH", path: "/services/ceh" },
+        { name: "PMI (PMP, CAPM)", path: "/exam-aid/pmp" },
         {
-          name: "MCSA",
-          path: "/exam-aid/microsoft-exams",
+          name: "CISA",
+          path: "/exam-aid/cisa",
+        },
+        {
+          name: "and More",
+          path: "/exam-aid",
         },
       ],
     },

@@ -9,7 +9,7 @@ export default function MainHero() {
   const { isVisible } = useUIState();
   const dispatch = useUIDispatch();
   return (
-    <section className="bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] min-h-screen z-10 relative">
+    <section id='hero-main' className="bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] min-h-screen z-10 relative">
       {isVisible ? (
         <AnimatePresence mode="wait">
           <motion.div

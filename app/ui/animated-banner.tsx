@@ -3,8 +3,21 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-
+import { useUIDispatch } from "@/context/UIContext";
 export const AnimatedBanner = () => {
+  const dispatch = useUIDispatch();
+
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    setTimeout(() => {
+      dispatch({ type: "SHOW_HELP" });
+    }, 1000);
+  };
+
   return (
     <motion.section
       className="relative py-16 px-8  overflow-hidden min-h-[500px] flex items-center"
@@ -58,7 +71,10 @@ export const AnimatedBanner = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <button className="bg-white hover:cursor-pointer text-primary font-semibold px-8 py-3 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all">
+          <button
+            onClick={handleClick}
+            className="bg-white hover:cursor-pointer text-primary font-semibold px-8 py-3 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all"
+          >
             Get Started
           </button>
         </motion.div>

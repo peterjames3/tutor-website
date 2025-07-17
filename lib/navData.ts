@@ -94,7 +94,7 @@ export const certifications = [
     name: "AWS Solution Architect Professional",
     slug: "awssolutionarchitectprofessional",
   },
- 
+
   { name: "PMI-PMP", slug: "pmp" },
   { name: "Google Cloud", slug: "googlecloud" },
   // { name: "CompTIA Security+", slug: "exam-aid/comptiasecurityplus" },
@@ -107,7 +107,7 @@ export const certifications = [
     slug: "itil",
   },
   { name: "CompTIA A+", slug: "exam-aid/comptiaa" },
-  { name: "ISTOB", slug: "exam-aid/istob" },
+
   {
     name: "CAPM",
     slug: "capm",
@@ -122,7 +122,7 @@ export const certifications = [
   { name: "CRISC", slug: "crisc" },
   { name: "CISM", slug: "cism" },
   { name: "Snowflake", slug: "exam-aid/snowflake" },
-  { name: "Power BI", slug: "power-bi" },
+
   { name: "Terraform", slug: "terraform" },
 ];
 
@@ -171,7 +171,7 @@ export const testPrepSubjects = [
   { name: "HSPT", slug: "test-prep/hspt" },
   { name: "PSAT", slug: "test-prep/psat" },
   { name: "TOEFL", slug: "test-prep/toefl" },
-  { name: "MTTLE", slug: "test-prep/mttle" },
+  { name: "MTTLE", slug: "exam-aid/mttle" },
   { name: "NMSQT", slug: "test-prep/nmsqt" },
   { name: "BTECs", slug: "test-prep/btecs" },
   { name: "Series", slug: "test-prep/series" },

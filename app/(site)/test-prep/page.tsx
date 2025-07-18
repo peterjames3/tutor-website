@@ -1,4 +1,4 @@
-//import { SanityDocument } from "@sanity/client";
+
 import {
   examPrepProgramsQuery,
 

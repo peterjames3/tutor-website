@@ -4,23 +4,14 @@ import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { SanityDocument } from "@sanity/client";
+//import { SanityDocument } from "@sanity/client";
+import { TestPrepProgram } from "@/sanity/lib/testprep";
 
-interface ExamAidProgram extends SanityDocument {
-  slug: string;
-  title: string;
-  description: string;
-  banner?: string;
-  duration?: string;
-  category?: string;
-  sections?: Array<{ title: string }>;
+interface TestPrepSliderProps {
+  programs: TestPrepProgram[];
 }
 
-interface ExamAidSliderProps {
-  programs: ExamAidProgram[];
-}
-
-export default function TestPrepSlider({ programs }: ExamAidSliderProps) {
+export default function TestPrepSlider({ programs }: TestPrepSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
   const [itemsPerPage, setItemsPerPage] = useState(1);

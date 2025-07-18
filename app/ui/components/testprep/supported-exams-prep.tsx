@@ -1,13 +1,13 @@
 // app/components/supported-exams.tsx
-import { SanityDocument } from "@sanity/client";
+//import { SanityDocument } from "@sanity/client";
 
 import TestPrepSlider from "@/app/ui/components/testprep/TestPrepSlider";
-
+import { TestPrepProgram } from "@/sanity/lib/testprep";
 interface SupportedExamsProps {
-  programs: SanityDocument[];
+  programs: TestPrepProgram[];
 }
 export default function SupportedTestPrep({ programs }: SupportedExamsProps) {
-  console.log(`Supported-exams: ${programs.length}`);
+
   return (
     <section
       id="supported-exams"

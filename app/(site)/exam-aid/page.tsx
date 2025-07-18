@@ -19,7 +19,7 @@ export default async function TestAidHome() {
     query: examAidProgramsQuery,
     // tags: ["exams"],
   });
-  console.log(programs.length);
+ 
 
   return (
     <>

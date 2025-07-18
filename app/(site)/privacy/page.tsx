@@ -129,7 +129,7 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-semibold mb-4">7. Your Rights</h2>
           <p className="mb-4">Specific to our services:</p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
-            <li>Request copies of all exam materials we've accessed</li>
+            <li>Request copies of all exam materials we&apos;ve accessed</li>
             <li>Revoke exam access at any time (even mid-session)</li>
             <li>
               Receive full reports of all actions taken during exam support

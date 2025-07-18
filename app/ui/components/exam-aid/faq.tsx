@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ChevronDown,
@@ -160,9 +160,13 @@ export default function FAQSection() {
           className="text-center mt-16"
         >
           <p className="text-gray-600 mb-6">Still have questions?</p>
-          <button className="px-6 py-3 bg-button-login-default text-white font-medium rounded-lg hover:bg-button-login-hover transition-colors shadow-sm">
+
+          <Link
+            href="/contact"
+            className="px-6 py-3 bg-button-login-default text-white font-medium rounded-lg hover:bg-button-login-hover transition-colors shadow-sm"
+          >
             Contact Support
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

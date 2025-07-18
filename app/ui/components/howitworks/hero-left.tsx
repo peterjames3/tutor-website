@@ -1,7 +1,14 @@
 "use client";
-import Button from "@/app/ui/start-button";
-
+import { useUIDispatch } from "@/context/UIContext";
 const LeftHero = () => {
+  const dispatch = useUIDispatch();
+  const toggleForm = () => {
+   
+
+  
+      dispatch({ type: "SHOW_HELP" });
+    
+  };
   return (
     <div className=" h-full w-full mx-auto px-6 flex items-center">
       <div>
@@ -25,7 +32,14 @@ const LeftHero = () => {
           <h2 className="text-2xl font-semibold mb-6 text-gray-800">
             Get help Now!
           </h2>
-          <Button />
+
+          <button
+          onClick={toggleForm}
+            type="button"
+            className="cursor-pointer bg-button-login-default px-16 py-4 rounded-md text-primary hover:bg-button-login-hover hover:text-button-textColor-hover transition-all delay-300 "
+          >
+            Get Help Now
+          </button>
         </div>
       </div>
     </div>

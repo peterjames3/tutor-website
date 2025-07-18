@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import NewsletterForm from "./newsletter-form";
-import Logo from "@/app/ui/Logo";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -19,11 +19,23 @@ export default function Footer() {
         {/* Logo & Description */}
         <div className="space-y-4">
           <div className="flex gap-3 items-center">
-            <Logo />
-            <h2 className="text-2xl font-bold">Edusion</h2>
+            <Link href="/" className="flex items-center gap-1 lg:gap-2">
+              <Image
+                src="/favicon-32x32.png"
+                alt="EduSion logo"
+                height={30}
+                width={30}
+                priority
+                className="object-contain"
+              />
+              <span className="font-semibold">
+                <span className="text-foreground">Edu</span>
+                <span className="text-gray-400">sion</span>.
+              </span>
+            </Link>
           </div>
 
-          <p className="text-xl text-gray-300">
+          <p className="p-text text-gray-300">
             Your trusted partner for academic success. We help students excel in
             their exams and classes with personalized support.
           </p>
@@ -50,16 +62,22 @@ export default function Footer() {
           <h3 className=" text-xl font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-gray-300 text-[1rem]">
             <li>
-              <Link href="/about">➜ About Us</Link>
+              <Link href="/faq">➜ FAQs</Link>
             </li>
             <li>
               <Link href="/how-it-works">➜ How It Works</Link>
             </li>
             <li>
-              <Link href="/testimonials">➜ Testimonials</Link>
+              <Link href="/blog">➜ Blog</Link>
             </li>
             <li>
               <Link href="/contact">➜ Contact</Link>
+            </li>
+            <li>
+              <Link href="/sitemap">➜ Sitemap</Link>
+            </li>
+            <li>
+              <Link href="/privacy">➜ Privacy</Link>
             </li>
           </ul>
         </div>

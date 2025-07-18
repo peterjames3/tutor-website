@@ -73,7 +73,7 @@ export const ExamPrepFormSchema = BaseFormSchema.extend({
 });
 
 export const TutoringFormSchema = BaseFormSchema.extend({
-  subject_help: z.string().min(1, "Subject help is required"),
+  //subject_help: z.string().min(1, "Subject help is required"),
   subject: z.string().min(1, "Subject is required"),
   exam_date: z.string().refine(
     (value) => {

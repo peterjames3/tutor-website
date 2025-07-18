@@ -143,18 +143,9 @@ export default function CategorySpecificStep() {
 
           {supportType === "Tutoring" && (
             <>
+            
               <Input
-                {...register("subject")}
-                label="Topic or Focus Area"
-                placeholder="e.g., Algebra, Essay Writing..."
-                error={
-                  typeof errors.subject?.message === "string"
-                    ? errors.subject.message
-                    : undefined
-                }
-              />
-              <Input
-                {...register("start_date")}
+                {...register("exam_date")}
                 label={label}
                 type="date"
                 error={

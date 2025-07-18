@@ -151,9 +151,7 @@ export default function PrivacyPage() {
             <p>
               <strong>For Exam Support:</strong> exams@tutorpro.com
             </p>
-            <p>
-              <strong>Privacy Office:</strong> privacy@tutorpro.com
-            </p>
+           
             <p>24/7 Support Line: (555) 987-6543</p>
           </address>
         </section>

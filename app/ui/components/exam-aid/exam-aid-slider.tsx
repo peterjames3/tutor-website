@@ -4,20 +4,21 @@ import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { SanityDocument } from "@sanity/client";
-
-interface ExamAidProgram extends SanityDocument {
+//import { SanityDocument } from "@sanity/client";
+export interface MinimalExamAidProgram {
+  _id: string;
   slug: string;
   title: string;
   description: string;
-  banner?: string;
-  duration?: string;
-  category?: string;
+  deliveryMethod?: string;
   sections?: Array<{ title: string }>;
+  educationLevel?: string;
+  benefits?: string;
+  // Add any other optional fields you use
 }
 
 interface ExamAidSliderProps {
-  programs: ExamAidProgram[];
+  programs: MinimalExamAidProgram[]; // Use the minimal interface
 }
 
 export default function ExamAidSlider({ programs }: ExamAidSliderProps) {

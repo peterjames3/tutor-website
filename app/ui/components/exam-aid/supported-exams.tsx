@@ -1,10 +1,13 @@
 // app/components/supported-exams.tsx
-import { SanityDocument } from "@sanity/client";
-
+//import { SanityDocument } from "@sanity/client";
+import { MinimalExamAidProgram } from "@/app/ui/components/exam-aid/exam-aid-slider";
 import ExamAidSlider from "@/app/ui/components/exam-aid/exam-aid-slider";
 
+// interface SupportedExamsProps {
+//   programs: SanityDocument[];
+// }
 interface SupportedExamsProps {
-  programs: SanityDocument[];
+  programs: MinimalExamAidProgram[]; // Use the minimal required type
 }
 export default function SupportedExams({ programs }: SupportedExamsProps) {
   console.log(`Supported-exams: ${programs.length}`);

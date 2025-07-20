@@ -46,13 +46,15 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Solutions</h3>
           <ul className="space-y-2 text-gray-300 text-[1rem] ">
             <li>
-              <Link href="/exam-support">➜ Exam Support</Link>
+              <Link href="/exam-aid">➜ Proctored Exam support</Link>
             </li>
             <li>
-              <Link href="/class-assistance">➜ Class Assistance</Link>
+              <Link href="/test-prep">➜ Test Prep </Link>
             </li>
             <li>
-              <Link href="/one-on-one-tutoring">➜ One-on-One Tutoring</Link>
+              <Link href="/academic/tutoring">
+                ➜ One-on-One Online Tutoring
+              </Link>
             </li>
           </ul>
         </div>

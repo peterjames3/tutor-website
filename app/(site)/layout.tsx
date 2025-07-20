@@ -18,6 +18,28 @@ export const metadata: Metadata = {
   title: "Edubase | Tutoring, Exam Prep & Exam Support Services",
   description:
     "Edusion is your trusted partner in academic success. We provide personalized tutoring, structured exam preparation, and full end-to-end support for students in the US, UK, Canada, and New Zealand.",
+  keywords: [
+    "online exam assistance",
+    "test preparation services",
+    "professional exam takers",
+    "exam support services",
+    "guaranteed exam success",
+    "hire someone to take my exam",
+    "do my exam for me",
+    "take my online test",
+    "academic exam help",
+    "exam help for students",
+    "remote test assistance",
+    "exam solutions online",
+    "university exam support",
+    "college test prep help",
+    "exam coaching services",
+    "certification exam help",
+    "proctored exam assistance",
+    "exam completion services",
+    "online class and exam help",
+    "exam takers for hire",
+  ],
 
   robots: "index, follow",
   openGraph: {

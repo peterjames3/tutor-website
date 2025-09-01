@@ -67,7 +67,7 @@ export default function ExamServices() {
             </section>
             <figcaption className="h-full  w-1/2">
               <Image
-                src="/service 1.png"
+                src="/process image 1.png"
                 alt="expert exam assistance"
                 width={300}
                 height={400}
@@ -103,7 +103,7 @@ export default function ExamServices() {
             </section>
             <figcaption className="h-[55%]  w-full">
               <Image
-                src="/service 2.png"
+                src="/process image 2.png"
                 alt="expert exam assistance"
                 width={800}
                 height={400}
@@ -142,7 +142,7 @@ export default function ExamServices() {
             </section>
             <figcaption className="h-[55%]  w-full">
               <Image
-                src="/services 3.png"
+                src="/process image 3.png"
                 alt="expert exam assistance"
                 width={800}
                 height={400}

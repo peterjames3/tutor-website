@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 type Testimonial = {
   name: string;
@@ -21,15 +21,23 @@ export default function TestimonialScroller({
   direction = "left",
 }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollWidth, setScrollWidth] = useState(0);
 
   // Duplicate testimonials to fill space — better looping illusion
   const repeatedTestimonials = [...testimonials, ...testimonials];
 
-  // Animate from 0 to -50% (scroll half the width, since we duplicated)
+  useEffect(() => {
+    if (scrollRef.current) {
+      setScrollWidth(scrollRef.current.scrollWidth / 2);
+      // divide by 2 since we duplicated
+    }
+  }, [testimonials]);
+
+  // Animate dynamically based on scrollWidth
   const animation = {
-    x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"],
+    x: direction === "left" ? [0, -scrollWidth] : [-scrollWidth, 0],
     transition: {
-      ease: "linear",
+      ease: "linear" as const,
       duration: 40,
       repeat: Infinity,
     },
@@ -40,10 +48,12 @@ export default function TestimonialScroller({
       <motion.div
         animate={animation}
         onHoverStart={(e) => (
-          e.stopPropagation(), scrollRef.current?.classList.add("paused")
+          e.stopPropagation(),
+          scrollRef.current?.classList.add("paused")
         )}
         onHoverEnd={(e) => (
-          e.stopPropagation(), scrollRef.current?.classList.remove("paused")
+          e.stopPropagation(),
+          scrollRef.current?.classList.remove("paused")
         )}
         ref={scrollRef}
         className="flex w-fit gap-6"

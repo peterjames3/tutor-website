@@ -30,7 +30,7 @@ export default function Mobile() {
     open: {
       x: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 30,
       },
@@ -38,7 +38,7 @@ export default function Mobile() {
     closed: {
       x: "100%",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 30,
         delay: 0.15,

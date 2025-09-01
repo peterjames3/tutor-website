@@ -106,15 +106,7 @@ export default function Footer() {
       <hr className="border-0.5 border-accent2" />
 
       {/* Newsletter */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]  pt-6  pb-6">
-        <div>
-          <h4 className="text-lg font-semibold">Subscribe to Our Newsletter</h4>
-          <p className="text-sm text-gray-300">
-            Stay updated with the latest in solar technology and energy
-            solutions
-          </p>
-        </div>
-
+      <div className="w-full mx-auto max-w-full lg:max-w-[840px]   pt-6  pb-6">
         <NewsletterForm />
       </div>
       <hr className="border-0.5 border-accent2" />

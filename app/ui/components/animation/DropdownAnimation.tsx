@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface DropdownAnimationProps {
@@ -16,14 +16,14 @@ export default function DropdownAnimation({
 }: DropdownAnimationProps) {
   console.log("📋 DropdownAnimation rendered, isOpen:", isOpen);
 
-  const dropdownVariants = {
+  const dropdownVariants: Variants = {
     hidden: {
       opacity: 0,
       scale: 0.95,
       y: -10,
       transition: {
         duration: 0.2,
-        ease: "easeInOut",
+        ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeInOut
       },
     },
     visible: {
@@ -32,7 +32,7 @@ export default function DropdownAnimation({
       y: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut",
+        ease: [0.25, 1, 0.5, 1], // cubic-bezier for easeOut
         type: "spring",
         stiffness: 300,
         damping: 30,

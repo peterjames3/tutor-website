@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/app/ui/components/navigation/Navbar";
+import { GoogleTagManager } from "@next/third-parties/google";
 import Footer from "../ui/components/footer/Footer";
 import ScrollToTopBtn from "../ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
@@ -82,10 +83,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
       <UIProvider>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
         >
+          {/* <!-- Google Tag Manager (noscript) --> */}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-KZHSPRPQ"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          {/* <!-- End Google Tag Manager (noscript) --> */}
           <Navbar />
           {children}
           <ScrollToTopBtn />

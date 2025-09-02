@@ -93,8 +93,8 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Mail size={20} />
-            <Link href="mailto:support@academihelp.com">
-              support@academihelp.com
+            <Link href="mailto:info@testhelpnow.com">
+              info@testhelpnow.com
             </Link>
           </div>
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">

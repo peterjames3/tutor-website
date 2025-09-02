@@ -15,9 +15,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-xl font-semibold mb-2">Email Support</h2>
             <p>Reach out to our Customer Support team by email at:</p>
-            <p className="text-blue-600 font-medium">
-              support@tutordashboard.com
-            </p>
+            <a  className="text-blue-600 font-medium">info@testhelpnow.com</a>
             <p className="text-gray-600">
               Our team typically responds to emails within 1-3 business days.
             </p>

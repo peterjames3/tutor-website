@@ -22,9 +22,7 @@ const ContactBar = memo<ContactBarProps>(({ isScrolled }) => {
           </div>
           <div className="flex items-center gap-2">
             <Mail className="h-3 w-3 md:h-4 md:w-4" />
-            <a href="mailto:info@OdysseyTestPrep.com">
-              info@OdysseyTestPrep.com
-            </a>
+            <a href="mailto:info@testhelpnow.com">info@testhelpnow.com</a>
 
             <span className="sm:hidden">Email</span>
           </div>

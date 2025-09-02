@@ -54,7 +54,7 @@ const Stepper = () => {
           href="/"
         >
           <div className="w-full text-white  flex text-xl md:text-2xl lg:text-3xl items-center gap-5 font-semibold">
-            <GraduationCap size={64} /> Edusion
+            <GraduationCap size={64} /> TestHelpNow
           </div>
         </Link>
       </div>

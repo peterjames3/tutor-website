@@ -22,15 +22,15 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-1 lg:gap-2">
               <Image
                 src="/favicon-32x32.png"
-                alt="EduSion logo"
+                alt="TestHelpNow logo"
                 height={30}
                 width={30}
                 priority
                 className="object-contain"
               />
               <span className="font-semibold">
-                <span className="text-foreground">Edu</span>
-                <span className="text-gray-400">sion</span>.
+                <span className="text-foreground">TestHelp</span>
+                <span className="text-gray-400">Now</span>.
               </span>
             </Link>
           </div>
@@ -76,7 +76,7 @@ export default function Footer() {
               <Link href="/contact">➜ Contact</Link>
             </li>
             <li>
-              <Link href="/sitemap">➜ Sitemap</Link>
+              <Link href="/sitemap.xml">➜ Sitemap</Link>
             </li>
             <li>
               <Link href="/privacy">➜ Privacy</Link>
@@ -93,9 +93,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Mail size={20} />
-            <Link href="mailto:info@testhelpnow.com">
-              info@testhelpnow.com
-            </Link>
+            <Link href="mailto:info@testhelpnow.com">info@testhelpnow.com</Link>
           </div>
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Phone size={20} />

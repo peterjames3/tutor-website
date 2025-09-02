@@ -40,15 +40,15 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-1 lg:gap-2">
             <Image
               src="/favicon-32x32.png"
-              alt="EduSion logo"
+              alt="TestHelpNow logo"
               height={30}
               width={30}
               priority
               className="object-contain"
             />
             <span>
-              <span className="text-foreground">Edu</span>
-              <span className="text-primary">sion</span>.
+              <span className="text-foreground">TestHelp</span>
+              <span className="text-primary">Now</span>.
             </span>
           </Link>
         </nav>

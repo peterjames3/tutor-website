@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "Edubase | Tutoring, Exam Prep & Exam Support Services",
+  title: "Testhelpnow | Tutoring, Exam Prep & Exam Support Services",
   description:
-    "Edusion is your trusted partner in academic success. We provide personalized tutoring, structured exam preparation, and full end-to-end support for students in the US, UK, Canada, and New Zealand.",
+    "Testhelpnow is your trusted partner in academic success. We provide personalized tutoring, structured exam preparation, and full end-to-end support for students in the US, UK, Canada, and New Zealand.",
   keywords: [
     "online exam assistance",
     "test preparation services",
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     title: "Edusion | Academic Tutoring & Exam Support Services",
     description:
       "Get expert tutoring, targeted exam preparation, and end-to-end academic support. Edusion helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
-    url: "https://youredusiondomain.com",
+    url: "https://testhelpnow.com/",
     type: "website",
     locale: "en_US",
-    siteName: "Edusion",
+    siteName: "Testhelpnow",
   },
   icons: {
     icon: [

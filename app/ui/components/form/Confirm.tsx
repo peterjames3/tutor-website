@@ -74,67 +74,92 @@ export default function ConfirmationStep() {
   const getEndToEndData = () => state.data as EndToEndSupportFormData;
 
   return (
-    <div className="space-y-6 bg-background py-4 px-6 rounded-sm">
-      <div>
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">
+    <section
+      className="space-y-6 bg-background py-4 px-6 rounded-sm"
+      role="region"
+      aria-labelledby="review-heading"
+    >
+      <header>
+        <h2
+          id="review-heading"
+          className="text-3xl font-bold text-gray-800 mb-2"
+        >
           Review Your Information
         </h2>
         <p className="text-gray-600">
           Please confirm that everything is correct
         </p>
-      </div>
+      </header>
 
       {/* Support Type */}
-      <div className="p-6 rounded-sm bg-cardBg space-y-2">
-        <h3 className="title">Support Type</h3>
+      <section
+        className="p-6 rounded-sm bg-cardBg space-y-2"
+        role="region"
+        aria-labelledby="support-type-heading"
+      >
+        <h3 id="support-type-heading" className="title">
+          Support Type
+        </h3>
         <p className="label-text">Your selected support category</p>
         <p className="font-semibold">{supportType}</p>
-      </div>
+      </section>
 
       {/* Personal Info */}
-      <div className="p-6 rounded-sm bg-cardBg space-y-2">
-        <h3 className="title">Personal Information</h3>
+      <section
+        className="p-6 rounded-sm bg-cardBg space-y-2"
+        role="region"
+        aria-labelledby="personal-info-heading"
+      >
+        <h3 id="personal-info-heading" className="title">
+          Personal Information
+        </h3>
         <p className="label-text">Your contact details</p>
-        <div className="grid grid-cols-2 gap-5">
+        <dl className="grid grid-cols-2 gap-5">
           <div>
-            <h4 className="p-text">Full Name</h4>
-            <p className="label-text">{state.data.name}</p>
+            <dt className="p-text">Full Name</dt>
+            <dd className="label-text">{state.data.name}</dd>
           </div>
           <div>
-            <h4 className="p-text">Email</h4>
-            <p className="label-text">{state.data.email}</p>
+            <dt className="p-text">Email</dt>
+            <dd className="label-text">{state.data.email}</dd>
           </div>
           <div>
-            <h4 className="p-text">Phone Number</h4>
-            <p className="label-text">{state.data.phone_number}</p>
+            <dt className="p-text">Phone Number</dt>
+            <dd className="label-text">{state.data.phone_number}</dd>
           </div>
           <div>
-            <h4 className="p-text">Education Level</h4>
-            <p className="label-text">{state.data.level}</p>
+            <dt className="p-text">Education Level</dt>
+            <dd className="label-text">{state.data.level}</dd>
           </div>
-        </div>
-      </div>
+        </dl>
+      </section>
 
       {/* Service Details */}
-      <div className="p-6 rounded-sm bg-cardBg space-y-2">
-        <h3 className="title">Service Details</h3>
+      <div
+        className="p-6 rounded-sm bg-cardBg space-y-2"
+        role="region"
+        aria-labelledby="service-details-heading"
+      >
+        <h3 id="service-details-heading" className="title">
+          Service Details
+        </h3>
         <p className="label-text">Your specific requirements</p>
-        <div className="grid grid-cols-2 gap-5">
+        <dl className="grid grid-cols-2 gap-5">
           {supportType === "Exam Prep" && (
             <>
               <div>
-                <h4 className="p-text">Exam Name</h4>
-                <p className="label-text">{getExamPrepData().exam}</p>
+                <dt className="p-text">Exam Name</dt>
+                <dd className="label-text">{getExamPrepData().exam}</dd>
               </div>
               <div>
-                <h4 className="p-text">Subject</h4>
-                <p className="label-text">{getExamPrepData().subject}</p>
+                <dt className="p-text">Subject</dt>
+                <dd className="label-text">{getExamPrepData().subject}</dd>
               </div>
               <div>
-                <h4 className="p-text">Exam Date</h4>
-                <p className="label-text">
+                <dt className="p-text">Exam Date</dt>
+                <dd className="label-text">
                   {new Date(getExamPrepData().exam_date).toLocaleDateString()}
-                </p>
+                </dd>
               </div>
             </>
           )}
@@ -142,14 +167,14 @@ export default function ConfirmationStep() {
           {supportType === "Tutoring" && (
             <>
               <div>
-                <h4 className="p-text">Subject</h4>
-                <p className="label-text">{getTutoringData().subject}</p>
+                <dt className="p-text">Subject</dt>
+                <dd className="label-text">{getTutoringData().subject}</dd>
               </div>
               <div>
-                <h4 className="p-text">Start Date</h4>
-                <p className="label-text">
+                <dt className="p-text">Start Date</dt>
+                <dd className="label-text">
                   {new Date(getTutoringData().exam_date).toLocaleDateString()}
-                </p>
+                </dd>
               </div>
             </>
           )}
@@ -157,27 +182,31 @@ export default function ConfirmationStep() {
           {supportType === "End to End Exam Support" && (
             <>
               <div>
-                <h4 className="p-text">Exam Name</h4>
-                <p className="label-text">{getEndToEndData().exam}</p>
+                <dt className="p-text">Exam Name</dt>
+                <dd className="label-text">{getEndToEndData().exam}</dd>
               </div>
               <div>
-                <h4 className="p-text">Subject</h4>
-                <p className="label-text">{getEndToEndData().subject}</p>
+                <dt className="p-text">Subject</dt>
+                <dd className="label-text">{getEndToEndData().subject}</dd>
               </div>
               <div>
-                <h4 className="p-text">Exam Date</h4>
-                <p className="label-text">
+                <dt className="p-text">Exam Date</dt>
+                <dd className="label-text">
                   {new Date(getEndToEndData().exam_date).toLocaleDateString()}
-                </p>
+                </dd>
               </div>
             </>
           )}
-        </div>
+        </dl>
       </div>
 
       {/* Error Message */}
       {submitError && (
-        <div className="p-4 rounded-md bg-red-50 text-red-700">
+        <div
+          className="p-4 rounded-md bg-red-50 text-red-700"
+          role="alert"
+          aria-live="assertive"
+        >
           <p className="font-medium">Submission Error:</p>
           <p>{submitError}</p>
         </div>
@@ -189,13 +218,23 @@ export default function ConfirmationStep() {
           variant="outline"
           onClick={() => dispatch({ type: "PREV_STEP" })}
           disabled={isSubmitting}
+          aria-label="Go back to the previous step"
         >
           Back
         </Button>
-        <Button onClick={handleSubmit} disabled={isSubmitting}>
+        <Button
+          id="submit-form"
+          onClick={handleSubmit}
+          disabled={isSubmitting}
+          aria-label={
+            isSubmitting
+              ? "Submitting your application"
+              : "Submit your application"
+          }
+        >
           {isSubmitting ? "Submitting..." : "Submit Application"}
         </Button>
       </div>
-    </div>
+    </section>
   );
 }

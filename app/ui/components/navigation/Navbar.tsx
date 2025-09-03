@@ -84,7 +84,14 @@ export default function Navbar() {
         </div>
         {/*  Buttons */}
         <div className="lg:flex  hidden gap-5">
-          <button  onClick={()=> dispatch({ type: 'SHOW_HELP'})} type="button" className="btn hover:cursor-pointer">
+          <button
+            id="get-help-now-btn"
+            onClick={() => dispatch({ type: "SHOW_HELP" })}
+            type="button"
+            className="btn hover:cursor-pointer"
+            aria-label='Get help now'
+            aria-pressed='false'
+          >
             Get Help Now
           </button>
         </div>

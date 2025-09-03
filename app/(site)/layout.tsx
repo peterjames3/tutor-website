@@ -6,6 +6,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import Footer from "../ui/components/footer/Footer";
 import ScrollToTopBtn from "../ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
+import Chatbot from "../ui/Chatbot";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -102,6 +103,7 @@ export default function RootLayout({
           {children}
           <ScrollToTopBtn />
           <Footer />
+          <Chatbot />
         </body>
       </UIProvider>
     </html>

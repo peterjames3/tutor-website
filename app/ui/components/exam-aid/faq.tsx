@@ -26,7 +26,7 @@ export default function FAQSection() {
         {
           question: "How does the 'on-behalf' support work?",
           answer:
-            "Our certified technicians can remotely access your computer (with your permission) to handle technical setup, troubleshoot issues, and ensure compliance with exam requirements—all while you maintain full visibility and control.",
+            "Our support technicians can remotely access your computer (with your permission) to handle technical setup, troubleshoot issues, and handle the exam for you-all while you maintain full visibility and control .",
         },
       ],
     },

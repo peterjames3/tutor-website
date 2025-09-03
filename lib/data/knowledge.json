@@ -1,0 +1,75 @@
+{
+  "company": "TestHelpNow",
+  "tagline": "Your trusted partner for exam prep, tutoring, and full exam support.",
+  "services": {
+    "tutoring": {
+      "description": "One-on-one and personalized tutoring sessions tailored to each student’s needs. Covers K–12, graduate, and professional subjects.",
+      "benefits": [
+        "Personalized learning experience",
+        "Expert tutors across 300+ subjects",
+        "Flexible scheduling and availability"
+      ],
+      "link": "https://testhelpnow.com/academic/tutoring"
+    },
+    "exam_prep": {
+      "description": "Comprehensive preparation for exams, including practice tests, study guides, and coaching to build confidence and maximize performance.",
+      "benefits": [
+        "Customized study plans",
+        "Access to practice materials",
+        "Strategies for time management and success"
+      ],
+      "link": "https://testhelpnow.com/test-prep"
+    },
+    "full_exam_support": {
+      "description": "We manage proctored exams on your behalf, ensuring a stress-free experience. Our experts handle everything from start to finish.",
+      "benefits": [
+        "End-to-end support",
+        "Expert support throughout the exam",
+        "Proven track record of 2000+ passed exams"
+      ],
+      "link": "https://testhelpnow.com/exam-aid"
+    }
+  },
+  "process": [
+    "Browse our services online",
+    "Fill a quick form with subject, course, and exam details",
+    "Get personalized help tailored to your needs"
+  ],
+  "results": {
+    "passed_exams": "2000+ successful exams completed",
+    "reviews": "Consistently rated 5-stars by students",
+    "subjects": "Support available across 300+ subjects"
+  },
+  "audience": [
+    "K–12 students",
+    "Graduate students",
+    "Professionals pursuing certifications"
+  ],
+  "pricing": {
+    "tutoring": "Starts at $30/hour depending on subject and level.",
+    "exam_prep": "Package-based pricing, includes practice tests and coaching sessions.",
+    "full_exam_support": "Custom quote provided after reviewing exam details."
+  },
+  "faq": {
+    "guarantee": "We guarantee expert support but do not encourage academic dishonesty.",
+    "availability": "Tutors available worldwide across different time zones.",
+    "confidentiality": "All sessions and exam support are handled with 100% confidentiality."
+  },
+  "tutors": {
+    "experience": "All tutors are vetted with at least 3+ years of teaching or industry experience.",
+    "coverage": "300+ subjects including STEM, business, humanities, and professional certifications.",
+    "languages": ["English"]
+  },
+  "hours": {
+    "support": "24/7 support"
+  },
+  "getting_started": [
+    "Choose a service that fits your needs (Tutoring, Exam Prep, Full Exam Support).",
+    "Fill out the quick intake form with subject, level, and goals.",
+    "Our team will match you with the right tutor or provide next steps."
+  ],
+  "contact": {
+    "website": "https://testhelpnow.com",
+    "support_email": "info@testhelpnow.com"
+  }
+}

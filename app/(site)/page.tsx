@@ -9,6 +9,7 @@ import TestimonialsSection from "../ui/components/Testimonial/testimonials-secti
 import { AnimatedBanner } from "../ui/animated-banner";
 import { OtherLinksSection } from "../ui/components/otherlinks/other-links-section";
 
+
 export default function Page() {
   return (
     <main className="">

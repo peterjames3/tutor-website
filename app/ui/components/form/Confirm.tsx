@@ -42,16 +42,16 @@ export default function ConfirmationStep() {
           body: JSON.stringify(formData),
         }
       );
+         const data = await response.json(); 
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(
-          errorData.error || `HTTP error! status: ${response.status}`
-        );
-      }
+      throw new Error(
+        data.error || `HTTP error! status: ${response.status}`
+      );
+    }
 
-      const result = await response.json();
-      console.log("Submission successful:", result);
+    
+      console.log("Submission successful:", data);
 
       // Clear form state on success
       dispatch({ type: "SUBMIT" });

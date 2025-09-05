@@ -57,7 +57,7 @@ export default function SupportTypeStep() {
   const handleNext = () => {
     if (state.data.support_type) {
       dispatch({ type: "NEXT_STEP", payload: {} });
-      console.log(state.data.support_type);
+    
     }
   };
 

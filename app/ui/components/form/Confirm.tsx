@@ -7,7 +7,7 @@ import {
   TutoringFormData,
   EndToEndSupportFormData,
 } from "@/lib/zod-schema";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 export default function ConfirmationStep() {
   const { state, dispatch } = useFormContext();
@@ -15,9 +15,7 @@ export default function ConfirmationStep() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-  useEffect(() => {
-    console.log("Form data to submit:", state.data);
-  }, [state.data]);
+
 
   const handleSubmit = async () => {
     setIsSubmitting(true);

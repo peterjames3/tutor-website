@@ -3,7 +3,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useFormContext } from "@/context/FormContext";
-import { useEffect } from "react";
+
 import Input from "./input";
 import {
   MessageSquare,
@@ -57,10 +57,7 @@ export default function CategorySpecificStep() {
     mode: "onChange",
   });
 
-  useEffect(() => {
-    console.log("Current step:", state.step);
-    console.log("Form errors:", errors);
-  }, [state.step, errors]);
+ 
 
   const onSubmit = (
     data:

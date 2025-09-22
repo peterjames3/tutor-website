@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://sunsetbrightEnergyLimited.com/sitemap.xml",
+    sitemap: "https://testhelpnow.com/sitemap.xml",
   };
 }

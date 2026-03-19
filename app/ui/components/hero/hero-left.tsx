@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Logo from "@/app/ui/Logo";
 
-type ExamCategory = "k12" | "graduate" | "academics";
+type ExamCategory = "k12" | "graduate" | "academics" | "healthcare";
 
 interface ExamItem {
   name: string;
@@ -38,16 +38,15 @@ const LeftHero = () => {
           path: "/exam-aid/ap",
           description: "Advanced Placement exams",
         },
-        { name: "PSAT", path: "/exams/psat", description: "Preliminary SAT" },
         {
-          name: "PSAT",
-          path: "/exam-aid/psat",
-          description: "Specialized High Schools Admissions Test",
+          name: "GED",
+          path: "/take-my-ged-exam-for-me",
+          description: "High School Equivalency Test",
         },
         {
-          name: "SSAT",
-          path: "/exam-aid/ssat",
-          description: "Secondary School Admission Test",
+          name: "HiSET",
+          path: "/take-my-hiset-exam-for-me",
+          description: "High School Equivalency Test",
         },
         {
           name: "and More",
@@ -97,29 +96,56 @@ const LeftHero = () => {
       ],
     },
     academics: {
-      title: " Certiticates Exams",
+      title: "Certificates Exams",
       exams: [
-        {
-          name: "CCNA",
-          path: "/exam-aid/cisco",
-        },
-        {
-          name: "CompTIA A+",
-          path: "/exam-aid/comptiaa",
-        },
         {
           name: "AWS",
           path: "/exam-aid/awssolutionarchitectprofessional",
         },
-        { name: "CEH", path: "/services/ceh" },
-        { name: "PMI (PMP, CAPM)", path: "/exam-aid/pmp" },
         {
-          name: "CISA",
-          path: "/exam-aid/cisa",
+          name: "SHRM",
+          path: "/take-my-shrm-exam-for-me",
+          description: "Society for Human Resource Management",
+        },
+        { name: "PMP", path: "/take-my-pmp-exam-for-me" },
+        {
+          name: "PRINCE2",
+          path: "/take-my-prince2-exam-for-me",
+          description: "Projects in Controlled Environments",
         },
         {
           name: "and More",
           path: "/exam-aid",
+        },
+      ],
+    },
+    healthcare: {
+      title: "Healthcare & Nursing",
+      exams: [
+        {
+          name: "Nursing Entrance",
+          path: "/exam-aid/nursing-entrance",
+          description: "TEAS, HESI, Kaplan Nursing",
+        },
+        {
+          name: "NCLEX",
+          path: "/exam-aid/nclex",
+          description: "Nursing License Exam",
+        },
+        {
+          name: "MCAT",
+          path: "/exam-aid/mcat",
+          description: "Medical College Admission Test",
+        },
+        {
+          name: "DAT",
+          path: "/exam-aid/dat",
+          description: "Dental Admission Test",
+        },
+        {
+          name: "and More",
+          path: "/exam-aid",
+          description: "Other healthcare exams",
         },
       ],
     },
@@ -134,20 +160,21 @@ const LeftHero = () => {
             Left Side: Title + Description + Category Tabs
         ───────────────────────────────────────────────────────────────── */}
         <div>
-          <h1 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[4.1rem] font-bold mb-4 leading-tight">
-            <span className="text-primary">Ace Your </span>
-            <span className="text-secondary">Exams </span>
+          <h1 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.6rem] font-bold mb-4 leading-tight">
+            <span className="text-primary">Get the </span>
+            <span className="text-secondary">Support </span>
             <br />
-            <span className="text-primary">with </span>
-            <span className="text-secondary">Expert </span>
-            <span className="text-primary"> Assistance</span>
+            <span className="text-primary">You Need to Pass</span>
+            <span className="text-secondary">Your High-Stakes </span>
+            <span className="text-primary"> Exam</span>
           </h1>
 
           <p className="text-primary mb-4 text-lg leading-relaxed">
-            Struggling with exams? Let our experts handle it for you!
+            Support candidates preparing for: professional certifications
             <br />
-            We ensure top-quality results while you focus on what matters most.
-            Say goodbye to stress and hello to success!
+            PmP certifications, PRINCE2 Project Management, SHRM Human Resource
+            Ceritifications, Healthcare & Academic Exams, Nursing Entrance
+            Exams, GED, HiSET{" "}
           </p>
 
           <h2 className="text-2xl font-semibold mb-6 text-gray-800">

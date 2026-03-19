@@ -15,7 +15,7 @@ export default function StepOne() {
           1
         </nav>
         <h2 className="headline font-semibold mb-2">
-          Browse or Select the Services You Need
+          Click on <span className='text-secondary'>Get Help Now</span> Button and  Browse or Select the Services You Need
         </h2>
         <p className="text-[1rem] lg:text-[1.3rem] text-primary mb-4">
           Browse the type of support you need: Online Tutoring, Exam Preparation

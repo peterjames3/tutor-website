@@ -18,11 +18,12 @@ const geistMono = Geist_Mono({
 });
 export const metadata: Metadata = {
   title: {
-    default: "Testhelpnow | Academic Tutoring, Test prep & End-To-End Exam Support Services",
+    default:
+      "Testhelpnow | Academic Tutoring, Test prep & End-To-End Exam Support Services",
     template: "%s | Testhelpnow",
   },
   description:
-    "Testhelpnow is your trusted partner in academic success. We provide personalized tutoring, structured exam preparation, and full end-to-end support for students in the US, UK, Canada, and New Zealand.",
+    "Need help with online exams? TestHelpNow lets you pay someone to do your online exam with expert support, guaranteed confidentiality, and reliable results.",
   keywords: [
     "online exam assistance",
     "test preparation services",
@@ -33,9 +34,6 @@ export const metadata: Metadata = {
     "do my exam for me",
     "take my online test",
     "academic exam help",
-    "exam help for students",
-    "remote test assistance",
-    "exam solutions online",
     "university exam support",
     "college test prep help",
     "exam coaching services",
@@ -44,14 +42,16 @@ export const metadata: Metadata = {
     "exam completion services",
     "online class and exam help",
     "exam takers for hire",
+    "Pay Someone to do my Online Exam for me",
   ],
 
   robots: "index, follow",
   openGraph: {
-    title:{
-      default: "Testhelpnow | Academic Tutoring, Test prep & End-To-End Exam Support Services",
+    title: {
+      default:
+        "Testhelpnow | Academic Tutoring, Test prep & End-To-End Exam Support Services",
       template: "%s | Testhelpnow",
-    } ,
+    },
     description:
       "Get expert tutoring, targeted exam preparation, and end-to-end academic support. Edusion helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
     url: "https://testhelpnow.com/",

@@ -49,7 +49,7 @@ export default function SuccessPath() {
         <h2 className="text-4xl font-bold text-primary mb-2">
           Unlock Your Path to <br /> Success with Us
         </h2>
-        <p className="text-primary p-text">
+        <p className="text-[1rem] lg:text-[1.3rem] text-primary">
           Our simple process makes it easy to get the <br /> academic support
           you need
         </p>

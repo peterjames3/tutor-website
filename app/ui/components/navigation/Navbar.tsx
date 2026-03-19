@@ -88,7 +88,7 @@ export default function Navbar() {
             id="get-help-now-btn"
             onClick={() => dispatch({ type: "SHOW_HELP" })}
             type="button"
-            className="btn hover:cursor-pointer"
+            className="cta hover:cursor-pointer"
             aria-label='Get help now'
             aria-pressed='false'
           >

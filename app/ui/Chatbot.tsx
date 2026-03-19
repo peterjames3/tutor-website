@@ -1,34 +1,87 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Bot } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+import { MessageSquareDot, X } from "lucide-react";
+import HomeTab from "./chatbot/HomeTab";
+import HelpTab from "./chatbot/HelpTab";
+import FooterTabs from "./chatbot/FooterTabs";
+import Header from "./chatbot/Header";
+import MessagesTab from "./chatbot/MessagesTab";
+import ChartHeader from "./chatbot/ChartHeader";
+import HelpHeader from "./chatbot/HelpHeader";
+
+type Tab = "home" | "messages" | "help";
+
+type Message = {
+  role: "user" | "bot";
+  text: string;
+  options?: { label: string; value: string }[];
+};
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState<{ role: string; text: string }[]>(
-    []
-  );
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<Tab>("home");
 
-  // 🔹 Load state from localStorage on mount
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    if (messages.length === 0) {
+      setMessages([
+        {
+          role: "bot",
+          text: "Hi there! 👋\nWhat brings you here today?",
+          options: [
+            { label: "Tutoring related request", value: "tutoring" },
+            { label: "Exam prep", value: "exam_prep" },
+            { label: "Full exam support", value: "exam_support" },
+          ],
+        },
+      ]);
+    }
+  }, []);
+
+  // Load chatbot open state
+  useEffect(() => {
+    // Check if user has a saved preference
     const savedState = localStorage.getItem("chatbot-open");
-    if (savedState) {
+
+    if (savedState === null) {
+      // First time visitor → open chatbot after 3 seconds
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        localStorage.setItem("chatbot-open", JSON.stringify(true)); // remember user opened it
+      }, 3000);
+
+      // Clean up the timer if component unmounts
+      return () => clearTimeout(timer);
+    } else {
+      // User has a preference → respect it
       setIsOpen(JSON.parse(savedState));
     }
   }, []);
 
-  // 🔹 Save state to localStorage when it changes
+  // Save chatbot open state
   useEffect(() => {
     localStorage.setItem("chatbot-open", JSON.stringify(isOpen));
   }, [isOpen]);
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
+  // Scroll to bottom when messages update
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, loading]);
 
-    const userMessage = { role: "user", text: input };
+  // Send message
+  const sendMessage = async (customMessage?: string) => {
+    const text = customMessage ?? input;
+    if (!text.trim()) return;
+
+    const userMessage: { role: "user" | "bot"; text: string } = {
+      role: "user",
+      text,
+    };
+
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setLoading(true);
@@ -37,13 +90,13 @@ export default function Chatbot() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
+        body: JSON.stringify({ message: text }),
       });
-
       const data = await res.json();
       if (data.reply) {
         setMessages((prev) => [...prev, { role: "bot", text: data.reply }]);
       }
+      setActiveTab("messages"); // Auto switch to messages tab
     } catch (err) {
       console.error(err);
       setMessages((prev) => [
@@ -57,20 +110,84 @@ export default function Chatbot() {
       setLoading(false);
     }
   };
+  const handleOption = (value: string) => {
+    setMessages((prev) => [...prev, { role: "user", text: value }]);
+
+    if (
+      value === "tutoring" ||
+      value === "exam_prep" ||
+      value == "exam_support"
+    ) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "bot",
+          text: "Which course/exam are you preparing for?",
+          options: [
+            { label: "PMP", value: "pmp" },
+            { label: "GED", value: "ged" },
+            { label: "HISET", value: "hiset" },
+          ],
+        },
+      ]);
+    }
+
+    if (value === "pmp" || value === "ged" || value === "hiset") {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "bot",
+          text: "How would you like to proceed?",
+          options: [
+            { label: "Book a free 15-minute strategy call", value: "call" },
+            { label: "Place an order", value: "order" },
+          ],
+        },
+      ]);
+    }
+
+    if (value === "call") {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "bot",
+          text: "You can book your **free strategy call** here:\n\n[Contact Us](https://testhelpnow.com/contact)",
+        },
+      ]);
+    }
+
+    if (value === "order") {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "bot",
+          text: "To place an order click **Get Help Now** button in the navigation bar.",
+        },
+      ]);
+    }
+
+    setActiveTab("messages");
+  };
+
+  <HomeTab setActiveTab={setActiveTab} />;
+
+  <HelpTab />;
 
   return (
     <>
-      {/* Floating Button with bounce */}
+      {/* Floating Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-27 right-15 bg-secondary hover:bg-primary text-white p-4 rounded-full shadow-lg"
-        aria-label="Open chatbot"
+        className="fixed bottom-25 right-14 z-10 bg-primary text-white p-4 rounded-full shadow-lg animate-bounce"
         whileTap={{ scale: 0.9 }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type: "spring", stiffness: 200, damping: 10 }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          scale: { type: "spring", stiffness: 200, damping: 10 },
+          opacity: { delay: 1.2, duration: 0.6 },
+        }}
       >
-        {isOpen ? <X size={20} /> : <MessageCircle size={20} />}
+        {isOpen ? <X size={20} /> : <MessageSquareDot size={30} />}
       </motion.button>
 
       {/* Chat Window */}
@@ -81,81 +198,29 @@ export default function Chatbot() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 50 }}
             transition={{ type: "spring", stiffness: 150, damping: 15 }}
-            className="fixed bottom-20 right-5 w-80  rounded-xl shadow-lg shadow-primary  bg-white flex flex-col overflow-hidden"
+            className="fixed h-[67%] bottom-25 right-10 z-10 w-[22rem]  rounded-3xl shadow-lg shadow-primary bg-white flex flex-col overflow-hidden"
           >
-            {/* Header */}
-            <section className="text-label-title px-3 py-4 font-medium bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] text-primary rounded-t-xl flex justify-between items-center">
-              <header className="flex gap-2 items-center">
-                <Bot size={30} className="" />
-                <h2> TestHelpNow Chatbot</h2>
-              </header>
+            {activeTab == "messages" && <ChartHeader setIsOpen={setIsOpen} />}
+            {activeTab == "help" && <HelpHeader setIsOpen={setIsOpen} />}
+            {activeTab == "home" && <Header setIsOpen={setIsOpen} />}
 
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-primary hover:text-gray-400 cursor-pointer"
-                aria-label="Close chatbot"
-              >
-                <X size={18} />
-              </button>
-            </section>
-
-            {/* Messages */}
-            <div className="p-4 h-70 overflow-y-auto space-y-2">
-              {messages.map((msg, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`p-2 rounded-xl max-w-[80%] whitespace-pre-line text-sm ${
-                    msg.role === "user"
-                      ? "bg-secondary text-primary ml-auto"
-                      : "bg-gray-100 text-gray-900"
-                  }`}
-                >
-                  <ReactMarkdown
-                    components={{
-                      a: ({ href, children }) => (
-                        <a
-                          href={href ?? "#"}
-                          target="_self"
-                          rel="noopener noreferrer"
-                          className="inline-block  text-secondary font-semibold text-xs hover:text-active-link transition mt-2"
-                        >
-                          {children}
-                        </a>
-                      ),
-                    }}
-                  >
-                    {msg.text}
-                  </ReactMarkdown>
-                </motion.div>
-              ))}
-              {loading && (
-                <div className="p-2 bg-gray-200 rounded-xl text-sm w-fit">
-                  Typing...
-                </div>
+            {/* Tab Content */}
+            <div className="flex-1 overflow-y-auto">
+              {activeTab === "home" && <HomeTab setActiveTab={setActiveTab} />}
+              {activeTab === "messages" && (
+                <MessagesTab
+                  messages={messages}
+                  input={input}
+                  setInput={setInput}
+                  sendMessage={sendMessage}
+                  loading={loading}
+                  handleOption={handleOption}
+                />
               )}
+              {activeTab === "help" && <HelpTab />}
             </div>
 
-            {/* Input */}
-            <div className="flex  p-2">
-              <input
-                type="text"
-                className="flex-1 border rounded-lg p-2 mr-2 text-sm"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask me about our services..."
-                onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-              />
-              <button
-                onClick={sendMessage}
-                disabled={loading}
-                className="bg-secondary hover:bg-active-link text-white hover:cursor-pointer transition-all delay-300 px-4 py-2 rounded-lg text-sm disabled:opacity-50"
-              >
-                Send
-              </button>
-            </div>
+            <FooterTabs activeTab={activeTab} setActiveTab={setActiveTab} />
           </motion.div>
         )}
       </AnimatePresence>

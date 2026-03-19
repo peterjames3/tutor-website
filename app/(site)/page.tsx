@@ -7,9 +7,15 @@ import SubTestimonialCard from "../ui/components/Testimonial/sub-testimonial";
 import SuccessPath from "../ui/components/path/success-path";
 import TestimonialsSection from "../ui/components/Testimonial/testimonials-section";
 import { AnimatedBanner } from "../ui/animated-banner";
+import SEOContent from '../ui/seo-content'
+import PortalsSection from "../ui/portal-section"
 import { OtherLinksSection } from "../ui/components/otherlinks/other-links-section";
 
-
+export const metadata = {
+  title: "Pay Someone to Take My Online Exam | AllExamHelper",
+  description:
+    "Pay someone to take your online exam with expert exam takers. Secure, confidential, and reliable online exam help for students.",
+};
 export default function Page() {
   return (
     <main className="">
@@ -18,6 +24,8 @@ export default function Page() {
       <SubService />
       <TestServices />
       <SubTestimonialCard />
+      <SEOContent />
+      <PortalsSection />
       <SuccessPath />
       <TestimonialsSection />
       <AnimatedBanner />

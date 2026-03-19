@@ -18,7 +18,7 @@ const SuccessStep: FC<SuccessStepProps> = ({
     <div className={`rounded-xl px-6 py-16 ${bgColor} w-full max-w-xs`}>
       <div className="mb-4">{icon}</div>
       <h4 className="title font-semibold text-gray-900 mb-2">{title}</h4>
-      <p className="text-gray-700 p-text">{description}</p>
+      <p className="text-[1rem] lg:text-[1.3rem] text-primary">{description}</p>
     </div>
   );
 };

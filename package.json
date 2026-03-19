@@ -27,6 +27,7 @@
     "next-sanity": "^10.0.15",
     "postcss": "^8.5.4",
     "react": "^19.0.0",
+    "react-calendly": "^4.4.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.58.1",
     "react-markdown": "^10.1.0",

@@ -6,7 +6,7 @@ import path from "path";
 // Load structured knowledge base
 const knowledge = fs.readFileSync(
   path.join(process.cwd(), "lib/data/knowledge.json"),
-  "utf-8"
+  "utf-8",
 );
 
 export async function POST(req: Request) {
@@ -14,7 +14,9 @@ export async function POST(req: Request) {
     const { message } = await req.json();
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.5-flash",
+    });
 
     const prompt = `
     You are a helpful assistant for TestHelpNow.com.
@@ -46,7 +48,7 @@ export async function POST(req: Request) {
     console.error(error);
     return NextResponse.json(
       { error: "Something went wrong." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

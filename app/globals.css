@@ -35,7 +35,7 @@ html {
   --color-default-link: #b3e7b3;
   --color-hover-link: #81d487;
   --color-button-login-default: #2b9e3b;
-  --color-button-login-hover: #1c7f2b;
+  --color-button-login-hover: rgb(28, 127, 43);
   --color-button-login-active: #176526;
   --color-button-login-disabled: #d9f3d8;
   --color-button-textColor: #f8f9fa;
@@ -102,6 +102,76 @@ html {
   @apply px-6 py-4 rounded-lg font-medium text-sm transition-colors;
   background-color: var(--color-button-login-default);
   color: var(--color-button-textColor);
+}
+.cta {
+  @apply px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300;
+  background-color: var(--color-button-login-default);
+  color: var(--color-button-textColor);
+  animation:
+    breathe 2.5s infinite ease-in-out,
+    aura 2.5s infinite ease-in-out;
+  transform-origin: center;
+  position: relative;
+}
+@keyframes aura {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(45, 212, 191, 0.35),
+      0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  50% {
+    box-shadow:
+      0 0 20px 8px rgba(45, 212, 191, 0.3),
+      0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+/* Optional: Add a pseudo-element for a background ripple effect */
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  opacity: 0.15;
+  transform: scale(1);
+  animation: ripple 2.5s infinite ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+.cta:hover {
+  background-color: var(--color-button-login-hover);
+  color: var(--color-button-textColor-hover);
+}
+.cta:active {
+  background-color: var(--color-button-login-active);
+}
+.cta:disabled {
+  background-color: var(--color-button-login-disabled);
+  color: var(--color-button-textColor-disabled);
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .btn:hover {

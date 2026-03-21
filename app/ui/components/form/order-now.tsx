@@ -1,5 +1,5 @@
 "use client";
-import { ToastContainer } from "react-toastify";
+
 import { MessageSquare } from "lucide-react";
 import Input from "./input";
 import TextArea from "./text-area";
@@ -93,7 +93,7 @@ export default function OrderNowForm() {
           {isSubmitting ? "Sending..." : "Book Your Free Strategy via email"}
         </button>
       </form>
-      <ToastContainer />
+    
     </div>
   );
 }

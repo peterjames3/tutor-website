@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import NewsletterForm from "./newsletter-form";
 import Image from "next/image";
@@ -87,10 +87,7 @@ export default function Footer() {
         {/* Support */}
         <div className="space-y-3">
           <h3 className="font-semibold mb-4 text-xl">Support</h3>
-          <div className="flex items-start gap-3 text-[1rem] text-gray-300">
-            <MapPin size={20} className="mt-1" />
-            <span>123 Education Ave, Learning City</span>
-          </div>
+        
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Mail size={20} />
             <Link href="mailto:info@testhelpnow.com">info@testhelpnow.com</Link>

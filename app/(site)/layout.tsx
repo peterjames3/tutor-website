@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/app/ui/components/navigation/Navbar";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { ToastContainer } from "react-toastify";
 import Footer from "../ui/components/footer/Footer";
 import ScrollToTopBtn from "../ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
@@ -110,6 +111,7 @@ export default function RootLayout({
           <ScrollToTopBtn />
           <Footer />
           <Chatbot />
+          <ToastContainer />
         </body>
       </UIProvider>
     </html>

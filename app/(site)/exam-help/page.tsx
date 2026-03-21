@@ -14,28 +14,26 @@ import { Services } from "@/app/ui/components/exam-aid/services";
 
 import TestimonialsSection from "@/app/ui/components/Testimonial/testimonials-section";
 
-
 export const metadata = {
-  title: "Exam Aid Services",
+  title: "ExamHelp Services",
   description:
     "Get expert end-to-end exam support aid with real-time guidance, we handle the exam for you-all while you maintain full visibility and control.",
   alternates: {
-    canonical: "https://testhelpnow.com/exam-aid",
+    canonical: "https://testhelpnow.com/exam-help",
   },
   openGraph: {
-    title: "Exam Aid Services | TestHelpNow",
+    title: "Exam Help Services | TestHelpNow",
     description:
       "Comprehensive exam aid services designed to help you succeed.",
-    url: "https://testhelpnow.com/exam-aid",
+    url: "https://testhelpnow.com/exam-help",
   },
 };
 
-export default async function TestAidHome() {
+export default async function TestHelpHome() {
   const programs = await sanityFetch<MinimalExamAidProgram[]>({
     query: examAidProgramsQuery,
     // tags: ["exams"],
   });
- 
 
   return (
     <>

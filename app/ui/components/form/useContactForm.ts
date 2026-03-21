@@ -1,3 +1,4 @@
+'use client';
 import { useState } from "react";
 import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";

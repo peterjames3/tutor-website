@@ -3,6 +3,7 @@ interface FormValues {
   email: string;
   phone: string;
   message: string;
+  [key: string]: string;
 }
 
 export type { FormValues };

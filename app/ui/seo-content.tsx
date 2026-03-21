@@ -223,11 +223,11 @@ export default function SEOContent() {
           </div>
           <div className="px-3 py-8">
             <ul className="flex flex-col space-y-2 p-2">
-              <Link href="/ged-exam" className="flex items-center gap-2">
+              <Link href="/take-my-ged-exam-for-me" className="flex items-center gap-2">
                 {" "}
                 <CircleArrowRight /> GED Exam
               </Link>
-              <Link href="/hiset-exam" className="flex items-center gap-2">
+              <Link href="/take-my-hiset-exam-for-me" className="flex items-center gap-2">
                 {" "}
                 <CircleArrowRight />
                 HiSET Exam
@@ -240,21 +240,7 @@ export default function SEOContent() {
                 <CircleArrowRight />
                 PMP Exam
               </Link>
-              <Link href="shrm-exam" className="flex items-center gap-2">
-                {" "}
-                <CircleArrowRight /> SHRM Exam
-              </Link>
-              <Link href="/prince2-exam" className="flex items-center gap-2">
-                {" "}
-                <CircleArrowRight /> PRINCE2 Exam
-              </Link>
-              <Link
-                href="/nursing-entrance-exams"
-                className="flex items-center gap-2"
-              >
-                {" "}
-                <CircleArrowRight /> Nursing Entrance Exams
-              </Link>
+             
             </ul>
           </div>
         </article>

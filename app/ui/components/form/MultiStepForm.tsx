@@ -1,11 +1,9 @@
 "use client";
-import { FormProvider, useFormContext } from "@/context/FormContext";
-import SupportTypeStep from "./SupportTypeStep";
-import PersonalInfoStep from "./PersonalInfoStep";
-import CategorySpecificStep from "./CategorySpecificStep";
-import ConfirmationStep from "./Confirm";
+import { FormProvider} from "@/context/FormContext";
+
 import Stepper from "./StepIndicators";
-import Success from "./Success";
+
+import OrderNow  from './order-now'
 import { ArrowLeft } from "lucide-react";
 type MultiStepFormProps = {
   onBack: () => void;
@@ -26,7 +24,7 @@ export default function StudentForm({ onBack }: MultiStepFormProps) {
             >
               <ArrowLeft size={18} /> Back to main
             </button>
-            <FormContent />
+            <OrderNow />
           </div>
         </div>
       </div>
@@ -34,19 +32,4 @@ export default function StudentForm({ onBack }: MultiStepFormProps) {
   );
 }
 
-const FormContent = () => {
-  const { state } = useFormContext();
-  if (state.submitted) {
-    return <Success />;
-  }
 
-  return (
-    <>
-      {state.step === 0 && <SupportTypeStep />}
-      {state.step === 1 && <PersonalInfoStep />}
-      {state.step === 2 && <CategorySpecificStep />}
-
-      {state.step === 3 && <ConfirmationStep />}
-    </>
-  );
-};

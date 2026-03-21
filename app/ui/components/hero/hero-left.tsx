@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Logo from "@/app/ui/Logo";
 
-type ExamCategory = "k12" | "graduate" | "academics" | "healthcare";
+type ExamCategory = "k12" | "academics";
 
 interface ExamItem {
   name: string;
@@ -23,21 +23,21 @@ const LeftHero = () => {
     k12: {
       title: "Grades K-12",
       exams: [
-        {
-          name: "SAT",
-          path: "/exam-aid/sat",
-          description: "College admission test",
-        },
-        {
-          name: "ACT",
-          path: "/exam-aid/act",
-          description: "Alternative college admission test",
-        },
-        {
-          name: "AP",
-          path: "/exam-aid/ap",
-          description: "Advanced Placement exams",
-        },
+        // {
+        //   name: "SAT",
+        //   path: "/exam-aid/sat",
+        //   description: "College admission test",
+        // },
+        // {
+        //   name: "ACT",
+        //   path: "/exam-aid/act",
+        //   description: "Alternative college admission test",
+        // },
+        // {
+        //   name: "AP",
+        //   path: "/exam-aid/ap",
+        //   description: "Advanced Placement exams",
+        // },
         {
           name: "GED",
           path: "/take-my-ged-exam-for-me",
@@ -55,100 +55,100 @@ const LeftHero = () => {
         },
       ],
     },
-    graduate: {
-      title: "Graduate & Beyond",
-      exams: [
-        {
-          name: "GRE",
-          path: "/exam-aid/gre",
-          description: "Graduate Record Examination",
-        },
-        {
-          name: "GMAT",
-          path: "/exam-aid/gmat",
-          description: "Graduate Management Admission Test",
-        },
-        {
-          name: "LSAT",
-          path: "/exam-aid/lsat",
-          description: "Law School Admission Test",
-        },
-        {
-          name: "MCAT",
-          path: "/exam-aid/mcat",
-          description: "Medical College Admission Test",
-        },
-        {
-          name: "DAT",
-          path: "/exam-aid/dat",
-          description: "Dental Admission Test",
-        },
-        {
-          name: "PCAT",
-          path: "/exam-aid/pcat",
-          description: "Pharmacy College Admission Test",
-        },
-        {
-          name: "NCLEX",
-          path: "/exam-aid/nclex",
-          description: "State Bar Examination",
-        },
-      ],
-    },
+    // graduate: {
+    //   title: "Graduate & Beyond",
+    //   exams: [
+    //     {
+    //       name: "GRE",
+    //       path: "/exam-aid/gre",
+    //       description: "Graduate Record Examination",
+    //     },
+    //     {
+    //       name: "GMAT",
+    //       path: "/exam-aid/gmat",
+    //       description: "Graduate Management Admission Test",
+    //     },
+    //     {
+    //       name: "LSAT",
+    //       path: "/exam-aid/lsat",
+    //       description: "Law School Admission Test",
+    //     },
+    //     {
+    //       name: "MCAT",
+    //       path: "/exam-aid/mcat",
+    //       description: "Medical College Admission Test",
+    //     },
+    //     {
+    //       name: "DAT",
+    //       path: "/exam-aid/dat",
+    //       description: "Dental Admission Test",
+    //     },
+    //     {
+    //       name: "PCAT",
+    //       path: "/exam-aid/pcat",
+    //       description: "Pharmacy College Admission Test",
+    //     },
+    //     {
+    //       name: "NCLEX",
+    //       path: "/exam-aid/nclex",
+    //       description: "State Bar Examination",
+    //     },
+    //   ],
+    // },
     academics: {
       title: "Certificates Exams",
       exams: [
-        {
-          name: "AWS",
-          path: "/exam-aid/awssolutionarchitectprofessional",
-        },
-        {
-          name: "SHRM",
-          path: "/take-my-shrm-exam-for-me",
-          description: "Society for Human Resource Management",
-        },
+        // {
+        //   name: "AWS",
+        //   path: "/exam-aid/awssolutionarchitectprofessional",
+        // },
+        // {
+        //   name: "SHRM",
+        //   path: "/take-my-shrm-exam-for-me",
+        //   description: "Society for Human Resource Management",
+        // },
         { name: "PMP", path: "/take-my-pmp-exam-for-me" },
-        {
-          name: "PRINCE2",
-          path: "/take-my-prince2-exam-for-me",
-          description: "Projects in Controlled Environments",
-        },
+        // {
+        //   name: "PRINCE2",
+        //   path: "/take-my-prince2-exam-for-me",
+        //   description: "Projects in Controlled Environments",
+        // },
         {
           name: "and More",
           path: "/exam-aid",
         },
       ],
     },
-    healthcare: {
-      title: "Healthcare & Nursing",
-      exams: [
-        {
-          name: "Nursing Entrance",
-          path: "/exam-aid/nursing-entrance",
-          description: "TEAS, HESI, Kaplan Nursing",
-        },
-        {
-          name: "NCLEX",
-          path: "/exam-aid/nclex",
-          description: "Nursing License Exam",
-        },
-        {
-          name: "MCAT",
-          path: "/exam-aid/mcat",
-          description: "Medical College Admission Test",
-        },
-        {
-          name: "DAT",
-          path: "/exam-aid/dat",
-          description: "Dental Admission Test",
-        },
-        {
-          name: "and More",
-          path: "/exam-aid",
-          description: "Other healthcare exams",
-        },
-      ],
-    },
+    // healthcare: {
+    //   title: "Healthcare & Nursing",
+    //   exams: [
+    //     {
+    //       name: "Nursing Entrance",
+    //       path: "/exam-aid/nursing-entrance",
+    //       description: "TEAS, HESI, Kaplan Nursing",
+    //     },
+    //     {
+    //       name: "NCLEX",
+    //       path: "/exam-aid/nclex",
+    //       description: "Nursing License Exam",
+    //     },
+    //     {
+    //       name: "MCAT",
+    //       path: "/exam-aid/mcat",
+    //       description: "Medical College Admission Test",
+    //     },
+    //     {
+    //       name: "DAT",
+    //       path: "/exam-aid/dat",
+    //       description: "Dental Admission Test",
+    //     },
+    //     {
+    //       name: "and More",
+    //       path: "/exam-aid",
+    //       description: "Other healthcare exams",
+    //     },
+    //   ],
+    // },
   };
 
   const currentCategory = examData[activeCategory];
@@ -170,7 +170,7 @@ const LeftHero = () => {
           </h1>
 
           <p className="text-primary mb-4 text-lg leading-relaxed">
-            Support candidates preparing for: professional certifications
+            Supporting candidates preparing for: professional certifications
             <br />
             PmP certifications, PRINCE2 Project Management, SHRM Human Resource
             Ceritifications, Healthcare & Academic Exams, Nursing Entrance
@@ -182,7 +182,7 @@ const LeftHero = () => {
           </h2>
 
           {/* ───── Category Tabs ───── */}
-          <div className="flex justify-between mb-3  rounded-md  overflow-hidden border border-active-link">
+          <div className="flex gap-8 mb-3  rounded-md  overflow-hidden border border-active-link max-w-[25.1rem]">
             {Object.entries(examData).map(([key, category]) => {
               const isActive = activeCategory === key;
               return (
@@ -190,7 +190,7 @@ const LeftHero = () => {
                   key={key}
                   onClick={() => setActiveCategory(key as ExamCategory)}
                   className={`
-                    px-6  py-3 text-[]1.2rem] font-semibold  transition-all
+                    px-6  py-3 text-[1.2rem] font-semibold  transition-all
                     ${
                       isActive
                         ? "bg-secondary text-background hover:cursor-pointer"

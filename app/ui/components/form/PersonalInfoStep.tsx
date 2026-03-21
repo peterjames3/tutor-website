@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { MessageSquare, MoveLeft, MoveRight } from "lucide-react";
 import Input from "./input";
 
-import Select from "./select";
+import Select from "./text-area";
 
 export default function PersonalInfoStep() {
   const { state, dispatch } = useFormContext();
@@ -26,7 +26,7 @@ export default function PersonalInfoStep() {
       level:
         state.data.level &&
         ["High School", "Undergraduate", "Graduate", "Professional"].includes(
-          state.data.level
+          state.data.level,
         )
           ? state.data.level
           : "High School",

@@ -215,7 +215,7 @@ export default function ContactForm() {
             disabled={isSubmitting}
             className={`w-full cursor-pointer rounded-md px-6 py-4 font-medium  text-lg text-white transition-all duration-300 ${
               isSubmitting
-                ? "bg-gray-400 cursor-not-allowed"
+                ? "bg-foreground cursor-not-allowed"
                 : "bg-button-login-default hover:bg-secondary/80 hover:shadow-lg"
             }`}
           >

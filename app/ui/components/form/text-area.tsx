@@ -1,13 +1,13 @@
 import React from "react";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: string;
   label?: string;
   containerClass?: string;
   required?: boolean;
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ className, error, label, containerClass, required, ...props }, ref) => {
     return (
       <div className={`w-full ${containerClass || ""}`}>
@@ -24,10 +24,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             </p>
           )}
         </div>
-        <input
+        <textarea
           className={`w-full px-4 py-3 rounded-md border ${
             error ? "border-red-500" : "border-gray-300"
-          } focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent ${
+          } focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent resize-none ${
             className || ""
           }`}
           ref={ref}
@@ -40,5 +40,5 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-Input.displayName = "Input";
-export default Input;
+TextArea.displayName = "TextArea";
+export default TextArea;

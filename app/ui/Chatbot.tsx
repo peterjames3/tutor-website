@@ -40,7 +40,7 @@ export default function Chatbot() {
         },
       ]);
     }
-  }, []);
+  }, [messages.length]);
 
   // Load chatbot open state
   useEffect(() => {

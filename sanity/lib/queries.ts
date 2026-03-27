@@ -178,3 +178,208 @@ export const examPrepProgramsQuery = `
   }
 }
 `;
+
+//   Get all exam service page slugs (for generateStaticParams)
+
+export const examServicePathQuery = groq`
+  *[_type == "examServicePage" && defined(slug.current)] {
+    "slug": slug.current
+  }
+    
+`;
+
+// Get a single exam service page by slug
+export const examServicePageQuery = groq`
+  *[_type == "examServicePage" && slug.current == $slug][0] {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+ 
+    // OG image for social sharing
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
+ 
+    // Page builder sections
+    sections[] {
+      _type,
+ 
+      // ── Hero ──────────────────────────────────────────────
+      _type == "hero" => {
+        preHeading,
+        heading,
+        accentWord,
+        subtext,
+        ctaPrimary,
+        ctaSecondary,
+        "heroImage": heroImage {
+          alt,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        },
+        backgroundColor
+      },
+ 
+      // ── Content Section with Image ─────────────────────────
+      _type == "contentSectionWithImage" => {
+        sectionId,
+        heading,
+        subheading,
+        body, // Portable Text — rendered with <PortableText />
+        imagePosition,
+        imageSize,
+        backgroundColor,
+        "image": image {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+ 
+      // ── Steps / Process ───────────────────────────────────
+      _type == "stepsSection" => {
+        heading,
+        subheading,
+        steps[] {
+          stepNumber,
+          label,
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+ 
+      // ── Exam Structure ────────────────────────────────────
+      _type == "examStructureSection" => {
+        heading,
+        subheading,
+        body,
+        structurePoints[],
+        "diagramImage": diagramImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+ 
+      // ── Challenges ────────────────────────────────────────
+      _type == "challengesSection" => {
+        heading,
+        intro,
+        challenges[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+ 
+      // ── Unlock Path ───────────────────────────────────────
+      _type == "unlockPathSection" => {
+        heading,
+        subheading,
+        featureCards[] {
+          title,
+          description,
+          accentColor,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "sideImage": sideImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        }
+      },
+ 
+      // ── Why Choose Us ─────────────────────────────────────
+      _type == "whyChooseUsSection" => {
+        heading,
+        subheading,
+        intro,
+        reasons[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        }
+      },
+ 
+      // ── FAQ ───────────────────────────────────────────────
+      _type == "faqSection" => {
+        heading,
+        subheading,
+        faqs[] {
+          question,
+          answer, // Portable Text
+          category
+        },
+        ctaBlock
+      }
+    }
+  }
+`;
+ 
+// Get all exam service pages (for listing/sitemap)
+export const allExamServicePagesQuery = groq`
+  *[_type == "examServicePage"] | order(_createdAt desc) {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    }
+  }
+`;
+// Fetch all exam service pages as a lightweight listing
+// Used in the "Exams We Support" section on proctored-exam-help and other pages
+export const examsWeSupportQuery = groq`
+  *[_type == "examServicePage"] | order(seoTitle asc) {
+    _id,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    // Pull the hero image as the card thumbnail
+    "thumbnail": sections[_type == "hero"][0].heroImage {
+      alt,
+      "url": asset->url
+    },
+    // Pull the first content section's heading as a short tagline fallback
+    "tagline": sections[_type == "hero"][0].subtext,
+  }
+`;
+ 

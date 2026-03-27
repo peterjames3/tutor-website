@@ -31,7 +31,9 @@ export const blockContentType = defineType({
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
       ],
-      lists: [{ title: "Bullet", value: "bullet" }],
+      lists: [{ title: "Bullet", value: "bullet" },
+              { title: "Numbered", value:"number"},
+      ],
       // Marks let you mark up inline text in the Portable Text Editor
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -39,6 +41,7 @@ export const blockContentType = defineType({
         decorators: [
           { title: "Strong", value: "strong" },
           { title: "Emphasis", value: "em" },
+          { title: "Underline", value: "underline"},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -52,6 +55,14 @@ export const blockContentType = defineType({
                 name: "href",
                 type: "url",
               },
+               {
+                title: "Open in new tab",
+                name: "openInNewTab",
+                type: "boolean",
+                initialValue: false, // ← added
+              },
+
+
             ],
           },
         ],
@@ -69,6 +80,28 @@ export const blockContentType = defineType({
           name: "alt",
           type: "string",
           title: "Alternative Text",
+          description: "Important for SEO and accessibility",
+          validation: (Rule) => Rule.required().warning("Alt text is required"), // ← added
+        },
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption (optional)", // ← added
+        },
+        {
+          name: "position",
+          type: "string",
+          title: "Image Position",
+          options: {
+            list: [
+              { title: "Left", value: "left" },
+              { title: "Center", value: "center" },
+              { title: "Right", value: "right" },
+              { title: "Full width", value: "full" },
+            ],
+            layout: "radio",
+          },
+          initialValue: "center", // ← added
         },
       ],
     }),

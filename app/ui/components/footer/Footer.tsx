@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Support */}
         <div className="space-y-3">
           <h3 className="font-semibold mb-4 text-xl">Support</h3>
-        
+
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Mail size={20} />
             <Link href="mailto:info@testhelpnow.com">info@testhelpnow.com</Link>
@@ -108,9 +108,16 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="text-sm text-gray-400 text-center pt-4">
-        © {new Date().getFullYear()} Edusion. All rights reserved. <br />
+        © {new Date().getFullYear()} TestHelpNow. All rights reserved. <br />
         Designed & built with ❤️ by{" "}
-        <span className="text-white font-semibold">KItechCreatives</span>
+        <a
+          href="https://celadon-concha-2bec16.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white font-semibold"
+        >
+          KItechCreatives
+        </a>
       </div>
     </motion.footer>
   );

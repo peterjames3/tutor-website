@@ -47,11 +47,11 @@ export default function WhyChooseUs() {
             variants={item}
             className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
           >
-            Why Choose Our <br /> End-to-End Exam Support Services?
+            Why Choose Our <br /> Proctored Exam Support Services?
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">
-            Our End-to-End Exam support is trusted by both students and
+            Our Proctored Exam support is trusted by both students and
             professionals alike. We prioritize confidentiality and security in
             every session.
           </motion.p>

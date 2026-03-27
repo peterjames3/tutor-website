@@ -1,13 +1,41 @@
 import type { ExamCategory } from "./defination";
 
 export const examAidCategories: ExamCategory = {
-  "Certification Exams": ["PMP"],
-  "High School Equivalency": ["GED", "HiSET"],
+ "Certification Exams": [
+    {
+      name: "Take PMP Exam for Me",
+      slug: "pay-someone-to-take-my-pmp-exam-for-me",
+    },
+  ],
+  "High School Equivalency": [
+    {
+      name: "Take GED Exam for Me",
+      slug: "pay-someone-to-take-my-ged-exam-for-me",
+    },
+    {
+      name: "Take HiSET Exam for Me",
+      slug: "pay-someone-to-take-my-hiset-exam-for-me",
+    },
+  ],
 };
 
 export const testPrepCategories: ExamCategory = {
-  "High School Equivalency": ["GED", "HiSET"],
-  Certification: ["PMP"],
+   "Certification Exams": [
+    {
+      name: "Take PMP Exam for Me",
+      slug: "pay-someone-to-take-my-pmp-exam-for-me",
+    },
+  ],
+  "High School Equivalency": [
+    {
+      name: "Take GED Exam for Me",
+      slug: "pay-someone-to-take-my-ged-exam-for-me",
+    },
+    {
+      name: "Take HiSET Exam for Me",
+      slug: "pay-someone-to-take-my-hiset-exam-for-me",
+    },
+  ],
 };
 
 // export const academicServices: AcademicService[] = [
@@ -26,11 +54,11 @@ export const gradeLevels = [
   { name: "8th Grade Tutoring" },
   { name: "High School Tutoring" },
   { name: "College Tutoring" },
-  { name: "Skills Based Tutoring" },
+  ,
 ];
 
 export const certifications = [
-  { name: "PMP", slug: "pmp" },
+  { name: "PMP", slug: "proctored-exam-help/pay-someone-take-pmp-exam-for-me" },
   // {
   //   name: "AWS Solution Architect Professional",
   //   slug: "awssolutionarchitectprofessional",
@@ -49,10 +77,6 @@ export const certifications = [
   // },
   // { name: "CompTIA A+", slug: "exam-aid/comptiaa" },
 
-  // {
-  //   name: "CAPM",
-  //   slug: "capm",
-  // },
   // {
   //   name: "Maryland Real Estate License Exam",
   //   slug: "marylandrealestatelicenseexam",

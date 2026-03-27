@@ -1,7 +1,7 @@
 // app/components/supported-exams.tsx
 //import { SanityDocument } from "@sanity/client";
-import { MinimalExamAidProgram } from "@/app/ui/components/exam-aid/exam-aid-slider";
-import ExamAidSlider from "@/app/ui/components/exam-aid/exam-aid-slider";
+import { MinimalExamAidProgram } from "@/app/ui/components/exam-aid/exam-we-support";
+import ExamAidSlider from "@/app/ui/components/exam-aid/exam-we-support";
 
 // interface SupportedExamsProps {
 //   programs: SanityDocument[];

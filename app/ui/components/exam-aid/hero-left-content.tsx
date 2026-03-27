@@ -40,8 +40,8 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
           className="text-[2.5rem] lg:text-[3.1rem] font-bold text-primary leading-tight"
           variants={itemVariants}
         >
-          <span className="text-primary">Book</span>
-          <span className="text-secondary"> Your Exam </span>
+          <span className="text-primary"> Proctored Exam Help – </span>
+          <span className="text-secondary"> Book Your Exam </span>
           <span className="text-primary"> and Let </span>
           <br />
           <span className="text-secondary">Our Experts </span>
@@ -49,21 +49,20 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
         </motion.h3>
 
         <p className="p-text text-primary mb-4">
-          Preparing for exams can be overwhelming — but you don’t have to do it
-          alone. With our <br /> proven expertise, personalized support, and
-          end-to-end exam handling, we ensure you stay confident, organized, and
-          fully prepared. From registration to results, we&apos;ve got you
-          covered.
+          Struggling with your proctored exam? Our experts provide <br /> proven
+          expertise, personalized support, and end-to-end exam handling, we
+          ensure you stay confident, organized, and fully prepared. From
+          registration to results, we&apos;ve got you covered.
         </p>
 
         <motion.button
           onClick={onGetStarted}
-          className="px-8 py-3 bg-secondary text-primary rounded-lg hover:bg-button-login-hover transition-colors cursor-pointer"
+          className="cta hover:cursor-pointer"
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Get Started
+          Get Procotred Exam Help
         </motion.button>
       </div>
     </motion.div>

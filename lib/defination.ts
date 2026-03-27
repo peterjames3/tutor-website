@@ -6,9 +6,16 @@ export interface StatCard {
   iconColor: string;
 }
 
-export interface ExamCategory {
-  [key: string]: string[];
+export interface ExamItem {
+  name: string;
+  slug: string;
 }
+
+export type ExamCategory = Record<string, ExamItem[]>;
+// export interface ExamCategory {
+//  name: string;
+//  slug: string;
+// }
 
 export interface AcademicService {
   name: string;

@@ -6,19 +6,22 @@ import { usePathname } from "next/navigation";
 
 const DropdownMenu = ({ submenu }: { submenu: SubMenuItem[] }) => {
   const pathname = usePathname();
-  const groupedItems = submenu.reduce((acc, item) => {
-    const group = item.group || "Other";
-    if (!acc[group]) acc[group] = [];
-    acc[group].push(item);
-    return acc;
-  }, {} as Record<string, SubMenuItem[]>);
+  const groupedItems = submenu.reduce(
+    (acc, item) => {
+      const group = item.group || "Other";
+      if (!acc[group]) acc[group] = [];
+      acc[group].push(item);
+      return acc;
+    },
+    {} as Record<string, SubMenuItem[]>,
+  );
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
-      className="absolute left-0 mt-2 w-96 bg-background shadow-xl rounded-lg z-50 p-4"
+      className="absolute left-0 mt-2 w-[30rem] bg-background shadow-xl rounded-lg z-50 p-4"
     >
       {/* Container with fixed height and scroll */}
       <div

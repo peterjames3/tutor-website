@@ -32,7 +32,7 @@ const LeftHero = () => {
             id="get-help-now-btn"
             type="button"
             className=" mt-6 cta hover:cursor-pointer"
-            aria-label="Get help now"
+            aria-label="Book Your Free 15-minute strategy Call"
             aria-pressed="false"
           >
             Book Your Free 15-minute strategy Call

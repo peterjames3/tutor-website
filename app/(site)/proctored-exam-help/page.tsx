@@ -1,37 +1,38 @@
 //import { SanityDocument } from "@sanity/client";
-import { examAidProgramsQuery } from "@/sanity/lib/queries";
+import { examsWeSupportQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/server-fetch";
-import { MinimalExamAidProgram } from "@/app/ui/components/exam-aid/exam-we-support";
+import { ExamCard } from "@/app/ui/components/exam-aid/exam-we-support";
 
 import Hero from "@/app/ui/components/exam-aid/main-hero-section";
 import WhyChooseUs from "@/app/ui/components/exam-aid/why-choose-us";
 import FAQSection from "@/app/ui/components/exam-aid/faq";
 
 import ProctoredProcess from "../../ui/components/exam-aid/proctored-process";
-import SupportedExams from "@/app/ui/components/exam-aid/supported-exams";
+import ExamsWeSupport from "@/app/ui/components/exam-aid/exam-we-support";
 
 import { Services } from "@/app/ui/components/exam-aid/services";
+import PortalsSection from "@/app/ui/portal-section";
 
 import TestimonialsSection from "@/app/ui/components/Testimonial/testimonials-section";
 
 export const metadata = {
-  title: "ProctoreExamHelp Services",
+  title: "Proctored Exam Help Services",
   description:
     "Get expert end-to-end exam support aid with real-time guidance, we handle the exam for you-all while you maintain full visibility and control.",
   alternates: {
-    canonical: "https://testhelpnow.com/exam-help",
+    canonical: "https://testhelpnow.com/proctored-exam-help",
   },
   openGraph: {
-    title: "Exam Help Services | TestHelpNow",
+    title: "Proctored Exam Help Services | TestHelpNow",
     description:
       "Comprehensive exam aid services designed to help you succeed.",
-    url: "https://testhelpnow.com/exam-help",
+    url: "https://testhelpnow.com/proctored-exam-help",
   },
 };
 
-export default async function TestHelpHome() {
-  const programs = await sanityFetch<MinimalExamAidProgram[]>({
-    query: examAidProgramsQuery,
+export default async function ProctoredExamHelpHome() {
+  const exams = await sanityFetch<ExamCard[]>({
+    query: examsWeSupportQuery,
     // tags: ["exams"],
   });
 
@@ -41,7 +42,8 @@ export default async function TestHelpHome() {
       <ProctoredProcess />
       <Services />
       <WhyChooseUs />
-      <SupportedExams programs={programs} />
+      <ExamsWeSupport exams={exams} />
+      <PortalsSection />
       <TestimonialsSection />
       <FAQSection />
     </>

@@ -24,7 +24,7 @@ export default function ProctoredProcess() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            How Our End-to-End Exam <br /> Assistance(Proctored) Works
+            How Our Proctored Exam Help Works
           </motion.h2>
           <motion.p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -49,7 +49,7 @@ export default function ProctoredProcess() {
             <section className="px-2 w-1/2 flex flex-col justify-center">
               <h3 className="text-lg font-normal text-gray-600 mb-4">Step</h3>
               <p className="text-2xl text-primary font-semibold mb-6">
-                Schedule Your Exam Date
+                Book Your Session
               </p>
               <p className="text-gray-500 mb-6">
                 Got an exam date? That&apos;s all we need to get started.
@@ -80,7 +80,8 @@ export default function ProctoredProcess() {
                 Join your Exam
               </p>
               <p className="text-gray-500 mb-4">
-                Securely join your exam session and we&apos;ll handle the rest
+                We securely join your exam session and we&apos;ll handle the
+                rest
               </p>
               <Link
                 href="#supported-exams"
@@ -114,10 +115,11 @@ export default function ProctoredProcess() {
                 Follow-up
               </h3>
               <p className="text-2xl text-primary font-semibold mb-6">
-                We Complete the Exam
+                Post-Exam Follow-up
               </p>
               <p className="text-gray-500 mb-4">
-                Receive feedback and support after your exam
+                Receive a full debrief and results support after your proctored
+                exam is complete.
               </p>
             </section>
             <figcaption className="h-[55%]  w-full">

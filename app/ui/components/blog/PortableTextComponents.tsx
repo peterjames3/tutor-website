@@ -92,7 +92,11 @@ const SanityImage = ({ value }: SanityImageProps) => {
     return null;
   }
 
-  const imageUrl = urlFor(value.asset._ref).width(1200).height(800).quality(80).url();
+  const imageUrl = urlFor(value.asset._ref)
+    .width(1200)
+    .height(800)
+    .quality(80)
+    .url();
 
   return (
     <figure className="relative w-full h-64 my-8">
@@ -124,7 +128,9 @@ export const portableTextComponents: PortableTextComponents = {
   },
   block: {
     normal: ({ children }) => (
-      <p className="text-[1.1rem] leading-7 mb-4">{children}</p>
+      <p className="text-[1rem] lg:text-[1.3rem] text-primary leading-7 mb-4">
+        {children}
+      </p>
     ),
     h2: ({ children, value }) => {
       // <--- ADDED 'value' PROP
@@ -169,10 +175,10 @@ export const portableTextComponents: PortableTextComponents = {
   },
   listItem: {
     bullet: ({ children }) => (
-      <li className="text-[1.1rem] leading-7">{children}</li>
+      <li className="text-[1rem] lg:text-[1.3rem] text-primary leading-7">{children}</li>
     ),
     number: ({ children }) => (
-      <li className="text-[1.1rem] leading-7">{children}</li>
+      <li className="text-[1rem] lg:text-[1.3rem] text-primary leading-7">{children}</li>
     ),
   },
   marks: {

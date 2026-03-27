@@ -1,14 +1,33 @@
 import { ExamCategory, AcademicService, MenuItem } from "./defination";
 
 export const examAidCategories: ExamCategory = {
-  "Certification Exams": ["PMP"],
-  "High School Equivalency": ["GED", "HiSET"],
+  "Certification Exams": [
+    {
+      name: "Take PMP Exam for Me",
+      slug: "pay-someone-to-take-my-pmp-exam-for-me",
+    },
+  ],
+  "High School Equivalency": [
+    {
+      name: "Take GED Exam for Me",
+      slug: "pay-someone-to-take-my-ged-exam-for-me",
+    },
+    {
+      name: "Take HiSET Exam for Me",
+      slug: "pay-someone-to-take-my-hiset-exam-for-me",
+    },
+  ],
 };
 
-export const testPrepCategories: ExamCategory = {
-  "High School Equivalency": ["GED", "HiSET"],
-  "Certification Exams": ["PMP"],
-};
+// export const testPrepCategories: ExamCategory = {
+//   "Certification Exams": [
+//     { name: "Take PMP Exam for Me", slug: "take-pmp-exam" },
+//   ],
+//   "High School Equivalency": [
+//     { name: "Take GED Exam for Me", slug: "take-ged-exam" },
+//     { name: "Take HiSET Exam for Me", slug: "take-hiset-exam" },
+//   ],
+// };
 
 export const academicServices: AcademicService[] = [
   // { name: "Assignment Help", href: "/academic/assignment-help" },
@@ -21,8 +40,8 @@ const categoryToSubmenu = (categories: ExamCategory, basePath: string) => {
   return Object.entries(categories).flatMap(([group, items]) => [
     { name: group, href: "#", group }, // Group header
     ...items.map((item) => ({
-      name: item,
-      href: `${basePath}/${item
+      name: item.name,
+      href: `${basePath}/${item.slug
         .toLowerCase()
         // .replace(/\s+/g, "-")
         .replace(/[^a-z0-9-]/g, "")}`,
@@ -41,12 +60,12 @@ export const MenuItems: MenuItem[] = [
   {
     name: "Test Prep",
     href: "/test-prep",
-    submenu: categoryToSubmenu(testPrepCategories, "/test-prep"),
+    // submenu: categoryToSubmenu(testPrepCategories, "/test-prep"),
   },
   {
     name: "Proctored Exam Help",
-    href: "/exam-help",
-    submenu: categoryToSubmenu(examAidCategories, "/exam-help"),
+    href: "/proctored-exam-help",
+    submenu: categoryToSubmenu(examAidCategories, "/proctored-exam-help"),
   },
   { name: "Blog", href: "/blog" },
   { name: "How It Works", href: "/how-it-works" },

@@ -50,8 +50,8 @@ const LeftHero = () => {
         },
         {
           name: "and More",
-          path: "/exam-aid",
-          description: "Exam aid page",
+          path: "/proctored-exam-help",
+          description: "Proctored Exam Help Page",
         },
       ],
     },
@@ -115,7 +115,7 @@ const LeftHero = () => {
         // },
         {
           name: "and More",
-          path: "/exam-aid",
+          path: "/procotored-exam-help",
         },
       ],
     },

@@ -1,146 +1,121 @@
 import type { MetadataRoute } from "next";
+import { client } from "@/sanity/lib/client";
+import { examPathsQuery, examServicePathQuery } from "@/sanity/lib/queries";
+import { examAidCategories } from "@/lib/menuitem"; // adjust path if needed
 
-// Test prep pages
-const testPrepPages = [
-  "DAT",
-  "OAT",
-  "MCAT",
-  "LSAT",
-  "GMAT",
-  "GRE",
-  "PCAT",
-  "CLEP",
-  "CLEID",
-  "ACUPLACER",
-  "NCLEX",
-  "TOEFL",
-  "TEAS",
-  "Medical Coding",
-  "HesiPn",
-  "Series 7",
-  "MAP",
-  "TAKS",
-  "AIMS",
-  "SAT",
-  "PSAT",
-  "ACT",
-  "AP",
-  "SSAT",
-  "ISEE",
-  "HSPT",
-  "GED",
-];
+const BASE_URL = "https://testhelpnow.com";
 
-// Exam-aid pages
-const examAidPages = [
-  "Azure Fundamentals",
-  "Google Cloud",
-  "Cisco",
-  "ITIL",
-  "Prince2 Practitioner",
-  "PMP",
-  "CAPM",
-  "CISA",
-  "CISM",
-  "CEH",
-  "CRISC",
-  "AWS Solution Architect Professional",
-  "CompTIA Security+",
-  "CompTIA Network+",
-  "CompTIA A+",
-  "Terraform",
-  "Oracle",
-  "Maryland Real Estate License Exam",
-  "DAT",
-  "OAT",
-  "MCAT",
-  "GRE",
-  "GED",
-  "LSAT",
-  "GMAT",
-  "PCAT",
-  "NCLEX",
-  "TOEFL",
-  "TEAS",
-  "Medical Coding",
-  "HesiPn",
-  "Series 7",
-  "CLEP",
-  "ACT",
-  "SAT",
-  "AP",
-  "PSAT",
-  "SSAT",
-  "ISEE",
-  "HSPT",
-];
+// ── Helpers ───────────────────────────────────────────────
 
-// Helper function to generate sitemap entries
-function generateSitemapEntries(
-  pages: string[],
+// Extract slugs from local category config
+const extractCategorySlugs = (categories: typeof examAidCategories) => {
+  return Object.values(categories).flatMap((items) =>
+    items.map((item) => ({ slug: item.slug })),
+  );
+};
+
+// Generate entries from slug list
+function generateDynamicEntries(
+  slugs: { slug: string }[],
   baseUrl: string,
   priority = 0.7,
-  changeFrequency: MetadataRoute.Sitemap["0"]["changeFrequency"] = "weekly"
-) {
-  return pages.map((page) => {
-    const slug = page.toLowerCase().replace(/\s+/g, "-");
-    return {
-      url: `${baseUrl}/${slug}`,
-      lastModified: new Date(),
-      changeFrequency,
-      priority,
-    };
-  });
+  changeFrequency: MetadataRoute.Sitemap["0"]["changeFrequency"] = "weekly",
+): MetadataRoute.Sitemap {
+  return slugs.map(({ slug }) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: new Date(),
+    changeFrequency,
+    priority,
+  }));
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// Remove duplicate slugs
+const dedupeSlugs = (slugs: { slug: string }[]) => {
+  return Array.from(new Map(slugs.map((item) => [item.slug, item])).values());
+};
+
+// ── Sitemap ───────────────────────────────────────────────
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Fetch from Sanity
+  const [examAidSlugs, examServiceSlugs] = await Promise.all([
+    client.fetch<{ slug: string }[]>(examPathsQuery),
+    client.fetch<{ slug: string }[]>(examServicePathQuery),
+  ]);
+
+  // Extract local slugs
+  const localExamAidSlugs = extractCategorySlugs(examAidCategories);
+
+  // Merge + dedupe
+  const allExamAidSlugs = dedupeSlugs([...localExamAidSlugs, ...examAidSlugs]);
+
+  // ── Static pages ───────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: "https://testhelpnow.com",
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: "https://testhelpnow.com/academic/tutoring",
+      url: `${BASE_URL}/test-prep`, // ✅ single page
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/proctored-exam-help`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/academic/tutoring`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://testhelpnow.com/blog",
+      url: `${BASE_URL}/blog`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://testhelpnow.com/how-it-works",
+      url: `${BASE_URL}/how-it-works`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://testhelpnow.com/faq",
+      url: `${BASE_URL}/faq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://testhelpnow.com/privacy",
+      url: `${BASE_URL}/privacy`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.5,
     },
   ];
 
-  const testPrepEntries = generateSitemapEntries(
-    testPrepPages,
-    "https://testhelpnow.com/test-prep"
-  );
-  const examAidEntries = generateSitemapEntries(
-    examAidPages,
-    "https://testhelpnow.com/exam-aid"
+  // ── Dynamic pages ──────────────────────────────────────
+
+  // Combined (local + sanity)
+  const examAidEntries = generateDynamicEntries(
+    allExamAidSlugs,
+    `${BASE_URL}/proctored-exam-help`,
+    0.8,
   );
 
-  return [...staticPages, ...testPrepEntries, ...examAidEntries];
+  // Page-builder / high priority pages
+  const examServiceEntries = generateDynamicEntries(
+    examServiceSlugs,
+    `${BASE_URL}/proctored-exam-help`,
+    0.9,
+  );
+
+  return [...staticPages, ...examAidEntries, ...examServiceEntries];
 }

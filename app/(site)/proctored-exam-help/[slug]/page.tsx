@@ -46,7 +46,7 @@ export interface ContentSectionData {
   sectionId?: string;
   heading?: string;
   subheading?: string;
-  body?: any[]; // Portable Text
+  body?: object[]; // Portable Text
   image?: SanityImage;
   imagePosition?: "left" | "right" | "none";
   imageSize?: "33" | "50" | "66";
@@ -72,7 +72,7 @@ export interface ExamStructureSectionData {
   _type: "examStructureSection";
   heading?: string;
   subheading?: string;
-  body?: any[];
+  body?: object[];
   structurePoints?: { point: string }[];
   diagramImage?: SanityImage;
   ctaButton?: CtaButton;
@@ -122,7 +122,7 @@ export interface FaqSectionData {
   subheading?: string;
   faqs: {
     question: string;
-    answer?: any[]; // Portable Text
+    answer?: object[]; // Portable Text
     category?: string;
   }[];
   ctaBlock?: {

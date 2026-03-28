@@ -35,7 +35,7 @@ export default function Chatbot() {
           options: [
             { label: "Tutoring related request", value: "tutoring" },
             { label: "Exam prep", value: "exam_prep" },
-            { label: "Full exam support", value: "exam_support" },
+            { label: "Proctored Exam Support", value: "exam_support" },
           ],
         },
       ]);

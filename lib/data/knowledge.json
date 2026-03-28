@@ -20,14 +20,14 @@
       ],
       "link": "https://testhelpnow.com/test-prep"
     },
-    "full_exam_support": {
-      "description": "We manage proctored exams on your behalf, ensuring a stress-free experience. Our experts handle everything from start to finish.",
+    "proctored_exam_Help": {
+      "description": "We do proctored exams on your behalf, ensuring a stress-free experience. Our experts handle everything from start to finish.",
       "benefits": [
         "End-to-end support",
         "Expert support throughout the exam",
-        "Proven track record of 2000+ passed exams"
+        "Proven track record of 200+ passed exams"
       ],
-      "link": "https://testhelpnow.com/exam-aid"
+      "link": "https://testhelpnow.com/proctored-exam-help"
     }
   },
   "process": [

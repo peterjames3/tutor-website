@@ -124,7 +124,7 @@ export interface FaqSectionData {
   subheading?: string;
   faqs: {
     question: string;
-    answer?: object[]; // Portable Text
+    answer?: RichText; // Portable Text
     category?: string;
   }[];
   ctaBlock?: {

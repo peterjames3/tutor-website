@@ -116,7 +116,7 @@ export const OtherLinksSection = () => {
                 className="p-3 text-primary"
                 whileHover={{ scale: 1.02 }}
               >
-                {grade.name}
+                {grade?.name}
               </motion.div>
             ))}
           </div>

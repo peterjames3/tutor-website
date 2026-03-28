@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquareDot, X } from "lucide-react";
+import { MessageSquareDot, X } from 'lucide-react';
 import HomeTab from "./chatbot/HomeTab";
 import HelpTab from "./chatbot/HelpTab";
 import FooterTabs from "./chatbot/FooterTabs";

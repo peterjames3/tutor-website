@@ -1,7 +1,7 @@
 import {  examServicePageQuery, examServicePathQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { client } from "@/sanity/lib/client";
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
 
 // ── Section components ──────────────────────────────────────
 import HeroSection from "@/app/ui/components/exam-service/hero-section";

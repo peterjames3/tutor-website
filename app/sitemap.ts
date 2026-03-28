@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next';
 import { client } from "@/sanity/lib/client";
 import { examPathsQuery, examServicePathQuery } from "@/sanity/lib/queries";
 import { examAidCategories } from "@/lib/menuitem"; // adjust path if needed

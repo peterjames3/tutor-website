@@ -1,8 +1,6 @@
 //import { SanityDocument } from "@sanity/client";
 import { examAidProgramsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/server-fetch";
-import { MinimalExamAidProgram } from "@/app/ui/components/exam-aid/exam-we-support";
-
 import Hero from "@/app/ui/components/exam-aid/main-hero-section";
 import WhyChooseUs from "@/app/ui/components/exam-aid/why-choose-us";
 import FAQSection from "@/app/ui/components/exam-aid/faq";

@@ -2,6 +2,7 @@ import {  examServicePageQuery, examServicePathQuery } from "@/sanity/lib/querie
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { client } from "@/sanity/lib/client";
 import { notFound } from 'next/navigation';
+import { PortableTextBlock } from "@portabletext/types";
 
 // ── Section components ──────────────────────────────────────
 import HeroSection from "@/app/ui/components/exam-service/hero-section";
@@ -13,7 +14,8 @@ import UnlockPathSection from "@/app/ui/components/exam-service/unlock-path-sect
 import WhyChooseUsSection from "@/app/ui/components/exam-service/why-choose-us-section";
 import FaqSection from "@/app/ui/components/exam-service/faq-section";
 
-// ── Types ───────────────────────────────────────────────────
+ // ── Types ───────────────────────────────────────────────────
+type RichText = PortableTextBlock[];
 export interface SanityImage {
   url: string;
   alt: string;
@@ -46,7 +48,7 @@ export interface ContentSectionData {
   sectionId?: string;
   heading?: string;
   subheading?: string;
-  body?: object[]; // Portable Text
+  body?: RichText; // Portable Text
   image?: SanityImage;
   imagePosition?: "left" | "right" | "none";
   imageSize?: "33" | "50" | "66";
@@ -72,7 +74,7 @@ export interface ExamStructureSectionData {
   _type: "examStructureSection";
   heading?: string;
   subheading?: string;
-  body?: object[];
+  body?: RichText;
   structurePoints?: { point: string }[];
   diagramImage?: SanityImage;
   ctaButton?: CtaButton;

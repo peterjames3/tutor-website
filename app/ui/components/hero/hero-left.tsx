@@ -115,7 +115,7 @@ const LeftHero = () => {
         // },
         {
           name: "and More",
-          path: "/procotored-exam-help",
+          path: "/proctored-exam-help",
         },
       ],
     },

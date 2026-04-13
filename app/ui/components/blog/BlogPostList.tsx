@@ -44,8 +44,9 @@ export default async function BlogPosts() {
           <figure>
             <Image
               src={
-                builder.image(post.imageURL).width(420).height(200).url() ||
-                "/3d-view-personal-computer-with-vegetation.jpg"
+                post.imageURL
+                  ? builder.image(post.imageURL).width(420).height(200).url()
+                  : "/3d-view-personal-computer-with-vegetation.jpg"
               }
               alt={post.title}
               width={420}
@@ -54,8 +55,8 @@ export default async function BlogPosts() {
             />
           </figure>
           <figcaption className="flex flex-col gap-2 p-3">
-            <div className=" w-[12rem] bg-tertiary text-center  text-secondary  label-text rounded-lg py-[0.29rem]   font-medium">
-              {post.categories.map((category: Category, id: number) => (
+            <div className="w-[12rem] bg-tertiary text-center text-secondary label-text rounded-lg py-[0.29rem] font-medium">
+              {(post.categories ?? []).map((category: Category, id: number) => (
                 <ul key={id}>
                   {" "}
                   <li>{category.title}</li>
@@ -66,9 +67,9 @@ export default async function BlogPosts() {
             <h3 className="text-[1.2rem] text-textColor font-bold ">
               {post.title}
             </h3>
-            <div className="text-foreground line-clamp-3 p-text   font-medium">
-              {post.categories.map((category: Category, id: number) => (
-                <p key={id}> {category.description}</p>
+            <div className="text-foreground line-clamp-3 p-text font-medium">
+              {(post.categories ?? []).map((category: Category, id: number) => (
+                <p key={id}>{category.description}</p>
               ))}
             </div>
             <div className="flex items-center justify-between">

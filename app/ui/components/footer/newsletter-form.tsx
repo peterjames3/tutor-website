@@ -43,7 +43,7 @@ export default function NewsletterForm() {
           notifyError(`Subscription failed! ${error.message}`);
           setIsSubmitting(false);
           console.log(error);
-        }
+        },
       );
     },
   });
@@ -53,7 +53,7 @@ export default function NewsletterForm() {
         Subscribe to Our Newsletter
       </h3>
       <p className="text-gray-300 mb-6 text-center">
-        Stay updated with the latest in solar technology and energy solutions
+        Stay ahead of your exams.{" "}
       </p>
 
       <form
@@ -102,7 +102,7 @@ export default function NewsletterForm() {
               isSubmitting ? "bg-foreground" : "btn hover:cursor-pointer"
             } hover:bg-secondary`}
           >
-            {isSubmitting ? "Subscribing..." : "Subscribe"}
+            {isSubmitting ? "Subscribing..." : "Get Free Tips & Resources"}
           </button>
           <ToastContainer />
         </div>

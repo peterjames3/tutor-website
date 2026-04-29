@@ -52,7 +52,7 @@ export default function ExamHelpSection() {
         transition={{ delay: 0.2, duration: 0.8 }}
         className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
       >
-        Our Exam Portifolio
+        Our Exam Portfolio
       </motion.h2>
       <motion.p
         className="text-xl text-primary mb-8 text-center mx-auto"

@@ -32,11 +32,11 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
       animate="visible"
     >
       <div>
-        <motion.h2 className="p-text text-primary" variants={itemVariants}>
+        <motion.h1 className="p-text text-primary" variants={itemVariants}>
           Your Exam, Our Expertise – Everything Else is Covered
-        </motion.h2>
+        </motion.h1>
 
-        <motion.h3
+        <motion.h2
           className="text-[2.5rem] lg:text-[3.1rem] font-bold text-primary leading-tight"
           variants={itemVariants}
         >
@@ -46,7 +46,7 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
           <br />
           <span className="text-secondary">Our Experts </span>
           <span className="text-primary"> Take Care of Rest.</span>
-        </motion.h3>
+        </motion.h2>
 
         <p className="p-text text-primary mb-4">
           Struggling with your proctored exam? Our experts provide <br /> proven
@@ -62,7 +62,7 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Get Procotred Exam Help
+          Get Proctored Exam Help
         </motion.button>
       </div>
     </motion.div>

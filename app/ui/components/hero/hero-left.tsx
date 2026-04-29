@@ -173,7 +173,7 @@ const LeftHero = () => {
             Supporting candidates preparing for: professional certifications
             <br />
             PmP certifications, PRINCE2 Project Management, SHRM Human Resource
-            Ceritifications, Healthcare & Academic Exams, Nursing Entrance
+            Certifications, Healthcare & Academic Exams, Nursing Entrance
             Exams, GED, HiSET{" "}
           </p>
 

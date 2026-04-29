@@ -16,14 +16,14 @@ import PortalsSection from "@/app/ui/portal-section";
 import TestimonialsSection from "@/app/ui/components/Testimonial/testimonials-section";
 
 export const metadata = {
-  title: "Proctored Exam Help Services",
+  title: "Pay Someone To Take My Proctored Exam Service",
   description:
-    "Get expert end-to-end exam support aid with real-time guidance, we handle the exam for you-all while you maintain full visibility and control.",
+    "Certified experts take your online proctored exam on your behalf — ProctorU, Examity, Respondus, Honorlock, and more. Guaranteed results, 100% confidential, available 24/7 across the USA and Canada.",
   alternates: {
     canonical: "https://testhelpnow.com/proctored-exam-help",
   },
   openGraph: {
-    title: "Proctored Exam Help Services | TestHelpNow",
+    title: "Pay Someone To Take My Proctored Exam | USA & Canada | TestHelpNow",
     description:
       "Comprehensive exam aid services designed to help you succeed.",
     url: "https://testhelpnow.com/proctored-exam-help",

@@ -23,7 +23,7 @@ export default function ExamServices() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Achieve Your Exam Goals
+            Three ways we help you pass
           </motion.h2>
           <motion.p
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -31,7 +31,8 @@ export default function ExamServices() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Allow our expert tutors to handle your exams and classes
+            Whether you&apos;re working adult, busy student, or a professional
+            chasing certification- pick the support that fits your situation.
           </motion.p>
         </div>
 
@@ -46,19 +47,25 @@ export default function ExamServices() {
             whileHover={{ y: -5 }}
           >
             <section className="p-2 w-1/2">
+              <div className="rounded-2xl text-center py-2 mb-3 text-sm text-primary font-semibold bg-[#BEDBFF]">
+                {" "}
+                Most Popular
+              </div>
               <h3 className="text-lg font-normal text-gray-600 mb-4">
-                Expert Exam Assistance
+                Expert Exam-taking
               </h3>
               <p className="text-2xl text-primary font-semibold mb-6">
                 Let Our Experts Take Your Exams for You
               </p>
               <p className="text-gray-500 mb-6">
-                Personalized support to ensure your success with ease and
-                confidence.
+                A certified expert logs into your exam session and completes
+                your proctored test on your behalf. Handles webcam monitoring,
+                lockdown browsers, timed sections, and all platform
+                requirements.
               </p>
 
               <Link
-                href="/exam-aid"
+                href="/proctored-exam-help"
                 className="flex items-center text-primary font-semibold group"
               >
                 Learn More{" "}
@@ -85,13 +92,18 @@ export default function ExamServices() {
             whileHover={{ y: -5 }}
           >
             <section className=" h-[45%] p-3 mb-2 ">
+              <div className="max-w-[14rem] rounded-2xl text-center py-2 mb-2 text-sm text-primary font-semibold bg-[#FBF7F0]">
+                {" "}
+                Build Confidence
+              </div>
               <h3 className="text-lg font-normal text-gray-600 mb-4">Expert</h3>
               <p className="text-2xl text-primary font-semibold mb-6">
-                Tutoring
+                1-On-1 Tutoring
               </p>
               <p className="text-gray-500 mb-4">
-                Get personalized tutoring from certified instructors to boost
-                your confidence and performance.
+                Certified instructors work with you directly — on your schedule,
+                in your subject, at your pace. K–12 through college and
+                professional certifications.
               </p>
               <Link
                 href="/academic/tutoring"
@@ -122,6 +134,10 @@ export default function ExamServices() {
             whileHover={{ y: -5 }}
           >
             <section className=" h-[45%] p-3 mb-2 ">
+              <div className="max-w-[14rem] text-center py-2 mb-2 rounded-2xl text-sm text-primary font-semibold bg-[#E9F5EA]">
+                {" "}
+                Ace it yourself
+              </div>
               <h3 className="text-lg font-normal text-gray-600 mb-4">
                 Test Prep
               </h3>
@@ -129,8 +145,9 @@ export default function ExamServices() {
                 Ace Your Exam
               </p>
               <p className="text-gray-500 mb-4">
-                Get ready with targeted practice, expert guidance, and full
-                support.
+                Practice tests, expert study guides, and targeted coaching for
+                GED, HiSET, PMP, SHRM, and more. Get fully prepared before exam
+                day.
               </p>
               <Link
                 href="/test-prep"

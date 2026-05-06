@@ -1,42 +1,94 @@
 "use client";
 import { motion } from "motion/react";
-import { useUIDispatch } from "@/context/UIContext";
-import { Monitor, BookOpen, BriefcaseBusiness } from "lucide-react";
+
+import Link from "next/link";
+import {
+  GraduationCap,
+  Monitor,
+  ClipboardList,
+  ShieldCheck,
+} from "lucide-react";
 
 const examServices = [
   {
-    icon: BookOpen,
+    icon: GraduationCap,
     title: "GED Exam Help",
+    subtitle: "Academic / equivalency",
+    tags: ["Academic"],
     description:
-      "Earning your GED is a fresh start for educational advancement. Our experienced GED test-takers can help you achieve it by delivering guaranteed results with zero stress on your part.",
+      "All 4 subtests covered — Math, RLA, Science & Social Studies. Accepted in all 50 US states and Canadian provinces.",
+    features: [
+      "Expert takes the exam for you",
+      "Online ",
+      "Last-minute bookings accepted",
+    ],
+    stats: [
+      { value: "100%", label: "Pass rate" },
+      { value: "500+", label: "GEDs passed" },
+      { value: "4.9★", label: "Rating" },
+    ],
+    price: "$100",
+    learnMore: {
+      label: "Learn more about GED help →",
+      href: "proctored-exam-help/pay-someone-to-take-my-ged-exam-for-me",
+    },
   },
   {
     icon: Monitor,
     title: "HiSET Exam Help",
+    subtitle: "Academic / equivalency",
+    tags: ["Academic", "⭐ Most requested"],
     description:
-      "The HiSET is your path to a high school equivalency credential. Our experts know every subtest inside out and will help you pass with confidence and ease.",
+      "All 5 HiSET subtests handled. Available in 23 US states. Our specialists have a proven pass rate across every section — including the essay.",
+    features: [
+      "Expert takes the exam for you",
+      "Online ",
+      "Last-minute bookings accepted",
+    ],
+    stats: [
+      { value: "100%", label: "Pass rate" },
+      { value: "300+", label: "HiSETs passed" },
+      { value: "4.8★", label: "Rating" },
+    ],
+    price: "$159",
+    learnMore: {
+      label: "Learn more about HiSET help →",
+      href: "/proctored-exam-help/pay-someone-to-take-my-hiset-exam-for-me",
+    },
   },
   {
-    icon: BriefcaseBusiness,
+    icon: ClipboardList,
     title: "PMP Exam Help",
+    subtitle: "Professional / PM",
+    tags: ["Professional / PM", "⭐ Most requested"],
     description:
-      "The PMP certification opens doors to senior project management roles. Our certified professionals will help you tackle the exam with precision and deliver the result you need.",
+      "PMI-certified experts handle your PMP exam. 180 questions, 230 minutes — we manage every domain: People, Process, and Business Environment.",
+    features: [
+      "PMI-certified expert assigned",
+      "All 3 domains fully covered",
+      "Last-minute bookings accepted",
+    ],
+    stats: [
+      { value: "100%", label: "Pass rate" },
+      { value: "200+", label: "PMPs passed" },
+      { value: "4.9★", label: "Rating" },
+    ],
+    price: "$249",
+    learnMore: {
+      label: "Learn more about PMP help →",
+      href: "/proctored-exam-help/pay-someone-to-take-my-pmp-exam-for-me",
+    },
   },
 ];
 
 export default function ExamHelpSection() {
-  const dispatch = useUIDispatch();
+  
 
   const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-
-    setTimeout(() => {
-      dispatch({ type: "SHOW_HELP" });
-    }, 1000);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    
   };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -45,61 +97,142 @@ export default function ExamHelpSection() {
       viewport={{ once: true, margin: "-100px" }}
       className="py-16 px-4 bg-white"
     >
-      {/* Heading */}
       <motion.h2
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
+        className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4"
       >
-        Our Exam Portfolio
+        Expert Help for Every Major Exam
       </motion.h2>
       <motion.p
-        className="text-xl text-primary mb-8 text-center mx-auto"
+        className="text-xl text-primary mb-12 text-center"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        Trusted Experts For High-Stakes Exam Support
+        Certified specialists across academic, professional, and healthcare
+        exams.
       </motion.p>
 
-      {/* Cards Grid */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {examServices.map((service, index) => {
           const Icon = service.icon;
           return (
             <div
               key={index}
-              className="flex flex-col items-center text-center bg-white rounded-2xl shadow-md border border-gray-100 px-6 py-10 hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col  rounded-2xl p-6 text-white gap-4  border-2 border-gray-200 hover:shadow-2xl transition-shadow duration-300"
             >
-              {/* Icon */}
-              <div className="mb-6 text-secondary">
-                <Icon size={56} strokeWidth={1.5} />
+              {/* Tags */}
+              <div className="flex gap-2 flex-wrap text-center">
+                {service.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className={`text-sm text-center font-semibold px-3 py-2 rounded-full ${
+                      tag.includes("⭐")
+                        ? "bg-[#2DBF50] text-white border border-green-700"
+                        : "bg-accent2 text-primary border border-gray-600"
+                    }`}
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
 
-              {/* Title */}
-              <h3 className="text-primary title font-bold mb-4">
-                {service.title}
-              </h3>
+              {/* Header */}
+              <div className="flex items-center gap-4">
+                <div className="bg-green-900/40 rounded-xl p-3 shrink-0">
+                  <Icon size={36} strokeWidth={1.5} className="text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-primary font-bold text-lg leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm mt-1">
+                    {service.subtitle}
+                  </p>
+                </div>
+              </div>
 
               {/* Description */}
-              <p className="text-gray-600 text-md leading-relaxed mb-8 flex-1">
+              <p className="text-gray-700  leading-relaxed">
                 {service.description}
               </p>
 
-              {/* CTA Button */}
+              {/* Features */}
+              <ul className="flex flex-col gap-2">
+                {service.features.map((feat, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-sm text-gray-600"
+                  >
+                    <span className="w-[18px] h-[18px] bg-primary rounded-full flex items-center justify-center shrink-0">
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                      >
+                        <polyline
+                          points="2,6 5,9 10,3"
+                          stroke="white"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    {feat}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 rounded-xl overflow-hidden border border-gray-700 divide-x divide-gray-700">
+                {service.stats.map((stat, i) => (
+                  <div key={i} className="bg-[#252b32] py-2.5 text-center">
+                    <div className="text-white font-bold text-base">
+                      {stat.value}
+                    </div>
+                    <div className="text-gray-300 text-[12px] mt-0.5">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Pricing */}
+              <p className="text-gray-400 text-sm">
+                Starting from{" "}
+                <span className="text-white font-bold">{service.price}</span> ·
+                free quote in 60 sec
+              </p>
+
+              {/* Guarantee */}
+              <div className="flex items-center gap-2 bg-green-950/50 border border-green-800/50 rounded-lg px-4 py-2.5 text-primary text-sm font-medium">
+                <ShieldCheck size={16} strokeWidth={2} />
+                100% money-back if you don&apos;t pass
+              </div>
+
+              {/* CTAs */}
               <button
                 onClick={handleClick}
-                className="bg-secondary hover:cursor-pointer text-white font-semibold px-8 py-3 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all"
+                className="bg-white hover:bg-gray-100 text-gray-900 font-bold text-base px-8 py-3 rounded-xl cursor-pointer transition-colors"
               >
-                Order Now
+                Get a free quote →
               </button>
+              <Link
+                href={service.learnMore.href}
+                className="text-center text-primary text-sm underline underline-offset-2 hover:opacity-80 transition-opacity"
+              >
+                {service.learnMore.label}
+              </Link>
             </div>
           );
         })}

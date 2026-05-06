@@ -13,30 +13,30 @@ import {
 
 const steps = [
   {
-    title: "Request Support",
+    title: "Tell Us your Exam Details",
     description:
-      "Tell us about your class or exam needs through our simple request form.",
+      "Share the exam type, platform, date, and login credentials. Takes under 2 minutes.",
     icon: <MessageSquare className="text-green-500 w-6 h-6" />,
     bgColor: "bg-red-50",
   },
   {
-    title: "Get Matched",
+    title: "Get Paires With a  Specialist",
     description:
-      "We'll match you with the perfect academic expert for your specific subject and needs.",
+      "We match you with an expert who has passed the same exam or worked on the same platform before.",
     icon: <CalendarCheck className="text-green-500 w-6 h-6" />,
     bgColor: "bg-blue-200",
   },
   {
-    title: "Receive Assistance",
+    title: "We Handle Everything Live",
     description:
-      "Your expert provides personalized support, whether attending classes or preparing for exams.",
+      "Your expert joins securely, manages the proctoring session, and completes the exam on time.",
     icon: <UserCheck className="text-green-500 w-6 h-6" />,
     bgColor: "bg-green-100",
   },
   {
-    title: "Succeed Academically",
+    title: "You Get Your Grade",
     description:
-      "Achieve better grades and reduce stress with our comprehensive academic support.",
+      "We debrief you on the outcome. If we miss our agreed target, you get your money back — no questions asked.",
     icon: <GraduationCap className="text-green-500 w-6 h-6" />,
     bgColor: "bg-blue-300",
   },

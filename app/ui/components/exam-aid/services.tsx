@@ -1,7 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import SlideInContainer from "@/app/ui/components/animation/SlideInContainer";
-import { MessageSquare, Calendar, ClipboardPen } from "lucide-react";
+import {
+  ScanFace,
+  MonitorOff,
+  Timer,
+  Eye,
+  Wifi,
+  ClipboardCheck,
+} from "lucide-react";
 
 export function Services() {
   const scrollToTop = () => {
@@ -10,46 +17,64 @@ export function Services() {
       behavior: "smooth",
     });
   };
+
   const benefits = [
     {
-      title: "Proctored Exam Support",
+      title: "Identity verification",
       description:
-        "We take care of your online exam from start to finish. You simply book your exam time and we handle the rest.",
-      icon: <MessageSquare className="w-6 h-6 text-green-500" />,
+        "Webcam ID checks, face matching, and biometric prompts — we handle every verification step each platform requires before the exam begins.",
+      icon: <ScanFace className="w-6 h-6 text-green-500" />,
     },
     {
-      title: "Class Support & Assignment Handling",
+      title: "Lockdown browsers",
       description:
-        "Our team can assist with attending online classes on your behalf.",
-      icon: <Calendar className="w-6 h-6 text-green-500" />,
+        "Respondus, ExamSoft, and similar tools restrict all other applications. Our experts operate within these environments without triggering alerts.",
+      icon: <MonitorOff className="w-6 h-6 text-green-500" />,
     },
     {
-      title: "Technical Exam setup & Monitoring",
+      title: "Timed pressure",
       description:
-        "We handle all the technical aspects of your online exam.  from setting up your system to monitoring the exam session.",
-      icon: <ClipboardPen className="w-6 h-6 text-green-500" />,
+        "Strict time limits with no pause option. Our experts manage pacing across every section so nothing is left unanswered when the clock runs out.",
+      icon: <Timer className="w-6 h-6 text-green-500" />,
+    },
+    {
+      title: "AI behaviour monitoring",
+      description:
+        "Modern proctoring tools flag unusual eye movement, typing rhythm, and tab switching. We know exactly what each platform watches for.",
+      icon: <Eye className="w-6 h-6 text-green-500" />,
+    },
+    {
+      title: "Technical disconnects",
+      description:
+        "Crashes and dropped connections happen. We stay on standby to rejoin and resume instantly without affecting your exam record.",
+      icon: <Wifi className="w-6 h-6 text-green-500" />,
+    },
+    {
+      title: "Post-exam debrief",
+      description:
+        "After every session we confirm your results are posted correctly and handle any follow-up the platform requires.",
+      icon: <ClipboardCheck className="w-6 h-6 text-green-500" />,
     },
   ];
 
   return (
     <section className="w-full py-20 px-4 md:px-2 lg:px-3 bg-tertiary-30">
-      <div className="w-full  max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto  ">
+      <div className="w-full max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto">
         {/* Header */}
-        <SlideInContainer direction="down" distance={30} className=" mb-12">
-          <section className="lg:flex lg:items-center gap-5 lg:gap-16 ">
+        <SlideInContainer direction="down" distance={30} className="mb-12">
+          <section className="lg:flex lg:items-center gap-5 lg:gap-16">
             <div className="w-full lg:w-1/2">
-              <div className="mb-3 label-text">Services</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 ">
-                Explore Our <br />
-                Comprehensive Test Solutions
+              <div className="mb-3 label-text">What we handle on exam day</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                Every challenge proctored exams throw at you
               </h2>
             </div>
             <div className="w-full lg:w-1/2 title">
               <p>
-                We offer a variety of tailored services to support you in your
-                academic journey. Whether you need assistance with your exams,
-                personalized tutoring, assignment help, or even full class
-                support, we&apos;re here to help every step of the way.
+                Proctored platforms are built to be stressful — webcam checks,
+                lockdown browsers, identity verification, timed pressure, and AI
+                monitoring. Our experts know every platform&apos;s exact
+                behaviour and navigate each one without triggering flags.
               </p>
             </div>
           </section>
@@ -65,7 +90,7 @@ export function Services() {
               delay={0.1 + index * 0.1}
               className="h-full"
             >
-              <div className="bg-background px-7 py-10 rounded-xl shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
+              <div className=" px-7 py-10 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col hover:bg-background transition-all delay-300 hover:cursor-pointer">
                 <div className="flex flex-col items-start gap-4 mb-4">
                   <div className="flex-shrink-0 mt-1 text-xl bg-accent rounded-full p-5">
                     {benefit.icon}

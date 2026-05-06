@@ -39,7 +39,7 @@ export default function StepThree() {
       <figcaption className="w-full h-full lg:w-1/2">
         <Image
           src="/step 3 image.png"
-          alt="step three image"
+          alt="Student getting support from TestHelpNow support team"
           width={700}
           height={200}
           className="rounded-md object-fill"

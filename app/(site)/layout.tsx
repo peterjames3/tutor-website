@@ -91,20 +91,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
       <UIProvider>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
         >
+          <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
           {/* <!-- Google Tag Manager (noscript) --> */}
-          <noscript>
+          {/* <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-KZHSPRPQ"
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
             ></iframe>
-          </noscript>
+          </noscript> */}
           {/* <!-- End Google Tag Manager (noscript) --> */}
           <Navbar />
           {children}

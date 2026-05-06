@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calculator, BookOpen, BrainCircuit } from "lucide-react";
+import { User, MonitorX, ScanEye } from "lucide-react";
 
 export default function HeroRightContent() {
   const containerVariants = {
@@ -28,24 +28,26 @@ export default function HeroRightContent() {
     >
       {/* Quantitative Reasoning */}
       <motion.div
-        className="relative bg-accent2 rounded-md flex items-center justify-between h-full w-full px-3 py-[10rem] overflow-hidden"
+        className="relative bg-accent2 rounded-md flex items-center justify-between h-full w-full px-3 py-[9.8rem] overflow-hidden"
         variants={itemVariants}
       >
         <section className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
             <div className="rounded-full p-3 bg-accent">
-              <Calculator />
+              <User />
             </div>
             <h3 className="text-2xl font-bold text-primary">
-              Quantitative Reasoning
+              Identity Verification
             </h3>
           </div>
           <p className="text-gray-600">
-            Core formulas like percentages, ratios, averages, algebraic
-            expressions, and data interpretation appear across many exams.
+            Webcam ID checks, face matching, and biometric prompts - We handle
+            every Verification step each platform requires before the exam
+            begins.
             <br />
             <span className="text-sm italic text-gray-500">
-              e.g., Understand how to compare growth rates using percent change.
+              e.g., Works across ProctorU, Examity, Honorlock, and Pearson VUE
+              identity flows.
             </span>
           </p>
         </section>
@@ -60,43 +62,46 @@ export default function HeroRightContent() {
         >
           <div className="flex items-center gap-2">
             <div className="rounded-full p-3 bg-accent">
-              <BookOpen />
+            <MonitorX />
+
             </div>
             <h3 className="text-xl font-semibold text-primary">
-              Written Communication
+              Lockdown Browser
             </h3>
           </div>
           <p className="text-gray-600 ml-7">
-            Grammar, clarity, sentence structure, and logical flow are critical
-            for written responses or essays.
+            Respondus, ExamSoft, and similar tools restrict all other
+            applications. Our experts operate within these environments without
+            triggering alerts or flags.
             <br />
             <span className="text-sm italic text-gray-500">
-              e.g., Knowing when to use active vs passive voice improves writing
-              quality.
+              e.g., Respondus Lockdown Browser, ExamSoft Examplify, and
+              institution-specific lockdown tools.
             </span>
           </p>
         </motion.div>
 
-        {/* Critical Thinking */}
+        {/* AI Behaviour Monitoring */}
         <motion.div
           className="space-y-3 rounded-md bg-cardBg-support3 h-full w-full px-3 py-[2rem]"
           variants={itemVariants}
         >
           <div className="flex items-center gap-2">
             <div className="rounded-full p-3 bg-accent">
-              <BrainCircuit />
+              <ScanEye />
             </div>
             <h3 className="text-xl font-semibold text-gray-800">
-              Critical Thinking
+              AI Behaviour Monitoring
             </h3>
           </div>
           <p className="text-gray-600 ml-7">
-            Evaluate arguments, identify assumptions, and draw conclusions —
-            core skills for both verbal and analytical exams.
+            Modern proctoring tools flag unusual eye movement, typing rhythm,
+            and tab switching. We know exactly what each platform watches for
+            and how to stay within expected behaviour patterns.
             <br />
             <span className="text-sm italic text-gray-500">
-              e.g., Spotting flawed logic helps in both reading passages and
-              data interpretation.
+              e.g., Honorlock AI, ProctorU Guardian, and Examity Smart
+              Proctoring detection systems.
             </span>
           </p>
         </motion.div>

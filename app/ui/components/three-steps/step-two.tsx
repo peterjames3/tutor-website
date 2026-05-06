@@ -8,7 +8,7 @@ export default function StepTwo() {
       <figcaption className="w-full h-full lg:w-1/2">
         <Image
           src="/step 2 image.png"
-          alt="step two image"
+          alt="Student filling out the TestHelpNow order form with exam details"
           width={700}
           height={200}
           className="rounded-md object-cover"
@@ -54,14 +54,13 @@ export default function StepTwo() {
           </p>
         </div>
         <div className="bg-gradient-to-r  from-[#CEF3D6] to-[#FFEEEB] p-4 rounded-md">
-          <h4 className="title font-bold text-primary">Emily Thompson</h4>
+          <h4 className="title font-bold text-primary">— Marcus D., Passed GED Mathematics, Houston TX</h4>
           <p className="label-text text-secondary mb-1">
             ⭐️⭐️⭐️⭐️⭐️ Admitted to Lakeside School
           </p>
           <p className="p-text text-gray-600 italic">
-            &apos;The personalized study plan was a game-changer. It helped me
-            focus on exactly what I needed to improve, and my grades improved
-            drastically. &apos;
+            &apos;I placed my order at 9pm and had an expert assigned by 10am
+            the next morning. The whole process took less than 24 hours &apos;
           </p>
         </div>
       </motion.div>

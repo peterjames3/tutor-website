@@ -3,19 +3,15 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useUIDispatch } from "@/context/UIContext";
-export const AnimatedBanner = () => {
-  const dispatch = useUIDispatch();
 
+import { ArrowUpRight, Mail } from "lucide-react";
+
+export const AnimatedBanner = () => {
   const handleClick = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-
-    setTimeout(() => {
-      dispatch({ type: "SHOW_HELP" });
-    }, 1000);
   };
 
   return (
@@ -51,7 +47,7 @@ export const AnimatedBanner = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Ready to Excel in Your Academic Journey?
+          Exam In Less Than 24 Hours?
         </motion.h2>
 
         <motion.p
@@ -60,8 +56,9 @@ export const AnimatedBanner = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          Join thousands of students who have improved their grades and reduced
-          academic stress with our comprehensive support services.
+          Join thousands of students across the US and Canada who passed their
+          proctored exams with TestHelpNow. It&apos;s free to get a quote — no
+          commitment, no pressure.
         </motion.p>
 
         <motion.div
@@ -70,13 +67,29 @@ export const AnimatedBanner = () => {
           transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          className="flex items-center justify-center gap-10"
         >
           <button
             onClick={handleClick}
-            className="bg-white hover:cursor-pointer text-primary font-semibold px-8 py-3 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all"
+            className="flex gap-2 bg-white hover:cursor-pointer text-primary font-semibold px-8 py-3 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all"
           >
-            Get Started
+            Get a free quote
+            <span>
+              <ArrowUpRight />
+            </span>
           </button>
+          <address className="flex items-center justify-center gap-4  text-lg text-gray-600">
+            {/* <div className="flex items-center gap-2 text-primary bg-white font-semibold px-8 py-4  rounded-xl">
+              <Phone className="h-3 w-3 md:h-4 md:w-4" />
+              <a href="tel:(800) 803-4058">(800) 803-4058</a>
+
+              
+            </div> */}
+            <div className="flex items-center gap-2 text-primary bg-white font-semibold px-8 py-3  rounded-xl">
+              <Mail className="h-3 w-3 md:h-4 md:w-4" />
+              <a href="mailto:info@testhelpnow.com">info@testhelpnow.com</a>
+            </div>
+          </address>
         </motion.div>
       </div>
     </motion.section>

@@ -1,5 +1,8 @@
 "use client";
 import { useUIDispatch } from "@/context/UIContext";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+
 const LeftHero = () => {
   const dispatch = useUIDispatch();
   const toggleForm = () => {
@@ -13,33 +16,36 @@ const LeftHero = () => {
     <div className=" h-full w-full mx-auto px-6 flex items-center">
       <div>
         <div>
+          <h1>How TestHelpNow Works</h1>
           <h2 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.1rem] font-bold mb-4 leading-tight">
-            <span className="text-primary">Learning </span>
-            <span className="text-secondary">has </span>
+            <span className="text-primary">Hire an Exam Expert, </span>
+            <span className="text-secondary">or want to Understand </span>
 
-            <span className="text-primary">Never </span>
+            <span className="text-primary">How Proctored Exam Help Works </span>
             <br />
-            <span className="text-secondary">Been </span>
-            <span className="text-primary"> Easy</span>
+            <span className="text-secondary">Before you commit? </span>
+            <span className="text-primary">?</span>
           </h2>
 
           <p className="text-primary mb-4 text-lg leading-relaxed">
-            Select your service and we guide you every step of the way.
-            Experience personalized support tailored to your unique learning
-            needs.
+            Our process is simple. Select the service you need and we guide you every
+            step of the way. Experience personalized support tailored to your
+            unique learning needs.
           </p>
 
           <h2 className="text-2xl font-semibold mb-6 text-gray-800">
             Get help Now!
           </h2>
 
-          <button
-          onClick={toggleForm}
-            type="button"
-            className="cursor-pointer bg-button-login-default px-16 py-4 rounded-md text-primary hover:bg-button-login-hover hover:text-button-textColor-hover transition-all delay-300 "
-          >
-            Get Help Now
-          </button>
+        
+           <motion.button
+                      onClick={toggleForm}
+                      className="cta hover:cursor-pointer flex items-center gap-2"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Get Exam Help Now! <ArrowRight />
+                    </motion.button>
         </div>
       </div>
     </div>

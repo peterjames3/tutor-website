@@ -1,14 +1,32 @@
 import React from "react";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   error?: string;
   label?: string;
   containerClass?: string;
   required?: boolean;
+  placeholder?: string;
+  options: string[] | { label: string; value: string }[];
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, error, label, containerClass, required, ...props }, ref) => {
+const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
+  (
+    {
+      className,
+      error,
+      label,
+      containerClass,
+      required,
+      placeholder,
+      options,
+      ...props
+    },
+    ref,
+  ) => {
+    const normalizedOptions = options.map((o) =>
+      typeof o === "string" ? { label: o, value: o } : o,
+    );
+
     return (
       <div className={`w-full ${containerClass || ""}`}>
         <div className="w-full flex items-center justify-between mb-1">
@@ -24,8 +42,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             </p>
           )}
         </div>
-        <input
-          className={`w-full px-4 py-2.5 rounded-md border ${
+        <select
+           className={`w-full px-4 py-2.5 rounded-md border ${
             error ? "border-red-500" : "border-gray-300"
           } focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent ${
             className || ""
@@ -34,11 +52,18 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           aria-required={required}
           aria-invalid={!!error}
           {...props}
-        />
+        >
+          {placeholder && <option value="">{placeholder}</option>}
+          {normalizedOptions.map((o) => (
+            <option key={o.value} value={o.value}>
+              {o.label}
+            </option>
+          ))}
+        </select>
       </div>
     );
   },
 );
 
-Input.displayName = "Input";
-export default Input;
+Select.displayName = "Select";
+export default Select;

@@ -22,7 +22,7 @@ export const useQuoteForm = () => {
       platform: "",
 
     },
-     quotevalidate,
+     validate: quotevalidate,
     onSubmit: (values) => {
       setIsSubmitting(true);
 

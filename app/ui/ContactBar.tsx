@@ -16,7 +16,7 @@ const ContactBar = memo<ContactBarProps>(({ isScrolled }) => {
         <address className="flex items-center justify-center gap-4 md:gap-8 py-2 text-xs md:text-sm text-gray-600">
           <div className="flex items-center gap-2">
             <Phone className="h-3 w-3 md:h-4 md:w-4" />
-            <a href="tel:+1(469) 428-4470">+1(469) 4284470</a>
+            <a href="tel:+1(469) 428-4470">+1(469) 428-4470</a>
 
             <span className="sm:hidden">Call Us</span>
           </div>

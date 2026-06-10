@@ -4,7 +4,7 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import Post from "@/app/ui/components/blog/post";
 import { client } from "@/sanity/lib/client";
 import { notFound } from 'next/navigation';
-
+import BlogPostSchema from "./_schema";
 export const revalidate = 60;
 
 export async function generateStaticParams() {
@@ -30,7 +30,13 @@ const PostPage = async ({ params }: { params: Params }) => {
     notFound();
   }
 
-  return <Post post={post} />;
+  return(
+    <>
+    <BlogPostSchema post={post} />
+    <Post post={post} />
+    </>
+
+  ) 
 };
 
 export default PostPage;

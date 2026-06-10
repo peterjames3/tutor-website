@@ -25,7 +25,7 @@ export default function ContactPage() {
             <p>Reach out to our Customer Support team by email at:</p>
             <a className="text-blue-600 font-medium">info@testhelpnow.com</a>
             <p className="text-gray-600">
-              Our team typically responds to emails within 1-3 business days.
+              Our team typically responds to emails within 24 hours of submission.
             </p>
           </div>
 

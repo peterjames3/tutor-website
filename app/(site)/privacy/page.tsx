@@ -143,16 +143,16 @@ export default function PrivacyPage() {
           </h2>
           <address className="not-italic">
             <p>
-              <strong>For Test Prep:</strong> prep@tutorpro.com
+              <strong>For Test Prep:</strong> info@testhelpnow.com
             </p>
             <p>
-              <strong>For Tutoring:</strong> tutors@tutorpro.com
+              <strong>For Tutoring:</strong> info@testhelpnow.com
             </p>
             <p>
-              <strong>For Exam Support:</strong> exams@tutorpro.com
+              <strong>For Exam Support:</strong> info@testhelpnow.com
             </p>
-           
-            <p>24/7 Support Line: (555) 987-6543</p>
+
+            <p>24/7 Support Line: +1(469) 428-4470</p>
           </address>
         </section>
 

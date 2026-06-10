@@ -9,7 +9,7 @@ import Quote from "@/app/ui/components/form/quote";
 import FAQSection from "@/app/ui/components/howitworks/faq";
 import ShapoReviews from "@/app/ui/Shaporeviews";
 export const metadata = {
-  title: "How It  Works - Get Expert Exam Help in 3 Steps | TestHelpNow",
+  title: "How Proctored  Exam Support  Works - Get Expert Exam Help in 3 Steps | TestHelpNow",
   description:
     "See exactly how  TestHelpNow works. Browse services, fill a quick form, and get matched with a certified exam expert in minutes",
     openGraph: {

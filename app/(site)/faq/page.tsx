@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import FAQSchema from "./_schema"
 
 const faqs = [
   {
@@ -40,6 +41,8 @@ const faqs = [
 
 export default function FAQPage() {
   return (
+    <>
+    <FAQSchema />
     <div className="mt-36 max-w-4xl mx-auto px-6 py-10 min-h-screen">
       <div className="text-center mb-12">
         <h2 className="headline font-bold mb-4">Frequently Asked Questions</h2>
@@ -71,5 +74,6 @@ export default function FAQPage() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import SubTestimonialCard from "@/app/ui/components/tutoring/sub-testimonial";
 import TutoringFeatures from "@/app/ui/components/tutoring/tutoring-component";
 import SubjectsSection from "@/app/ui/components/tutoring/some-subject-covered";
 import type { Metadata } from "next";
+import TutoringSchema from "./_schema";
 
 export const metadata: Metadata = {
   title: "Online Tutoring Services",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function TutoringPage() {
   return (
     <>
+      <TutoringSchema />
       <Hero />
       <WhyChooseUs />
       <SubTestimonialCard />

@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Phone size={20} />
-            <Link href="tel:5551234567">(800) 803-4058</Link>
+            <Link href="tel:+1(469) 428-4470">+1(469) 428-4470</Link>
           </div>
         </div>
       </div>

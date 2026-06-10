@@ -16,10 +16,10 @@ const LeftHero = () => {
     <div className=" h-full w-full mx-auto px-6 flex items-center">
       <div>
         <div>
-          <h1>How TestHelpNow Works</h1>
+          <h2>How Proctored Exam Support  Works</h2>
           <h2 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.1rem] font-bold mb-4 leading-tight">
-            <span className="text-primary">Hire an Exam Expert, </span>
-            <span className="text-secondary">or want to Understand </span>
+          
+            <span className="text-secondary">Want to Understand </span>
 
             <span className="text-primary">How Proctored Exam Help Works </span>
             <br />
@@ -33,9 +33,7 @@ const LeftHero = () => {
             unique learning needs.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
-            Get help Now!
-          </h2>
+         
 
         
            <motion.button

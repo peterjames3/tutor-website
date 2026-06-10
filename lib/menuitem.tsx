@@ -6,6 +6,14 @@ export const examAidCategories: ExamCategory = {
       name: "Take PMP Exam for Me",
       slug: "pay-someone-to-take-my-pmp-exam-for-me",
     },
+     {
+      name: "Take SHRM Exam for Me",
+      slug: "pay-someone-to-take-my-shrm-exam-for-me",
+    },
+     {
+      name: "Take PRINCE2 Exam for Me",
+      slug: "pay-someone-to-take-my-prince2-exam-for-me",
+    },
   ],
   "High School Equivalency": [
     {

@@ -1,59 +1,53 @@
 "use client";
 import { motion } from "motion/react";
-
 import Link from "next/link";
-import {
-  GraduationCap,
-  Monitor,
-  ClipboardList,
-  ShieldCheck,
-} from "lucide-react";
+import { Award, BookCheck, ClipboardList, ShieldCheck } from "lucide-react";
 
 const examServices = [
   {
-    icon: GraduationCap,
-    title: "GED Exam Help",
-    subtitle: "Academic / equivalency",
-    tags: ["Academic"],
+    icon: Award,
+    title: "SHRM Exam Help",
+    subtitle: "Professional / HR",
+    tags: ["Professional / HR", "⭐ Most requested"],
     description:
-      "All 4 subtests covered — Math, RLA, Science & Social Studies. Accepted in all 50 US states and Canadian provinces.",
+      "SHRM-certified experts handle your SHRM-CP or SHRM-SCP exam. 160 questions covering behavioral competencies and HR knowledge domains — fully managed for you.",
     features: [
-      "Expert takes the exam for you",
-      "Online ",
+      "SHRM-certified expert assigned",
+      "SHRM-CP & SHRM-SCP covered",
       "Last-minute bookings accepted",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
-      { value: "500+", label: "GEDs passed" },
+      { value: "150+", label: "SHRMs passed" },
       { value: "4.9★", label: "Rating" },
     ],
-    price: "$100",
+    price: "$249",
     learnMore: {
-      label: "Learn more about GED help →",
-      href: "proctored-exam-help/pay-someone-to-take-my-ged-exam-for-me",
+      label: "Learn more about SHRM help →",
+      href: "/take-my-shrm-exam-for-me",
     },
   },
   {
-    icon: Monitor,
-    title: "HiSET Exam Help",
-    subtitle: "Academic / equivalency",
-    tags: ["Academic", "⭐ Most requested"],
+    icon: BookCheck,
+    title: "PRINCE2 Exam Help",
+    subtitle: "Professional / PM",
+    tags: ["Professional / PM", "⭐ Most requested"],
     description:
-      "All 5 HiSET subtests handled. Available in 23 US states. Our specialists have a proven pass rate across every section — including the essay.",
+      "Qualified PRINCE2 specialists handle your Foundation or Practitioner exam. Every theme, process, and principle covered — so you walk away certified.",
     features: [
-      "Expert takes the exam for you",
-      "Online ",
+      "PRINCE2-qualified expert assigned",
+      "Foundation & Practitioner covered",
       "Last-minute bookings accepted",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
-      { value: "300+", label: "HiSETs passed" },
+      { value: "100+", label: "PRINCE2s passed" },
       { value: "4.8★", label: "Rating" },
     ],
-    price: "$159",
+    price: "$229",
     learnMore: {
-      label: "Learn more about HiSET help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-hiset-exam-for-me",
+      label: "Learn more about PRINCE2 help →",
+      href: "/take-my-prince2-exam-for-me",
     },
   },
   {
@@ -82,11 +76,8 @@ const examServices = [
 ];
 
 export default function ExamHelpSection() {
-  
-
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    
   };
 
   return (
@@ -111,8 +102,8 @@ export default function ExamHelpSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        Certified specialists across academic, professional, and healthcare
-        exams.
+        Certified specialists across PMP, SHRM, PRINCE2, and other professional
+        certification exams.
       </motion.p>
 
       <motion.div
@@ -127,7 +118,7 @@ export default function ExamHelpSection() {
           return (
             <div
               key={index}
-              className="flex flex-col  rounded-2xl p-6 text-white gap-4  border-2 border-gray-200 hover:shadow-2xl transition-shadow duration-300"
+              className="flex flex-col rounded-2xl p-6 text-white gap-4 border-2 border-gray-200 hover:shadow-2xl transition-shadow duration-300"
             >
               {/* Tags */}
               <div className="flex gap-2 flex-wrap text-center">
@@ -161,7 +152,7 @@ export default function ExamHelpSection() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-700  leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 {service.description}
               </p>
 

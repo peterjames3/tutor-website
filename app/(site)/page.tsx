@@ -10,6 +10,7 @@ import { AnimatedBanner } from "../ui/animated-banner";
 import SEOContent from '../ui/seo-content'
 import PortalsSection from "../ui/portal-section"
 import { OtherLinksSection } from "../ui/components/otherlinks/other-links-section";
+import HomeSchema from "./_schema";
 
 export const metadata = {
   title: "Pay Someone to Take My Online Exam | AllExamHelper",
@@ -19,6 +20,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="">
+      <HomeSchema />
       <Hero />
       <StatsSection />
       <SubService />

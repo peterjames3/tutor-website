@@ -28,18 +28,11 @@ const LeftHero = ({  onGetQuote }: LeftHeroProps) => {
 
   const examData: Record<ExamCategory, ExamCategoryData> = {
     k12: {
-      title: "Grades K-12",
+      title: "US-Based Certification Exam",
       exams: [
-        {
-          name: "GED",
-          path: "/take-my-ged-exam-for-me",
-          description: "High School Equivalency Test",
-        },
-        {
-          name: "HiSET",
-          path: "/take-my-hiset-exam-for-me",
-          description: "High School Equivalency Test",
-        },
+          { name: "PMP", path: "/take-my-pmp-exam-for-me" },
+          { name: "SHRM", path: "/take-my-shrm-exam-for-me" },
+     
         {
           name: "and More",
           path: "/proctored-exam-help",
@@ -48,9 +41,10 @@ const LeftHero = ({  onGetQuote }: LeftHeroProps) => {
       ],
     },
     academics: {
-      title: "Certificates Exams",
+      title: "UK-Based Certificates Exams",
       exams: [
-        { name: "PMP", path: "/take-my-pmp-exam-for-me" },
+           { name: "PRINCE2", path: "/take-my-prince2-exam-for-me" },
+        { name: "SHRM", path: "/take-my-shrm-exam-for-me" },
         { name: "and More", path: "/proctored-exam-help" },
       ],
     },
@@ -72,11 +66,10 @@ const LeftHero = ({  onGetQuote }: LeftHeroProps) => {
         </h1>
 
         <p className="text-primary mb-4 text-lg leading-relaxed">
-          Supporting candidates preparing for: professional certifications
-          <br />
-          PMP certifications, PRINCE2 Project Management, SHRM Human Resource
-          Certifications, Healthcare & Academic Exams, Nursing Entrance Exams,
-          GED, HiSET
+          Supporting candidates preparing for The PMP, SHRM, and PRINCE2 certification,
+                    <br />
+         as well as Healthcare & Academic Exams, Nursing
+  Entrance Exams, and other high-stakes professional qualifications.
         </p>
 
         <h2 className="text-2xl font-semibold mb-6 text-gray-800">

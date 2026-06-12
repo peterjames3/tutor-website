@@ -1,5 +1,5 @@
 //import { SanityDocument } from "@sanity/client";
-import { examsWeSupportQuery } from "@/sanity/lib/queries";
+import { allExamServicePagesQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/server-fetch";
 import { ExamCard } from "@/app/ui/components/exam-aid/exam-we-support";
 import ProctoredExamFAQSchema from "./_schema";
@@ -33,7 +33,7 @@ export const metadata = {
 
 export default async function ProctoredExamHelpHome() {
   const exams = await sanityFetch<ExamCard[]>({
-    query: examsWeSupportQuery,
+    query: allExamServicePagesQuery,
     // tags: ["exams"],
   });
 

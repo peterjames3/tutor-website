@@ -14,10 +14,7 @@ export default function StaggeredContainer({
   staggerDelay = 0.1,
   className = "",
 }: StaggeredContainerProps) {
-  console.log(
-    "🎭 StaggeredContainer rendered with stagger delay:",
-    staggerDelay
-  );
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },

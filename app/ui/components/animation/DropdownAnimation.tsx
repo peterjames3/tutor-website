@@ -14,7 +14,7 @@ export default function DropdownAnimation({
   isOpen,
   className = "",
 }: DropdownAnimationProps) {
-  console.log("📋 DropdownAnimation rendered, isOpen:", isOpen);
+ 
 
   const dropdownVariants: Variants = {
     hidden: {

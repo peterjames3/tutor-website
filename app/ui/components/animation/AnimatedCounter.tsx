@@ -24,11 +24,11 @@ export default function AnimatedCounter({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   //const controls = useAnimation();
 
-  console.log("🔢 AnimatedCounter rendered:", { end, duration, delay });
+  
 
   useEffect(() => {
     if (isInView) {
-      console.log("👁️ Counter in view, starting animation");
+     
 
       const timer = setTimeout(() => {
         let startTime: number;
@@ -50,7 +50,7 @@ export default function AnimatedCounter({
             requestAnimationFrame(animate);
           } else {
             setCount(end);
-            console.log("✅ Counter animation completed:", end);
+            
           }
         };
 

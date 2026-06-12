@@ -8,7 +8,7 @@ export interface ExamCard {
   seoTitle: string;
   seoDescription?: string;
   slug: string;
-  thumbnail?: {
+  ogImage?: {
     url: string;
     alt?: string;
   };
@@ -25,6 +25,7 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
   const [canScrollRight, setCanScrollRight] = useState(true);
 
   if (!exams?.length) return null;
+
 
   const scroll = (direction: "left" | "right") => {
     const el = sliderRef.current;
@@ -44,20 +45,19 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
   };
 
   return (
-    <section className="py-16 bg-gray-50 overflow-hidden">
+    <section aria-label="Proctored Exam Support Services"  className="py-16 bg-gray-50 overflow-hidden">
       <div className="max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto px-6">
         {/* Header + nav buttons row */}
         <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-2">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-secondary mb-2">
               What We Cover
-            </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary">
-              Exams We Support
             </h2>
+            <p className="text-3xl lg:text-4xl font-bold text-primary">
+              Online Proctored Exam Help & Support Services
+            </p>
             <p className="text-gray-600 mt-2 max-w-xl">
-              We specialize in end-to-end support for all major proctored
-              testing platforms. Click any exam to learn more.
+              Get expert, confidential help for GED, PMP, SHRM, HiSET and 50+ other proctored exams. Our certified professionals guide you every step of the way.
             </p>
           </div>
 
@@ -132,10 +132,10 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
           >
             {/* Thumbnail */}
             <div className="relative h-44 bg-gray-100 overflow-hidden">
-              {exam.thumbnail?.url ? (
+              {exam.ogImage?.url ? (
                 <Image
-                  src={exam.thumbnail.url}
-                  alt={exam.thumbnail.alt ?? exam.seoTitle}
+                  src={exam.ogImage.url}
+                  alt={exam.ogImage.alt ?? exam.seoTitle}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -163,7 +163,7 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
             {/* Card footer */}
             <div className="px-5 pb-5">
               <span className="inline-flex items-center gap-1 text-[1rem] font-semibold text-active-link group-hover:gap-2 transition-all duration-200">
-                Learn More
+                Get Exam Support
                 <svg
                   className="w-4 h-4"
                   fill="none"

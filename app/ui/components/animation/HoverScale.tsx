@@ -16,7 +16,7 @@ export default function HoverScale({
   duration = 0.2,
   className = "",
 }: HoverScaleProps) {
-  console.log("🎯 HoverScale rendered:", { scale, duration });
+  
 
   return (
     <motion.div

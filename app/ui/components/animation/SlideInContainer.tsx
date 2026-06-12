@@ -20,7 +20,7 @@ export default function SlideInContainer({
   distance = 50,
   className = "",
 }: SlideInContainerProps) {
-  console.log("🎬 SlideInContainer rendered:", { direction, delay, duration });
+ 
 
   const getInitialPosition = () => {
     switch (direction) {

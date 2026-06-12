@@ -18,7 +18,7 @@ export default function FadeInScale({
   scale = 0.8,
   className = "",
 }: FadeInScaleProps) {
-  console.log("🔍 FadeInScale rendered:", { delay, duration, scale });
+  
 
   return (
     <motion.div

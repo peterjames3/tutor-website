@@ -219,7 +219,7 @@ export default function ContactForm() {
                 : "bg-button-login-default hover:bg-secondary/80 hover:shadow-lg"
             }`}
           >
-            {isSubmitting ? "Sending..." : "Book Your Free Strategy via email"}
+            {isSubmitting ? "Sending..." : "Place Your Order"}
           </button>
         </div>
       </form>

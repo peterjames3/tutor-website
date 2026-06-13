@@ -8,6 +8,7 @@ import Footer from "../ui/components/footer/Footer";
 import ScrollToTopBtn from "../ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
 import Chatbot from "../ui/Chatbot";
+import Whatsapp from "../ui/whatsapp";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -108,6 +109,7 @@ export default function RootLayout({
           {/* <!-- End Google Tag Manager (noscript) --> */}
           <Navbar />
           {children}
+          <Whatsapp />
           <ScrollToTopBtn />
           <Footer />
           <Chatbot />

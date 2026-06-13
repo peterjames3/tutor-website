@@ -60,7 +60,7 @@ export default function UnlockPathSection({
 
         {/* Right — decorative side image */}
         {sideImage?.url && (
-          <div className="relative w-full lg:w-5/12 h-full rounded-2xl overflow-hidden shadow-2xl flex-shrink-0">
+          <div className="relative w-full lg:w-5/12 min-h-[670px]  overflow-hidden flex-shrink-0">
             <Image
               src={sideImage.url}
               alt={sideImage.alt ?? ""}

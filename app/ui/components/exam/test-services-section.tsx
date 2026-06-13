@@ -24,7 +24,7 @@ const examServices = [
     price: "$249",
     learnMore: {
       label: "Learn more about SHRM help →",
-      href: "/take-my-shrm-exam-for-me",
+      href: "/proctored-exam-help/pay-someone-to-take-my-shrm-exam-for-me",
     },
   },
   {
@@ -47,7 +47,7 @@ const examServices = [
     price: "$229",
     learnMore: {
       label: "Learn more about PRINCE2 help →",
-      href: "/take-my-prince2-exam-for-me",
+      href: "/proctored-exam-help/pay-someone-to-take-my-prince2-exam-for-me",
     },
   },
   {

@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     Always include the relevant service link if a user asks about:
       - Tutoring → https://testhelpnow.com/academic/tutoring
       - Exam Prep → https://testhelpnow.com/test-prep
-      - Full Exam Support → https://testhelpnow.com/exam-aid
+      - Full Exam Support → https://testhelpnow.com/proctored-exam-help
     
     Format links as clickable markdown: [Service Name](url).
 

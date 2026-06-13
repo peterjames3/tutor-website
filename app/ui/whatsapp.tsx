@@ -5,7 +5,7 @@ export default function Whatsapp() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 250) {
+      if (window.scrollY > 50) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

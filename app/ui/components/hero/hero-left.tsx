@@ -30,7 +30,10 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
       title: "US-Based Certification Exam",
       exams: [
         { name: "PMP", path: "/take-my-pmp-exam-for-me" },
-        { name: "SHRM", path: "/take-my-shrm-exam-for-me" },
+        {
+          name: "SHRM",
+          path: "/proctored-exam-help/pay-someone-to-take-my-shrm-exam-for-me",
+        },
 
         {
           name: "and More",
@@ -42,8 +45,14 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
     academics: {
       title: "UK-Based Certificates Exams",
       exams: [
-        { name: "PRINCE2", path: "/take-my-prince2-exam-for-me" },
-        { name: "SHRM", path: "/take-my-shrm-exam-for-me" },
+        {
+          name: "PRINCE2",
+          path: "/proctored-exam-help/pay-someone-to-take-my-prince2-exam-for-me",
+        },
+        {
+          name: "SHRM",
+          path: "/proctored-exam-help/pay-someone-to-take-my-shrm-exam-for-me",
+        },
         { name: "and More", path: "/proctored-exam-help" },
       ],
     },

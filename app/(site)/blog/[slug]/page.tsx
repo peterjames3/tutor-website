@@ -32,7 +32,7 @@ const PostPage = async ({ params }: { params: Params }) => {
 
   return(
     <>
-    <BlogPostSchema post={post} />
+    <BlogPostSchema post={post} /> 
     <Post post={post} />
     </>
 

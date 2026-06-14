@@ -72,12 +72,12 @@ export default function Post({ post }: { post: SanityDocument }) {
             {post?.mainImage && (
               <Image
                 src={
-                  urlFor(post.mainImage).width(1200).height(650).url() ||
+                  urlFor(post.mainImage).width(1200).height(690).url() ||
                   "/3d-view-personal-computer-with-vegetation.jpg"
                 }
                 alt={post?.mainImage?.alt || "Post image"}
                 width={1000}
-                height={650}
+                height={690}
                 className="rounded-md"
               />
             )}

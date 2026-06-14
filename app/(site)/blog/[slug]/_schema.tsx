@@ -6,7 +6,10 @@ interface BlogPostSchemaProps {
 }
 
 export default function BlogPostSchema({ post }: BlogPostSchemaProps) {
-  const postUrl = `https://www.testhelpnow.com/blog/${post.slug.current}`;
+ const slugString =
+  typeof post.slug === "string" ? post.slug : post.slug?.current;
+
+const postUrl = `https://www.testhelpnow.com/blog/${slugString}`;
 
   const articleSchema = {
     "@context": "https://schema.org",

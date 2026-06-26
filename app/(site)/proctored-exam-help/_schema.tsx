@@ -1,3 +1,4 @@
+tutor-website
 export default function ProctoredExamFAQSchema() {
   const faqSchema = {
     "@context": "https://schema.org",

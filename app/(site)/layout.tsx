@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Testhelpnow | Academic Tutoring, Test prep & End-To-End Exam Support Services",
+      "Testhelpnow | Academic Tutoring, Exam Taker & Proctored Online Exam Taker Services",
     template: "%s | Testhelpnow",
   },
   description:
@@ -51,11 +51,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default:
-        "Testhelpnow | Academic Tutoring, Test prep & End-To-End Exam Support Services",
+        "Testhelpnow | Academic Tutoring, Exam Taker  &  Proctored Online Exams Support Services",
       template: "%s | Testhelpnow",
     },
     description:
-      "Get expert tutoring, targeted exam preparation, and end-to-end academic support. Edusion helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
+      "Get expert tutoring, targeted exam preparation, and end-to-end academic support. TestHelpNow helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
     url: "https://testhelpnow.com/",
     type: "website",
     locale: "en_US",

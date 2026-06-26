@@ -13,9 +13,10 @@ import { OtherLinksSection } from "../ui/components/otherlinks/other-links-secti
 import HomeSchema from "./_schema";
 
 export const metadata = {
-  title: "Pay Someone to Take My Online Exam | AllExamHelper",
+  title: "Pay Someone to Take My Online Exam | AllExamHelper | Exam Taker",
   description:
     "Pay someone to take your online exam with expert exam takers. Secure, confidential, and reliable online exam help for students.",
+    
 };
 export default function Page() {
   return (

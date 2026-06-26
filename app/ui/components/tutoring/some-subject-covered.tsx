@@ -65,7 +65,7 @@ export default function SubjectsSection() {
 
   return (
     <section className="py-20  bg-[#e2ebf3]/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">
           Get the learning support you need
         </h2>

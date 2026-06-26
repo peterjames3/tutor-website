@@ -15,7 +15,7 @@ export default function Footer() {
       viewport={{ once: true }}
       className="bg-[#030f08] text-background px-6 md:px-20 py-12 space-y-10"
     >
-      <div className="grid md:grid-cols-4 gap-8 w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] pb-10">
+      <div className="grid md:grid-cols-4 gap-8 w-full mx-auto max-w-full lg:max-w-310 pb-10">
         {/* Logo & Description */}
         <div className="space-y-4">
           <div className="flex gap-3 items-center">

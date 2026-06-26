@@ -3,11 +3,10 @@ import { motion } from "motion/react";
 import { Clock } from "lucide-react";
 import Image from "next/image";
 
-
 export default function ProctoredProcess() {
   return (
     <section className="bg-background py-16 px-4 sm:px-6 lg:px-10 ">
-      <div className="w-full max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto">
+      <div className="w-full max-w-full lg:max-w-310 mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <motion.p
@@ -104,7 +103,6 @@ export default function ProctoredProcess() {
                 Same day, usually within 1 hour
                 <Clock />
               </p>
-          
             </section>
             <figcaption className="h-[55%]  w-full">
               <Image
@@ -140,8 +138,7 @@ export default function ProctoredProcess() {
                 manage identity checks, lockdown browser, webcam, and every
                 timed section.
               </p>
-               <p className="flex items-center gap-3 fonr-semibold text-secondary">
-        
+              <p className="flex items-center gap-3 fonr-semibold text-secondary">
                 <Clock /> Duration of your exam
               </p>
             </section>

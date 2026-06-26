@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-      <div className="w-full max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-18 items-center">
+      <div className="w-full max-w-full lg:max-w-310 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-18 items-center">
         {/* Left Column - Text Content */}
         <motion.div
           initial="hidden"

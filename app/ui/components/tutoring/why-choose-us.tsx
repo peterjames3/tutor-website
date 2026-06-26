@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
 
   return (
     <div className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-4xl font-bold text-center text-gray-900 mb-12"
           initial={{ opacity: 0, y: 20 }}

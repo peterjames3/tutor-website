@@ -49,7 +49,7 @@ export default function TutoringFeatures() {
 
   return (
     <section className="bg-background text-primary">
-      <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] px-4 md:px-6 lg:px-8 py-20">
+      <div className="w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-6 lg:px-8 py-20">
         {/* Header */}
         <motion.div
           initial="hidden"

@@ -45,7 +45,7 @@ const steps = [
 export default function SuccessPath() {
   return (
     <section className="py-20 px-4 md:px-8 bg-background">
-      <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]  flex flex-col text-center justify-center sm:flex-row sm:text-start lg:items-center sm:justify-between mb-10 px-9">
+      <div className="w-full mx-auto max-w-full lg:max-w-310  flex flex-col text-center justify-center sm:flex-row sm:text-start lg:items-center sm:justify-between mb-10 px-9">
         <h2 className="text-4xl font-bold text-primary mb-2">
           Unlock Your Path to <br /> Success with Us
         </h2>
@@ -60,7 +60,7 @@ export default function SuccessPath() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className=" w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] flex flex-wrap justify-center gap-6"
+        className=" w-full mx-auto max-w-full lg:max-w-310 flex flex-wrap justify-center gap-6"
       >
         {steps.map((step, index) => (
           <SuccessStep key={index} {...step} />

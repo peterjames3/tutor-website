@@ -141,7 +141,7 @@ export default function StatsSection() {
 
   return (
     <section ref={sectionRef} className="py-20">
-      <div className="mx-auto max-w-[1440px] px-2">
+      <div className="mx-auto max-w-7xl px-2">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

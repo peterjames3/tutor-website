@@ -4,7 +4,7 @@ import { CircleArrowRight } from "lucide-react";
 import Link from "next/link";
 export default function SEOContent() {
   return (
-    <section className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]  gap-4 mx-auto px-6 py-12 md:flex  items-start">
+    <section className="w-full mx-auto max-w-full lg:max-w-310  gap-4 mx-auto px-6 py-12 md:flex  items-start">
       <article className="w-full md:w-3/4">
         <article>
           <h2 className="text-4xl font-bold mb-6">

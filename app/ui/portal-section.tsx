@@ -144,7 +144,7 @@ export default function PortalsSection() {
     <>
       {/* ── LMS Section ─────────────────────────────────────── */}
       <section className="py-20 px-4 md:px-8 bg-[#e2ebf3]/30">
-        <div className="w-full mx-auto max-w-7xl flex flex-col items-center text-center mb-12 px-4">
+        <div className="w-full mx-auto max-w-310 flex flex-col items-center text-center mb-12 px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             LMS and Portals We Work On
           </h2>
@@ -159,8 +159,8 @@ export default function PortalsSection() {
           </p>
         </div>
 
-        <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+        <div className="w-full mx-auto max-w-full lg:max-w-310">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 px-4">
             {LMS.map((portal, index) => (
               <PortalCard key={`${portal.title}-${index}`} portal={portal} />
             ))}
@@ -170,7 +170,7 @@ export default function PortalsSection() {
 
       {/* ── Proctoring Platforms Section ────────────────────── */}
       <section className="pb-20 px-4 md:px-8 bg-[#e2ebf3]/30">
-        <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]">
+        <div className="w-full mx-auto max-w-full lg:max-w-310 px-4">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {PROCTORING_PLATFORMS.map((platform, index) => (
               <ProctoringCard

@@ -20,7 +20,7 @@ export default function ExamStructureSection({
 
   return (
     <section className="w-full">
-      <div className="py-16 max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto flex flex-col lg:flex-row  lg:items-center md:justify-between">
+      <div className="py-16 max-w-full lg:max-w-310 mx-auto flex flex-col lg:flex-row  lg:items-center md:justify-between">
         {/* Left — text + bullet points */}
         <div className="flex-1 flex flex-col gap-5">
           {subheading && (

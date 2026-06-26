@@ -11,7 +11,7 @@ const StatsSection = memo(() => {
 
   return (
     <section ref={elementRef} className="py-20 bg-gray-50">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+      <div className="mx-auto max-w-310 px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {statsData.map((stat, index) => (
             <StatCard

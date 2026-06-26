@@ -26,7 +26,6 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
 
   if (!exams?.length) return null;
 
-
   const scroll = (direction: "left" | "right") => {
     const el = sliderRef.current;
     if (!el) return;
@@ -45,8 +44,11 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
   };
 
   return (
-    <section aria-label="Proctored Exam Support Services"  className="py-16 bg-gray-50 overflow-hidden">
-      <div className="max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto px-6">
+    <section
+      aria-label="Proctored Exam Support Services"
+      className="py-16 bg-gray-50 overflow-hidden"
+    >
+      <div className="max-w-full lg:max-w-310 mx-auto px-6">
         {/* Header + nav buttons row */}
         <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
           <div>
@@ -57,7 +59,9 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
               Online Proctored Exam Help & Support Services
             </p>
             <p className="text-gray-600 mt-2 max-w-xl">
-              Get expert, confidential help for GED, PMP, SHRM, HiSET and 50+ other proctored exams. Our certified professionals guide you every step of the way.
+              Get expert, confidential help for GED, PMP, SHRM, HiSET and 50+
+              other proctored exams. Our certified professionals guide you every
+              step of the way.
             </p>
           </div>
 
@@ -121,7 +125,7 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
       <div
         ref={sliderRef}
         onScroll={handleScroll}
-        className="max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto flex gap-10 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 px-6
+        className="max-w-full lg:max-w-310 mx-auto flex gap-10 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 px-6
           [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {exams.map((exam) => (

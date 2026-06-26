@@ -7,7 +7,7 @@ export default function StepsSection({ data }: { data: StepsSectionData }) {
 
   return (
     <section className=" bg-gray-50">
-      <div className="max-w-full  mx-auto lg:max-w-[1240px] xl:max-w-[1440px] py-16 px-2">
+      <div className="max-w-full  mx-auto lg:max-w-310 py-16 px-2">
         {/* Header */}
         {(heading || subheading) && (
           <div className="max-w-4xl mx-auto text-center mb-14">

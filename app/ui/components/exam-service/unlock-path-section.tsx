@@ -10,7 +10,7 @@ export default function UnlockPathSection({
 
   return (
     <section className="bg-gray-50">
-      <div className="py-16 max-w-full lg:max-w-[1240px] xl:max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-12 items-center">
+      <div className="py-16 max-w-full lg:max-w-310 mx-auto flex flex-col lg:flex-row gap-12 items-center">
         {/* Left — heading + cards grid */}
         <div className="flex-1 flex flex-col gap-8">
           {(heading || subheading) && (

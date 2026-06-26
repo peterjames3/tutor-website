@@ -16,7 +16,7 @@ export default function StepsSection() {
         Three Steps. One Perfect Solution for Your Needs.
       </motion.h1>
 
-      <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] space-y-20">
+      <div className="w-full mx-auto max-w-full lg:max-w-310 space-y-20">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}

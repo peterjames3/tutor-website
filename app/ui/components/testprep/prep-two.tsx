@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PrepTwo() {
   return (
-    <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:gap-12">
+    <div className="flex flex-col gap-5 lg:flex-row lg:items-center px-4 lg:gap-12">
       <figcaption className="w-full h-full lg:w-1/2">
         <Image
           src="/step 2 image.png"

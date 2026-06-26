@@ -76,7 +76,7 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
         <p className="text-primary mb-4 text-lg leading-relaxed">
           Supporting candidates preparing for The PMP, SHRM, and PRINCE2
           certification,
-          <br />
+          
           as well as Healthcare & Academic Exams, Nursing Entrance Exams, and
           other high-stakes professional qualifications.
         </p>

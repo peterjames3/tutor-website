@@ -38,7 +38,7 @@ export default function ContentSectionWithImage({
       style={{ backgroundColor: backgroundColor ?? undefined }}
     >
       <div
-        className={`py-2 w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] flex  flex-col gap-10 lg:flex-row lg:items-center md:justify-between
+        className={`py-2 w-full mx-auto max-w-full lg:max-w-310 flex  flex-col gap-10 lg:flex-row lg:items-center md:justify-between
           ${hasImage ? `lg:flex-row ${isLeft ? "lg:flex-row-reverse" : ""}` : ""}`}
       >
         {/* Text column */}
@@ -58,7 +58,6 @@ export default function ContentSectionWithImage({
               <PortableText value={body} components={portableTextComponents} />
             </div>
           )}
-        
         </div>
 
         {/* Image column */}

@@ -131,51 +131,74 @@ export default function SEOContent() {
           <h2 className="text-2xl font-semibold mt-4 mb-4">
             Types of Online Exams We Handle
           </h2>
+          <article>
+            <h3 className="font-semibold text-2xl">Job Assessments</h3>
+            <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
+              <p>
+                We complete job assessment tests to help professionals advance
+                their careers.
+              </p>
+            </div>
+          </article>
+          <article>
+            <h3 className="font-semibold text-2xl">Entrance Exams</h3>
+            <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
+              <p>
+                Experts handle entrance exams for colleges, universities, and
+                certifications.
+              </p>
+            </div>
+          </article>
 
-          <h3 className="font-semibold">Job Assessments</h3>
-          <p>
-            We complete job assessment tests to help professionals advance their
-            careers.
-          </p>
-
-          <h3 className="font-semibold">Entrance Exams</h3>
-          <p>
-            Experts handle entrance exams for colleges, universities, and
-            certifications.
-          </p>
-
-          <h3 className="font-semibold">Proctored Exams</h3>
-          <p>
-            Our team has experience managing webcam-monitored proctored exams
-            securely.
-          </p>
-
-          <h3 className="font-semibold">Regular Quizzes and Tests</h3>
-          <p>
-            Weekly quizzes and online tests are handled accurately and on time.
-          </p>
-
-          <h3 className="font-semibold">Mid or Final term Exams</h3>
-          <p>
-            These are the most important exams, as they determine your overall
-            grades. Our experienced professionals handle mid and final term
-            exams with absolute precision and confidentiality while guaranteeing
-            top results that strengthen your academic record, plus overall GPA.
-          </p>
-
-          <h3 className="font-semibold">Lockdown Exams</h3>
-          <p>
-            Lockdown browsers can make exams tougher, as they restrict access to
-            notes or online help. However, these limitations are never an issue
-            with our professional support.
-          </p>
-          <p className="py-3">
-            You never have to worry about any exam type, any academic level, or
-            format, as we have expert exam-takers for each one of them. We cover
-            a wide range of exams under one reliable and secure platform. So,
-            hire our expert to achieve success in a simple, fast, and guaranteed
-            manner.
-          </p>
+          <article>
+            <h3 className="font-semibold text-2xl">Proctored Exams</h3>
+            <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
+              <p>
+                Our team has experience managing webcam-monitored proctored
+                exams securely.
+              </p>
+            </div>
+          </article>
+          <article>
+            <h3 className="font-semibold text-2xl">
+              Regular Quizzes and Tests
+            </h3>
+            <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
+              <p>
+                Weekly quizzes and online tests are handled accurately and on
+                time.
+              </p>
+            </div>
+          </article>
+          <article>
+            <h3 className="font-semibold text-2xl">Mid or Final term Exams</h3>
+            <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
+              <p>
+                These are the most important exams, as they determine your
+                overall grades. Our experienced professionals handle mid and
+                final term exams with absolute precision and confidentiality
+                while guaranteeing top results that strengthen your academic
+                record, plus overall GPA.
+              </p>
+            </div>
+          </article>
+          <article>
+            <h3 className="font-semibold text-2xl">Lockdown Exams</h3>
+            <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
+              <p>
+                Lockdown browsers can make exams tougher, as they restrict
+                access to notes or online help. However, these limitations are
+                never an issue with our professional support.
+              </p>
+              <p className="py-3">
+                You never have to worry about any exam type, any academic level,
+                or format, as we have expert exam-takers for each one of them.
+                We cover a wide range of exams under one reliable and secure
+                platform. So, hire our expert to achieve success in a simple,
+                fast, and guaranteed manner.
+              </p>
+            </div>
+          </article>
         </article>
         <Proctored />
 

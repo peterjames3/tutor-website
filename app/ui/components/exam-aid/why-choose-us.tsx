@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, ShieldCheck, Clock, Users, Headphones, Settings } from "lucide-react";
+import { ShieldCheck, Clock, Users, Headphones, Settings } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+
 
 export default function WhyChooseUs() {
   const container = {

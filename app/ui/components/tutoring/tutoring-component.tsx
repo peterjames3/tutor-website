@@ -4,9 +4,6 @@ import Link from "next/link";
 import { 
   ArrowRight, 
   BookOpen, 
-  BarChart2, 
-  Clock, 
-  Award, 
   Users, 
   FileText, 
   ClipboardCheck, 
@@ -14,7 +11,7 @@ import {
   PenTool,
   GraduationCap,
   MessageSquare,
-  Calculator
+
 } from "lucide-react";
 
 export default function TutoringFeatures() {

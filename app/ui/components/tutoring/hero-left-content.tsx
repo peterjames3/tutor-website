@@ -1,7 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, PencilRuler, MoveRight } from "lucide-react";
+import {
+  Users,
+  MoveRight,
+  GraduationCap,
+  Clock,
+} from "lucide-react";
 
 interface HeroLeftProps {
   onGetStarted: () => void;
@@ -34,26 +39,27 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
     >
       <div>
         <motion.h2 className="p-text text-primary" variants={itemVariants}>
-          Learn Smarter, Score Higher – Tutoring That Gets Results
+          Need Online Class Help? Get Expert Support Today
         </motion.h2>
 
         <motion.h3
           className="text-[2.5rem] lg:text-[3.1rem] font-bold text-primary leading-tight"
           variants={itemVariants}
         >
-          <span className="text-primary">Personalized</span>
-          <span className="text-secondary"> Tutoring </span>
-          <span className="text-primary"> for </span>
-          <br />
-          <span className="text-secondary">Every </span>
-          <span className="text-primary"> Student.</span>
+          <span className="text-primary">Pay Someone to</span>
+          <span className="text-secondary"> Take My </span>
+          <span className="text-primary"> Online </span>
+          
+          <span className="text-secondary">Class </span>
+          <span className="text-primary"> For Me.</span>
         </motion.h3>
 
-        <p className="p-text text-primary mb-4">
-          Our tutoring services are designed to help students of all ages and
-          skill levels achieve <br /> their academic goals. Whether you need
-          help with homework, exam preparation, or <br /> mastering a specific
-          subject, our experienced tutors are here to support you.
+        <p className="text-base sm:text-lg leading-relaxed text-primary mb-4">
+          Struggling with your online courses? Our experts handle your entire
+          online class — from assignments and quizzes to exams and discussion
+          posts.
+          <br /> Get <strong>online class help</strong> that guarantees results
+          with 100% confidentiality.
         </p>
         <div className="mb-4">
           <motion.div
@@ -63,17 +69,30 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
             <div className="">
               <Users className="text-primary" />
             </div>
-            <h3 className="label-text text-primary">1:1 Coaching? Tutoring</h3>
+            <h3 className="label-text text-primary">
+              Expert Online Class Helpers
+            </h3>
           </motion.div>
           <motion.div
             className="flex items-center gap-3 mb-4"
             variants={itemVariants}
           >
             <div className="">
-              <PencilRuler className="text-primary" />
+              <Clock className="text-primary" />
             </div>
             <h3 className="label-text text-primary">
-              A Study Plan Custom-made Just for You
+              Flexible Scheduling & 24/7 Support
+            </h3>
+          </motion.div>
+          <motion.div
+            className="flex items-center gap-3 mb-4"
+            variants={itemVariants}
+          >
+            <div className="">
+              <GraduationCap className="text-primary" />
+            </div>
+            <h3 className="label-text text-primary">
+              Guaranteed Academic Success
             </h3>
           </motion.div>
         </div>
@@ -85,7 +104,8 @@ export default function HeroLeftContent({ onGetStarted }: HeroLeftProps) {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Get Help Now <MoveRight className="hover:text-background" />
+          Get Online Class Help Now{" "}
+          <MoveRight className="hover:text-background" />
         </motion.button>
       </div>
     </motion.div>

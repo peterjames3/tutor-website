@@ -9,28 +9,28 @@ import CourseImage from "@/public/tutoring  image 3.png";
 export default function WhyChooseUs() {
   const services = [
     {
-      title: "Expert Tutoring and Support",
-      description: "Tailored to Your Unique Learning Needs",
+      title: "Expert Online Class Help",
+      description: "Tailored to Your Academic Needs",
       content:
-        "Our services include personalized ACT tutoring, a complete essentials course, and proctored exam support.",
+        "Our experts handle your entire online class — from assignments and quizzes to discussion posts and exams. Get personalized support for any subject, any platform.",
       image: TutoringImage,
-      alt: "ACT tutoring session",
+      alt: "Online class help session",
     },
     {
-      title: "Experience Tailored Learning",
-      description: "With Our One-on-One or Group Tutoring",
+      title: "100% Confidential & Secure",
+      description: "Your Privacy Is Our Priority",
       content:
-        "Benefit from customized sessions that focus on your strengths and areas for improvement.",
+        "We guarantee complete confidentiality with every online class help request. Your personal information and academic records are never shared or stored.",
       image: LearningImage,
-      alt: "Personalized learning",
+      alt: "Confidential online class assistance",
     },
     {
-      title: "Master the ACT",
-      description: "With Our Comprehensive Essentials Course",
+      title: "Guaranteed Academic Success",
+      description: "A or B Grades Guaranteed",
       content:
-        "Covering all subjects, our course equips you with the knowledge to excel.",
+        "Pay someone to take my online class with confidence. We guarantee top grades on your assignments, quizzes, and exams — or your money back.",
       image: CourseImage,
-      alt: "ACT essentials course",
+      alt: "Guaranteed online class success",
     },
   ];
 
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
 
   return (
     <div className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-310 px-4 max-w-full mx-auto">
         <motion.h2
           className="text-4xl font-bold text-center text-gray-900 mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -64,11 +64,11 @@ export default function WhyChooseUs() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          Why Our Tutoring Services Stand Out
+          Why Choose Our Online Class Help Services
         </motion.h2>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="max-w-310 mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -129,6 +129,32 @@ export default function WhyChooseUs() {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Trust Badges */}
+        <motion.div
+          className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+        >
+          <div className="flex gap-4 items-center text-gray-200 bg-gray-900 px-4 py-2 rounded-full border border-gray-700 justify-center ">
+            <div className="text-[1rem] font-medium">1,500+</div>
+            <div className="text-sm text-yellow-300">Students Helped</div>
+          </div>
+          <div className="flex gap-4 items-center justify-center text-gray-200 bg-gray-900 px-4 py-2 rounded-full border border-gray-700">
+            <div className="text-[1rem] font-medium">99.4%</div>
+            <div className="text-sm text-yellow-300">Success Rate</div>
+          </div>
+          <div className="flex gap-4 items-center justify-center text-gray-200 bg-gray-900 px-4 py-2 rounded-full border border-gray-700">
+            <div className="text-[1rem] font-medium">24/7</div>
+            <div className="text-sm text-yellow-300">Support Available</div>
+          </div>
+          <div className="flex gap-4 items-center justify-center text-gray-200 bg-gray-900 px-4 py-2 rounded-full border border-gray-700">
+            <div className="text-[1rem] font-medium">100%</div>
+            <div className="text-sm text-yellow-300">Confidential</div>
+          </div>
         </motion.div>
       </div>
     </div>

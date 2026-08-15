@@ -12,13 +12,13 @@ export default function HeroMainSection() {
   return (
     <div
       id="Hero"
-      className="w-full bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] min-h-[20rem] z-10 relative"
+      className="w-full bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] py-18 md:py-22 z-10 relative"
     >
       <AnimatePresence mode="wait">
         {showForm ? (
           <motion.div
             key="form"
-            className="py-[5rem] w-full mx-auto max-w-full lg:max-w-330 px-4 md:px-2 lg:px-3"
+            className="py-[5rem] w-full mx-auto max-w-full lg:max-w-310 px-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
@@ -29,7 +29,7 @@ export default function HeroMainSection() {
         ) : (
           <motion.div
             key="hero"
-            className="py-[10rem] w-full mx-auto max-w-full lg:max-w-330 flex flex-col gap-10 lg:flex-row md:justify-between px-4 md:px-2 lg:px-3"
+            className="mt-30 w-full mx-auto max-w-full lg:max-w-310 flex flex-col gap-10 lg:flex-row md:justify-between px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

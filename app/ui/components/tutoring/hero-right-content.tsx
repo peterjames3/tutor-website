@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calculator, BookOpen, BrainCircuit } from "lucide-react";
+import {
+  
+  BookOpen,
+  BrainCircuit,
+  ClipboardCheck,
+
+} from "lucide-react";
 
 export default function HeroRightContent() {
   const containerVariants = {
@@ -26,7 +32,7 @@ export default function HeroRightContent() {
       animate="visible"
       variants={containerVariants}
     >
-      {/* Quantitative Reasoning */}
+      {/* Online Class Support */}
       <motion.div
         className="relative bg-accent2 rounded-md flex items-center justify-between h-full w-full px-3 py-[10rem] overflow-hidden"
         variants={itemVariants}
@@ -34,27 +40,26 @@ export default function HeroRightContent() {
         <section className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
             <div className="rounded-full p-3 bg-accent">
-              <Calculator />
+              <ClipboardCheck />
             </div>
             <h3 className="text-2xl font-bold text-primary">
-              Math & Problem-Solving
+              Full Online Class Support
             </h3>
           </div>
           <p className="text-gray-600">
-            From basic arithmetic to advanced quantitative methods, we support
-            learners at all levels — building core skills and boosting
-            confidence with every lesson.
+            From weekly assignments to final exams, we handle your entire online
+            course. Our experts manage quizzes, discussion posts, and projects —
+            so you can focus on what matters most.
             <br />
             <span className="text-sm italic text-gray-500">
-              e.g., Learn how to break down multi-step problems with ease.
+              e.g., Complete your online class with guaranteed A or B grades.
             </span>
           </p>
         </section>
       </motion.div>
 
-      {/* Communication & Writing */}
       <div className="flex flex-col gap-5 py-2">
-        {/* Verbal Communication */}
+        {/* Assignment & Quiz Help */}
         <motion.div
           className="space-y-3 rounded-md bg-cardBg-support2 h-full w-full px-3 py-[2rem]"
           variants={itemVariants}
@@ -64,22 +69,21 @@ export default function HeroRightContent() {
               <BookOpen />
             </div>
             <h3 className="text-xl font-semibold text-primary">
-              Reading & Writing
+              Assignments & Quizzes
             </h3>
           </div>
           <p className="text-gray-600 ml-7">
-            Whether it&apos;s early literacy or academic essays, our tutors help
-            students strengthen vocabulary, grammar, structure, and expression —
-            tailored to their level.
+            Need help with weekly assignments, quizzes, or discussion posts? Our
+            experts handle it all with precision and on-time delivery.
             <br />
             <span className="text-sm italic text-gray-500">
-              e.g., Gain clarity in your writing from classroom assignments to
-              research papers.
+              e.g., Get expert help with your online class assignments and
+              quizzes.
             </span>
           </p>
         </motion.div>
 
-        {/* Critical Thinking */}
+        {/* Exam & Test Preparation */}
         <motion.div
           className="space-y-3 rounded-md bg-cardBg-support3 h-full w-full px-3 py-[2rem]"
           variants={itemVariants}
@@ -89,16 +93,16 @@ export default function HeroRightContent() {
               <BrainCircuit />
             </div>
             <h3 className="text-xl font-semibold text-gray-800">
-              Critical Thinking
+              Exam & Test Preparation
             </h3>
           </div>
           <p className="text-gray-600 ml-7">
-            Evaluate arguments, identify assumptions, and draw conclusions —
-            core skills for both verbal and analytical exams.
+            From midterms to finals, our experts prepare you for success. We
+            also offer online exam help for proctored tests and timed
+            assessments.
             <br />
             <span className="text-sm italic text-gray-500">
-              e.g., Spotting flawed logic helps in both reading passages and
-              data interpretation.
+              e.g., Pay someone to take my online exam and ace your tests.
             </span>
           </p>
         </motion.div>

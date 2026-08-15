@@ -26,7 +26,7 @@ export default function ScrollToTopBtn() {
   };
 
   return (
-    <div className="fixed bottom-10 right-16">
+    <div className="fixed bottom-44 right-9">
       {isVisible && (
         <button
           onClick={scrollToTop}

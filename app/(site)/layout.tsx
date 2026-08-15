@@ -7,7 +7,8 @@ import { ToastContainer } from "react-toastify";
 import Footer from "../ui/components/footer/Footer";
 import ScrollToTopBtn from "../ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
-import Chatbot from "../ui/Chatbot";
+import ChatWoot from "../ui/chatwoot";
+import ChatwootIllustration from "../ui/chatwoot-illustration";
 import Whatsapp from "../ui/whatsapp";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,22 +98,15 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
         >
           <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
-          {/* <!-- Google Tag Manager (noscript) --> */}
-          {/* <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-KZHSPRPQ"
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            ></iframe>
-          </noscript> */}
-          {/* <!-- End Google Tag Manager (noscript) --> */}
+
           <Navbar />
           {children}
           <Whatsapp />
           <ScrollToTopBtn />
           <Footer />
-          <Chatbot />
+
+          <ChatwootIllustration />
+          <ChatWoot />
           <ToastContainer />
         </body>
       </UIProvider>

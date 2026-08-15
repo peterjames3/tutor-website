@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ExamServices() {
   return (
     <section className="bg-[#e2ebf3]/30 py-16 px-4 sm:px-6 lg:px-10 ">
-      <div className="w-full max-w-full lg:max-w-310 mx-auto">
+      <div className="w-full max-w-full lg:max-w-310 px-4 mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <motion.p

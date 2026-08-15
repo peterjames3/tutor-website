@@ -25,7 +25,7 @@ export default function MainHero() {
   return (
     <section
       id="hero-main"
-      className="bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] min-h-screen z-10 relative"
+      className="bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB] z-10 relative py-16 md:py-24"
     >
       {isVisible ? (
         <AnimatePresence mode="wait">
@@ -42,7 +42,7 @@ export default function MainHero() {
         </AnimatePresence>
       ) : (
         <div
-          className="pt-[10rem] py-2 w-full mx-auto max-w-full lg:max-w-340 flex flex-col gap-10 lg:flex-row md:justify-between"
+          className="pt-[10rem] py-2 w-full mx-auto max-w-full lg:max-w-310 flex flex-col gap-10 lg:flex-row md:justify-between"
           onClick={showHomeQuote ? handleOverlayClick : undefined}
         >
           {/* Left — always visible */}

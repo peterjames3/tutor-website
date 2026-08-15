@@ -27,7 +27,7 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
 
   const examData: Record<ExamCategory, ExamCategoryData> = {
     k12: {
-      title: "US-Based Certification Exam",
+      title: "US-Based Exam",
       exams: [
         { name: "PMP", path: "/take-my-pmp-exam-for-me" },
         {
@@ -43,7 +43,7 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
       ],
     },
     academics: {
-      title: "UK-Based Certificates Exams",
+      title: "UK-Based Exams",
       exams: [
         {
           name: "PRINCE2",
@@ -64,29 +64,21 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
     <div className="h-full w-full mx-auto px-6 pt-12">
       <div>
         {/* ── Heading ── */}
-        <h1 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.6rem] font-bold mb-4 leading-tight">
-          <span className="text-primary">Get the </span>
-          <span className="text-secondary">Support </span>
-          <br />
-          <span className="text-primary">You Need to Pass </span>
-          <span className="text-secondary">Your High-Stakes </span>
-          <span className="text-primary">Exam</span>
+        <h1 className="sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+          <span className="text-primary">Pass Your High-Stakes Exam -</span>
+          <span className="text-secondary">Exam Support </span>
+          
         </h1>
 
         <p className="text-primary mb-4 text-lg leading-relaxed">
-          Supporting candidates preparing for The PMP, SHRM, and PRINCE2
-          certification,
-          
-          as well as Healthcare & Academic Exams, Nursing Entrance Exams, and
-          other high-stakes professional qualifications.
+          Supporting candidates preparing for The  <span className="font-semibold text-slate-800">
+          PMP, SHRM, PRINCE2, Real Estate, Nursing Entrace Exams  among other 
+        </span>{" "}
+          certification on the first try. get secure and realible testing assistance  to you.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-6 text-gray-800">
-          What can we help you with?
-        </h2>
-
         {/* ── Category Tabs ── */}
-        <div className="flex  mb-3 rounded-md overflow-hidden border border-active-link max-w-[38.5rem] ">
+        <div className="flex  mb-3 rounded-md overflow-hidden border border-active-link max-w-[24rem] ">
           {Object.entries(examData).map(([key, category]) => {
             const isActive = activeCategory === key;
             return (
@@ -179,12 +171,8 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
                   rounded-lg
                 "
                 />
-                <span className="relative z-10">Get a Free Quote</span>
-                <ArrowRight
-                  size={18}
-                  strokeWidth={2.5}
-                  className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
-                />
+                <span className="relative z-10">Get Quote</span>
+                
               </motion.button>
             </div>
           </div>

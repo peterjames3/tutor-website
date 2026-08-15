@@ -22,7 +22,7 @@ const stats: StatCard[] = [
   {
     number: 2000,
     suffix: "K +",
-    description: "Exam experts in 300+ subjects",
+    description: "Experts in 50+ Exams",
     bgColor: "bg-pink-100",
     iconColor: "bg-blue-400",
   },
@@ -141,7 +141,7 @@ export default function StatsSection() {
 
   return (
     <section ref={sectionRef} className="py-20">
-      <div className="mx-auto max-w-7xl px-2">
+      <div className="mx-auto max-w-310 px-4">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

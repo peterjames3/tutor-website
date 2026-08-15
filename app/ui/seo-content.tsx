@@ -76,11 +76,7 @@ export default function SEOContent() {
               </li>
             </ul>
 
-            <div className="mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
-              <p className="text-sm">
-                <strong>We understand all these challenges</strong> and have developed a single solution: offering the best <strong>online exam help</strong> available. Our professional exam helpers ensure accurate answers, timely submissions, and strong performance in every test. We provide the most reliable and professional <strong>online exam helper</strong> service on the market. Our mission is to make learning easier, success achievable, and your journey completely stress-free.
-              </p>
-            </div>
+           
           </div>
         </article>
 
@@ -262,11 +258,6 @@ export default function SEOContent() {
               </li>
             </ul>
 
-            <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-sm text-gray-800">
-                <strong>Our strong guarantees, transparent policies, and proven track record</strong> give students and professionals the confidence to use our <strong>online exam helper</strong> service without hesitation. We&apos;ve helped thousands of clients pass everything from PMP certification exams and PRINCE2 qualifications to GED tests and real estate licensing exams. Our reputation is built on reliability, confidentiality, and exceptional results.
-              </p>
-            </div>
 
             <p className="py-2">
               So, whether you need <strong>proctored exam help</strong>, assistance with a <strong>lockdown browser</strong> environment, or a comprehensive <strong>online exam helper</strong> for any subject or certification, <strong>TestHelpNow</strong> is your trusted partner. <strong>Hire our expert to achieve academic and professional excellence</strong> without having to stress about exams ever again.

@@ -58,8 +58,8 @@ export function Services() {
   ];
 
   return (
-    <section className="w-full py-20 px-4 md:px-2 lg:px-3 bg-tertiary-30">
-      <div className="w-full max-w-full lg:max-w-310 mx-auto">
+    <section className="w-full py-20  bg-tertiary-30">
+      <div className="w-full max-w-full lg:max-w-310 px-4 mx-auto">
         {/* Header */}
         <SlideInContainer direction="down" distance={30} className="mb-12">
           <section className="lg:flex lg:items-center gap-5 lg:gap-16">

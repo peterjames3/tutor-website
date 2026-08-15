@@ -9,7 +9,7 @@ import FAQSection from "@/app/ui/components/exam-aid/faq";
 import ShapoReviews from "@/app/ui/Shaporeviews";
 import ProctoredProcess from "../../ui/components/exam-aid/proctored-process";
 import ExamsWeSupport from "@/app/ui/components/exam-aid/exam-we-support";
-
+import ProctoredSeoContent from "../../ui/components/exam-aid/proctored-seo-content";
 import { Services } from "@/app/ui/components/exam-aid/services";
 import PortalsSection from "@/app/ui/portal-section";
 
@@ -24,7 +24,7 @@ export const metadata = {
     canonical: "https://testhelpnow.com/proctored-exam-help",
   },
   openGraph: {
-    title: "Pay Someone To Take My Proctored Exam | USA & Canada | TestHelpNow",
+    title: "Pay Someone To Take My Proctored Exam | USA & Canada ",
     description:
       "Comprehensive exam aid services designed to help you succeed.",
     url: "https://testhelpnow.com/proctored-exam-help",
@@ -45,6 +45,7 @@ export default async function ProctoredExamHelpHome() {
       <Services />
       <WhyChooseUs />
       <ExamsWeSupport exams={exams} />
+      <ProctoredSeoContent />
       <PortalsSection />
       <TestimonialsSection />
 

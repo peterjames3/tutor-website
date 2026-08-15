@@ -1,28 +1,34 @@
-// app/academic/tutoring/_schema.tsx
-// Private file — not a Next.js route. Imported only by page.tsx next to it.
 
 export default function TutoringSchema() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Online Tutoring Services",
+    name: "Online Class Help Services",
     description:
-      "Personalized online tutoring with expert tutors across all major academic subjects from K-12 through college level, including STEM, humanities, languages, and professional certificates.",
-    url: "https://www.testhelpnow.com/academic/tutoring",
+      "Need online class help? Get expert support for your online courses, assignments, quizzes, and exams. Our professionals handle your entire online class so you can focus on what matters most. 100% confidential and guaranteed results.",
+    url: "https://www.testhelpnow.com/academic/online-class-help",
     provider: {
       "@type": "Organization",
       name: "TestHelpNow",
       url: "https://www.testhelpnow.com",
     },
-    serviceType: "Online Tutoring",
+    serviceType: "Online Class Help",
     areaServed: {
       "@type": "Country",
       name: "United States",
     },
     availableChannel: {
       "@type": "ServiceChannel",
-      serviceUrl: "https://www.testhelpnow.com/academic/tutoring",
+      serviceUrl: "https://www.testhelpnow.com/academic/online-class-help",
       serviceType: "Online",
+    },
+    offers: {
+      "@type": "Offer",
+      name: "Online Class Help Services",
+      price: "Varies by course",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      validFrom: "2025-01-01",
     },
   };
 
@@ -45,8 +51,8 @@ export default function TutoringSchema() {
       {
         "@type": "ListItem",
         position: 3,
-        name: "Online Tutoring Services",
-        item: "https://www.testhelpnow.com/academic/tutoring",
+        name: "Online Class Help",
+        item: "https://www.testhelpnow.com/academic/online-class-help",
       },
     ],
   };
@@ -54,10 +60,10 @@ export default function TutoringSchema() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Online Tutoring Services — TestHelpNow",
+    name: "Online Class Help — TestHelpNow",
     description:
-      "Personalized online tutoring with expert tutors across all major academic subjects from K-12 through college level.",
-    url: "https://www.testhelpnow.com/academic/tutoring",
+      "Need online class help? Get expert support for your online courses, assignments, quizzes, and exams. Our professionals handle your entire online class so you can focus on what matters most.",
+    url: "https://www.testhelpnow.com/academic/online-class-help",
     inLanguage: "en-US",
     isPartOf: {
       "@type": "WebSite",
@@ -68,6 +74,17 @@ export default function TutoringSchema() {
       "@type": "Organization",
       name: "TestHelpNow",
       url: "https://www.testhelpnow.com",
+    },
+    about: {
+      "@type": "Thing",
+      name: "Online Class Help",
+      description: "Professional online class assistance for students",
+    },
+    mainEntity: {
+      "@type": "Service",
+      name: "Online Class Help Services",
+      description:
+        "Expert support for online courses, assignments, quizzes, and exams.",
     },
   };
 

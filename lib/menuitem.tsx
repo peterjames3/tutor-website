@@ -39,7 +39,7 @@ export const examAidCategories: ExamCategory = {
 
 export const academicServices: AcademicService[] = [
   // { name: "Assignment Help", href: "/academic/assignment-help" },
-  { name: "Online Tutoring Services", href: "/academic/tutoring" },
+  { name: "Online Class Help", href: "/academic/online-class-help" },
   // { name: "Class Assistant", href: "/academic/class-assistant" },
 ];
 

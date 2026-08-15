@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function ProctoredProcess() {
   return (
-    <section className="bg-background py-16 px-4 sm:px-6 lg:px-10 ">
-      <div className="w-full max-w-full lg:max-w-310 mx-auto">
+    <section className="bg-background py-16  ">
+      <div className="w-full max-w-full lg:max-w-310 px-4 mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <motion.p

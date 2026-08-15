@@ -1,21 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRouter } from 'next/navigation'
 import Link from "next/link";
 import {
   Award,
   ShieldAlert,
-  LayoutGrid,
-  Layers,
-  ShieldCheck,
   BookOpen,
   GraduationCap,
-  Building2,
   Briefcase,
   Home,
   Calculator,
   PenTool,
-  Users,
   Heart,
 } from "lucide-react";
 
@@ -237,7 +231,7 @@ const examServices = [
 ];
 
 export default function VendorListSection() {
-  const router = useRouter()
+
 
   return (
     <motion.section

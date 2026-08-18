@@ -1,5 +1,5 @@
 
-import { SanityDocument } from "@sanity/client";
+import { SanityDocument } from "next-sanity";
 
 interface BlogPostSchemaProps {
   post: SanityDocument;

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import type { HeroSectionData } from "@/lib/defination";
 import FloatingElements from "../animation/FloatingElements";
 import { ArrowLeft, ClipboardList, Users, Target } from "lucide-react";
@@ -22,8 +22,9 @@ export default function HeroSection({ data }: { data: HeroSectionData }) {
   const headingParts = accentWord ? heading.split(accentWord) : [heading];
 
   // Pick first section for the tall featured card, remaining sections for the right column
-  const featuredSection = sectionsData[0];
-  const sideSections = sectionsData.slice(1);
+  const sections = sectionsData ?? [];
+  const featuredSection = sections[0];
+  const sideSections = sections.slice(1);
 
   return (
     <section

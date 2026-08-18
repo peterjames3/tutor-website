@@ -2,10 +2,10 @@
 "use client";
 import BackgroundRings from "@/ui/components/about/background-rings";
 import LearnOnlineBadge from "@/ui/components/about/learnonline-badge";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import { KeywordExpoundData } from "@/lib/defination";
 
 const colorMap: Record<string, string> = {

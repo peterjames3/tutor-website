@@ -1,22 +1,22 @@
 // app/ui/components/pmp/sections/exam-structure-section.tsx
 "use client";
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import { CircleArrowRight } from "lucide-react";
-import type { PortableTextBlock } from "@portabletext/types";
+//import type { PortableTextBlock } from "@portabletext/types";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { portableTextComponents } from "@/ui/components/blog/PortableTextComponents";
 import { ExamStructureData } from "@/lib/defination";
 
-const colorMap: Record<string, string> = {
-  blue: "bg-blue-100 text-blue-700",
-  green: "bg-green-100 text-green-700",
-  purple: "bg-purple-100 text-purple-700",
-  orange: "bg-orange-100 text-orange-700",
-  red: "bg-red-100 text-red-700",
-  teal: "bg-teal-100 text-teal-700",
-};
+// const colorMap: Record<string, string> = {
+//   blue: "bg-blue-100 text-blue-700",
+//   green: "bg-green-100 text-green-700",
+//   purple: "bg-purple-100 text-purple-700",
+//   orange: "bg-orange-100 text-orange-700",
+//   red: "bg-red-100 text-red-700",
+//   teal: "bg-teal-100 text-teal-700",
+// };
 
 export default function ExamStructureSection({
   data,

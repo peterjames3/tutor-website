@@ -1,10 +1,10 @@
 // app/ui/components/pmp/sections/content-section-with-image.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import type { ContentSectionData } from "@/lib/defination";
 
 export default function ContentSectionWithImage({

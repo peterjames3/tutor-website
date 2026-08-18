@@ -1,30 +1,30 @@
 // app/ui/components/pmp/sections/why-we-lead.tsx
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { WhyWeLeadData } from "@/lib/defination";
-import { Award, ShieldCheck, CheckCircle, Users, Clock, Briefcase, Target, Lock, LucideIcon } from "lucide-react";
+//import { Award, ShieldCheck, CheckCircle, Users, Clock, Briefcase, Target, Lock, LucideIcon } from "lucide-react";
 
-const iconMap: Record<string, LucideIcon> = {
-  Award,
-  ShieldCheck,
-  CheckCircle,
-  Users,
-  Clock,
-  Briefcase,
-  Target,
-  Lock,
-};
+// const iconMap: Record<string, LucideIcon> = {
+//   Award,
+//   ShieldCheck,
+//   CheckCircle,
+//   Users,
+//   Clock,
+//   Briefcase,
+//   Target,
+//   Lock,
+// };
 
-const colorMap: Record<string, string> = {
-  blue: "bg-blue-100 text-blue-600",
-  green: "bg-green-100 text-green-600",
-  purple: "bg-purple-100 text-purple-600",
-  orange: "bg-orange-100 text-orange-600",
-  red: "bg-red-100 text-red-600",
-  teal: "bg-teal-100 text-teal-600",
-};
+// const colorMap: Record<string, string> = {
+//   blue: "bg-blue-100 text-blue-600",
+//   green: "bg-green-100 text-green-600",
+//   purple: "bg-purple-100 text-purple-600",
+//   orange: "bg-orange-100 text-orange-600",
+//   red: "bg-red-100 text-red-600",
+//   teal: "bg-teal-100 text-teal-600",
+// };
 
 
 export default function WhyWeLead({ data }: { data: WhyWeLeadData }) {
@@ -58,8 +58,8 @@ export default function WhyWeLead({ data }: { data: WhyWeLeadData }) {
         {/* Benefit Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {benefitCards.map((card, index) => {
-            const Icon = iconMap[card.icon] || Award;
-            const iconColor = colorMap[card.iconColor] || 'bg-blue-100 text-blue-600';
+            // const Icon = iconMap[card.icon] || Award;
+            // const iconColor = colorMap[card.iconColor] || 'bg-blue-100 text-blue-600';
             
             return (
               <motion.div
@@ -115,7 +115,7 @@ export default function WhyWeLead({ data }: { data: WhyWeLeadData }) {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {trustBadges.map((badge, index) => {
-              const Icon = iconMap[badge.icon] || Award;
+              // const Icon = iconMap[badge.icon] || Award;
               return (
                 <div key={index} className=" flex items-center gap-4 justify-center text-center bg-gray-900 px-4 py-2 rounded-full border border-gray-200">
                   

@@ -1,4 +1,4 @@
-import { SanityDocument } from "@sanity/client";
+import { SanityDocument } from "next-sanity";
 import TableOfContents from "./table-0f-content"; 
 import { portableTextComponents } from "./PortableTextComponents";
 import Image from "next/image";

@@ -11,7 +11,7 @@ import { postsQuery } from "@/sanity/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { format } from "date-fns/format";
+import { format } from "date-fns";
 const builder = imageUrlBuilder(client);
 export default async function BlogPosts() {
   let posts: SanityDocument[] = [];

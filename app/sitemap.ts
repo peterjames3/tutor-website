@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
-import { examPathsQuery, examServicePathQuery } from "@/sanity/lib/queries";
-import { examAidCategories } from "@/lib/menuitem";
+import { examServicePathQuery } from "@/sanity/lib/queries";
+
 import groq from "groq";
 
 const BASE_URL = "https://testhelpnow.com";
@@ -16,11 +16,11 @@ const blogPathsQuery = groq`
 
 // ── Helpers ───────────────────────────────────────────────
 
-const extractCategorySlugs = (categories: typeof examAidCategories) => {
-  return Object.values(categories).flatMap((items) =>
-    items.map((item) => ({ slug: item.slug })),
-  );
-};
+// const extractCategorySlugs = (categories: typeof examAidCategories) => {
+//   return Object.values(categories).flatMap((items) =>
+//     items.map((item) => ({ slug: item.slug })),
+//   );
+// };
 
 function generateDynamicEntries(
   slugs: { slug: string }[],
@@ -47,25 +47,20 @@ function generateBlogEntries(
   }));
 }
 
-const dedupeSlugs = (slugs: { slug: string }[]) => {
-  return Array.from(new Map(slugs.map((item) => [item.slug, item])).values());
-};
+
 
 // ── Sitemap ───────────────────────────────────────────────
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch from Sanity
-  const [examAidSlugs, examServiceSlugs, blogPosts] = await Promise.all([
-    client.fetch<{ slug: string }[]>(examPathsQuery),
+  const [ examServiceSlugs, blogPosts] = await Promise.all([
+    
     client.fetch<{ slug: string }[]>(examServicePathQuery),
     client.fetch<{ slug: string; publishedAt: string }[]>(blogPathsQuery),
   ]);
 
-  // Extract local slugs
-  const localExamAidSlugs = extractCategorySlugs(examAidCategories);
 
-  // Merge + dedupe
-  const allExamAidSlugs = dedupeSlugs([...localExamAidSlugs, ...examAidSlugs]);
+
 
   // ── Static pages ───────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
@@ -76,40 +71,40 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: `${BASE_URL}/test-prep`,
+      url: `${BASE_URL}/real-estate-exam-help`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.9,
+      priority: 0.5,
     },
     {
       url: `${BASE_URL}/proctored-exam-help`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.5,
     },
     {
       url: `${BASE_URL}/take-my-hiset-exam-for-me`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.5,
     },
     {
       url: `${BASE_URL}/take-my-ged-exam-for-me`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.4,
     },
     {
-      url: `${BASE_URL}/academic/tutoring`,
+      url: `${BASE_URL}/academic/online-class-help`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.4,
     },
     {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly", // updated to weekly since blog gets new posts
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${BASE_URL}/how-it-works`,
@@ -121,7 +116,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${BASE_URL}/faq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.5,
     },
     {
       url: `${BASE_URL}/privacy`,
@@ -131,17 +126,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // ── Dynamic pages ──────────────────────────────────────
-  const examAidEntries = generateDynamicEntries(
-    allExamAidSlugs,
-    `${BASE_URL}/proctored-exam-help`,
-    0.8,
-  );
+
 
   const examServiceEntries = generateDynamicEntries(
     examServiceSlugs,
     `${BASE_URL}/proctored-exam-help`,
-    0.9,
+    0.5,
   );
 
   // ── Blog post entries ──────────────────────────────────
@@ -149,7 +139,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
  const allEntries = [
   ...staticPages,
-  ...examAidEntries,
+
   ...examServiceEntries,
   ...blogEntries,
 ];

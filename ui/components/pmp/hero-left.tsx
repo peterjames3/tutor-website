@@ -1,0 +1,42 @@
+"use client";
+import Link from "next/link";
+const LeftHero = () => {
+  return (
+    <div className=" h-full w-full mx-auto px-6 flex items-center">
+      <div>
+        <div>
+          <h2 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.1rem] font-bold mb-4 leading-tight">
+            <span className="text-primary">Pay Someone To Take my </span>
+            <span className="text-secondary">PMP Exam </span>
+
+            <span className="text-primary">Services With </span>
+
+            <span className="text-secondary">Expert</span>
+            <span className="text-primary"> Help</span>
+          </h2>
+
+          <p className="text-primary mb-8 text-lg leading-relaxed">
+            TestHelpNow is a trusted platform to get with PMP exam help for
+            those who wants to earn PMP certification. A team of professionals
+            will take your PMP exam on your behalf with guaranteed results. Get
+            in touch with us and uplift your managerial career.
+          </p>
+
+
+          <Link
+            href="/order"
+            id="get-help-now-btn"
+            type="button"
+            className=" cta hover:cursor-pointer"
+            aria-label="Get help now"
+            aria-pressed="false"
+          >
+            Take PMP Exam For Me
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LeftHero;

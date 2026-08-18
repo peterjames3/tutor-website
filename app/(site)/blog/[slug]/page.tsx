@@ -1,7 +1,7 @@
 import { SanityDocument } from '@sanity/client';
 import { postPathsQuery, postQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/fetch";
-import Post from "@/app/ui/components/blog/post";
+import Post from "@/ui/components/blog/post";
 import { client } from "@/sanity/lib/client";
 import { notFound } from 'next/navigation';
 import BlogPostSchema from "./_schema";

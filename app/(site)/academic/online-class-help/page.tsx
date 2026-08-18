@@ -1,11 +1,11 @@
-import Hero from "@/app/ui/components/tutoring/hero-main-section";
-import OnlineSeoContent  from "@/app/ui/components/tutoring/online-seo-content";
-import PricingSection from "@/app/ui/components/tutoring/pricing-section"
-import HireSomeoneSection from  "@/app/ui/components/tutoring/hire-someone";
-import WhyChooseUs from "@/app/ui/components/tutoring/why-choose-us";
-import SubTestimonialCard from "@/app/ui/components/tutoring/sub-testimonial";
-import TutoringFeatures from "@/app/ui/components/tutoring/tutoring-component";
-import SubjectsSection from "@/app/ui/components/tutoring/some-subject-covered";
+import Hero from "@/ui/components/tutoring/hero-main-section";
+import OnlineSeoContent  from "@/ui/components/tutoring/online-seo-content";
+import PricingSection from "@/ui/components/tutoring/pricing-section"
+import HireSomeoneSection from  "@/ui/components/tutoring/hire-someone";
+import WhyChooseUs from "@/ui/components/tutoring/why-choose-us";
+import SubTestimonialCard from "@/ui/components/tutoring/sub-testimonial";
+import TutoringFeatures from "@/ui/components/tutoring/tutoring-component";
+import SubjectsSection from "@/ui/components/tutoring/some-subject-covered";
 import type { Metadata } from "next";
 import TutoringSchema from "./_schema";
 
@@ -108,11 +108,7 @@ export const metadata: Metadata = {
     ],
   },
 
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
+ 
 
  
 

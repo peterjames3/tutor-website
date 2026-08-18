@@ -1,20 +1,20 @@
 //import { SanityDocument } from "@sanity/client";
 import { allExamServicePagesQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/server-fetch";
-import { ExamCard } from "@/app/ui/components/exam-aid/exam-we-support";
+import { ExamCard } from "@/ui/components/exam-aid/exam-we-support";
 import ProctoredExamFAQSchema from "./_schema";
-import Hero from "@/app/ui/components/exam-aid/main-hero-section";
-import WhyChooseUs from "@/app/ui/components/exam-aid/why-choose-us";
-import FAQSection from "@/app/ui/components/exam-aid/faq";
-import ShapoReviews from "@/app/ui/Shaporeviews";
-import ProctoredProcess from "../../ui/components/exam-aid/proctored-process";
-import ExamsWeSupport from "@/app/ui/components/exam-aid/exam-we-support";
-import ProctoredSeoContent from "../../ui/components/exam-aid/proctored-seo-content";
-import { Services } from "@/app/ui/components/exam-aid/services";
-import PortalsSection from "@/app/ui/portal-section";
+import Hero from "@/ui/components/exam-aid/main-hero-section";
+import WhyChooseUs from "@/ui/components/exam-aid/why-choose-us";
+import FAQSection from "@/ui/components/exam-aid/faq";
+import ShapoReviews from "@/ui/Shaporeviews";
+import ProctoredProcess from "@/ui/components/exam-aid/proctored-process";
+import ExamsWeSupport from "@/ui/components/exam-aid/exam-we-support";
+import ProctoredSeoContent from "@/ui/components/exam-aid/proctored-seo-content";
+import { Services } from "@/ui/components/exam-aid/services";
+import PortalsSection from "@/ui/portal-section";
 
-import Quote from "@/app/ui/components/form/quote";
-import TestimonialsSection from "@/app/ui/components/Testimonial/testimonials-section";
+import Quote from "@/ui/components/form/quote";
+import TestimonialsSection from "@/ui/components/Testimonial/testimonials-section";
 
 export const metadata = {
   title: "Pay Someone To Take My Proctored Exam Service",

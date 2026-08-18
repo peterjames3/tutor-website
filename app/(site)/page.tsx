@@ -1,15 +1,15 @@
-import Hero from "@/app/ui/components/hero/main-hero";
-import StatsSection from "../ui/components/stats/stats-section";
-import SubService from "../ui/components/heroservice/subservices-section";
-import TestServices from "../ui/components/exam/test-services-section";
-import SubTestimonialCard from "../ui/components/Testimonial/sub-testimonial";
-import SuccessPath from "../ui/components/path/success-path";
-import TestimonialsSection from "../ui/components/Testimonial/testimonials-section";
-import { AnimatedBanner } from "../ui/animated-banner";
-import SEOContent from "../ui/seo-content";
-import AboutUsSection from "../ui/components/about/aboutus-section";
-import PortalsSection from "../ui/portal-section";
-import { OtherLinksSection } from "../ui/components/otherlinks/other-links-section";
+import Hero from "@/ui/components/hero/main-hero";
+import StatsSection from "@/ui/components/stats/stats-section";
+import SubService from "@/ui/components/heroservice/subservices-section";
+import TestServices from "@/ui/components/exam/test-services-section";
+import SubTestimonialCard from "@/ui/components/Testimonial/sub-testimonial";
+import SuccessPath from "@/ui/components/path/success-path";
+import TestimonialsSection from "@/ui/components/Testimonial/testimonials-section";
+import { AnimatedBanner } from "@/ui/animated-banner";
+import SEOContent from "@/ui/seo-content";
+import AboutUsSection from "@/ui/components/about/aboutus-section";
+import PortalsSection from "@/ui/portal-section";
+import  PMPExamFAQSection from "@/ui/components/faq/pmp-faq";
 import HomeSchema from "./_schema";
 import { Metadata } from "next";
 
@@ -112,11 +112,7 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#1a1a2e" },
   ],
   colorScheme: "light dark",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
+ 
 
   appleWebApp: {
     title: "TestHelpNow",
@@ -152,7 +148,7 @@ export default function Page() {
       <SuccessPath />
       <TestimonialsSection />
       <AnimatedBanner />
-      <OtherLinksSection />
+      <PMPExamFAQSection />
     </main>
   );
 }

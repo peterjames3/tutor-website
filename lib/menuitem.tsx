@@ -15,7 +15,7 @@ export const examAidCategories: ExamCategory = {
       slug: "pay-someone-to-take-my-prince2-exam-for-me",
     },
   ],
-  "High School Equivalency": [
+  "High School Level": [
     {
       name: "Take GED Exam for Me",
       slug: "pay-someone-to-take-my-ged-exam-for-me",
@@ -27,15 +27,7 @@ export const examAidCategories: ExamCategory = {
   ],
 };
 
-// export const testPrepCategories: ExamCategory = {
-//   "Certification Exams": [
-//     { name: "Take PMP Exam for Me", slug: "take-pmp-exam" },
-//   ],
-//   "High School Equivalency": [
-//     { name: "Take GED Exam for Me", slug: "take-ged-exam" },
-//     { name: "Take HiSET Exam for Me", slug: "take-hiset-exam" },
-//   ],
-// };
+
 
 export const academicServices: AcademicService[] = [
   // { name: "Assignment Help", href: "/academic/assignment-help" },
@@ -43,18 +35,24 @@ export const academicServices: AcademicService[] = [
   // { name: "Class Assistant", href: "/academic/class-assistant" },
 ];
 
-// Helper function to convert ExamCategory to SubMenuItem[]
-const categoryToSubmenu = (categories: ExamCategory, basePath: string) => {
+
+const categoryToSubmenu = (categories: ExamCategory, basePath?: string) => {
   return Object.entries(categories).flatMap(([group, items]) => [
     { name: group, href: "#", group }, // Group header
-    ...items.map((item) => ({
-      name: item.name,
-      href: `${basePath}/${item.slug
-        .toLowerCase()
-        // .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9-]/g, "")}`,
-      group,
-    })),
+    ...items.map((item) => {
+      // If basePath is provided, prepend it; otherwise use the slug directly
+      const href = basePath 
+        ? `${basePath}/${item.slug
+            .toLowerCase()
+            .replace(/[^a-z0-9-]/g, "")}`
+        : `/${item.slug}`;
+      
+      return {
+        name: item.name,
+        href: href,
+        group,
+      };
+    }),
   ]);
 };
 
@@ -65,16 +63,16 @@ export const MenuItems: MenuItem[] = [
     href: "#",
     submenu: academicServices,
   },
-  {
-    name: "Test Prep",
-    href: "/test-prep",
-    // submenu: categoryToSubmenu(testPrepCategories, "/test-prep"),
-  },
+
   {
     name: "Proctored Exam Help",
     href: "/proctored-exam-help",
     submenu: categoryToSubmenu(examAidCategories, "/proctored-exam-help"),
   },
+  {
+   name:"Real Estate Exam Help", href:"/real-estate-exam-help"
+  },
+  { name:"Faqs", href:"/faq"},
   { name: "Blog", href: "/blog" },
-  { name: "How It Works", href: "/how-it-works" },
+  
 ];

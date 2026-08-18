@@ -62,123 +62,6 @@ export const latestPostsQuery = groq`
   }
 `;
 
-// Fetch Slugs and Exam aid programs
-export const examPathsQuery = `
-  *[_type == "exam_aid"] {
-    "slug": slug.current
-  }
-`;
-
-export const examQuery = `
-  *[_type == "exam_aid" && slug.current == $slug] {
-    _id,
-    _createdAt,
-    title,
-    "slug": slug.current,
-    description,
-    deliveryMethod,
-    educationLevel,
-    benefits,
-    structure,
-    "sections": sections[]->{
-      _id,
-      title,
-      content,
-      tips,
-      icon
-    },
-    "testimonials": testimonials[]->{
-      _id,
-      author,
-      quote
-    }
-  }
-`;
-export const examAidProgramsQuery = `
-  *[_type == "exam_aid"] | order(title asc) {
-    _id,
-    _createdAt,
-    title,
-    "slug": slug.current,
-    description,
-    deliveryMethod,
-    educationLevel,
-    benefits,
-    structure,
-    "sections": sections[]->{
-      _id,
-      title,
-      content,
-      tips,
-      icon
-    },
-    "testimonials": testimonials[]->{
-      _id,
-      author,
-      quote
-    }
-  }
-`;
-
-//fetch slugs  for exam prep programs
-
-export const examPrepPathsQuery = `
-*[_type == "exam_prep"] {
-  "slug": slug.current
-}
-`;
-
-export const examPrepQuery = `
-*[_type == "exam_prep" && slug.current == $slug] {
-  _id,
-  _createdAt,
-  title,
-  "slug": slug.current,
-  description,
-  deliveryMethod,
-  educationLevel,
-  benefits,
-  structure,
-  "sections": sections[]->{
-    _id,
-    title, 
-    content,
-    tips,
-    icon
-  },
-  "testimonials": testimonials[]->{
-    _id,
-    author,
-    quote
-  }
-}
-`;
-export const examPrepProgramsQuery = `
-*[_type == "exam_prep"]  {
-  _id,
-  _createdAt,
-  title,
-  "slug": slug.current,
-  description,
-  deliveryMethod,
-  educationLevel,   
-  benefits,
-  structure,
-  "sections": sections[]->{
-    _id,
-    title,
-    content,
-    tips,
-    icon
-  },
-  "testimonials": testimonials[]->{
-    _id,
-    author,
-    quote
-  }
-}
-`;
-
 //   Get all exam service page slugs (for generateStaticParams)
 
 export const examServicePathQuery = groq`
@@ -196,17 +79,17 @@ export const examServicePageQuery = groq`
     seoTitle,
     seoDescription,
     "slug": slug.current,
- 
+
     // OG image for social sharing
     "ogImage": ogImage {
       alt,
       "url": asset->url
     },
- 
+
     // Page builder sections
     sections[] {
       _type,
- 
+
       // ── Hero ──────────────────────────────────────────────
       _type == "hero" => {
         preHeading,
@@ -215,6 +98,12 @@ export const examServicePageQuery = groq`
         subtext,
         ctaPrimary,
         ctaSecondary,
+         "sections": sections[]-> {
+          title,
+          content,
+          tips,
+          icon
+        },
         "heroImage": heroImage {
           alt,
           "url": asset->url,
@@ -227,7 +116,7 @@ export const examServicePageQuery = groq`
         },
         backgroundColor
       },
- 
+
       // ── Content Section with Image ─────────────────────────
       _type == "contentSectionWithImage" => {
         sectionId,
@@ -244,32 +133,107 @@ export const examServicePageQuery = groq`
           hotspot,
           crop
         },
-        ctaButton
-      },
- 
-      // ── Steps / Process ───────────────────────────────────
-      _type == "stepsSection" => {
-        heading,
-        subheading,
-        steps[] {
-          stepNumber,
-          label,
+        keyPoints[] {
           title,
           description,
-          "icon": icon {
-            alt,
-            "url": asset->url
-          }
+          link
         },
-        ctaButton
+        ctaButton {
+          label,
+          href,
+          variant
+        },
+    help {
+  heading,
+  intro,
+  bulletPoints[] { title, description },
+  closingNote,
+  closingCta { label, href }
+},
       },
- 
-      // ── Exam Structure ────────────────────────────────────
+
+      // ── Why We Lead ───────────────────────────────────
+      _type == "whyWeLead" => {
+        sectionId,
+        heading,
+        subheading,
+        mainImage,
+        "image": image {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+
+
+        benefitCards[] {
+          title,
+          "image": image {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+          description,
+          content,
+          icon,
+          iconColor,
+          link
+        },
+        trustBadges[] {
+          value,
+          label,
+          icon
+        },
+        footerNote,
+        backgroundColor,
+        ctaButton {
+          label,
+          href,
+          variant
+        }
+      },
+
+      // ── Keyword Expound Section ────────────────────────
+      _type == "keyWordExpound" => {
+        sectionId,
+        heading,
+        highlightedText,
+        body, // Portable Text
+        primaryCTA {
+          label,
+          href
+        },
+        featureTags[] {
+          label,
+          color
+        },
+        "image": image {
+          alt,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        imagePosition,
+        backgroundColor
+      },
+
+      // ── Exam Structure Section ──────────────────────────────────
       _type == "examStructureSection" => {
         heading,
         subheading,
-        body,
-        structurePoints[],
+        body, // Portable Text
+        structureCards[] {
+          title,
+          badgeColor,
+          items[] {
+            point,
+            description,
+            link
+          }
+        },
         "diagramImage": diagramImage {
           alt,
           caption,
@@ -277,65 +241,25 @@ export const examServicePageQuery = groq`
           hotspot,
           crop
         },
-        ctaButton
-      },
- 
-      // ── Challenges ────────────────────────────────────────
-      _type == "challengesSection" => {
-        heading,
-        intro,
-        challenges[] {
-          title,
-          description,
-          "icon": icon {
-            alt,
-            "url": asset->url
-          }
-        },
-        ctaButton
-      },
- 
-      // ── Unlock Path ───────────────────────────────────────
-      _type == "unlockPathSection" => {
-        heading,
-        subheading,
-        featureCards[] {
-          title,
-          description,
-          accentColor,
-          "icon": icon {
-            alt,
-            "url": asset->url
-          }
-        },
-        "sideImage": sideImage {
-          alt,
-          caption,
-          "url": asset->url,
-          hotspot,
-          crop
+        ctaButton {
+          label,
+          href
         }
       },
- 
-      // ── Why Choose Us ─────────────────────────────────────
-      _type == "whyChooseUsSection" => {
-        heading,
-        subheading,
-        intro,
-        reasons[] {
-          title,
-          description,
-          "icon": icon {
-            alt,
-            "url": asset->url
-          }
-        },
-        "backgroundImage": backgroundImage {
-          alt,
-          "url": asset->url
-        }
+
+      // ── Certification Overview Section ──────────────────────────
+      _type == "certOverviewSection" => {
+        sectionId,
+        certSlug
       },
- 
+
+      // ── Certification Comparison Section ────────────────────────
+      _type == "certCompareSection" => {
+        sectionId,
+        heading,
+        certSlugs
+      },
+
       // ── FAQ ───────────────────────────────────────────────
       _type == "faqSection" => {
         heading,
@@ -350,7 +274,7 @@ export const examServicePageQuery = groq`
     }
   }
 `;
- 
+
 // Get all exam service pages (for listing/sitemap)
 export const allExamServicePagesQuery = groq`
   *[_type == "examServicePage"] | order(_createdAt desc) {
@@ -382,4 +306,3 @@ export const examsWeSupportQuery = groq`
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
- 

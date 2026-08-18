@@ -5,43 +5,39 @@ import { categoryType } from "./categoryType";
 import { postType } from "./postType";
 import { authorType } from "./authorType";
 import { sectionType } from "./sectionType";
-import { TestimonialsType } from "./testimonialType";
-import { examaidType } from "./exam-aidType";
-import { examprepType } from "./exam-prepType";
-//New section imports
+//import { TestimonialsType } from "./testimonialType";
+
+//Dynamic pages related schemas
 import { FaqSectionType } from "./faqSectionType";
-import { WhyChooseUsType } from "./whychooseusType";
-import { UnlockPathSectionType } from "./unlockPathSectionType";
-import { ChallengesSectionType } from "./challengesSectiontype";
-import { ExamStructureSectionType } from "./examStructureSectionType";
-import { StepsSectionType } from "./stepsSectionType";
+
+import ExamStructureSectionType from "./examStructureSectionType";
+import { certOverviewSectionType } from "./certOverviewSectionType";
+import { certCompareSectionType } from "./certComparesectiontype";
+import { WhyWeLeadType } from "./whyWeLeadType";
+import { KeyWordExpoundType } from "./keywordExpoundType";
 import { ContentSectionWithImageType } from "./contentSectionWithImageType";
 import { HeroType } from "./heroType";
 import { ExamServicePageType } from "./examServicePageType";
-//import { BlockContentMainType } from "./blockContentMainType";
-
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
+    // blog related
     blockContentType,
     categoryType,
     postType,
     authorType,
     sectionType,
-    TestimonialsType,
-    examaidType,
-    examprepType,
+    // TestimonialsType,
 
-    //New section
-    //BlockContentMainType,
+    //dynamic page related
     ExamServicePageType,
     HeroType,
     ContentSectionWithImageType,
-    StepsSectionType,
-    ExamStructureSectionType,
-    ChallengesSectionType,
-    UnlockPathSectionType,
-    WhyChooseUsType,
+    WhyWeLeadType,
+    KeyWordExpoundType,
+    ...ExamStructureSectionType,
+    certOverviewSectionType,
+    certCompareSectionType,
     FaqSectionType,
   ],
 };

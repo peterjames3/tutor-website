@@ -2,158 +2,26 @@ import {  examServicePageQuery, examServicePathQuery } from "@/sanity/lib/querie
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { client } from "@/sanity/lib/client";
 import { notFound } from 'next/navigation';
-import { PortableTextBlock } from "@portabletext/types";
-
-// ── Section components ──────────────────────────────────────
-import HeroSection from "@/app/ui/components/exam-service/hero-section";
-import ContentSectionWithImage from "@/app/ui/components/exam-service/content-section-with-image";
-import StepsSection from "@/app/ui/components/exam-service/steps-section";
-import ExamStructureSection from "@/app/ui/components/exam-service/exam-structure-section";
-import ChallengesSection from "@/app/ui/components/exam-service/challenges-section";
-import UnlockPathSection from "@/app/ui/components/exam-service/unlock-path-section";
-import WhyChooseUsSection from "@/app/ui/components/exam-service/why-choose-us-section";
-import FaqSection from "@/app/ui/components/exam-service/faq-section";
-
- // ── Types ───────────────────────────────────────────────────
-type RichText = PortableTextBlock[];
-export interface SanityImage {
-  url: string;
-  alt: string;
-  hotspot?: { x: number; y: number };
-  crop?: { top: number; bottom: number; left: number; right: number };
-  caption?: string;
-}
-
-export interface CtaButton {
-  label: string;
-  href: string;
-  variant?: "primary" | "secondary" | "outline";
-}
-
-export interface HeroSectionData {
-  _type: "hero";
-  preHeading?: string;
-  heading: string;
-  accentWord?: string;
-  subtext?: string;
-  ctaPrimary?: { label: string; href: string };
-  ctaSecondary?: { label: string; href: string };
-  heroImage?: SanityImage;
-  backgroundImage?: SanityImage;
-  backgroundColor?: string;
-}
-
-export interface ContentSectionData {
-  _type: "contentSectionWithImage";
-  sectionId?: string;
-  heading?: string;
-  subheading?: string;
-  body?: RichText; // Portable Text
-  image?: SanityImage;
-  imagePosition?: "left" | "right" | "none";
-  imageSize?: "33" | "50" | "66";
-  backgroundColor?: string;
-  ctaButton?: CtaButton;
-}
-
-export interface StepsSectionData {
-  _type: "stepsSection";
-  heading?: string;
-  subheading?: string;
-  steps: {
-    stepNumber: number;
-    label?: string;
-    title: string;
-    description?: string;
-    icon?: SanityImage;
-  }[];
-  ctaButton?: CtaButton;
-}
-
-export interface ExamStructureSectionData {
-  _type: "examStructureSection";
-  heading?: string;
-  subheading?: string;
-  body?: RichText;
-  structurePoints?: { point: string }[];
-  diagramImage?: SanityImage;
-  ctaButton?: CtaButton;
-}
-
-export interface ChallengesSectionData {
-  _type: "challengesSection";
-  heading?: string;
-  intro?: string;
-  challenges: {
-    title: string;
-    description?: string;
-    icon?: SanityImage;
-  }[];
-  ctaButton?: CtaButton;
-}
-
-export interface UnlockPathSectionData {
-  _type: "unlockPathSection";
-  heading?: string;
-  subheading?: string;
-  featureCards: {
-    title: string;
-    description?: string;
-    icon?: SanityImage;
-    accentColor?: string;
-  }[];
-  sideImage?: SanityImage;
-}
-
-export interface WhyChooseUsSectionData {
-  _type: "whyChooseUsSection";
-  heading?: string;
-  subheading?: string;
-  intro?: string;
-  reasons: {
-    title: string;
-    description?: string;
-    icon?: SanityImage;
-  }[];
-  backgroundImage?: SanityImage;
-}
-
-export interface FaqSectionData {
-  _type: "faqSection";
-  heading?: string;
-  subheading?: string;
-  faqs: {
-    question: string;
-    answer?: RichText; // Portable Text
-    category?: string;
-  }[];
-  ctaBlock?: {
-    text?: string;
-    buttonLabel?: string;
-    buttonHref?: string;
-  };
-}
-
-export type PageSection =
-  | HeroSectionData
-  | ContentSectionData
-  | StepsSectionData
-  | ExamStructureSectionData
-  | ChallengesSectionData
-  | UnlockPathSectionData
-  | WhyChooseUsSectionData
-  | FaqSectionData;
-
-export interface ExamServicePageData {
-  _id: string;
-  _createdAt: string;
-  seoTitle: string;
-  seoDescription?: string;
-  slug: string;
-  ogImage?: SanityImage;
-  sections: PageSection[];
-}
-
+import HeroSection from "@/ui/components/dynamic-exam-pages/hero-section";
+import ContentSectionWithImage from "@/ui/components/dynamic-exam-pages/content-section-with-image";
+import WhyWeLead from "@/ui/components/dynamic-exam-pages/why-we-lead";
+import ExamStructureSection from "@/ui/components/dynamic-exam-pages/exam-structure-section";
+import KeywordExpound from "@/ui/components/dynamic-exam-pages/keyword-expound";
+import CertOverviewSection from "@/ui/components/dynamic-exam-pages/cert-overview-section";
+import CertComparisonSection from "@/ui/components/dynamic-exam-pages/cert-compare-section";
+import FaqSection from "@/ui/components/dynamic-exam-pages/faq-section";
+import { getComparisonServer } from "@/services/comparison.server";
+import { getCertification } from "@/services/certification.service";
+import type { ExamServicePageData, PageSection } from "@/lib/defination";
+import {
+  ContentSectionData,
+  WhyWeLeadData,
+  KeywordExpoundData,
+  ExamStructureData,
+  CertOverviewSectionData,
+  CertCompareSectionData,
+  FaqSectionData,
+} from "@/lib/defination";
 // ── Static params ───────────────────────────────────────────
 export async function generateStaticParams() {
   const pages = await client.fetch(examServicePathQuery);
@@ -171,37 +39,101 @@ export async function generateMetadata({ params }: { params: Params }) {
   });
 
   if (!page) return {};
+  
+  const url = `https://www.testhelpnow.com/proctored-exam-help/${page.slug}`;
 
   return {
+   
     title: page.seoTitle,
     description: page.seoDescription,
+    alternates: { canonical: url },
     openGraph: {
+      type: "website",
+      url,
       title: page.seoTitle,
       description: page.seoDescription,
       images: page.ogImage?.url ? [{ url: page.ogImage.url }] : [],
+      siteName: "TestHelpNow",
+      locale: "en_US",
     },
   };
 }
 
-// ── Section renderer ────────────────────────────────────────
-function renderSection(section: PageSection, index: number) {
-  switch (section._type) {
+async function renderSection(section: PageSection, index: number) {
+  const sectionType = (section as { _type?: string })._type;
+
+  switch (sectionType) {
     case "hero":
       return <HeroSection key={index} data={section} />;
+
     case "contentSectionWithImage":
-      return <ContentSectionWithImage key={section.sectionId ?? index} data={section} />;
-    case "stepsSection":
-      return <StepsSection key={index} data={section} />;
+      // ✅ Type assertion — we know this is a ContentSectionData
+      return (
+        <ContentSectionWithImage
+          key={index}
+          data={section as ContentSectionData}
+        />
+      );
+
+    case "whyWeLead":
+      return <WhyWeLead key={index} data={section as WhyWeLeadData} />;
+
+    case "keyWordExpound":
+      return (
+        <KeywordExpound key={index} data={section as KeywordExpoundData} />
+      );
+
     case "examStructureSection":
-      return <ExamStructureSection key={index} data={section} />;
-    case "challengesSection":
-      return <ChallengesSection key={index} data={section} />;
-    case "unlockPathSection":
-      return <UnlockPathSection key={index} data={section} />;
-    case "whyChooseUsSection":
-      return <WhyChooseUsSection key={index} data={section} />;
+      return (
+        <ExamStructureSection key={index} data={section as ExamStructureData} />
+      );
+
+    case "certOverviewSection": {
+      let cert;
+      try {
+        cert = await getCertification(
+          (section as CertOverviewSectionData).certSlug,
+        );
+      } catch (err) {
+        console.error(
+          `Failed to prefetch certification "${(section as CertOverviewSectionData).certSlug}":`,
+          err,
+        );
+      }
+      return (
+        <CertOverviewSection
+          key={index}
+          data={section as CertOverviewSectionData}
+          initialCert={cert}
+        />
+      );
+    }
+
+    case "certCompareSection": {
+      const certCompareSection = section as CertCompareSectionData;
+      const slugs = certCompareSection.certSlugs?.filter(Boolean) ?? [];
+      let comparison = null;
+
+      if (slugs.length === 2 || slugs.length === 3) {
+        comparison = await getComparisonServer(slugs);
+      } else {
+        console.error(
+          `certCompareSection "${index}" requires 2 or 3 certSlugs, got ${slugs.length}`,
+        );
+      }
+
+      return (
+        <CertComparisonSection
+          key={index}
+          data={certCompareSection}
+          initialComparison={comparison ?? undefined}
+        />
+      );
+    }
+
     case "faqSection":
-      return <FaqSection key={index} data={section} />;
+      return <FaqSection key={index} data={section as FaqSectionData} />;
+
     default:
       return null;
   }
@@ -218,9 +150,14 @@ export default async function ExamServicePage({ params }: { params: Params }) {
 
   if (!page) notFound();
 
+    const renderedSections = await Promise.all(
+      page.sections?.map((section, index) => renderSection(section, index)) ??
+        [],
+    );
+
   return (
     <main>
-      {page.sections?.map((section, index) => renderSection(section, index))}
+      {renderedSections}
     </main>
   );
 }

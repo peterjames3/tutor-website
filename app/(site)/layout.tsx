@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Navbar from "@/app/ui/components/navigation/Navbar";
+import Navbar from "@/ui/components/navigation/Navbar";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { ToastContainer } from "react-toastify";
-import Footer from "../ui/components/footer/Footer";
-import ScrollToTopBtn from "../ui/scroll-to-top-btn";
+import Footer from "@/ui/components/footer/Footer";
+import ScrollToTopBtn from "@/ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
-import ChatWoot from "../ui/chatwoot";
-import ChatwootIllustration from "../ui/chatwoot-illustration";
-import Whatsapp from "../ui/whatsapp";
+import ChatWoot from "@/ui/chatwoot";
+import ChatwootIllustration from "@/ui/chatwoot-illustration";
+import Whatsapp from "@/ui/whatsapp";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

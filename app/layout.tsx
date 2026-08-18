@@ -1,4 +1,5 @@
 import "./globals.css";
+import QueryProvider from "@/provider/QueryProvider";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -6,7 +7,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+         <QueryProvider>  {children}</QueryProvider>
+        </body>
     </html>
   );
 }

@@ -3,7 +3,6 @@ import StepSection from "@/ui/components/three-steps/step-section";
 import SuccessReasons from "@/ui/success-reasons";
 import { AnimatedBanner } from "@/ui/components/howitworks/animater-banner";
 import HowItWorksSchema from "./_schema";
-//import StatsSection from "../ui/components/stats/stats-section";
 import StatsSection from "@/ui/components/stats/stats-section";
 import Quote from "@/ui/components/form/quote";
 import FAQSection from "@/ui/components/howitworks/faq";

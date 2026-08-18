@@ -12,7 +12,7 @@ import CertComparisonSection from "@/ui/components/dynamic-exam-pages/cert-compa
 import FaqSection from "@/ui/components/dynamic-exam-pages/faq-section";
 import { getComparisonServer } from "@/services/comparison.server";
 import { getCertification } from "@/services/certification.service";
-import type { ExamServicePageData, PageSection } from "@/lib/defination";
+import type { ExamServicePageData, HeroSectionData, PageSection } from "@/lib/defination";
 import {
   ContentSectionData,
   WhyWeLeadData,
@@ -64,10 +64,10 @@ async function renderSection(section: PageSection, index: number) {
 
   switch (sectionType) {
     case "hero":
-      return <HeroSection key={index} data={section} />;
+      return <HeroSection key={index} data={section as HeroSectionData} />;
 
     case "contentSectionWithImage":
-      // ✅ Type assertion — we know this is a ContentSectionData
+     
       return (
         <ContentSectionWithImage
           key={index}

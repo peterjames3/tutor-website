@@ -1,4 +1,4 @@
-import type { SanityDocument } from "@sanity/client";
+import type { SanityDocument } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import imageUrlBuilder from "@sanity/image-url";
@@ -53,7 +53,7 @@ export default async function BlogPosts() {
             />
           </figure>
           <figcaption className="flex flex-col gap-2 p-3">
-            <div className="w-[13rem] bg-tertiary text-center text-primary label-text rounded-lg py-[0.29rem] font-medium">
+            <div className="w-52 bg-tertiary text-center text-primary label-text rounded-lg py-[0.29rem] font-medium">
               {(post.categories ?? []).map((category: Category, id: number) => (
                 <ul key={id}>
                   {" "}

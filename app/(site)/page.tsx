@@ -87,15 +87,6 @@ export const metadata: Metadata = {
   category: "Education",
   classification: "Online Exam Help, Proctored Exam Taker & Tutoring Services",
 
-  verification: {
-    google: "google-site-verification-code-here",
-    yandex: "yandex-verification-code-here",
-    yahoo: "yahoo-verification-code-here",
-    other: {
-      "facebook-domain-verification": "facebook-verification-code-here",
-    },
-  },
-
   applicationName: "TestHelpNow",
   generator: "Next.js",
   formatDetection: {

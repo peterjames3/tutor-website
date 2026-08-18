@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
 import { examServicePathQuery } from "@/sanity/lib/queries";
 
-import groq from "groq";
+import { groq } from "next-sanity";
 
 const BASE_URL = "https://testhelpnow.com";
 

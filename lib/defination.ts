@@ -1,4 +1,4 @@
-import { PortableTextBlock } from "@portabletext/types";
+import { PortableTextBlock } from "next-sanity";
 type RichText = PortableTextBlock[];
 export interface StatCard {
   number: number;

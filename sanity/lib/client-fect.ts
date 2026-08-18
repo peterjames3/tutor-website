@@ -1,5 +1,5 @@
 // sanity/lib/client-fetch.ts
-import type { QueryParams } from "@sanity/client";
+import type { QueryParams } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 
 const DEFAULT_PARAMS = {} as QueryParams;

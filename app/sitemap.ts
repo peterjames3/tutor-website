@@ -103,7 +103,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(),
-      changeFrequency: "weekly", // updated to weekly since blog gets new posts
+      changeFrequency: "weekly", 
       priority: 0.7,
     },
     {

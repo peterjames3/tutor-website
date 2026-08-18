@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import SuccessPath from "@/app/ui/components/path/success-path";
+import SuccessPath from "@/ui/components/path/success-path";
 import ExamSection from "./what-is-hiset/exam-section";
-import { AnimatedBanner } from "@/app/ui/animated-banner";
+import { AnimatedBanner } from "@/ui/animated-banner";
 
 import FAQ from "./what-is-hiset/faq";
 export default function SEOCONTENT() {

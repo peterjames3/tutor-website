@@ -23,7 +23,7 @@ export default function DropdownAnimation({
       y: -10,
       transition: {
         duration: 0.2,
-        ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeInOut
+        ease: [0.42, 0, 0.58, 1],
       },
     },
     visible: {
@@ -32,7 +32,6 @@ export default function DropdownAnimation({
       y: 0,
       transition: {
         duration: 0.3,
-        ease: [0.25, 1, 0.5, 1], // cubic-bezier for easeOut
         type: "spring",
         stiffness: 300,
         damping: 30,

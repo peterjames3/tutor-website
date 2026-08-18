@@ -1,7 +1,13 @@
 // PortableTextComponents.tsx
-import { PortableTextComponents, toPlainText } from "@portabletext/react"; // <--- Import toPlainText
-import { PortableTextBlock } from "@portabletext/types";
-import { PortableText } from "@portabletext/react";
+// import { PortableTextComponents, toPlainText } from "@portabletext/react"; // <--- Import toPlainText
+// import { PortableTextBlock } from "@portabletext/types";
+// import { PortableText } from "@portabletext/react";
+import {
+  PortableText,
+  type PortableTextComponents,
+  toPlainText,
+  type PortableTextBlock,
+} from "next-sanity";
 import slugify from "slugify";
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";

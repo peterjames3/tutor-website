@@ -3,7 +3,7 @@ import TableOfContents from "./table-0f-content";
 import { portableTextComponents } from "./PortableTextComponents";
 import Image from "next/image";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import { Proctored } from "@/ui/proctored";
 import SocialShare from "./social-share";
 import { format } from "date-fns";
@@ -25,8 +25,8 @@ export default function Post({ post }: { post: SanityDocument }) {
   if (!post) return <p>Loading ...</p>;
 
   return (
-    <div className="w-full mx-auto max-w-full md:max-w-310 px-4 md:px-0 mt-[10rem]">
-      <ul className="flex gap-[0.5rem] p-text mb-3 sm:ml-[13px] ">
+    <div className="w-full mx-auto max-w-full md:max-w-310 px-4 md:px-0 mt-40">
+      <ul className="flex gap-8px p-text mb-3 sm:ml-3.25 ">
         <li className="hover:text-primary font-semibold transition-color delay-300">
           <Link href="/">Home</Link>
         </li>
@@ -42,7 +42,7 @@ export default function Post({ post }: { post: SanityDocument }) {
       </ul>
       <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-2">
         {/* Left Social Share - Sticky */}
-        <section className="col-span-1 p-4 h-auto md:min-h-[30rem] md:sticky md:top-7 md:h-screen overflow-y-auto">
+        <section className="col-span-1 p-4 h-auto md:min-h-120 md:sticky md:top-7 md:h-screen overflow-y-auto">
           <div className="sm:sticky sm:top-26 flex flex-col  gap-8">
             {/* Ensure post.headings is an array, even if empty */}
             <div className="mb-5">
@@ -69,7 +69,7 @@ export default function Post({ post }: { post: SanityDocument }) {
               Written on: {format(new Date(post._createdAt), "MM/dd/yyyy")}
             </span>
           </header>
-          <figure className="w-full h-[320px] rounded-md overflow-hidden">
+          <figure className="w-full h-80 rounded-md overflow-hidden">
             {post?.mainImage && (
               <Image
                 src={
@@ -109,7 +109,7 @@ export default function Post({ post }: { post: SanityDocument }) {
           </article>
         </section>
         {/* Right Social Share - Sticky */}
-        <section className="col-span-1 p-4 min-h-[30rem] sticky top-10 h-screen overflow-y-auto">
+        <section className="col-span-1 p-4 min-h-120 sticky top-10 h-screen overflow-y-auto">
           <div className="sticky top-26">
           
             <Proctored />

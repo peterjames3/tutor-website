@@ -3,7 +3,7 @@ import "server-only";
 Draft mode allows one to preview draft content from your headless CMS in Next js application
 This is useful for static pages that are generated at build time as it allows one to switch to dynamic rendering and see
 the draft changes without having to rebuild your entire site. */
-import type { QueryParams } from "@sanity/client"; // helps with typescript type safety when passing query parameters
+import type { QueryParams } from "next-sanity"; // helps with typescript type safety when passing query parameters
 import { draftMode } from "next/headers";
 import { client } from "@/sanity/lib/client";
 

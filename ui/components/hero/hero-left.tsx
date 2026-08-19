@@ -111,21 +111,21 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
             </h3>
 
             <div className="flex flex-wrap gap-3">
-              {currentCategory.exams.map((exam) => (
-                <Link
-                  key={exam.path}
-                  href={exam.path}
-                  className="
-                  inline-block px-4 py-2
-                  text-primary font-medium label-text
-                  border border-green-500 rounded-full
-                  hover:bg-green-500 hover:text-white
-                  transition-all
-                "
-                >
-                  {exam.name}
-                </Link>
-              ))}
+             {currentCategory.exams.map((exam) => (
+  <Link
+    key={exam.path ?? exam.slug}
+    href={exam.path ?? `/${exam.slug}`}
+    className="
+    inline-block px-4 py-2
+    text-primary font-medium label-text
+    border border-green-500 rounded-full
+    hover:bg-green-500 hover:text-white
+    transition-all
+  "
+  >
+    {exam.name}
+  </Link>
+))}
             </div>
           </div>
           {/* ── Button row ── */}

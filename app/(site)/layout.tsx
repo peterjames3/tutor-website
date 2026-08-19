@@ -10,6 +10,7 @@ import { UIProvider } from "@/context/UIContext";
 import ChatWoot from "@/ui/chatwoot";
 import ChatwootIllustration from "@/ui/chatwoot-illustration";
 import Whatsapp from "@/ui/whatsapp";
+import { Analytics } from "@vercel/analytics/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -107,6 +108,7 @@ export default function RootLayout({
 
           <ChatwootIllustration />
           <ChatWoot />
+          <Analytics />
           <ToastContainer />
         </body>
       </UIProvider>

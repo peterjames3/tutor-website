@@ -37,7 +37,7 @@ export default function HeroLeftContent({
     >
       <div>
         <motion.h1 className="p-text text-primary" variants={itemVariants}>
-          Trusted by 1,500+ students across the USA & Canada
+
         </motion.h1>
 
         <motion.h2
@@ -45,7 +45,7 @@ export default function HeroLeftContent({
           variants={itemVariants}
         >
           <span className="text-primary"> Proctored Exam Help – </span>
-          <span className="text-secondary"> Book Your Exam </span>
+          <span className="text-secondary"> Book Exam </span>
           <span className="text-primary"> and Let </span>
           <br />
           <span className="text-secondary">Our Experts </span>

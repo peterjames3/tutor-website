@@ -485,7 +485,7 @@ export default function OnlineSeoContent() {
               </li>
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
-                <Link href="/proctored-exam-help/pay-someone-to-take-my-real-estate-exam-for-me" className="hover:text-emerald-600 transition-colors">
+                <Link href="/real-estate-exam-help" className="hover:text-emerald-600 transition-colors">
                   Real Estate Exam Help
                 </Link>
               </li>

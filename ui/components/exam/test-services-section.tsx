@@ -176,7 +176,7 @@ const examServices = [
     ],
     learnMore: {
       label: "Learn more about Academic help →",
-      href: "/online-class-help",
+      href: "/academic/online-class-help",
     },
   },
  

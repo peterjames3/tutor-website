@@ -53,7 +53,7 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
         <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-widest text-secondary mb-2">
-              What We Cover
+              Proctored Exam  We Cover
             </h2>
             <p className="text-3xl lg:text-4xl font-bold text-primary">
               Online Proctored Exam Help & Support Services
@@ -132,10 +132,10 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
           <Link
             key={exam._id}
             href={`/proctored-exam-help/${exam.slug}`}
-            className="group flex-shrink-0 snap-start w-[300px] sm:w-[320px] flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1"
+            className="group flex-shrink-0 snap-start w-[350px] sm:w-[380px] flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1"
           >
             {/* Thumbnail */}
-            <div className="relative h-44 bg-gray-100 overflow-hidden">
+            <div className="relative h-55 bg-gray-100 overflow-hidden">
               {exam.ogImage?.url ? (
                 <Image
                   src={exam.ogImage.url}
@@ -154,11 +154,11 @@ export default function ExamsWeSupport({ exams }: ExamsWeSupportProps) {
 
             {/* Card body */}
             <div className="flex flex-col gap-2 p-5 flex-1">
-              <h3 className="font-bold text-primary text-2xl leading-snug group-hover:text-active-link transition-colors duration-200">
+              <h3 className="font-semibold text-primary text-[1.3rem] leading-snug group-hover:text-active-link transition-colors duration-200">
                 {exam.seoTitle}
               </h3>
               {(exam.tagline ?? exam.seoDescription) && (
-                <p className="text-gray-500 text-[1rem] lg:text-[1.3rem] leading-relaxed line-clamp-3">
+                <p className="text-gray-500 text-base leading-relaxed ">
                   {exam.tagline ?? exam.seoDescription}
                 </p>
               )}

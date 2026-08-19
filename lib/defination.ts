@@ -75,7 +75,7 @@ export interface FormValues {
 
 export interface ExamItem {
   name: string;
-  path: string;
+  path?: string;
   slug: string;
   description?: string;
 }

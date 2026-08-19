@@ -528,12 +528,12 @@ export default function RealEstateSeoContent() {
               dedicated platform for proctored IT exam help.
             </p>
             <Link
-              href="https://www.proctoredexamhelp.com"
+              href="https://www.proctoreditexamhelp.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-sm hover:shadow-md w-full text-center"
             >
-              Visit ProctoredExamHelp.com →
+              Visit ProctoredITExamHelp.com →
             </Link>
             <p className="text-xs text-gray-500 mt-3">
               AWS • Azure • CompTIA • Cisco • ISACA • EC-Council

@@ -566,7 +566,7 @@ export default function SEOCONTENT() {
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
                 <Link
-                  href="https://www/proctoredexamhelp.com"
+                  href="https://www/proctoreditexamhelp.com"
                   rel="noreferrer"
                   target="_blank"
                   prefetch={true}
@@ -635,6 +635,19 @@ export default function SEOCONTENT() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="https://www.proctoreditexamhelp.com/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification">
+                  className="flex items-start gap-2 hover:text-emerald-600 tran>
+                  target="_blank" ref="noreferrer" 
+>
+                  <CircleArrowRight className="w-4 h-4 text-emerald-500 shrink->
+                  <span>
+                    Pay Someone to Pass My PMP Exam - Fast, Safe & Reliable
+                  </span>
+                </Link>
+              </li>
+
             </ul>
             <div className="mt-3 text-center">
               <Link

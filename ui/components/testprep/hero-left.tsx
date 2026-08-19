@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ShieldCheck, Clock, Award } from "lucide-react";
 
 export default function HeroLeft() {

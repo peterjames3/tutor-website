@@ -1,11 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
-  Users,
+  
   MoveRight,
-  GraduationCap,
-  Clock,
+ 
 } from "lucide-react";
 
 

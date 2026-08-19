@@ -2,18 +2,18 @@
 import { useState } from "react";
 import Link from "next/link";
 import Logo from "@/ui/Logo";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import { ExamCategoryData, ExamCategory } from "@/lib/defination";
+import { ExamCategoryData, ClassCategory } from "@/lib/defination";
 
 interface LeftHeroProps {
   onGetQuote: () => void;
 }
 
 const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
-  const [activeCategory, setActiveCategory] = useState<ExamCategory>("k12");
+  const [activeCategory, setActiveCategory] = useState<ClassCategory>("k12");
 
-  const examData: Record<ExamCategory, ExamCategoryData> = {
+  const examData: Record<ClassCategory, ExamCategoryData> = {
     k12: {
       title: "US-Based Exam",
       exams: [
@@ -84,7 +84,7 @@ const LeftHero = ({ onGetQuote }: LeftHeroProps) => {
             return (
               <button
                 key={key}
-                onClick={() => setActiveCategory(key as ExamCategory)}
+                onClick={() => setActiveCategory(key as ClassCategory)}
                 className={`
                    px-8 py-3 text-[1.2rem] font-semibold transition-all
                   ${

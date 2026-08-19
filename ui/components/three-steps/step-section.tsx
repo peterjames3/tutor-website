@@ -2,7 +2,7 @@
 import StepOne from "./step-one";
 import StepTwo from "./step-two";
 import StepThree from "./step-three";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function StepsSection() {
   return (

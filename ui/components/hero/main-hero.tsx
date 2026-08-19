@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import LeftHero from "./hero-left";
 import RightHero from "./hero-right";
 import FloatingElements from "../animation/FloatingElements";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 import Quote from "@/ui/components/form/quote";
 

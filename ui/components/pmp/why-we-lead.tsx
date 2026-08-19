@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import TutoringImage from "@/public/tutoring image 1.png";
 import LearningImage from "@/public/tutoring image 2.png";

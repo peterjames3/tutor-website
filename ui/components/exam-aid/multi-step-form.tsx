@@ -1,7 +1,7 @@
 // src/app/test-prep/[slug]/components/multi-step-form.tsx
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import { useState } from "react";
 

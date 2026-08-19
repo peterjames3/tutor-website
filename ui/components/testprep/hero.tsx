@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import HeroLeft from "./hero-left";
 import { HeroRight } from "./hero-right";
 import FloatingElements from "../animation/FloatingElements";

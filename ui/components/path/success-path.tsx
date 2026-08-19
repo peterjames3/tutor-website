@@ -1,7 +1,7 @@
 // components/SuccessPath.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import SuccessStep from "./success-step";
 
 import {

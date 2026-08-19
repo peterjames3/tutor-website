@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import HireSomeoneLeft from "./hire-someone-left";
 import HireSomeoneRight from "./hire-someone-right";
 

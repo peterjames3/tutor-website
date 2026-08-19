@@ -1,5 +1,5 @@
 // StepOne.tsx
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { X, AlignJustify, ChevronDown, ChevronUp } from "lucide-react";
 import clsx from "clsx";
 import { MenuItems } from "@/lib/menuitem";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Mobile() {
   const [isOpen, setIsOpen] = useState(false);

@@ -3,15 +3,14 @@
 
 import type { ComparisonResponse, ComparisonResult } from "@/types/api.types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000";
-
+const API_URL = process.env.NEXT_PUBLIC_API_URL 
 export async function getComparisonServer(
   certs: string[],
 ): Promise<ComparisonResult | null> {
   const endpoint = `${API_URL}/compare/${certs.join("/")}`;
   const label = certs.join(" vs ");
 
-  console.log(`[comparison.server] Fetching: ${label}`);
+  // console.log(`[comparison.server] Fetching: ${label}`);
 
   try {
     const res = await fetch(endpoint, {
@@ -19,9 +18,9 @@ export async function getComparisonServer(
     });
 
     if (!res.ok) {
-      console.error(
-        `[comparison.server] ${label} — HTTP ${res.status} ${res.statusText}`,
-      );
+      // console.error(
+      //   `[comparison.server] ${label} — HTTP ${res.status} ${res.statusText}`,
+      // );
       return null;
     }
 
@@ -30,14 +29,14 @@ export async function getComparisonServer(
     };
 
     const cached = json.meta?.cached;
-    console.log(
-      `[comparison.server] ${label} — OK (${cached ? "cache hit" : "generated"})`,
-    );
+    // console.log(
+    //   `[comparison.server] ${label} — OK (${cached ? "cache hit" : "generated"})`,
+    // );
 
     return json.data;
   } catch (err) {
     // Network failure, JSON parse error, etc.
-    console.error(`[comparison.server] ${label} — fetch threw:`, err);
+   // console.error(`[comparison.server] ${label} — fetch threw:`, err);
     return null;
   }
 }

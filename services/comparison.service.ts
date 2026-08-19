@@ -7,5 +7,5 @@ export async function getComparison(
 ): Promise<ComparisonResult> {
   const path = `/compare/${certs.join("/")}`;
   const res = await api.get<ComparisonResponse>(path);
-  return res;
+  return res.data;
 }

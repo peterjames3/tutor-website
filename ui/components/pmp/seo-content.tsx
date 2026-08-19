@@ -637,17 +637,17 @@ export default function SEOCONTENT() {
               </li>
               <li>
                 <Link
-                  href="https://www.proctoreditexamhelp.com/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification">
-                  className="flex items-start gap-2 hover:text-emerald-600 tran>
-                  target="_blank" ref="noreferrer" 
->
-                  <CircleArrowRight className="w-4 h-4 text-emerald-500 shrink->
+                  href="https://www.proctoreditexamhelp.com/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors text-sm"
+                >
+                  <CircleArrowRight className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                   <span>
                     Pay Someone to Pass My PMP Exam - Fast, Safe & Reliable
                   </span>
                 </Link>
               </li>
-
             </ul>
             <div className="mt-3 text-center">
               <Link

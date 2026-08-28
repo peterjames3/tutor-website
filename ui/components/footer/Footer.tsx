@@ -102,7 +102,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Mail size={20} />
-            <Link href="mailto:info@testhelpnow.com">info@testhelpnow.com</Link>
+            <Link href="mailto:testprep952@gmail.com">info@testhelpnow.com</Link>
           </div>
           <div className="flex items-center gap-3 text-[1rem] text-gray-300">
             <Phone size={20} />

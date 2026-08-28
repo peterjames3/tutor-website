@@ -1,4 +1,3 @@
-
 import { SanityDocument } from "next-sanity";
 
 interface BlogPostSchemaProps {
@@ -6,81 +5,93 @@ interface BlogPostSchemaProps {
 }
 
 export default function BlogPostSchema({ post }: BlogPostSchemaProps) {
- const slugString =
-  typeof post.slug === "string" ? post.slug : post.slug?.current;
+  const slugString =
+    typeof post.slug === "string" ? post.slug : post.slug?.current || "";
 
-const postUrl = `https://www.testhelpnow.com/blog/${slugString}`;
+  const postUrl = `https://testhelpnow.com/blog/${slugString}`;
 
-  const articleSchema = {
+  const schemaGraph = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    url: postUrl,
-    datePublished: post._createdAt,
-    inLanguage: "en-US",
-    ...(post.imageURL && {
-      image: {
-        "@type": "ImageObject",
-        url: post.imageURL,
+    "@graph": [
+      // ── 1. Organization ──────────────────────────────────────────
+      {
+        "@type": "Organization",
+        "@id": "https://testhelpnow.com/#organization",
+        name: "TestHelpNow",
+        url: "https://testhelpnow.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://testhelpnow.com/logo.png",
+        },
       },
-    }),
-    ...(post.authorName && {
-      author: {
-        "@type": "Person",
-        name: post.authorName,
-      },
-    }),
-    publisher: {
-      "@type": "Organization",
-      name: "TestHelpNow",
-      url: "https://www.testhelpnow.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.testhelpnow.com/logo.png",
-      },
-    },
-    isPartOf: {
-      "@type": "Blog",
-      name: "TestHelpNow Blog",
-      url: "https://www.testhelpnow.com/blog",
-    },
-  };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
+      // ── 2. Breadcrumbs ───────────────────────────────────────────
       {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.testhelpnow.com",
+        "@type": "BreadcrumbList",
+        "@id": `${postUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://testhelpnow.com",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: "https://testhelpnow.com/blog",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.title,
+            item: postUrl,
+          },
+        ],
       },
+
+      // ── 3. Article ───────────────────────────────────────────────
       {
-        "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: "https://www.testhelpnow.com/blog",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.title,
-        item: postUrl,
+        "@type": "Article",
+        "@id": `${postUrl}#article`,
+        headline: post.title,
+        url: postUrl,
+        datePublished: post._createdAt,
+        dateModified: post._updatedAt || post._createdAt,
+        description: post.summary || post.excerpt || undefined,
+        inLanguage: "en-US",
+        isPartOf: {
+          "@type": "Blog",
+          "@id": "https://testhelpnow.com/blog#blog",
+          name: "TestHelpNow Blog",
+          url: "https://testhelpnow.com/blog",
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": postUrl,
+        },
+        ...(post.imageURL && {
+          image: {
+            "@type": "ImageObject",
+            url: post.imageURL,
+          },
+        }),
+        author: {
+          "@type": "Person",
+          name: post.authorName || "TestHelpNow Editorial Team",
+        },
+        publisher: {
+          "@id": "https://testhelpnow.com/#organization",
+        },
       },
     ],
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+    />
   );
 }

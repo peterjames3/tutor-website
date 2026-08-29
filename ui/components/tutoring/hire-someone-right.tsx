@@ -8,7 +8,7 @@ export default function HireSomeoneRight() {
     <article className="w-full space-y-6">
       {/* Main Hero Content */}
       <article>
-        <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 leading-snug mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-primary leading-snug mb-4">
           <span className="">Take My Online Class</span> Service – Let&apos;s Ace Together!
         </h2>
         <p className="text-lg text-gray-600 leading-relaxed mb-4">

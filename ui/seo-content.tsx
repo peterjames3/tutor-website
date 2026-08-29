@@ -9,28 +9,28 @@ export default function SEOContent() {
       <article className="w-full md:w-[65%]">
         {/* Main Hero Section */}
         <article>
-          <h1 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl text-primary font-bold mb-6">
             Pay Someone to Take My Online Exam – Your Pathway to Academic and Professional Achievement
-          </h1>
+          </h2>
 
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
             <p>
-              If you&apos;ve ever found yourself searching for someone to <strong>pay someone to take my online exam</strong>, you&apos;re not alone. Thousands of busy professionals and students turn to trusted <strong>online exam helper</strong> services every year to achieve their academic and career goals without the stress. At <strong>TestHelpNow</strong>, we provide a secure, reliable, and confidential <strong>online exam help</strong> service that delivers guaranteed results.
+              If you&apos;ve ever found yourself searching for <strong> "pay someone to take my online exam"</strong>, you&apos;re not alone. Thousands of busy professionals and students turn to trusted online exam helper services every year to achieve their academic and career goals without the stress. At <strong>TestHelpNow</strong>, we provide a secure, reliable, and confidential online exam help service that delivers guaranteed results.
             </p>
 
             <p>
-              Whether you&apos;re preparing for a <strong>PMP certification exam</strong>, working toward your <strong>PRINCE2 qualification</strong>, earning your high school equivalency through <strong>GED or HiSET</strong>, or pursuing a career in real estate, our certified experts take your exams on your behalf with precision, privacy, and professionalism. We understand that balancing work, life, and study commitments can be overwhelming — that&apos;s why we&apos;re here to provide the <strong>proctored exam help</strong> you need to succeed.
+              Whether you&apos;re preparing for a <strong>PMP certification exam</strong>, working toward your <strong>PRINCE2 qualification</strong>, earning your high school equivalency through <strong>GED or HiSET</strong>, or pursuing a career in real estate, our certified experts take your exams on your behalf with precision, privacy, and professionalism. We understand that balancing work, life, and study commitments can be overwhelming — that&apos;s why we&apos;re here to provide the proctored exam help you need to succeed.
             </p>
 
             <p>
-              Our services are designed for professionals and students who need a reliable <strong>online exam helper</strong> to handle everything from simple quizzes to complex certification exams. With our <strong>proctored exam help</strong>, you can rest assured that your exam will be completed with the highest level of expertise, regardless of the platform or proctoring environment.
+              Our services are designed for professionals and students who need a reliable online exam helper to handle everything from simple quizzes to complex certification exams. With our proctored exam help, you can rest assured that your exam will be completed with the highest level of expertise, regardless of the platform or proctoring environment.
             </p>
           </div>
         </article>
 
         {/* Section: Professional Online Exam Assistance */}
         <article>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
+          <h2 className="text-2xl font-semibold mt-8 mb-4 text-primary">
             Professional Online Exam Helper Services for Busy Professionals and Students
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
@@ -39,7 +39,7 @@ export default function SEOContent() {
             </p>
 
             <p>
-              Our <strong>online exam help</strong> services are tailored to meet the unique needs of each client. When you decide to <strong>pay someone to take my online exam</strong>, you&apos;re not just outsourcing a test, you&apos;re investing in your peace of mind. Our experts handle the entire exam process, from login to submission, ensuring your performance is optimized and your identity remains completely confidential.
+              Our online exam help services are tailored to meet the unique needs of each client. When you decide to pay someone to take my online exam, you&apos;re not just outsourcing a test, you&apos;re investing in your peace of mind. Our experts handle the entire exam process, from login to submission, ensuring your performance is optimized and your identity remains completely confidential.
             </p>
 
             <p>
@@ -50,12 +50,12 @@ export default function SEOContent() {
 
         {/* Section: Why Choose Online Exam Help */}
         <article>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
+          <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">
             Why Professionals and Students Choose Online Exam Help Services
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
             <p>
-              The decision to <strong>pay someone to take my online exam</strong> is not made lightly. Students and professionals choose our <strong>online exam helper</strong> services for a variety of compelling reasons. We understand the challenges you face because we&apos;ve helped thousands of clients overcome them.
+              The decision to <strong>pay someone to take my online exam</strong> is not made lightly. Students and professionals choose our online exam helper services for a variety of compelling reasons. We understand the challenges you face because we&apos;ve helped thousands of clients overcome them.
             </p>
 
             <ul className="py-2 pl-4 space-y-3 list-disc">
@@ -84,30 +84,30 @@ export default function SEOContent() {
 
         {/* Section: All Types of Exam Services */}
         <article>
-          <h2 className="font-semibold text-3xl py-3">
+          <h2 className="font-semibold text-3xl py-3 text-primary">
             Comprehensive Online Exam Help for Every Test and Certification
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
             <p>
-              When you choose to <strong>pay someone to take my online exam</strong>, you need a service that can handle any test, any subject, and any format. <strong>TestHelpNow</strong> is your comprehensive solution for all your <strong>online exam help</strong> needs. We cover everything from simple quizzes to high-stakes certification exams with the same level of professionalism and confidentiality.
+              When you choose to pay someone to take my online exam, you need a service that can handle any test, any subject, and any format. <strong>TestHelpNow</strong> is your comprehensive solution for all your online exam help needs. We cover everything from simple quizzes to high-stakes certification exams with the same level of professionalism and confidentiality.
             </p>
 
             <p>
-              Our <strong>online exam helper</strong> services extend across all major exam types and platforms. Whether you&apos;re taking a <strong>proctored exam</strong> through Pearson VUE, completing a <strong>lockdown browser test</strong> on Respondus, or sitting for a certification exam through PSI or ProctorU, our experts are ready to assist.
+              Our services extend across all major exam types and platforms. Whether you&apos;re taking a proctored exam through Pearson VUE, completing a <strong>lockdown browser test</strong> on Respondus, or sitting for a certification exam through PSI or ProctorU, our experts are ready to assist.
             </p>
           </div>
         </article>
 
         {/* Section: Types of Exams We Handle */}
         <article>
-          <h2 className="text-2xl font-semibold mt-4 mb-4">
+          <h2 className="text-2xl font-semibold mt-4 mb-4 text-primary">
             Complete Coverage of Your Exam Needs
           </h2>
 
           {/* PMP */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> PMP Certification Exam Help
+            <h3 className="font-semibold text-2xl text-primary flex items-center gap-2">
+              <span className="text-primary">●</span> PMP Certification Exam Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -127,8 +127,8 @@ export default function SEOContent() {
 
           {/* PRINCE2 */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> PRINCE2 Certification Exam Help
+            <h3 className=" font-semibold text-2xl flex text-primary items-center gap-2">
+              <span className="text-primary">●</span> PRINCE2 Certification Exam Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -148,8 +148,8 @@ export default function SEOContent() {
 
           {/* GED */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> GED Exam Help
+            <h3 className=" text-primary font-semibold text-2xl flex items-center gap-2">
+              <span className="text-primary">●</span> GED Exam Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -169,8 +169,8 @@ export default function SEOContent() {
 
           {/* HiSET */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> HiSET Exam Help
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span className="">●</span> HiSET Exam Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -190,8 +190,8 @@ export default function SEOContent() {
 
           {/* Real Estate */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Real Estate Licensing Exam Help
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span className="">●</span> Real Estate Licensing Exam Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -211,8 +211,8 @@ export default function SEOContent() {
 
           {/* Proctored Exams */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Proctored Exam Help for All Platforms
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span className="">●</span> Proctored Exam Help for All Platforms
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -235,7 +235,7 @@ export default function SEOContent() {
 
         {/* Section: Pay Someone To Take My Exam For Me With Assurance */}
         <article>
-          <h2 className="font-semibold text-3xl py-3">
+          <h2 className="font-semibold text-3xl text-primary py-3">
             Pay Someone to Take My Online Exam With Full Assurance
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
@@ -348,7 +348,7 @@ export default function SEOContent() {
             <h2>Why We&apos;re #1 for Exam Help</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex flex-col space-y-3 font-medium text-primary">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Certified Subject Matter Experts
@@ -379,7 +379,7 @@ export default function SEOContent() {
             <h2>Proctored Environments Handled</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex flex-col space-y-3 font-medium text-primary">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Pearson VUE / OnVUE
@@ -414,7 +414,7 @@ export default function SEOContent() {
             <h2>Quick Links</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-primary">
               <li>
                 <Link
                   href="/blog/pmp-eligibility-requirements-2027-how-to-check-if-you-qualify-before-you-start-studying"

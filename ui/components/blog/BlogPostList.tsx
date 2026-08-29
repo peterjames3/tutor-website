@@ -62,7 +62,7 @@ export default async function BlogPosts() {
               ))}
             </div>
 
-            <h3 className="group-hover:text-primary-700 text-[1.2rem] text-textColor font-bold ">
+            <h3 className="group-hover:text-secondary text-[1.2rem] text-primary font-bold ">
               {post.title}
             </h3>
             
@@ -74,8 +74,8 @@ export default async function BlogPosts() {
               <div className="text-sm text-tertiary-white/70 ">
                 <span>By: {post.authorName || "Unknown Author"}</span>
               </div>
-              <div className="w-8 h-8 rounded-full border border-blue-300/40 flex items-center justify-center group-hover:bg-yellow-400 group-hover:text-blue-900 group-hover:border-yellow-400 transition-all">
-                <ArrowUpRight className="w-4 h-4" />
+              <div className="size-8 rounded-full border border-blue-300/40 flex items-center justify-center group-hover:bg-yellow-400 group-hover:text-blue-900 group-hover:border-yellow-400 transition-all text-blue-700">
+                <ArrowUpRight className="size-4" />
               </div>
             </div>
           </figcaption>

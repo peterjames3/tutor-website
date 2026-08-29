@@ -19,12 +19,12 @@ export default function AboutRight() {
       </div>
 
       {/* Heading */}
-      <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 leading-snug">
+      <h2 className="text-3xl md:text-5xl font-bold text-primary leading-snug">
         Who We Are – Trusted Online Exam Helpers
       </h2>
 
       {/* Paragraph */}
-      <p className="text-sm md:text-base text-secondary-600 leading-relaxed">
+      <p className="text-sm md:text-base text-primary leading-relaxed">
         If you need to pay someone to take your online exam or discover how to
         pass proctored exams safely, our platform provides discrete,
         professional exam takers to secure your academic and professional path.
@@ -38,7 +38,7 @@ export default function AboutRight() {
           <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
             <Laptop size={16} />
           </span>
-          <p className="text-xs md:text-sm text-secondary-500 font-medium">
+          <p className="text-xs md:text-sm text-primary font-medium">
             Online exam help solutions
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function AboutRight() {
           <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
             <ShieldAlert size={16} />
           </span>
-          <p className="text-xs md:text-sm text-secondary-500 font-medium">
+          <p className="text-xs md:text-sm text-primary font-medium">
             100% confidential & secure
           </p>
         </div>
@@ -55,22 +55,22 @@ export default function AboutRight() {
       {/* Stats row - Pivot to track records across certification domains */}
       <div className="flex flex-wrap justify-between gap-4 pt-2">
         <div className="flex items-center gap-3">
-          <p className="text-3xl md:text-4xl font-bold text-secondary-900 leading-none">
+          <p className="text-3xl md:text-4xl font-bold text-primary leading-none">
             50+
           </p>
           <div>
-            <p className="text-xs text-secondary-500 leading-tight">
+            <p className="text-xs text-primary/70 leading-tight">
               Certified exam takers & <br /> subject matter experts
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <p className="text-3xl md:text-4xl font-bold text-secondary-900 leading-none">
-            99.4%
+          <p className="text-3xl md:text-4xl font-bold text-primary leading-none">
+            100%
           </p>
           <div>
-            <p className="text-xs text-secondary-500 leading-tight">
+            <p className="text-xs text-primary/70 leading-tight">
               First attempt pass rate <br /> across all exams
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function AboutRight() {
       <div className="pt-3 flex flex-wrap items-center justify-between gap-4">
         <Link
           href="/proctored-exam-help"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-secondary-900 hover:text-primary transition-colors group"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-primary/70 hover:text-primary transition-colors group"
         >
           More About Proctored Exam Help service
           <ArrowRight

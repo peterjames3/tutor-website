@@ -14,7 +14,8 @@ export default function ChatwootIllustration() {
         className="relative flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-gray-200"
       >
         {/* Text Badge */}
-        <span className="text-sm font-semibold text-primary-700 whitespace-nowrap">
+        <span className="text-sm font-semibold text-primary
+ whitespace-nowrap">
           Live Chat Us Now
         </span>
         

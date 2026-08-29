@@ -7,13 +7,13 @@ export default function OnlineSeoContent() {
       <article className="w-full md:w-[65%]">
         {/* Main Hero Section */}
         <article>
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl text-primary font-bold mb-6">
             Pay Someone to Take My Online Class – Your Pathway to Academic and Professional Achievement
           </h2>
 
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
             <p>
-              If you&apos;ve ever found yourself searching for someone to <strong>pay someone to take my online class</strong>, you&apos;re not alone. Thousands of busy professionals and students turn to trusted <strong>online class helper</strong> services every year to achieve their academic and career goals without the stress. At <strong>TestHelpNow</strong>, we provide a secure, reliable, and confidential <strong>online class help</strong> service that delivers guaranteed results.
+              If you&apos;ve ever found yourself searching for someone to <strong>pay someone to take my online class</strong>, you&apos;re not alone. Thousands of busy professionals and students turn to trusted online class helper services every year to achieve their academic and career goals without the stress. At <strong>TestHelpNow</strong>, we provide a secure, reliable, and confidential online class help service that delivers guaranteed results.
             </p>
 
             <p>
@@ -21,7 +21,7 @@ export default function OnlineSeoContent() {
             </p>
 
             <p>
-              Our services are designed for professionals and students who need a reliable <strong>online class helper</strong> to handle everything from simple assignments to complex coursework. With our <strong>online class help</strong>, you can rest assured that your class will be completed with the highest level of expertise, regardless of the platform or subject.
+              Our services are designed for professionals and students who need a reliable online class helper to handle everything from simple assignments to complex coursework. With our online class help, you can rest assured that your class will be completed with the highest level of expertise, regardless of the platform or subject.
             </p>
           </div>
  
@@ -38,16 +38,16 @@ export default function OnlineSeoContent() {
 
         {/* Section: Professional Online Class Assistance */}
         <article>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
+          <h2 className="text-2xl font-semibold mt-8 mb-4 text-primary">
             Professional Online Class Helper Services for Busy Professionals and Students
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
             <p>
-              The demands of modern life often leave little time for online coursework. Whether you&apos;re managing a full-time job, family responsibilities, or multiple academic commitments, finding the time to complete every assignment, quiz, and discussion post can feel impossible. That&apos;s where a professional <strong>online class helper</strong> becomes invaluable.
+              The demands of modern life often leave little time for online coursework. Whether you&apos;re managing a full-time job, family responsibilities, or multiple academic commitments, finding the time to complete every assignment, quiz, and discussion post can feel impossible. That&apos;s where a professional online class helper becomes invaluable.
             </p>
 
             <p>
-              Our <strong>online class help</strong> services are tailored to meet the unique needs of each client. When you decide to <strong>pay someone to take my online class</strong>, you&apos;re not just outsourcing coursework, you&apos;re investing in your peace of mind. Our experts handle the entire class process, from weekly assignments to final exams, ensuring your performance is optimized and your identity remains completely confidential.
+              Our online class help services are tailored to meet the unique needs of each client. When you decide to pay someone to take my online class, you&apos;re not just outsourcing coursework, you&apos;re investing in your peace of mind. Our experts handle the entire class process, from weekly assignments to final exams, ensuring your performance is optimized and your identity remains completely confidential.
             </p>
 
             <p>
@@ -64,12 +64,12 @@ export default function OnlineSeoContent() {
 
         {/* Section: Why Choose Online Class Help */}
         <article>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
+          <h2 className="text-2xl font-semibold mt-8 mb-4 text-primary">
             Why Professionals and Students Choose Online Class Help Services
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
             <p>
-              The decision to <strong>pay someone to take my online class</strong> is not made lightly. Students and professionals choose our <strong>online class helper</strong> services for a variety of compelling reasons. We understand the challenges you face because we&apos;ve helped thousands of clients overcome them.
+              The decision to <strong>pay someone to take my online class</strong> is not made lightly. Students and professionals choose our online class helper services for a variety of compelling reasons. We understand the challenges you face because we&apos;ve helped thousands of clients overcome them.
             </p>
 
             <ul className="py-2 pl-4 space-y-3 list-disc">
@@ -100,11 +100,11 @@ export default function OnlineSeoContent() {
 
         {/* NEW: How to Place an Order Section */}
         <article className="mt-8 mb-8">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl text-primary font-bold mb-4">
             How to Place an Order to Get Help with Your Online Class
           </h2>
           <p className="text-gray-600 mb-6">
-            Getting your online class done on our website is a simple process. All you need to do is provide us access to your coursework and we help you out. Here are the steps to follow to get your <strong>online class help</strong> from our expert <strong>online class takers</strong>:
+            Getting your online class done on our website is a simple process. All you need to do is provide us access to your coursework and we help you out. Here are the steps to follow to get your online class help from our expert <strong>online class takers</strong>:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
@@ -142,7 +142,7 @@ export default function OnlineSeoContent() {
                 <div className="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-lg font-bold mb-3">
                   {item.step}
                 </div>
-                <h4 className="font-bold text-sm">{item.title}</h4>
+                <h4 className="font-bold text-sm text-primary">{item.title}</h4>
                 <p className="text-gray-600 text-xs mt-1">{item.desc}</p>
               </div>
             ))}
@@ -159,7 +159,7 @@ export default function OnlineSeoContent() {
 
         {/* Section: All Types of Online Class Services */}
         <article>
-          <h2 className="font-semibold text-3xl py-3">
+          <h2 className="font-semibold text-3xl py-3 text-primary">
             Comprehensive Online Class Help for Every Subject and Platform
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
@@ -175,14 +175,14 @@ export default function OnlineSeoContent() {
 
         {/* Section: Subjects We Cover */}
         <article>
-          <h2 className="text-2xl font-semibold mt-4 mb-4">
+          <h2 className="text-2xl font-semibold mt-4 mb-4 text-primary">
             Complete Coverage of Your Online Class Needs
           </h2>
 
           {/* Math */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Math & Statistics Class Help
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span>●</span> Math & Statistics Class Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -196,8 +196,8 @@ export default function OnlineSeoContent() {
 
           {/* Nursing */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Nursing & Healthcare Class Help
+            <h3 className="font-semibold text-2xl text-primary flex items-center gap-2">
+              <span>●</span> Nursing & Healthcare Class Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -211,8 +211,8 @@ export default function OnlineSeoContent() {
 
           {/* Business */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Business & Management Class Help
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span>●</span> Business & Management Class Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -226,8 +226,8 @@ export default function OnlineSeoContent() {
 
           {/* Science */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Science Class Help (Biology, Chemistry, Physics)
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span>●</span> Science Class Help (Biology, Chemistry, Physics)
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -241,8 +241,8 @@ export default function OnlineSeoContent() {
 
           {/* Computer Science */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Computer Science & IT Class Help
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span>●</span> Computer Science & IT Class Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -256,8 +256,8 @@ export default function OnlineSeoContent() {
 
           {/* Accounting */}
           <article className="mb-8 border-b border-gray-100 pb-6">
-            <h3 className="font-semibold text-2xl flex items-center gap-2">
-              <span className="text-emerald-600">●</span> Accounting & Finance Class Help
+            <h3 className="font-semibold text-primary text-2xl flex items-center gap-2">
+              <span>●</span> Accounting & Finance Class Help
             </h3>
             <div className="mt-3 space-y-3 leading-relaxed text-[1.1rem] text-gray-700 pl-4">
               <p>
@@ -272,7 +272,7 @@ export default function OnlineSeoContent() {
 
         {/* Section: Pay Someone To Take My Online Class With Assurance */}
         <article>
-          <h2 className="font-semibold text-3xl py-3">
+          <h2 className="font-semibold text-3xl py-3 text-primary">
             Pay Someone to Take My Online Class With Full Assurance
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
@@ -376,7 +376,7 @@ export default function OnlineSeoContent() {
             <h2>Why Choose TestHelpNow</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex flex-col space-y-3 font-medium text-primary">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
                 Expert Subject Specialists
@@ -407,7 +407,7 @@ export default function OnlineSeoContent() {
             <h2>Platforms We Support</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex flex-col space-y-3 font-medium text-primary">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
                 Canvas
@@ -452,7 +452,7 @@ export default function OnlineSeoContent() {
             <h2>We also Offer Proctored Exam Help</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex flex-col space-y-3 font-medium text-primary">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
                 <Link href="/proctored-exam-help/pay-someone-to-take-my-pmp-exam-for-me" className="hover:text-emerald-600 transition-colors">
@@ -527,7 +527,7 @@ export default function OnlineSeoContent() {
             <h2>Quick Links</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-primary">
               <li>
                 <Link href="/blog/pmp-eligibility-requirements-2027-how-to-check-if-you-qualify-before-you-start-studying" className="flex items-start gap-2 hover:text-emerald-600 transition-colors text-sm">
                   <CircleArrowRight className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />

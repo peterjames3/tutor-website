@@ -47,8 +47,8 @@ export default function Navbar() {
               className="object-contain"
             />
             <span>
-              <span className="text-foreground">TestHelp</span>
-              <span className="text-primary">Now</span>.
+              <span className="text-primary">TestHelp</span>
+              <span className="text-secondary">Now</span>.
             </span>
           </Link>
         </nav>

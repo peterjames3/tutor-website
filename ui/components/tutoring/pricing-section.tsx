@@ -25,7 +25,7 @@ export default function PricingSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="lg:col-span-6 space-y-6"
         >
-          <h2 className="text-3xl md:text-5xl font-black leading-snug ">
+          <h2 className="text-3xl md:text-5xl text-primary font-semibold leading-snug ">
             Unbeatable Pricing for Professional Academic Help
           </h2>
 

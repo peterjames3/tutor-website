@@ -9,7 +9,7 @@ export default function RealEstateSeoContent() {
       <article className="w-full md:w-[65%]">
         {/* Main Hero Section */}
         <article>
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl text-primary font-bold mb-6">
             Online Real Estate Exam Help – Your Pathway to a Successful Real
             Estate Career
           </h2>
@@ -47,7 +47,7 @@ export default function RealEstateSeoContent() {
 
           <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm text-gray-700">
-              <strong>Need help with your real estate licensing exam?</strong>{" "}
+              Need help with your real estate licensing exam? <Link href="/order" className="text-secondary font-semibold hover:underline"> Order Now </Link> or {" "}
               <Link
                 href="/"
                 className="text-secondary font-semibold hover:underline"
@@ -55,15 +55,14 @@ export default function RealEstateSeoContent() {
                 Visit our homepage
               </Link>{" "}
               to explore our full range of{" "}
-              <strong>real estate exam help</strong> and{" "}
-              <strong>proctored exam help</strong> services.
+              <strong>exam help services</strong>.
             </p>
           </div>
         </article>
 
         {/* Section: How to Place an Order */}
         <article className="mt-8 mb-8">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold text-primary mb-4">
             How to Place an Order for Real Estate Exam Help
           </h2>
           <p className="text-gray-600 mb-6">
@@ -102,7 +101,7 @@ export default function RealEstateSeoContent() {
                 <div className="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-lg font-bold mb-3">
                   {item.step}
                 </div>
-                <h4 className="font-bold text-sm">{item.title}</h4>
+                <h4 className="font-bold text-sm text-primary">{item.title}</h4>
                 <p className="text-gray-600 text-xs mt-1">{item.desc}</p>
               </div>
             ))}
@@ -134,16 +133,16 @@ export default function RealEstateSeoContent() {
 
         {/* Section: Why Choose Our Real Estate Exam Help */}
         <article>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
+          <h2 className="text-2xl font-semibold mt-8 mb-4 text-primary">
             Why Choose Our Real Estate Exam Help Services
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
             <p>
               At <strong>TestHelpNow</strong>, we understand the importance of
-              passing your <strong>real estate licensing exam</strong>.
+              passing your real estate licensing exam.
               That&apos;s why we&apos;ve employed top real estate exam experts
               who will take your exam with{" "}
-              <strong>99% satisfactory guarantee</strong>.
+              <strong>100% satisfactory guarantee</strong>.
             </p>
 
             <ul className="py-2 pl-4 space-y-3 list-disc">
@@ -197,7 +196,7 @@ export default function RealEstateSeoContent() {
 
         {/* Section: National Real Estate Exam Help */}
         <article>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
+          <h2 className="text-primary text-2xl font-semibold mt-8 mb-4">
             National Real Estate Exam Help Services
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
@@ -227,7 +226,7 @@ export default function RealEstateSeoContent() {
 
         {/* Section: Why People Pay Someone to Take Their Real Estate Exam */}
         <article>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
+          <h2 className="text-2xl text-primary font-semibold mt-8 mb-4">
             Why Pay Someone to Take My Real Estate Exam?
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
@@ -290,7 +289,7 @@ export default function RealEstateSeoContent() {
 
         {/* Section: Pay Someone To Take My Online Class With Assurance */}
         <article>
-          <h2 className="font-semibold text-3xl py-3">
+          <h2 className="font-semibold text-3xl text-primary py-3">
             Pay Someone to Take My Real Estate Exam With Full Assurance
           </h2>
           <div className="mb-6 space-y-4 leading-relaxed text-[1.15rem] text-gray-700">
@@ -405,7 +404,7 @@ export default function RealEstateSeoContent() {
             <h2>Why Choose TestHelpNow</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex flex-col space-y-3 font-medium text-primary">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
                 Licensed Real Estate Experts
@@ -420,7 +419,7 @@ export default function RealEstateSeoContent() {
               </li>
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
-                99% Pass Rate Guaranteed
+                100% Pass Rate Guaranteed
               </li>
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
@@ -436,7 +435,7 @@ export default function RealEstateSeoContent() {
             <h2>Testing Platforms We Support</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex text-primary flex-col space-y-3 font-medium">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
                 PSI Real Estate Exam
@@ -467,7 +466,7 @@ export default function RealEstateSeoContent() {
             <h2>We Also Offer Proctored Exam Help</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="flex flex-col space-y-3 font-medium">
+            <ul className="flex flex-col text-primary space-y-3 font-medium">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />
                 <Link
@@ -548,7 +547,7 @@ export default function RealEstateSeoContent() {
             <h2>Quick Links</h2>
           </div>
           <div className="px-4 py-6">
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-primary">
               <li>
                 <Link
                   href="/blog/pmp-eligibility-requirements-2027-how-to-check-if-you-qualify-before-you-start-studying"

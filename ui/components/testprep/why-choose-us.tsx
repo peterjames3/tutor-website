@@ -47,7 +47,7 @@ export function WhyChooseUs() {
                 your online Real Estate Exam
               </h2>
             </div>
-            <div className="w-full lg:w-1/2 title">
+            <div className="w-full text-primary lg:w-1/2 title">
               <p>
                 Our streamlined process ensures you get the right academic{" "}
                 support-quickly and effectively. No hassle, just results.

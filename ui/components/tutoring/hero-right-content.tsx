@@ -39,7 +39,7 @@ export default function HeroRightContent() {
       >
         <section className="relative z-10">
           <div className="flex items-center gap-3 mb-3">
-            <div className="rounded-full p-3 bg-accent">
+            <div className="rounded-full text-primary p-3 bg-accent">
               <ClipboardCheck />
             </div>
             <h3 className="text-2xl font-bold text-primary">
@@ -62,7 +62,7 @@ export default function HeroRightContent() {
           variants={itemVariants}
         >
           <div className="flex items-center gap-2">
-            <div className="rounded-full p-3 bg-accent">
+            <div className="rounded-full p-3 text-primary bg-accent">
               <BookOpen />
             </div>
             <h3 className="text-xl font-semibold text-primary">
@@ -86,7 +86,7 @@ export default function HeroRightContent() {
           variants={itemVariants}
         >
           <div className="flex items-center gap-2">
-            <div className="rounded-full p-3 bg-accent">
+            <div className="rounded-full p-3 bg-accent text-primary">
               <BrainCircuit />
             </div>
             <h3 className="text-xl font-semibold text-gray-800">

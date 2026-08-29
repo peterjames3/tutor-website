@@ -471,7 +471,7 @@ export default function FAQPage() {
     <FAQSchema />
     <div className="mt-36 max-w-4xl mx-auto px-6 py-10 min-h-screen">
       <div className="text-center mb-12">
-        <h2 className="headline font-bold mb-4">Frequently Asked Questions</h2>
+        <h2 className="headline font-bold text-primary mb-4">Frequently Asked Questions</h2>
         <p className="text-lg text-gray-600">
           Find answers to common questions about our <strong>online exam help</strong>, <strong>proctored exam help</strong>, and <strong>online class help</strong> services.
         </p>
@@ -486,7 +486,7 @@ export default function FAQPage() {
       <section className="space-y-6">
         {faqs.map((faq, index) => (
           <article key={index} className="border-b border-gray-200 pb-6">
-            <h3 className="text-xl font-semibold mb-2">{faq.question}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-primary">{faq.question}</h3>
             <div className="text-gray-700">{faq.answer}</div>
           </article>
         ))}

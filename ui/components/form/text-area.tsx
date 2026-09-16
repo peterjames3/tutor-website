@@ -26,7 +26,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
           )}
         </div>
         <textarea
-          className={`w-full px-4 py-3 rounded-md border ${
+          className={`w-full px-4 py-3 rounded-md border text-gray-600 ${
             error ? "border-red-500" : "border-gray-300"
           } focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent resize-none ${
             className || ""

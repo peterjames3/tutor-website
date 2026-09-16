@@ -143,7 +143,7 @@ export const portableTextComponents: PortableTextComponents = {
       // Using toPlainText from @portabletext/react for consistent slug generation
       const slug = slugify(toPlainText(value), { lower: true, strict: true });
       return (
-        <h2 id={slug} className="text-2xl font-bold mb-6 mt-8 scroll-mt-24">
+        <h2 id={slug} className="text-2xl font-bold mb-6 mt-8 scroll-mt-24 text-secondary1-900">
           <Link href={`#${slug}`} className="hover:text-primary">
             {children}
           </Link>
@@ -155,7 +155,7 @@ export const portableTextComponents: PortableTextComponents = {
       // Using toPlainText from @portabletext/react for consistent slug generation
       const slug = slugify(toPlainText(value), { lower: true, strict: true });
       return (
-        <h3 id={slug} className="text-xl font-semibold mb-4 mt-6 scroll-mt-24">
+        <h3 id={slug} className="text-xl text-secondary1-800 font-semibold mb-4 mt-6 scroll-mt-24">
           <Link href={`#${slug}`} className="hover:text-primary">
             {children}
           </Link>
@@ -163,7 +163,7 @@ export const portableTextComponents: PortableTextComponents = {
       );
     },
     h4: ({ children }) => (
-      <h4 className="text-lg font-semibold mb-3 mt-5">{children}</h4>
+      <h4 className="text-lg text-secondary1-800 font-semibold mb-3 mt-5">{children}</h4>
     ),
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-primary pl-4 italic my-4">

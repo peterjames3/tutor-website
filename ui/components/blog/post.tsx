@@ -27,11 +27,11 @@ export default function Post({ post }: { post: SanityDocument }) {
   return (
     <div className="w-full mx-auto max-w-full md:max-w-310 px-4 md:px-0 mt-40">
       <ul className="flex gap-8px p-text mb-3 sm:ml-3.25 ">
-        <li className="hover:text-primary font-semibold transition-color delay-300">
+        <li className="text-secondary1-500 hover:text-primary font-semibold transition-color delay-300">
           <Link href="/">Home</Link>
         </li>
         <li>&gt;</li>
-        <li className="hover:text-primary font-semibold transition-color delay-300">
+        <li className="text-secondary1-500 hover:text-primary font-semibold transition-color delay-300">
           <Link href="/blog">Blog</Link>
         </li>
         <li>&gt;</li>
@@ -62,7 +62,7 @@ export default function Post({ post }: { post: SanityDocument }) {
                 Go Back
               </Link>
             </nav>
-            <h3 className="text-3xl font-semibold text-foreground">
+            <h3 className="text-3xl font-semibold text-secondary1-900">
               {post.title}
             </h3>
             <span className="text-[0.97rem] font-medium text-tertiary-white">
@@ -84,7 +84,7 @@ export default function Post({ post }: { post: SanityDocument }) {
             )}
           </figure>
           <figcaption className="flex flex-col pt-4 space-y-2">
-            <div className=" flex gap-2 items-center p-text text-textColor font-semibold">
+            <div className=" flex gap-2 items-center p-text text-secondary1-700 font-semibold">
               {" "}
               <span className="font-bold">Category: </span>
               {post.categories.map((category: Category, id: number) => (
@@ -93,13 +93,13 @@ export default function Post({ post }: { post: SanityDocument }) {
                 </h3>
               )) || "Uncategorized post"}
             </div>
-            <p className="label-text font-medium ">
+            <p className="label-text font-medium text-primary">
               {" "}
               <span className="font-semibold">written by : </span>{" "}
               {post.authorName || "Unknown Author"}
             </p>
           </figcaption>
-          <article>
+          <article className="text-primary">
             {post?.body && (
               <PortableText
                 value={post.body}
@@ -117,7 +117,7 @@ export default function Post({ post }: { post: SanityDocument }) {
         </section>
       </div>
  <div className="max-w-310 mx-auto px-4">
-        <header className="text-foreground max-w-310 px-12 mx-auto mb-12 border-l-4 rounded-sm border-foreground/90  title font-semibold ">
+        <header className="text-primary max-w-310 px-12 mx-auto mb-12 border-l-4 rounded-sm border-foreground/90  title font-semibold ">
               Related Published Posts
             </header>
             <RecentPosts />

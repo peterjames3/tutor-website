@@ -21,11 +21,11 @@ export default async function RecentPosts() {
           key={latestPost._id}
           className="border-l-4 border-primary px-3 py-2 rounded-md flex flex-col gap-2 hover:cursor-pointer hover:shadow-lg transition-all delay-300"
         >
-          <header className=" text-[0.89rem] sm:text-[0.89] md:text-[1.1rem] font-semibold text-foreground">
+          <header className=" text-[0.89rem] sm:text-[0.89] md:text-[1.1rem] font-semibold text-primary">
             {latestPost.title || "Untitled Post"}
           </header>
-          <footer className="flex  flex-row justify-between items-center">
-            <address className="text-textColor/70 font-medium not-italic">
+          <footer className="flex text-secondary1-300 flex-row justify-between items-center">
+            <address className="font-medium not-italic">
               {latestPost.authorName || "Unknown author"}
             </address>
             <time>

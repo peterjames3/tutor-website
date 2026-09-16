@@ -42,7 +42,7 @@ export default function SocialShare({ title }: { title: string }) {
 
   return (
     <div>
-      <h3 className="title font-semibold mb-2">Share this post:</h3>
+      <h3 className="title font-semibold mb-2 text-primary">Share this post:</h3>
       <div className="flex flex-col space-y-5  ">
         {shareButtons.map(({ Component, Icon, name }) => (
           <Component key={name} url={postUrl} title={title}>

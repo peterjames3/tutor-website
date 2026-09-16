@@ -35,7 +35,7 @@ const Stepper = () => {
             <div className="w-16 h-16 rounded-full border border-accent3 bg-accent3 text-primary flex items-center justify-center text-2xl font-semibold shrink-0">
               {index + 1}
             </div>
-            <div className="text-foreground w-1/2">
+            <div className="text-primary w-1/2">
               <h3 className="text-sm font-medium opacity-80">{step.label}</h3>
               <p className="text-[0.9rem] md:text-[1.0rem] lg:text-[1.1rem] font-semibold">
                 {step.description}
